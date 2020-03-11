@@ -4,46 +4,60 @@
 [import com::eryaz::prototype::ryz::codegeneration::common::layoutDeclaration /]
 [import com::eryaz::prototype::ryz::codegeneration::common::mvcRelations /]
 [import com::eryaz::prototype::ryz::codegeneration::common::modelDeclaration /]
+[import com::eryaz::prototype::ryz::codegeneration::common::viewModelDeclaration /]
+[import com::eryaz::prototype::ryz::codegeneration::common::actionLink /]
+[import com::eryaz::prototype::ryz::codegeneration::common::modelDisplay /]
+[import com::eryaz::prototype::ryz::codegeneration::common::form /]
 [import com::eryaz::prototype::ryz::codegeneration::common::htmlPartial /]
 [import com::eryaz::prototype::ryz::codegeneration::common::htmlAction /]
-[import com::eryaz::prototype::ryz::codegeneration::common::presentationElement /]
-[import com::eryaz::prototype::ryz::codegeneration::common::modelDisplay /]
 
-[import com::eryaz::prototype::ryz::codegeneration::common::actionLink /]
+[template public generateViewFile(anAbstractView : AbstractView)]
 
-[template public generateNewViewFile(anAbstractView : AbstractView)]
 [file (anAbstractView.eContainer(Project).name + '/Views/' + anAbstractView.eContainer(ViewPackage).name + '/' + anAbstractView.name + '.cshtml', false, 'UTF-8')]
 
-[let aView : View = anAbstractView]
-[aView.generateLayoutDeclaration()/]
-[/let]
+[if (anAbstractView.oclIsTypeOf(View))]
+[anAbstractView.oclAsType(View).generateLayoutDeclaration()/]
+[/if]
 
-[let aViewToModelRelation : ViewToModelRelation = anAbstractView.getViewToModelRelationForAbstractView()]
-[aViewToModelRelation.generateModelDeclaration()/]
-[/let]
+[if (anAbstractView.getViewToModelRelationForAbstractView().oclIsUndefined()._not())]
+[if (isViewModel(anAbstractView))]
+[generateViewModelDeclaration(anAbstractView.getViewToModelRelationForAbstractView())/]
+[else]
+[generateModelDeclaration(anAbstractView.getViewToModelRelationForAbstractView())/]
+[/if]
+[/if]
 
 [if (anAbstractView.oclIsTypeOf(Layout))]
 @RenderBody()
 [/if]
 
-[for (aPartial : Partial | getStaticPartials(anAbstractView))]
+[for (aPartial : Partial | getStaticPartials(anAbstractView)) separator ('\n')]
 [generateHtmlPartial(aPartial)/]
 [/for]
 
-[for (aPartial : Partial | anAbstractView.getDynamicPartials())]
-[for (anActionMethod : ActionMethod | aPartial.getPartialActionMethods())]
-[let aViewToModelRelation : ViewToModelRelation = anAbstractView.getViewToModelRelationForAbstractView()]
-[anActionMethod.generateHtmlAction(aViewToModelRelation)/]
-[else]
+[for (aPartial : Partial | getDynamicPartials(anAbstractView)) separator ('\n')]
+[for (anActionMethod : ActionMethod | getPartialActionMethods(aPartial)) separator ('\n')]
+[if (anAbstractView.getViewToModelRelationForAbstractView().oclIsUndefined())]
 [anActionMethod.generateHtmlAction()/]
-[/let]
+[else]
+[anActionMethod.generateHtmlAction(anAbstractView.getViewToModelRelationForAbstractView())/]
+[/if]
 [/for]
 [/for]
 
-[for (aPresentationElement : PresentationElement | anAbstractView.presentationelement)]
-[aPresentationElement.generatePresentationElement()/]
+[for (anActionLink : ActionLink | anAbstractView.htmlelements->filter(ActionLink)) separator ('\n')]
+[anActionLink.generateActionLink()/]
 [/for]
 
+[for (aForm : Form | anAbstractView.htmlelements->filter(Form)) separator ('\n')]
+[aForm.generateForm()/]
+[/for]
+
+[if (anAbstractView.getViewToModelRelationForAbstractView().oclIsUndefined()._not())]
+[if (anAbstractView.htmlelements->filter(Form)->isEmpty())]
+[anAbstractView.getViewToModelRelationForAbstractView().generateModelDisplay()/]
+[/if]
+[/if]
 [/file]
 [/template]
 
@@ -54,7 +68,17 @@
 anAbstractView.eContainer(Project).getViewToModelRelationsInProject()->any(r | r.abstractview = anAbstractView)
 /]
 
+[query private getViewToControllerRelationForAbstractView(anAbstractView : AbstractView) : ViewToControllerRelation = 
+anAbstractView.eContainer(Project).getViewToControllerRelationsInProject()->any(r | anAbstractView.htmlelements->filter(Form)->includes(r.helperforsendingrequest))
+/]
 
+[query private getControllerToModelOperation(anAbstractView : AbstractView) : ControllerToModelRelation = 
+anAbstractView.eContainer(Project).getControllerToModelRelationsInProject()->any(r | r.actionmethod = getViewToControllerRelationForAbstractView(anAbstractView).actionmethod) 
+/]
+
+[query private isViewModel(anAbstractView : AbstractView) : Boolean = 
+(getControllerToModelOperation(anAbstractView).modelOperation = ModelOperation::CREATE)._or(getControllerToModelOperation(anAbstractView).modelOperation = ModelOperation::UPDATE)
+/]
 
 [query private getPartialActionMethods(aPartial : Partial) : Bag(ActionMethod) = 
 aPartial.eContainer(Project).getControllerToViewRelationsInProject()->select(r | r.returns = aPartial).actionmethod

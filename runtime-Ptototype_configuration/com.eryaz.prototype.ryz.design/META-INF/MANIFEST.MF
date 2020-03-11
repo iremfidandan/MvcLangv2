@@ -15,4 +15,3 @@ Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: %providerName
 Automatic-Module-Name: com.eryaz.prototype.ryz.design
-Export-Package: com.eryaz.prototype.ryz.design

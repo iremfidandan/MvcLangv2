@@ -51,25 +51,6 @@
       <genEnumLiterals ecoreEnumLiteral="ryz.ecore#//ActionMethodReturnType/Json"/>
       <genEnumLiterals ecoreEnumLiteral="ryz.ecore#//ActionMethodReturnType/Content"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ryz.ecore#//MultipleChoiceType">
-      <genEnumLiterals ecoreEnumLiteral="ryz.ecore#//MultipleChoiceType/RADIO_BUTTON"/>
-      <genEnumLiterals ecoreEnumLiteral="ryz.ecore#//MultipleChoiceType/CHECKBOX_GROUP"/>
-      <genEnumLiterals ecoreEnumLiteral="ryz.ecore#//MultipleChoiceType/DROPDOWN_LIST"/>
-    </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ryz.ecore#//ButtonType">
-      <genEnumLiterals ecoreEnumLiteral="ryz.ecore#//ButtonType/SUBMIT"/>
-      <genEnumLiterals ecoreEnumLiteral="ryz.ecore#//ButtonType/RESET"/>
-    </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="ryz.ecore#//InputDataType">
-      <genEnumLiterals ecoreEnumLiteral="ryz.ecore#//InputDataType/TEXT"/>
-      <genEnumLiterals ecoreEnumLiteral="ryz.ecore#//InputDataType/NUMBER"/>
-      <genEnumLiterals ecoreEnumLiteral="ryz.ecore#//InputDataType/PASSWORD"/>
-      <genEnumLiterals ecoreEnumLiteral="ryz.ecore#//InputDataType/EMAIL"/>
-      <genEnumLiterals ecoreEnumLiteral="ryz.ecore#//InputDataType/TEL"/>
-      <genEnumLiterals ecoreEnumLiteral="ryz.ecore#//InputDataType/DATE"/>
-      <genEnumLiterals ecoreEnumLiteral="ryz.ecore#//InputDataType/TIME"/>
-      <genEnumLiterals ecoreEnumLiteral="ryz.ecore#//InputDataType/FILE"/>
-    </genEnums>
     <genClasses ecoreClass="ryz.ecore#//Project">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ryz.ecore#//Project/packages"/>
     </genClasses>
@@ -101,7 +82,6 @@
     <genClasses ecoreClass="ryz.ecore#//AbstractView">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ryz.ecore#//AbstractView/renders"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ryz.ecore#//AbstractView/htmlelements"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ryz.ecore#//AbstractView/presentationelement"/>
     </genClasses>
     <genClasses ecoreClass="ryz.ecore#//Controller">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ryz.ecore#//Controller/actionmethods"/>
@@ -124,7 +104,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ryz.ecore#//ActionMethod/httpMethod"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ryz.ecore#//ActionMethod/parameters"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ryz.ecore#//ActionMethod/returns"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ryz.ecore#//ActionMethod/usecase"/>
     </genClasses>
     <genClasses ecoreClass="ryz.ecore#//Layout"/>
     <genClasses ecoreClass="ryz.ecore#//View">
@@ -149,14 +128,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ryz.ecore#//ControllerToModelRelation/modelCardinality"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ryz.ecore#//ControllerToModelRelation/modelOperation"/>
     </genClasses>
+    <genClasses ecoreClass="ryz.ecore#//HtmlElement"/>
     <genClasses ecoreClass="ryz.ecore#//ActionLink"/>
     <genClasses ecoreClass="ryz.ecore#//Form"/>
     <genClasses ecoreClass="ryz.ecore#//HelperForSendingRequest">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ryz.ecore#//HelperForSendingRequest/requestType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ryz.ecore#//HelperForSendingRequest/httpMethod"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ryz.ecore#//HelperForSendingRequest/text"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ryz.ecore#//HelperForSendingRequest/usecase"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ryz.ecore#//HelperForSendingRequest/presentationelement"/>
     </genClasses>
     <genClasses ecoreClass="ryz.ecore#//ControllerToViewRelation">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ryz.ecore#//ControllerToViewRelation/actionmethod"/>
@@ -173,68 +151,6 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ryz.ecore#//ViewToModelRelation/model"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ryz.ecore#//ViewToModelRelation/modelcardinality"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ryz.ecore#//ViewToModelRelation/properties"/>
-    </genClasses>
-    <genClasses ecoreClass="ryz.ecore#//UseCaseActorPackage">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ryz.ecore#//UseCaseActorPackage/actors"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ryz.ecore#//UseCaseActorPackage/usecasepackages"/>
-    </genClasses>
-    <genClasses ecoreClass="ryz.ecore#//Actor">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ryz.ecore#//Actor/usecase"/>
-    </genClasses>
-    <genClasses ecoreClass="ryz.ecore#//UseCase">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ryz.ecore#//UseCase/actor"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ryz.ecore#//UseCase/helperforsendingrequest"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ryz.ecore#//UseCase/actionmethod"/>
-    </genClasses>
-    <genClasses ecoreClass="ryz.ecore#//UseCasePackage">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ryz.ecore#//UseCasePackage/usecases"/>
-    </genClasses>
-    <genClasses ecoreClass="ryz.ecore#//PresentationElement">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ryz.ecore#//PresentationElement/helperforsendingrequest"/>
-    </genClasses>
-    <genClasses ecoreClass="ryz.ecore#//PresentationForm">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ryz.ecore#//PresentationForm/presentationformelement"/>
-    </genClasses>
-    <genClasses ecoreClass="ryz.ecore#//MultipleChoice">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ryz.ecore#//MultipleChoice/choice"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ryz.ecore#//MultipleChoice/multipleChoiceType"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ryz.ecore#//MultipleChoice/multipleSelection"/>
-    </genClasses>
-    <genClasses ecoreClass="ryz.ecore#//Choice">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ryz.ecore#//Choice/text"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ryz.ecore#//Choice/value"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ryz.ecore#//Choice/selected"/>
-    </genClasses>
-    <genClasses ecoreClass="ryz.ecore#//Button">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ryz.ecore#//Button/buttonType"/>
-    </genClasses>
-    <genClasses ecoreClass="ryz.ecore#//PresentationFormElement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ryz.ecore#//PresentationFormElement/labelText"/>
-    </genClasses>
-    <genClasses ecoreClass="ryz.ecore#//Input">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ryz.ecore#//Input/inputDataType"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ryz.ecore#//Input/isReadOnly"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ryz.ecore#//Input/isHidden"/>
-    </genClasses>
-    <genClasses ecoreClass="ryz.ecore#//Link">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ryz.ecore#//Link/text"/>
-    </genClasses>
-    <genClasses ecoreClass="ryz.ecore#//Table">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ryz.ecore#//Table/header"/>
-    </genClasses>
-    <genClasses ecoreClass="ryz.ecore#//Header">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ryz.ecore#//Header/labelText"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ryz.ecore#//Header/name"/>
-    </genClasses>
-    <genClasses ecoreClass="ryz.ecore#//FormElementToPropertyKeyRelation">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ryz.ecore#//FormElementToPropertyKeyRelation/helperforsendingrequest"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ryz.ecore#//FormElementToPropertyKeyRelation/model"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ryz.ecore#//FormElementToPropertyKeyRelation/presentationformelementtoproperty"/>
-    </genClasses>
-    <genClasses ecoreClass="ryz.ecore#//PresentationFormElementToPropertyKey">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ryz.ecore#//PresentationFormElementToPropertyKey/presentationformelement"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ryz.ecore#//PresentationFormElementToPropertyKey/property"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ryz.ecore#//PresentationFormElementToPropertyKey/tablekey"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -21,7 +21,3 @@ aProject.getMainComponentRelationsInProject()->filter(ControllerToViewRelation)
 [query public getViewToModelRelationsInProject(aProject: Project) : Set(ViewToModelRelation) = 
 aProject.getMainComponentRelationsInProject()->filter(ViewToModelRelation) 
 /]
-
-[query public getFormElementToPropertyKeyRelationsInProject(aProject: Project) : Set(FormElementToPropertyKeyRelation) = 
-aProject.getMainComponentRelationsInProject()->filter(FormElementToPropertyKeyRelation)
-/]

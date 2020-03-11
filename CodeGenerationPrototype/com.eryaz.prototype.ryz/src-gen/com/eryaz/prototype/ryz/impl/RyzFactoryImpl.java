@@ -6,49 +6,33 @@ import com.eryaz.prototype.ryz.ActionLink;
 import com.eryaz.prototype.ryz.ActionMethod;
 import com.eryaz.prototype.ryz.ActionMethodParameterType;
 import com.eryaz.prototype.ryz.ActionMethodReturnType;
-import com.eryaz.prototype.ryz.Actor;
-import com.eryaz.prototype.ryz.Button;
-import com.eryaz.prototype.ryz.ButtonType;
 import com.eryaz.prototype.ryz.Cardinality;
-import com.eryaz.prototype.ryz.Choice;
 import com.eryaz.prototype.ryz.Controller;
 import com.eryaz.prototype.ryz.ControllerPackage;
 import com.eryaz.prototype.ryz.ControllerToModelRelation;
 import com.eryaz.prototype.ryz.ControllerToViewRelation;
 import com.eryaz.prototype.ryz.Form;
-import com.eryaz.prototype.ryz.FormElementToPropertyKeyRelation;
-import com.eryaz.prototype.ryz.Header;
 import com.eryaz.prototype.ryz.HttpMethod;
-import com.eryaz.prototype.ryz.Input;
-import com.eryaz.prototype.ryz.InputDataType;
 import com.eryaz.prototype.ryz.Layout;
-import com.eryaz.prototype.ryz.Link;
 import com.eryaz.prototype.ryz.Model;
 import com.eryaz.prototype.ryz.ModelAssociation;
 import com.eryaz.prototype.ryz.ModelCardinality;
 import com.eryaz.prototype.ryz.ModelOperation;
 import com.eryaz.prototype.ryz.ModelPackage;
 import com.eryaz.prototype.ryz.ModelPropertyType;
-import com.eryaz.prototype.ryz.MultipleChoice;
-import com.eryaz.prototype.ryz.MultipleChoiceType;
 import com.eryaz.prototype.ryz.MvcPackage;
 import com.eryaz.prototype.ryz.Parameter;
 import com.eryaz.prototype.ryz.Partial;
-import com.eryaz.prototype.ryz.PresentationForm;
-import com.eryaz.prototype.ryz.PresentationFormElementToPropertyKey;
 import com.eryaz.prototype.ryz.Project;
 import com.eryaz.prototype.ryz.Property;
 import com.eryaz.prototype.ryz.RequestType;
 import com.eryaz.prototype.ryz.RyzFactory;
 import com.eryaz.prototype.ryz.RyzPackage;
-import com.eryaz.prototype.ryz.Table;
 import com.eryaz.prototype.ryz.TableKey;
-import com.eryaz.prototype.ryz.UseCase;
-import com.eryaz.prototype.ryz.UseCaseActorPackage;
-import com.eryaz.prototype.ryz.UseCasePackage;
 import com.eryaz.prototype.ryz.View;
 import com.eryaz.prototype.ryz.ViewPackage;
 import com.eryaz.prototype.ryz.ViewToControllerRelation;
+
 import com.eryaz.prototype.ryz.ViewToModelRelation;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -144,34 +128,6 @@ public class RyzFactoryImpl extends EFactoryImpl implements RyzFactory {
 			return createTableKey();
 		case RyzPackage.VÝEW_TO_MODEL_RELATÝON:
 			return createViewToModelRelation();
-		case RyzPackage.USE_CASE_ACTOR_PACKAGE:
-			return createUseCaseActorPackage();
-		case RyzPackage.ACTOR:
-			return createActor();
-		case RyzPackage.USE_CASE:
-			return createUseCase();
-		case RyzPackage.USE_CASE_PACKAGE:
-			return createUseCasePackage();
-		case RyzPackage.PRESENTATÝON_FORM:
-			return createPresentationForm();
-		case RyzPackage.MULTÝPLE_CHOÝCE:
-			return createMultipleChoice();
-		case RyzPackage.CHOÝCE:
-			return createChoice();
-		case RyzPackage.BUTTON:
-			return createButton();
-		case RyzPackage.INPUT:
-			return createInput();
-		case RyzPackage.LÝNK:
-			return createLink();
-		case RyzPackage.TABLE:
-			return createTable();
-		case RyzPackage.HEADER:
-			return createHeader();
-		case RyzPackage.FORM_ELEMENT_TO_PROPERTY_KEY_RELATÝON:
-			return createFormElementToPropertyKeyRelation();
-		case RyzPackage.PRESENTATÝON_FORM_ELEMENT_TO_PROPERTY_KEY:
-			return createPresentationFormElementToPropertyKey();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -201,12 +157,6 @@ public class RyzFactoryImpl extends EFactoryImpl implements RyzFactory {
 			return createModelOperationFromString(eDataType, initialValue);
 		case RyzPackage.ACTÝON_METHOD_RETURN_TYPE:
 			return createActionMethodReturnTypeFromString(eDataType, initialValue);
-		case RyzPackage.MULTÝPLE_CHOÝCE_TYPE:
-			return createMultipleChoiceTypeFromString(eDataType, initialValue);
-		case RyzPackage.BUTTON_TYPE:
-			return createButtonTypeFromString(eDataType, initialValue);
-		case RyzPackage.INPUT_DATA_TYPE:
-			return createInputDataTypeFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -236,12 +186,6 @@ public class RyzFactoryImpl extends EFactoryImpl implements RyzFactory {
 			return convertModelOperationToString(eDataType, instanceValue);
 		case RyzPackage.ACTÝON_METHOD_RETURN_TYPE:
 			return convertActionMethodReturnTypeToString(eDataType, instanceValue);
-		case RyzPackage.MULTÝPLE_CHOÝCE_TYPE:
-			return convertMultipleChoiceTypeToString(eDataType, instanceValue);
-		case RyzPackage.BUTTON_TYPE:
-			return convertButtonTypeToString(eDataType, instanceValue);
-		case RyzPackage.INPUT_DATA_TYPE:
-			return convertInputDataTypeToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -252,7 +196,6 @@ public class RyzFactoryImpl extends EFactoryImpl implements RyzFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Project createProject() {
 		ProjectImpl project = new ProjectImpl();
 		return project;
@@ -263,7 +206,6 @@ public class RyzFactoryImpl extends EFactoryImpl implements RyzFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public MvcPackage createMvcPackage() {
 		MvcPackageImpl mvcPackage = new MvcPackageImpl();
 		return mvcPackage;
@@ -274,7 +216,6 @@ public class RyzFactoryImpl extends EFactoryImpl implements RyzFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public ModelPackage createModelPackage() {
 		ModelPackageImpl modelPackage = new ModelPackageImpl();
 		return modelPackage;
@@ -285,7 +226,6 @@ public class RyzFactoryImpl extends EFactoryImpl implements RyzFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public ViewPackage createViewPackage() {
 		ViewPackageImpl viewPackage = new ViewPackageImpl();
 		return viewPackage;
@@ -296,7 +236,6 @@ public class RyzFactoryImpl extends EFactoryImpl implements RyzFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public ControllerPackage createControllerPackage() {
 		ControllerPackageImpl controllerPackage = new ControllerPackageImpl();
 		return controllerPackage;
@@ -307,7 +246,6 @@ public class RyzFactoryImpl extends EFactoryImpl implements RyzFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Model createModel() {
 		ModelImpl model = new ModelImpl();
 		return model;
@@ -318,7 +256,6 @@ public class RyzFactoryImpl extends EFactoryImpl implements RyzFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Controller createController() {
 		ControllerImpl controller = new ControllerImpl();
 		return controller;
@@ -329,7 +266,6 @@ public class RyzFactoryImpl extends EFactoryImpl implements RyzFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Property createProperty() {
 		PropertyImpl property = new PropertyImpl();
 		return property;
@@ -340,7 +276,6 @@ public class RyzFactoryImpl extends EFactoryImpl implements RyzFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public ModelAssociation createModelAssociation() {
 		ModelAssociationImpl modelAssociation = new ModelAssociationImpl();
 		return modelAssociation;
@@ -351,7 +286,6 @@ public class RyzFactoryImpl extends EFactoryImpl implements RyzFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Partial createPartial() {
 		PartialImpl partial = new PartialImpl();
 		return partial;
@@ -362,7 +296,6 @@ public class RyzFactoryImpl extends EFactoryImpl implements RyzFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public ActionMethod createActionMethod() {
 		ActionMethodImpl actionMethod = new ActionMethodImpl();
 		return actionMethod;
@@ -373,7 +306,6 @@ public class RyzFactoryImpl extends EFactoryImpl implements RyzFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Layout createLayout() {
 		LayoutImpl layout = new LayoutImpl();
 		return layout;
@@ -384,7 +316,6 @@ public class RyzFactoryImpl extends EFactoryImpl implements RyzFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public View createView() {
 		ViewImpl view = new ViewImpl();
 		return view;
@@ -395,7 +326,6 @@ public class RyzFactoryImpl extends EFactoryImpl implements RyzFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Parameter createParameter() {
 		ParameterImpl parameter = new ParameterImpl();
 		return parameter;
@@ -406,7 +336,6 @@ public class RyzFactoryImpl extends EFactoryImpl implements RyzFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public ViewToControllerRelation createViewToControllerRelation() {
 		ViewToControllerRelationImpl viewToControllerRelation = new ViewToControllerRelationImpl();
 		return viewToControllerRelation;
@@ -417,7 +346,6 @@ public class RyzFactoryImpl extends EFactoryImpl implements RyzFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public ControllerToModelRelation createControllerToModelRelation() {
 		ControllerToModelRelationImpl controllerToModelRelation = new ControllerToModelRelationImpl();
 		return controllerToModelRelation;
@@ -428,7 +356,6 @@ public class RyzFactoryImpl extends EFactoryImpl implements RyzFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public ActionLink createActionLink() {
 		ActionLinkImpl actionLink = new ActionLinkImpl();
 		return actionLink;
@@ -439,7 +366,6 @@ public class RyzFactoryImpl extends EFactoryImpl implements RyzFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Form createForm() {
 		FormImpl form = new FormImpl();
 		return form;
@@ -450,7 +376,6 @@ public class RyzFactoryImpl extends EFactoryImpl implements RyzFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public ControllerToViewRelation createControllerToViewRelation() {
 		ControllerToViewRelationImpl controllerToViewRelation = new ControllerToViewRelationImpl();
 		return controllerToViewRelation;
@@ -461,7 +386,6 @@ public class RyzFactoryImpl extends EFactoryImpl implements RyzFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public TableKey createTableKey() {
 		TableKeyImpl tableKey = new TableKeyImpl();
 		return tableKey;
@@ -472,164 +396,9 @@ public class RyzFactoryImpl extends EFactoryImpl implements RyzFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public ViewToModelRelation createViewToModelRelation() {
 		ViewToModelRelationImpl viewToModelRelation = new ViewToModelRelationImpl();
 		return viewToModelRelation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public UseCaseActorPackage createUseCaseActorPackage() {
-		UseCaseActorPackageImpl useCaseActorPackage = new UseCaseActorPackageImpl();
-		return useCaseActorPackage;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Actor createActor() {
-		ActorImpl actor = new ActorImpl();
-		return actor;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public UseCase createUseCase() {
-		UseCaseImpl useCase = new UseCaseImpl();
-		return useCase;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public UseCasePackage createUseCasePackage() {
-		UseCasePackageImpl useCasePackage = new UseCasePackageImpl();
-		return useCasePackage;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public PresentationForm createPresentationForm() {
-		PresentationFormImpl presentationForm = new PresentationFormImpl();
-		return presentationForm;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public MultipleChoice createMultipleChoice() {
-		MultipleChoiceImpl multipleChoice = new MultipleChoiceImpl();
-		return multipleChoice;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Choice createChoice() {
-		ChoiceImpl choice = new ChoiceImpl();
-		return choice;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Button createButton() {
-		ButtonImpl button = new ButtonImpl();
-		return button;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Input createInput() {
-		InputImpl ýnput = new InputImpl();
-		return ýnput;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Link createLink() {
-		LinkImpl link = new LinkImpl();
-		return link;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Table createTable() {
-		TableImpl table = new TableImpl();
-		return table;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Header createHeader() {
-		HeaderImpl header = new HeaderImpl();
-		return header;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public FormElementToPropertyKeyRelation createFormElementToPropertyKeyRelation() {
-		FormElementToPropertyKeyRelationImpl formElementToPropertyKeyRelation = new FormElementToPropertyKeyRelationImpl();
-		return formElementToPropertyKeyRelation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public PresentationFormElementToPropertyKey createPresentationFormElementToPropertyKey() {
-		PresentationFormElementToPropertyKeyImpl presentationFormElementToPropertyKey = new PresentationFormElementToPropertyKeyImpl();
-		return presentationFormElementToPropertyKey;
 	}
 
 	/**
@@ -814,73 +583,6 @@ public class RyzFactoryImpl extends EFactoryImpl implements RyzFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MultipleChoiceType createMultipleChoiceTypeFromString(EDataType eDataType, String initialValue) {
-		MultipleChoiceType result = MultipleChoiceType.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertMultipleChoiceTypeToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ButtonType createButtonTypeFromString(EDataType eDataType, String initialValue) {
-		ButtonType result = ButtonType.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertButtonTypeToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public InputDataType createInputDataTypeFromString(EDataType eDataType, String initialValue) {
-		InputDataType result = InputDataType.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertInputDataTypeToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public RyzPackage getRyzPackage() {
 		return (RyzPackage) getEPackage();
 	}

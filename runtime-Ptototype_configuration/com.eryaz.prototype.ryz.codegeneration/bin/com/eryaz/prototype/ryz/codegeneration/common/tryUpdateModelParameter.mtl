@@ -1,7 +1,0 @@
-[comment encoding = UTF-8 /]
-[module tryUpdateModelParameter('http://www.eryaz.com/prototype/ryz')]
-
-
-[template public generateTryUpdateModelParameter(aControllerToModelRelation : ControllerToModelRelation) { includedProperties : OrderedSet(Property) = aControllerToModelRelation.modelproperties; }]
-new string[ '[' /][ ']' /]{[for (aProperty : Property | includedProperties) separator (', ') { aModelName : String = aControllerToModelRelation.model.name; }]nameof([aModelName/].[aProperty.name/])[/for]}
-[/template]

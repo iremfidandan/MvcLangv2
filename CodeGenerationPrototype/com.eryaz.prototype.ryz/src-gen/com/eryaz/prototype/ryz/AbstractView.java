@@ -15,7 +15,6 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link com.eryaz.prototype.ryz.AbstractView#getRenders <em>Renders</em>}</li>
  *   <li>{@link com.eryaz.prototype.ryz.AbstractView#getHtmlelements <em>Htmlelements</em>}</li>
- *   <li>{@link com.eryaz.prototype.ryz.AbstractView#getPresentationelement <em>Presentationelement</em>}</li>
  * </ul>
  *
  * @see com.eryaz.prototype.ryz.RyzPackage#getAbstractView()
@@ -27,6 +26,10 @@ public interface AbstractView extends MainComponent {
 	 * Returns the value of the '<em><b>Renders</b></em>' reference list.
 	 * The list contents are of type {@link com.eryaz.prototype.ryz.Partial}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Renders</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Renders</em>' reference list.
 	 * @see com.eryaz.prototype.ryz.RyzPackage#getAbstractView_Renders()
@@ -37,26 +40,18 @@ public interface AbstractView extends MainComponent {
 
 	/**
 	 * Returns the value of the '<em><b>Htmlelements</b></em>' containment reference list.
-	 * The list contents are of type {@link com.eryaz.prototype.ryz.HelperForSendingRequest}.
+	 * The list contents are of type {@link com.eryaz.prototype.ryz.HtmlElement}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Htmlelements</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Htmlelements</em>' containment reference list.
 	 * @see com.eryaz.prototype.ryz.RyzPackage#getAbstractView_Htmlelements()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<HelperForSendingRequest> getHtmlelements();
-
-	/**
-	 * Returns the value of the '<em><b>Presentationelement</b></em>' containment reference list.
-	 * The list contents are of type {@link com.eryaz.prototype.ryz.PresentationElement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Presentationelement</em>' containment reference list.
-	 * @see com.eryaz.prototype.ryz.RyzPackage#getAbstractView_Presentationelement()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<PresentationElement> getPresentationelement();
+	EList<HtmlElement> getHtmlelements();
 
 } // AbstractView

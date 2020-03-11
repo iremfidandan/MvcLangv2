@@ -50,8 +50,12 @@
     </controllers>
     <controllers name="AdminController">
       <actionmethods name="Click_CreateProduct"/>
-      <actionmethods name="Click_EditProduct"/>
-      <actionmethods name="Click_DeleteProduct"/>
+      <actionmethods name="Click_EditProduct">
+        <parameters name="ProductId"/>
+      </actionmethods>
+      <actionmethods name="Click_DeleteProduct">
+        <parameters name="ProductId"/>
+      </actionmethods>
       <actionmethods name="CreateProduct" httpMethod="POST"/>
       <actionmethods name="EditProduct" httpMethod="POST">
         <parameters name="ProductId"/>
@@ -60,12 +64,6 @@
         <parameters name="ProductId"/>
       </actionmethods>
       <actionmethods name="GetAdminHomePage"/>
-      <actionmethods name="GetEditProductForm" returns="PartialView">
-        <parameters name="ProductId"/>
-      </actionmethods>
-      <actionmethods name="GetDeleteProductForm" returns="PartialView">
-        <parameters name="ProductId"/>
-      </actionmethods>
     </controllers>
   </packages>
   <packages xsi:type="ryz:MvcPackage" name="CartControllerMvc" maincomponents="//@packages.1/@controllers.0 //@packages.8/@views.0 //@packages.6/@views.1 //@packages.0/@models.2 //@packages.8/@views.1 //@packages.8/@views.2 //@packages.8/@views.3 //@packages.6/@views.0 //@packages.0/@models.0 //@packages.0/@models.1">
@@ -102,7 +100,7 @@
     <maincomponentrelations xsi:type="ryz:ViewToControllerRelation" helperforsendingrequest="//@packages.7/@views.0/@htmlelements.0" actionmethod="//@packages.1/@controllers.1/@actionmethods.0"/>
     <maincomponentrelations xsi:type="ryz:ControllerToViewRelation" actionmethod="//@packages.1/@controllers.1/@actionmethods.1" returns="//@packages.7/@views.0"/>
   </packages>
-  <packages xsi:type="ryz:MvcPackage" name="AdminControllerMvc" maincomponents="//@packages.1/@controllers.2 //@packages.0/@models.0 //@packages.5/@views.3 //@packages.5/@views.0 //@packages.5/@views.2 //@packages.5/@views.1 //@packages.5/@views.5 //@packages.5/@views.4">
+  <packages xsi:type="ryz:MvcPackage" name="AdminControllerMvc" maincomponents="//@packages.1/@controllers.2 //@packages.0/@models.0 //@packages.5/@views.3 //@packages.5/@views.0 //@packages.5/@views.2 //@packages.5/@views.1">
     <maincomponentrelations xsi:type="ryz:ViewToControllerRelation" helperforsendingrequest="//@packages.5/@views.3/@htmlelements.0" actionmethod="//@packages.1/@controllers.2/@actionmethods.0"/>
     <maincomponentrelations xsi:type="ryz:ViewToControllerRelation" helperforsendingrequest="//@packages.5/@views.3/@htmlelements.1" actionmethod="//@packages.1/@controllers.2/@actionmethods.1"/>
     <maincomponentrelations xsi:type="ryz:ViewToControllerRelation" helperforsendingrequest="//@packages.5/@views.3/@htmlelements.2" actionmethod="//@packages.1/@controllers.2/@actionmethods.2"/>
@@ -114,134 +112,61 @@
     <maincomponentrelations xsi:type="ryz:ControllerToModelRelation" actionmethod="//@packages.1/@controllers.2/@actionmethods.0" model="//@packages.0/@models.0" modelproperties="//@packages.0/@models.0/@properties.0 //@packages.0/@models.0/@properties.1 //@packages.0/@models.0/@properties.2 //@packages.0/@models.0/@properties.3"/>
     <maincomponentrelations xsi:type="ryz:ControllerToModelRelation" actionmethod="//@packages.1/@controllers.2/@actionmethods.3" model="//@packages.0/@models.0" modelproperties="//@packages.0/@models.0/@properties.0 //@packages.0/@models.0/@properties.1 //@packages.0/@models.0/@properties.2 //@packages.0/@models.0/@properties.3"/>
     <maincomponentrelations xsi:type="ryz:ControllerToModelRelation" actionmethod="//@packages.1/@controllers.2/@actionmethods.4" model="//@packages.0/@models.0" modelproperties="//@packages.0/@models.0/@properties.0 //@packages.0/@models.0/@properties.1 //@packages.0/@models.0/@properties.2 //@packages.0/@models.0/@properties.3" modelOperation="UPDATE"/>
+    <maincomponentrelations xsi:type="ryz:ControllerToModelRelation" actionmethod="//@packages.1/@controllers.2/@actionmethods.1" model="//@packages.0/@models.0" modelproperties="//@packages.0/@models.0/@properties.0 //@packages.0/@models.0/@properties.1 //@packages.0/@models.0/@properties.2 //@packages.0/@models.0/@properties.3" modelOperation="UPDATE"/>
     <maincomponentrelations xsi:type="ryz:ControllerToModelRelation" actionmethod="//@packages.1/@controllers.2/@actionmethods.5" model="//@packages.0/@models.0" modelproperties="//@packages.0/@models.0/@properties.0 //@packages.0/@models.0/@properties.1 //@packages.0/@models.0/@properties.2 //@packages.0/@models.0/@properties.3" modelOperation="DELETE"/>
+    <maincomponentrelations xsi:type="ryz:ControllerToModelRelation" actionmethod="//@packages.1/@controllers.2/@actionmethods.2" model="//@packages.0/@models.0" modelproperties="//@packages.0/@models.0/@properties.0 //@packages.0/@models.0/@properties.1 //@packages.0/@models.0/@properties.2 //@packages.0/@models.0/@properties.3" modelOperation="DELETE"/>
     <maincomponentrelations xsi:type="ryz:ControllerToViewRelation" actionmethod="//@packages.1/@controllers.2/@actionmethods.3" returns="//@packages.5/@views.3"/>
     <maincomponentrelations xsi:type="ryz:ControllerToViewRelation" actionmethod="//@packages.1/@controllers.2/@actionmethods.4" returns="//@packages.5/@views.3"/>
     <maincomponentrelations xsi:type="ryz:ControllerToViewRelation" actionmethod="//@packages.1/@controllers.2/@actionmethods.5" returns="//@packages.5/@views.3"/>
     <maincomponentrelations xsi:type="ryz:ViewToModelRelation" abstractview="//@packages.5/@views.0" model="//@packages.0/@models.0"/>
-    <maincomponentrelations xsi:type="ryz:ViewToModelRelation" abstractview="//@packages.5/@views.2" model="//@packages.0/@models.0" modelcardinality="ALL"/>
-    <maincomponentrelations xsi:type="ryz:ViewToModelRelation" abstractview="//@packages.5/@views.1" model="//@packages.0/@models.0" modelcardinality="ALL"/>
-    <maincomponentrelations xsi:type="ryz:ControllerToModelRelation" actionmethod="//@packages.1/@controllers.2/@actionmethods.1" model="//@packages.0/@models.0" modelproperties="//@packages.0/@models.0/@properties.0 //@packages.0/@models.0/@properties.3 //@packages.0/@models.0/@properties.2 //@packages.0/@models.0/@properties.1" modelCardinality="ALL" modelOperation="READ"/>
-    <maincomponentrelations xsi:type="ryz:ControllerToModelRelation" actionmethod="//@packages.1/@controllers.2/@actionmethods.2" model="//@packages.0/@models.0" modelproperties="//@packages.0/@models.0/@properties.0 //@packages.0/@models.0/@properties.1 //@packages.0/@models.0/@properties.2 //@packages.0/@models.0/@properties.3" modelCardinality="ALL" modelOperation="READ"/>
-    <maincomponentrelations xsi:type="ryz:ControllerToViewRelation" actionmethod="//@packages.1/@controllers.2/@actionmethods.7" returns="//@packages.5/@views.4"/>
-    <maincomponentrelations xsi:type="ryz:ControllerToViewRelation" actionmethod="//@packages.1/@controllers.2/@actionmethods.8" returns="//@packages.5/@views.5"/>
-    <maincomponentrelations xsi:type="ryz:ViewToControllerRelation" helperforsendingrequest="//@packages.5/@views.2/@htmlelements.0" actionmethod="//@packages.1/@controllers.2/@actionmethods.8"/>
-    <maincomponentrelations xsi:type="ryz:ViewToControllerRelation" helperforsendingrequest="//@packages.5/@views.1/@htmlelements.0" actionmethod="//@packages.1/@controllers.2/@actionmethods.7"/>
-    <maincomponentrelations xsi:type="ryz:ViewToControllerRelation" helperforsendingrequest="//@packages.5/@views.4/@htmlelements.0" actionmethod="//@packages.1/@controllers.2/@actionmethods.4"/>
-    <maincomponentrelations xsi:type="ryz:ViewToControllerRelation" helperforsendingrequest="//@packages.5/@views.5/@htmlelements.0" actionmethod="//@packages.1/@controllers.2/@actionmethods.5"/>
-    <maincomponentrelations xsi:type="ryz:ControllerToModelRelation" actionmethod="//@packages.1/@controllers.2/@actionmethods.7" model="//@packages.0/@models.0" modelproperties="//@packages.0/@models.0/@properties.0 //@packages.0/@models.0/@properties.1 //@packages.0/@models.0/@properties.3 //@packages.0/@models.0/@properties.2" modelOperation="UPDATE"/>
-    <maincomponentrelations xsi:type="ryz:ControllerToModelRelation" actionmethod="//@packages.1/@controllers.2/@actionmethods.8" model="//@packages.0/@models.0" modelproperties="//@packages.0/@models.0/@properties.0 //@packages.0/@models.0/@properties.1 //@packages.0/@models.0/@properties.2 //@packages.0/@models.0/@properties.3" modelOperation="DELETE"/>
-    <maincomponentrelations xsi:type="ryz:ViewToModelRelation" abstractview="//@packages.5/@views.4" model="//@packages.0/@models.0" properties="//@packages.0/@models.0/@properties.0 //@packages.0/@models.0/@properties.1 //@packages.0/@models.0/@properties.2 //@packages.0/@models.0/@properties.3"/>
-    <maincomponentrelations xsi:type="ryz:ViewToModelRelation" abstractview="//@packages.5/@views.5" model="//@packages.0/@models.0" properties="//@packages.0/@models.0/@properties.0 //@packages.0/@models.0/@properties.1 //@packages.0/@models.0/@properties.3 //@packages.0/@models.0/@properties.2"/>
-    <maincomponentrelations xsi:type="ryz:FormElementToPropertyKeyRelation" helperforsendingrequest="//@packages.5/@views.2/@htmlelements.0" model="//@packages.0/@models.0">
-      <presentationformelementtoproperty presentationformelement="//@packages.5/@views.2/@presentationelement.0/@presentationformelement.0" tablekey="//@packages.0/@models.0/@tablekeys.0"/>
-    </maincomponentrelations>
-    <maincomponentrelations xsi:type="ryz:FormElementToPropertyKeyRelation" helperforsendingrequest="//@packages.5/@views.1/@htmlelements.0" model="//@packages.0/@models.0">
-      <presentationformelementtoproperty presentationformelement="//@packages.5/@views.1/@presentationelement.0/@presentationformelement.0" tablekey="//@packages.0/@models.0/@tablekeys.0"/>
-    </maincomponentrelations>
+    <maincomponentrelations xsi:type="ryz:ViewToModelRelation" abstractview="//@packages.5/@views.2" model="//@packages.0/@models.0"/>
+    <maincomponentrelations xsi:type="ryz:ViewToModelRelation" abstractview="//@packages.5/@views.1" model="//@packages.0/@models.0"/>
+    <maincomponentrelations xsi:type="ryz:ViewToControllerRelation" helperforsendingrequest="//@packages.5/@views.2/@htmlelements.0" actionmethod="//@packages.1/@controllers.2/@actionmethods.5"/>
+    <maincomponentrelations xsi:type="ryz:ViewToControllerRelation" helperforsendingrequest="//@packages.5/@views.1/@htmlelements.0" actionmethod="//@packages.1/@controllers.2/@actionmethods.4"/>
+    <maincomponentrelations xsi:type="ryz:ControllerToModelRelation" actionmethod="//@packages.1/@controllers.2/@actionmethods.6" model="//@packages.0/@models.0" modelproperties="//@packages.0/@models.0/@properties.0 //@packages.0/@models.0/@properties.1 //@packages.0/@models.0/@properties.2 //@packages.0/@models.0/@properties.3" modelCardinality="ALL" modelOperation="READ"/>
+    <maincomponentrelations xsi:type="ryz:ViewToModelRelation" abstractview="//@packages.5/@views.3" model="//@packages.0/@models.0" modelcardinality="ALL"/>
   </packages>
   <packages xsi:type="ryz:ViewPackage" name="Admin">
     <views xsi:type="ryz:View" name="CreateProductPage">
-      <htmlelements xsi:type="ryz:Form" httpMethod="POST" text="Create a Product" presentationelement="//@packages.5/@views.0/@presentationelement.0"/>
-      <presentationelement xsi:type="ryz:PresentationForm" name="Create Product" helperforsendingrequest="//@packages.5/@views.0/@htmlelements.0">
-        <presentationformelement xsi:type="ryz:Input" labelText="Name"/>
-        <presentationformelement xsi:type="ryz:Input" labelText="Category"/>
-        <presentationformelement xsi:type="ryz:Input" labelText="Description"/>
-        <presentationformelement xsi:type="ryz:Input" labelText="Price" inputDataType="NUMBER"/>
-        <presentationformelement xsi:type="ryz:Button" labelText="Create Product"/>
-      </presentationelement>
+      <htmlelements xsi:type="ryz:Form" name="Admin_CreateProductPage_Form1" httpMethod="POST" text="Create a Product"/>
     </views>
-    <views xsi:type="ryz:View" name="EditProductPage" renders="//@packages.5/@views.4">
-      <htmlelements xsi:type="ryz:Form" requestType="AJAX" text="Select Edited Product" presentationelement="//@packages.5/@views.1/@presentationelement.0"/>
-      <presentationelement xsi:type="ryz:PresentationForm" name="Select Edited Product" helperforsendingrequest="//@packages.5/@views.1/@htmlelements.0">
-        <presentationformelement xsi:type="ryz:MultipleChoice" labelText="Edited Product" multipleChoiceType="DROPDOWN_LIST">
-          <choice text="Name" value="ProductId"/>
-        </presentationformelement>
-        <presentationformelement xsi:type="ryz:Button" labelText="Select Product"/>
-      </presentationelement>
+    <views xsi:type="ryz:View" name="EditProductPage">
+      <htmlelements xsi:type="ryz:Form" name="Admin_CreateProductPage_Form1" httpMethod="POST" text="Edit a Product"/>
     </views>
-    <views xsi:type="ryz:View" name="DeleteProductPage" renders="//@packages.5/@views.5">
-      <htmlelements xsi:type="ryz:Form" requestType="AJAX" text="Select Deleted Product" presentationelement="//@packages.5/@views.2/@presentationelement.0"/>
-      <presentationelement xsi:type="ryz:PresentationForm" name="Select Deleted Product" helperforsendingrequest="//@packages.5/@views.2/@htmlelements.0">
-        <presentationformelement xsi:type="ryz:MultipleChoice" labelText="Deleted Product" multipleChoiceType="DROPDOWN_LIST">
-          <choice text="Name" value="ProductId"/>
-        </presentationformelement>
-        <presentationformelement xsi:type="ryz:Button" labelText="Select Product"/>
-      </presentationelement>
+    <views xsi:type="ryz:View" name="DeleteProductPage">
+      <htmlelements xsi:type="ryz:Form" name="Admin_CreateProductPage_Form1" httpMethod="POST" text="Delete a Product"/>
     </views>
     <views xsi:type="ryz:View" name="AdminHomePage">
-      <htmlelements xsi:type="ryz:ActionLink" text="Create a Product" presentationelement="//@packages.5/@views.3/@presentationelement.0"/>
-      <htmlelements xsi:type="ryz:ActionLink" text="Edit a Product" presentationelement="//@packages.5/@views.3/@presentationelement.1"/>
-      <htmlelements xsi:type="ryz:ActionLink" text="Delete a Product" presentationelement="//@packages.5/@views.3/@presentationelement.2"/>
-      <presentationelement xsi:type="ryz:Link" name="Create New Product" helperforsendingrequest="//@packages.5/@views.3/@htmlelements.0" text="Create New Product"/>
-      <presentationelement xsi:type="ryz:Link" name="Edit Product" helperforsendingrequest="//@packages.5/@views.3/@htmlelements.1" text="Edit Product"/>
-      <presentationelement xsi:type="ryz:Link" name="Delete Product" helperforsendingrequest="//@packages.5/@views.3/@htmlelements.2" text="Delete Product"/>
-    </views>
-    <views xsi:type="ryz:Partial" name="EditProductFormPage">
-      <htmlelements xsi:type="ryz:Form" httpMethod="POST" text="Edit Product" presentationelement="//@packages.5/@views.4/@presentationelement.0"/>
-      <presentationelement xsi:type="ryz:PresentationForm" name="Edit Product" helperforsendingrequest="//@packages.5/@views.4/@htmlelements.0">
-        <presentationformelement xsi:type="ryz:Input" labelText="Name"/>
-        <presentationformelement xsi:type="ryz:Input" labelText="Category"/>
-        <presentationformelement xsi:type="ryz:Input" labelText="Description"/>
-        <presentationformelement xsi:type="ryz:Input" labelText="Price" inputDataType="NUMBER"/>
-        <presentationformelement xsi:type="ryz:Button" labelText="Edit Product"/>
-      </presentationelement>
-    </views>
-    <views xsi:type="ryz:Partial" name="DeleteProductFormPage">
-      <htmlelements xsi:type="ryz:Form" httpMethod="POST" text="Delete Product" presentationelement="//@packages.5/@views.5/@presentationelement.0"/>
-      <presentationelement xsi:type="ryz:PresentationForm" name="Delete Product" helperforsendingrequest="//@packages.5/@views.5/@htmlelements.0">
-        <presentationformelement xsi:type="ryz:Button" labelText="Delete Product"/>
-      </presentationelement>
+      <htmlelements xsi:type="ryz:ActionLink" name="Admin_AdminHomePage_ActionLink1" text="Create a Product"/>
+      <htmlelements xsi:type="ryz:ActionLink" name="Admin_AdminHomePage_ActionLink1" text="Edit a Product"/>
+      <htmlelements xsi:type="ryz:ActionLink" name="Admin_AdminHomePage_ActionLink1" text="Delete a Product"/>
     </views>
   </packages>
   <packages xsi:type="ryz:ViewPackage" name="Shared">
-    <views xsi:type="ryz:Partial" name="ProductListPage" renders="//@packages.6/@views.1">
-      <presentationelement xsi:type="ryz:Table" name="ProductListTable">
-        <header labelText="Name" name="Name"/>
-        <header labelText="Category" name="Category"/>
-        <header labelText="Description" name="Description"/>
-        <header labelText="Price" name="Price"/>
-        <header labelText="Cart Operations" name="CartOperations"/>
-      </presentationelement>
-    </views>
+    <views xsi:type="ryz:Partial" name="ProductListPage" renders="//@packages.6/@views.1"/>
     <views xsi:type="ryz:Partial" name="CartOperationsPage">
-      <htmlelements xsi:type="ryz:ActionLink" text="Add To Cart" presentationelement="//@packages.6/@views.1/@presentationelement.0"/>
-      <htmlelements xsi:type="ryz:ActionLink" text="Remove From Cart" presentationelement="//@packages.6/@views.1/@presentationelement.1"/>
-      <presentationelement xsi:type="ryz:Link" name="Add To Cart" helperforsendingrequest="//@packages.6/@views.1/@htmlelements.0" text="Add To Cart"/>
-      <presentationelement xsi:type="ryz:Link" name="Remove From Cart" helperforsendingrequest="//@packages.6/@views.1/@htmlelements.1" text="Remove From Cart"/>
+      <htmlelements xsi:type="ryz:ActionLink" name="Shared_CartOperationsPage_ActionLink1" text="Add To Cart"/>
+      <htmlelements xsi:type="ryz:ActionLink" name="Shared_CartOperationsPage_ActionLink1" text="Remove From Cart"/>
     </views>
   </packages>
   <packages xsi:type="ryz:ViewPackage" name="Product">
     <views xsi:type="ryz:View" name="ProductCategoryListPage" renders="//@packages.6/@views.0">
-      <htmlelements xsi:type="ryz:ActionLink" requestType="AJAX" text="Choose Product Category" presentationelement="//@packages.7/@views.0/@presentationelement.0"/>
-      <presentationelement xsi:type="ryz:Link" name="Choose Product Category" helperforsendingrequest="//@packages.7/@views.0/@htmlelements.0" text="Choose Product Category"/>
+      <htmlelements xsi:type="ryz:ActionLink" name="Product_ProductCategoryListPage_ActionLink1" requestType="AJAX" text="Choose Product Category"/>
     </views>
   </packages>
   <packages xsi:type="ryz:ViewPackage" name="Cart">
     <views xsi:type="ryz:View" name="CartHomePage">
-      <htmlelements xsi:type="ryz:ActionLink" text="Checkout Now" presentationelement="//@packages.8/@views.0/@presentationelement.0"/>
-      <htmlelements xsi:type="ryz:ActionLink" text="Continue Shopping" presentationelement="//@packages.8/@views.0/@presentationelement.1"/>
-      <presentationelement xsi:type="ryz:Link" name="Checkout Now" helperforsendingrequest="//@packages.8/@views.0/@htmlelements.0" text="Checkout Now"/>
-      <presentationelement xsi:type="ryz:Link" name="Continue Shopping" helperforsendingrequest="//@packages.8/@views.0/@htmlelements.1" text="Continue Shopping"/>
+      <htmlelements xsi:type="ryz:ActionLink" name="Cart_CartHomePage_ActionLink1" text="Checkout Now"/>
+      <htmlelements xsi:type="ryz:ActionLink" name="Cart_CartHomePage_ActionLink1" text="Continue Shopping"/>
     </views>
     <views xsi:type="ryz:View" name="AddToCartPage">
-      <htmlelements xsi:type="ryz:Form" httpMethod="POST" text="Add To Cart" presentationelement="//@packages.8/@views.1/@presentationelement.0"/>
-      <presentationelement xsi:type="ryz:PresentationForm" name="Add To Cart" helperforsendingrequest="//@packages.8/@views.1/@htmlelements.0">
-        <presentationformelement xsi:type="ryz:Input" labelText="Quantity" inputDataType="NUMBER"/>
-        <presentationformelement xsi:type="ryz:Button" labelText="Add To Cart"/>
-      </presentationelement>
+      <htmlelements xsi:type="ryz:Form" name="Cart_AddToCartPage_Form1" httpMethod="POST" text="Add To Cart"/>
     </views>
     <views xsi:type="ryz:View" name="RemoveFromCartPage">
-      <htmlelements xsi:type="ryz:Form" httpMethod="POST" text="Remove From Cart" presentationelement="//@packages.8/@views.2/@presentationelement.0"/>
-      <presentationelement xsi:type="ryz:PresentationForm" name="Remove From Cart" helperforsendingrequest="//@packages.8/@views.2/@htmlelements.0">
-        <presentationformelement xsi:type="ryz:Button" labelText="Remove From Cart"/>
-      </presentationelement>
+      <htmlelements xsi:type="ryz:Form" name="Cart_RemoveFromCartPage_Form1" httpMethod="POST" text="Remove From Cart"/>
     </views>
     <views xsi:type="ryz:View" name="CheckoutPage">
-      <htmlelements xsi:type="ryz:Form" httpMethod="POST" text="Checkout" presentationelement="//@packages.8/@views.3/@presentationelement.0"/>
-      <presentationelement xsi:type="ryz:PresentationForm" name="Checkout Form" helperforsendingrequest="//@packages.8/@views.3/@htmlelements.0">
-        <presentationformelement xsi:type="ryz:Button" labelText="Checkout"/>
-      </presentationelement>
+      <htmlelements xsi:type="ryz:Form" name="Cart_CheckoutPage_Form1" httpMethod="POST" text="Checkout"/>
     </views>
   </packages>
 </ryz:Project>

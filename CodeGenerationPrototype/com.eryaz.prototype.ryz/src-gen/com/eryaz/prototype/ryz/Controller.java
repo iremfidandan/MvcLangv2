@@ -25,6 +25,10 @@ public interface Controller extends MainComponent {
 	 * Returns the value of the '<em><b>Actionmethods</b></em>' containment reference list.
 	 * The list contents are of type {@link com.eryaz.prototype.ryz.ActionMethod}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Actionmethods</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Actionmethods</em>' containment reference list.
 	 * @see com.eryaz.prototype.ryz.RyzPackage#getController_Actionmethods()

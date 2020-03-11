@@ -66,7 +66,6 @@ public class ControllerPackageImpl extends ComponentPackageImpl implements Contr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EList<Controller> getControllers() {
 		if (controllers == null) {
 			controllers = new EObjectContainmentEList<Controller>(Controller.class, this,

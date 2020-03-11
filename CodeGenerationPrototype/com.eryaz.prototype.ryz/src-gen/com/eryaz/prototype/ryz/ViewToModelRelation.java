@@ -27,6 +27,10 @@ public interface ViewToModelRelation extends MainComponentRelation {
 	/**
 	 * Returns the value of the '<em><b>Abstractview</b></em>' reference.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Abstractview</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Abstractview</em>' reference.
 	 * @see #setAbstractview(AbstractView)
@@ -49,6 +53,10 @@ public interface ViewToModelRelation extends MainComponentRelation {
 	/**
 	 * Returns the value of the '<em><b>Model</b></em>' reference.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Model</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Model</em>' reference.
 	 * @see #setModel(Model)
@@ -72,6 +80,10 @@ public interface ViewToModelRelation extends MainComponentRelation {
 	 * Returns the value of the '<em><b>Modelcardinality</b></em>' attribute.
 	 * The literals are from the enumeration {@link com.eryaz.prototype.ryz.ModelCardinality}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Modelcardinality</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Modelcardinality</em>' attribute.
 	 * @see com.eryaz.prototype.ryz.ModelCardinality
@@ -97,6 +109,10 @@ public interface ViewToModelRelation extends MainComponentRelation {
 	 * Returns the value of the '<em><b>Properties</b></em>' reference list.
 	 * The list contents are of type {@link com.eryaz.prototype.ryz.Property}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Properties</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Properties</em>' reference list.
 	 * @see com.eryaz.prototype.ryz.RyzPackage#getViewToModelRelation_Properties()

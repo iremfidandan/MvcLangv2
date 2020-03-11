@@ -154,9 +154,6 @@ public class ProjectItemProvider extends NamedElementItemProvider {
 
 		newChildDescriptors.add(createChildParameter(RyzPackage.Literals.PROJECT__PACKAGES,
 				RyzFactory.eINSTANCE.createControllerPackage()));
-
-		newChildDescriptors.add(createChildParameter(RyzPackage.Literals.PROJECT__PACKAGES,
-				RyzFactory.eINSTANCE.createUseCaseActorPackage()));
 	}
 
 }

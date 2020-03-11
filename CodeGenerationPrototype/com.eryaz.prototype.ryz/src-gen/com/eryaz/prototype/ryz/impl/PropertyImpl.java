@@ -9,7 +9,6 @@ import com.eryaz.prototype.ryz.RyzPackage;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -91,7 +90,6 @@ public class PropertyImpl extends NamedElementImpl implements Property {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public ModelPropertyType getType() {
 		return type;
 	}
@@ -101,7 +99,6 @@ public class PropertyImpl extends NamedElementImpl implements Property {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setType(ModelPropertyType newType) {
 		ModelPropertyType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;
@@ -114,7 +111,6 @@ public class PropertyImpl extends NamedElementImpl implements Property {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public boolean is›sRequired() {
 		return isRequired;
 	}
@@ -124,7 +120,6 @@ public class PropertyImpl extends NamedElementImpl implements Property {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void set›sRequired(boolean new›sRequired) {
 		boolean old›sRequired = isRequired;
 		isRequired = new›sRequired;

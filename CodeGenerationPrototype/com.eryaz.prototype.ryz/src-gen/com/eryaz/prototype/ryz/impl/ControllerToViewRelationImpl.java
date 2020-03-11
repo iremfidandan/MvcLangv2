@@ -6,7 +6,6 @@ import com.eryaz.prototype.ryz.AbstractView;
 import com.eryaz.prototype.ryz.ActionMethod;
 import com.eryaz.prototype.ryz.ControllerToViewRelation;
 import com.eryaz.prototype.ryz.RyzPackage;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -73,7 +72,6 @@ public class ControllerToViewRelationImpl extends MainComponentRelationImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public ActionMethod getActionmethod() {
 		if (actionmethod != null && actionmethod.eIsProxy()) {
 			InternalEObject oldActionmethod = (InternalEObject) actionmethod;
@@ -101,7 +99,6 @@ public class ControllerToViewRelationImpl extends MainComponentRelationImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setActionmethod(ActionMethod newActionmethod) {
 		ActionMethod oldActionmethod = actionmethod;
 		actionmethod = newActionmethod;
@@ -115,7 +112,6 @@ public class ControllerToViewRelationImpl extends MainComponentRelationImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public AbstractView getReturns() {
 		if (returns != null && returns.eIsProxy()) {
 			InternalEObject oldReturns = (InternalEObject) returns;
@@ -143,7 +139,6 @@ public class ControllerToViewRelationImpl extends MainComponentRelationImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setReturns(AbstractView newReturns) {
 		AbstractView oldReturns = returns;
 		returns = newReturns;

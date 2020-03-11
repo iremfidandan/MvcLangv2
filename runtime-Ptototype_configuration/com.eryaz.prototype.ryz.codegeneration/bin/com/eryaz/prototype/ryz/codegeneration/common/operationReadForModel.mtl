@@ -1,13 +1,14 @@
 [comment encoding = UTF-8 /]
 [module operationReadForModel('http://www.eryaz.com/prototype/ryz')]
 
-[import com::eryaz::prototype::ryz::codegeneration::common::enumtypes::httpMethodTypeForActionMethod /]
-[import com::eryaz::prototype::ryz::codegeneration::common::inferences::actionMethodLambdaExpInference /]
+[import com::eryaz::prototype::ryz::codegeneration::common::httpMethodTypeForActionMethod /]
+[import com::eryaz::prototype::ryz::codegeneration::common::actionMethodLambdaExpInference /]
 
-[template public generateOperationReadForModel(aControllerToModelRelation : ControllerToModelRelation) { aModelName : String = aControllerToModelRelation.model.name; }]
-[if (aControllerToModelRelation.modelCardinality = ModelCardinality::ONE)]
-[aModelName/] [aModelName/] = _uow.[aModelName/]Repository.Get([aControllerToModelRelation.generateActionMethodLambdaExprInference()/]);
-[else]
-List<[aModelName/]> [aModelName/] = _uow.[aModelName/]Repository.GetAll([aControllerToModelRelation.generateActionMethodLambdaExprInference()/]).ToList();
-[/if]
+[template public generateOperationReadForModel(aControllerToModelRelation : ControllerToModelRelation) ? (aControllerToModelRelation.modelCardinality = ModelCardinality::ONE)]
+[aControllerToModelRelation.model.name/] [aControllerToModelRelation.model.name/] = _uow.[aControllerToModelRelation.model.name/]Repository.Get([generateActionMethodLambdaExprInference(aControllerToModelRelation)/]);
+[/template]
+
+
+[template public generateOperationReadForModel(aControllerToModelRelation : ControllerToModelRelation) ? (aControllerToModelRelation.modelCardinality = ModelCardinality::ALL)]
+List<[aControllerToModelRelation.model.name/]> [aControllerToModelRelation.model.name/] = _uow.[aControllerToModelRelation.model.name/]Repository.GetAll([generateActionMethodLambdaExprInference(aControllerToModelRelation)/]).ToList();
 [/template]

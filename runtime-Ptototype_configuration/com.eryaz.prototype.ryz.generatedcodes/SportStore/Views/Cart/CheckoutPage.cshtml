@@ -8,10 +8,13 @@
 
 
 
-@using(@Html.BeginForm("Checkout", "Cart", new{CartLineId = Model.Select(m => m.CartLineId)}, FormMethod.Post))
+
+@using(@Html.BeginForm("Checkout", "Cart", new{}, FormMethod.Post))
 {
 	@Html.AntiForgeryToken()
-	<input type="submit" name="Checkout" value="Checkout"><br>
+    for(int i = 0; i < Model.Count(); i++){
+		@Html.HiddenFor(m => m.ElementAt(i).CartLineId)
+    }
+	<input type="submit" name="Checkout" value="Checkout">
 }
-
 

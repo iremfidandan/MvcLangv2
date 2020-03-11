@@ -2,7 +2,6 @@
 <description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:validation="http://www.eclipse.org/sirius/description/validation/1.1.0" name="ryz" version="12.0.0.2017041100">
   <ownedViewpoints name="projects" modelFileExtension="ryz">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Projects Diagram" initialisation="true" domainClass="ryz::Project" enablePopupBars="true">
-      <metamodel href="http://www.eryaz.com/prototype/ryz#/"/>
       <validationSet name="MVCValidations">
         <ownedRules xsi:type="validation:ViewValidationRule" name="Model_Name_Must_Be_Unique" label="Model_Name_Must_Be_Unique" level="ERROR" message="aql:'Model Name is not unique'" targets="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@defaultLayer/@containerMappings[name='ModelPackageContainer']/@subContainerMappings[name='ModelsContainer']">
           <audits auditExpression="aql:self.target.oclAsType(ryz::Model).eContainer(ryz::Project).packages->filter(ryz::ModelPackage).models->excluding(self.target.oclAsType(ryz::Model)).name->excludes(self.target.oclAsType(ryz::Model).name)"/>
@@ -73,27 +72,6 @@
         </ownedRules>
         <ownedRules xsi:type="validation:ViewValidationRule" name="AbstractModel_Must_Be_Inherited_By_At_Least_One_Concrete_Model" message="aql:'It is not inherited by concrete model'" targets="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@defaultLayer/@containerMappings[name='ModelPackageContainer']/@subContainerMappings[name='ModelsContainer']">
           <audits auditExpression="aql:self.target.oclAsType(ryz::Model).isAbstract implies self.target.oclAsType(ryz::Model).eInverse('inherits')->exists(myModel | not myModel.isAbstract)"/>
-        </ownedRules>
-        <ownedRules xsi:type="validation:ViewValidationRule" name="UseCase_Must_Be_Covered_ActionMethod" level="ERROR" message="aql:self.target.oclAsType(ryz::UseCase).name + ' Use Case is not covered in any ActionMethod'" targets="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@additionalLayers[name='UseCaseLayer']/@containerMappings[name='UseCaseLayer_UseCasePackageContainer']/@subNodeMappings[name='UseCaseLayer_UseCaseNode']">
-          <audits auditExpression="aql:not self.target.oclAsType(ryz::UseCase).actionmethod->isEmpty()"/>
-        </ownedRules>
-        <ownedRules xsi:type="validation:ViewValidationRule" name="UseCase_Must_Be_Covered_HelperForSendingRequest" level="ERROR" message="aql:self.target.oclAsType(ryz::UseCase).name + ' Use Case is not covered in any ActionLink/Form message.'" targets="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@additionalLayers[name='UseCaseLayer']/@containerMappings[name='UseCaseLayer_UseCasePackageContainer']/@subNodeMappings[name='UseCaseLayer_UseCaseNode']">
-          <audits auditExpression="aql:not self.target.oclAsType(ryz::UseCase).helperforsendingrequest->isEmpty()"/>
-        </ownedRules>
-        <ownedRules xsi:type="validation:ViewValidationRule" name="UseCase_ViewMessage_And_ControllerMessage_Must_Be_Compatible" level="ERROR" message="aql:self.target.oclAsType(ryz::UseCase).name + ' Use Case that is used by ' + self.target.oclAsType(ryz::UseCase).helperforsendingrequest.eContainer(ryz::AbstractView).name + 's ' + self.target.oclAsType(ryz::UseCase).helperforsendingrequest.name + ' action-link/form is not used by the action method that ' + self.target.oclAsType(ryz::UseCase).helperforsendingrequest.name + ' is connected with.'" targets="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@additionalLayers[name='UseCaseLayer']/@containerMappings[name='UseCaseLayer_UseCasePackageContainer']/@subNodeMappings[name='UseCaseLayer_UseCaseNode']">
-          <audits auditExpression="aql:(self.target.oclAsType(ryz::UseCase).helperforsendingrequest->size() = 1 and self.target.oclAsType(ryz::UseCase).actionmethod->size() = 1) implies (self.target.oclAsType(ryz::UseCase).eContainer(ryz::Project).packages->filter(ryz::MvcPackage).maincomponentrelations->filter(ryz::ViewToControllerRelation)->one(e | self.target.oclAsType(ryz::UseCase).helperforsendingrequest->includes(e.helperforsendingrequest) and self.target.oclAsType(ryz::UseCase).actionmethod->includes(e.actionmethod)))"/>
-        </ownedRules>
-        <ownedRules xsi:type="validation:ViewValidationRule" name="UseCase_Must_Not_Be_Covered_More_Than_One_ActionMethod" level="ERROR" message="aql:'Use case ' +self.target.oclAsType(ryz::UseCase).name + ' is covered in more than one ActionMethod'" targets="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@additionalLayers[name='UseCaseLayer']/@containerMappings[name='UseCaseLayer_UseCasePackageContainer']/@subNodeMappings[name='UseCaseLayer_UseCaseNode']">
-          <audits auditExpression="aql:self.target.oclAsType(ryz::UseCase).actionmethod->size() &lt;= 1"/>
-        </ownedRules>
-        <ownedRules xsi:type="validation:ViewValidationRule" name="UseCase_Must_Not_Be_Covered_More_Than_One_HelperForSendingRequest" level="ERROR" message="aql:'Use case ' +self.target.oclAsType(ryz::UseCase).name + ' is covered by more than one ActionLink/Form'" targets="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@additionalLayers[name='UseCaseLayer']/@containerMappings[name='UseCaseLayer_UseCasePackageContainer']/@subNodeMappings[name='UseCaseLayer_UseCaseNode']">
-          <audits auditExpression="aql:self.target.oclAsType(ryz::UseCase).helperforsendingrequest->size() &lt;= 1"/>
-        </ownedRules>
-        <ownedRules xsi:type="validation:ViewValidationRule" name="Form_Must_Be_ConnectedWith_PresentationForm" level="ERROR" message="aql:self.target.oclAsType(ryz::Form).text + ' is not connected with any UI Form'" targets="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@defaultLayer/@containerMappings[name='ViewPackageContainer']/@subContainerMappings[name='LayoutContainer']/@subContainerMappings[name='LayoutContainer_FormContainer'] //@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@defaultLayer/@containerMappings[name='ViewPackageContainer']/@subContainerMappings[name='PartialContainer']/@subContainerMappings[name='PartialContainer_FormContainer'] //@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@defaultLayer/@containerMappings[name='ViewPackageContainer']/@subContainerMappings[name='ViewContainer']/@subContainerMappings[name='ViewContainer_FormContainer']">
-          <audits auditExpression="aql:not self.target.oclAsType(ryz::Form).presentationelement->isEmpty()"/>
-        </ownedRules>
-        <ownedRules xsi:type="validation:ViewValidationRule" name="ActionLink_Must_Be_ConnectedWith_PresentationLink" level="ERROR" message="aql:self.target.oclAsType(ryz::ActionLink).text + ' is not connected with any UI Link'" targets="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@defaultLayer/@containerMappings[name='ViewPackageContainer']/@subContainerMappings[name='LayoutContainer']/@subContainerMappings[name='LayoutContainer_ActionLinkContainer'] //@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@defaultLayer/@containerMappings[name='ViewPackageContainer']/@subContainerMappings[name='PartialContainer']/@subContainerMappings[name='PartialContainer_ActionLinkContainer'] //@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@defaultLayer/@containerMappings[name='ViewPackageContainer']/@subContainerMappings[name='ViewContainer']/@subContainerMappings[name='ViewContainer_ActionLinkContainer']">
-          <audits auditExpression="aql:not self.target.oclAsType(ryz::ActionLink).presentationelement->isEmpty()"/>
         </ownedRules>
       </validationSet>
       <layout xsi:type="description_1:CompositeLayout" padding="200"/>
@@ -401,7 +379,7 @@
             <elementView name="elementView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
-                <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="aql:'Model ' + ' Edit'">
+                <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="aql:'Model ' + self.name + ' Edit'">
                   <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
                     <initialOperation/>
                   </buttons>
@@ -516,7 +494,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="InheritsRelationBasedEdgeCreation" label="Inheritance" edgeMappings="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@defaultLayer/@edgeMappings[name='InheritsRelationBasedEdge']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="InheritsRelationBasedEdgeCreation" label="Inheritance" precondition="aql:preTarget.isAbstract" edgeMappings="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@defaultLayer/@edgeMappings[name='InheritsRelationBasedEdge']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -977,16 +955,6 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool_1:GroupMenu" name="ViewPresentationDiagramOperations" label="View Presentation Diagram" precondition="aql:self.oclIsKindOf(ryz::AbstractView)" locationURI="menu:root">
-            <itemDescriptions xsi:type="tool_1:OperationAction" name="CreateNewViewPresentationDiagram" label="Create New View Presentation Diagram">
-              <view name="views"/>
-              <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self">
-                  <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='ViewPresentation%20Diagram']"/>
-                </firstModelOperations>
-              </initialOperation>
-            </itemDescriptions>
-          </ownedTools>
         </toolSections>
         <toolSections name="ControllerToolSet" label="Controller Tools">
           <ownedTools xsi:type="tool:ContainerCreationDescription" name="ControllerPackageCreation" label="Controller Package" containerMappings="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@defaultLayer/@containerMappings[name='ControllerPackageContainer']">
@@ -1226,69 +1194,6 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
-        <toolSections name="UseCase Tools">
-          <ownedTools xsi:type="tool_1:GroupMenu" name="UseCaseDiagramOperations" precondition="aql:self.oclIsTypeOf(ryz::Project)" locationURI="menu:root">
-            <itemDescriptions xsi:type="tool_1:OperationAction" name="CreateNewUseCaseDiagram" label="Create New Use Case Diagram">
-              <view name="views"/>
-              <initialOperation>
-                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:views">
-                  <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:views.target.oclAsType(ryz::Project)">
-                    <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ryz::UseCaseActorPackage" referenceName="packages">
-                      <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'UseCaseDiagram' + self.eInverse(ryz::Project).packages->filter(ryz::UseCaseActorPackage)->size()"/>
-                      <subModelOperations xsi:type="tool:Navigation" createIfNotExistent="true" diagramDescription="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']"/>
-                    </subModelOperations>
-                  </subModelOperations>
-                </firstModelOperations>
-              </initialOperation>
-            </itemDescriptions>
-          </ownedTools>
-          <ownedTools xsi:type="tool_1:SelectionWizardDescription" name="SetUseCaseToView" label="Connect View Message To UseCase" precondition="aql:self.oclIsKindOf(ryz::HelperForSendingRequest)" candidatesExpression="aql:self.eContainer(ryz::Project).packages->filter(ryz::UseCaseActorPackage).usecasepackages->union(self.eContainer(ryz::Project).packages->filter(ryz::UseCaseActorPackage).usecasepackages.usecases)" multiple="true" tree="true" rootExpression="aql:self.eContainer(ryz::Project).packages->filter(ryz::UseCaseActorPackage).usecasepackages" childrenExpression="aql:self.oclAsType(ryz::UseCasePackage).usecases">
-            <element name="element"/>
-            <containerView name="containerView"/>
-            <container name="container"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.oclAsType(ryz::HelperForSendingRequest)">
-                <subModelOperations xsi:type="tool_1:Unset" featureName="usecase" elementExpression="feature:usecase"/>
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="usecase" valueExpression="var:element"/>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool_1:SelectionWizardDescription" name="SetUseCaseToController" label="Connect Controller Message To Use Case" precondition="aql:self.oclIsKindOf(ryz::ActionMethod)" candidatesExpression="aql:self.eContainer(ryz::Project).packages->filter(ryz::UseCaseActorPackage).usecasepackages->union(self.eContainer(ryz::Project).packages->filter(ryz::UseCaseActorPackage).usecasepackages.usecases)" multiple="true" tree="true" rootExpression="aql:self.eContainer(ryz::Project).packages->filter(ryz::UseCaseActorPackage).usecasepackages" childrenExpression="aql:self.oclAsType(ryz::UseCasePackage).usecases">
-            <element name="element"/>
-            <containerView name="containerView"/>
-            <container name="container"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.oclAsType(ryz::ActionMethod)">
-                <subModelOperations xsi:type="tool_1:Unset" featureName="usecase" elementExpression="feature:usecase"/>
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="usecase" valueExpression="var:element"/>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-        </toolSections>
-        <toolSections name="PresentationViewTools" label="Presentation View Tools">
-          <ownedTools xsi:type="tool_1:SelectionWizardDescription" name="SetPresentationForm" label="Connect Form To UI Form" precondition="aql:self.oclIsKindOf(ryz::Form)" candidatesExpression="aql:self.eInverse(ryz::AbstractView).presentationelement->filter(ryz::PresentationForm)">
-            <element name="element"/>
-            <containerView name="containerView"/>
-            <container name="container"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.oclAsType(ryz::Form)">
-                <subModelOperations xsi:type="tool_1:Unset" featureName="presentationelement" elementExpression="feature:presentationelement"/>
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="presentationelement" valueExpression="var:element"/>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool_1:SelectionWizardDescription" name="SetPresentationActionLink" label="Connect ActionLink To UI Link" precondition="aql:self.oclIsKindOf(ryz::ActionLink)" candidatesExpression="aql:self.eInverse(ryz::AbstractView).presentationelement->filter(ryz::Link)">
-            <element name="element"/>
-            <containerView name="containerView"/>
-            <container name="container"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:self.oclAsType(ryz::ActionLink)">
-                <subModelOperations xsi:type="tool_1:Unset" featureName="presentationelement" elementExpression="feature:presentationelement"/>
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="presentationelement" valueExpression="var:element"/>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-        </toolSections>
         <customization>
           <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql: (not self.oclAsType(ryz::ModelAssociation).isRequired) and (self.oclAsType(ryz::ModelAssociation).cardinality = ryz::Cardinality::MANY_TO_MANY)">
             <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@defaultLayer/@edgeMappings[name='ModelAssociationsElementBasedEdge']/@style/@beginLabelStyleDescription" attributeName="labelExpression" value="aql:'[0..*]\n' + self.oclAsType(ryz::ModelAssociation).principalRoleName"/>
@@ -1316,28 +1221,8 @@
           </vsmElementCustomizations>
         </customization>
       </defaultLayer>
-      <additionalLayers name="UseCaseLayer" label="Use Case">
-        <containerMappings name="UseCaseLayer_UseCasePackageContainer" semanticCandidatesExpression="aql:self.packages->filter(ryz::UseCaseActorPackage).usecasepackages" domainClass="ryz::UseCasePackage" childrenPresentation="List">
-          <subNodeMappings name="UseCaseLayer_UseCaseNode" semanticCandidatesExpression="feature:usecases" domainClass="ryz::UseCase">
-            <style xsi:type="style:SquareDescription" labelSize="45" showIcon="false" labelPosition="node" resizeKind="NSEW">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelFormat>bold</labelFormat>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            </style>
-          </subNodeMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="45" showIcon="false">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelFormat>bold</labelFormat>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
-          </style>
-        </containerMappings>
-      </additionalLayers>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="MvcPackage Diagram" initialisation="true" domainClass="ryz::MvcPackage" enablePopupBars="true">
-      <metamodel href="http://www.eryaz.com/prototype/ryz#/"/>
       <layout xsi:type="description_1:CompositeLayout" padding="100"/>
       <defaultLayer name="Default">
         <edgeMappings name="ViewToControllerElementBasedEdge" semanticCandidatesExpression="aql:self.maincomponentrelations" sourceMapping="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='MvcPackage%20Diagram']/@defaultLayer/@containerMappings[name='Mvc_LayoutContainer']/@subContainerMappings[name='Mvc_LayoutContainer_ActionLinkContainer'] //@ownedViewpoints[name='projects']/@ownedRepresentations[name='MvcPackage%20Diagram']/@defaultLayer/@containerMappings[name='Mvc_LayoutContainer']/@subContainerMappings[name='Mvc_LayoutContainer_FormContainer'] //@ownedViewpoints[name='projects']/@ownedRepresentations[name='MvcPackage%20Diagram']/@defaultLayer/@containerMappings[name='Mvc_PartialContainer']/@subContainerMappings[name='Mvc_PartialContainer_ActionLinkContainer'] //@ownedViewpoints[name='projects']/@ownedRepresentations[name='MvcPackage%20Diagram']/@defaultLayer/@containerMappings[name='Mvc_PartialContainer']/@subContainerMappings[name='Mvc_PartialContainer_FormContainer'] //@ownedViewpoints[name='projects']/@ownedRepresentations[name='MvcPackage%20Diagram']/@defaultLayer/@containerMappings[name='Mvc_ViewContainer']/@subContainerMappings[name='Mvc_ViewContainer_ActionLinkContainer'] //@ownedViewpoints[name='projects']/@ownedRepresentations[name='MvcPackage%20Diagram']/@defaultLayer/@containerMappings[name='Mvc_ViewContainer']/@subContainerMappings[name='Mvc_ViewContainer_FormContainer']" targetMapping="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='MvcPackage%20Diagram']/@defaultLayer/@containerMappings[name='Mvc_ControllerContainer']/@subContainerMappings[name='Mvc_ActionMethodContainer']" targetFinderExpression="feature:actionmethod" sourceFinderExpression="feature:helperforsendingrequest" domainClass="ryz::ViewToControllerRelation" useDomainElement="true">
@@ -1376,14 +1261,6 @@
             <endLabelStyleDescription labelSize="12">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </endLabelStyleDescription>
-          </style>
-        </edgeMappings>
-        <edgeMappings name="FormElementToPropertyKeyElementBasedEdge" semanticCandidatesExpression="aql:self.maincomponentrelations" sourceMapping="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='MvcPackage%20Diagram']/@defaultLayer/@containerMappings[name='Mvc_LayoutContainer']/@subContainerMappings[name='Mvc_LayoutContainer_FormContainer'] //@ownedViewpoints[name='projects']/@ownedRepresentations[name='MvcPackage%20Diagram']/@defaultLayer/@containerMappings[name='Mvc_PartialContainer']/@subContainerMappings[name='Mvc_PartialContainer_FormContainer'] //@ownedViewpoints[name='projects']/@ownedRepresentations[name='MvcPackage%20Diagram']/@defaultLayer/@containerMappings[name='Mvc_ViewContainer']/@subContainerMappings[name='Mvc_ViewContainer_FormContainer']" targetMapping="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='MvcPackage%20Diagram']/@defaultLayer/@containerMappings[name='Mvc_ModelsContainer']" targetFinderExpression="feature:model" sourceFinderExpression="feature:helperforsendingrequest" domainClass="ryz::FormElementToPropertyKeyRelation" useDomainElement="true">
-          <style sizeComputationExpression="2" routingStyle="manhattan">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription labelSize="12" labelExpression="aql:'&lt;&lt;formmodel>>{'+self.presentationformelementtoproperty->collect(p | '[' + p.presentationformelement.labelText + ' = ' + if p.property->isEmpty() p.tablekey.name else p.property.name endif + ']')->sep(', ')+'}'">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
           </style>
         </edgeMappings>
         <edgeMappings name="Mvc_LayoutRelationBasedEdge" sourceMapping="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='MvcPackage%20Diagram']/@defaultLayer/@containerMappings[name='Mvc_ViewContainer']" targetMapping="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='MvcPackage%20Diagram']/@defaultLayer/@containerMappings[name='Mvc_LayoutContainer']" targetFinderExpression="feature:layout">
@@ -1648,20 +1525,6 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="FormToRelation_ElementBasedEdgeCreation" label="FormElement To Property/Key Edge" edgeMappings="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='MvcPackage%20Diagram']/@defaultLayer/@edgeMappings[name='FormElementToPropertyKeyElementBasedEdge']">
-            <sourceVariable name="source"/>
-            <targetVariable name="target"/>
-            <sourceViewVariable name="sourceView"/>
-            <targetViewVariable name="targetView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:sourceView.getParentDiagram().target.oclAsType(ryz::MvcPackage)">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ryz::FormElementToPropertyKeyRelation" referenceName="maincomponentrelations">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="helperforsendingrequest" valueExpression="var:source"/>
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="model" valueExpression="var:target"/>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
         </toolSections>
         <customization>
           <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclAsType(ryz::ControllerToModelRelation).modelCardinality = ryz::ModelCardinality::ONE">
@@ -1677,496 +1540,6 @@
             <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='MvcPackage%20Diagram']/@defaultLayer/@edgeMappings[name='ViewToModelElementBasedEdge']/@style/@endLabelStyleDescription" attributeName="labelExpression" value="aql:'*'"/>
           </vsmElementCustomizations>
         </customization>
-      </defaultLayer>
-    </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="UseCase Diagram" domainClass="ryz::UseCaseActorPackage" enablePopupBars="true">
-      <metamodel href="http://www.eryaz.com/prototype/ryz#/"/>
-      <defaultLayer name="Default">
-        <nodeMappings name="ActorNode" semanticCandidatesExpression="feature:actors" doubleClickDescription="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='ActorNodeEdition']" domainClass="ryz::Actor">
-          <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" sizeComputationExpression="10" resizeKind="NSEW" workspacePath="/com.eryaz.prototype.ryz.design/kisspng-use-case-diagram-symbol-computer-icons-actor-actor-5ac18860865fc3.1153830815226328005504.png">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-          </style>
-        </nodeMappings>
-        <edgeMappings name="ActorToUseCaseRelationBasedEdge" sourceMapping="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@nodeMappings[name='ActorNode']" targetMapping="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']/@subNodeMappings[name='UseCaseNode']" targetFinderExpression="feature:usecase">
-          <style sizeComputationExpression="2">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription labelSize="12">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
-          </style>
-        </edgeMappings>
-        <containerMappings name="UseCasePackageContainer" semanticCandidatesExpression="feature:usecasepackages" domainClass="ryz::UseCasePackage">
-          <subNodeMappings name="UseCaseNode" semanticCandidatesExpression="feature:usecases" doubleClickDescription="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='UseCaseNodeEdition']" domainClass="ryz::UseCase">
-            <style xsi:type="style:EllipseNodeDescription" borderSizeComputationExpression="2" labelSize="12" labelPosition="node" resizeKind="NSEW" horizontalDiameterComputationExpression="15" verticalDiameterComputationExpression="5">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-            </style>
-          </subNodeMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
-          </style>
-        </containerMappings>
-        <toolSections name="ActorTools" label="Actor Tools">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="ActorNodeCreation" label="Actor" nodeMappings="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@nodeMappings[name='ActorNode']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ryz::Actor" referenceName="actors">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'Actor' + container.actors->size()"/>
-                  <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Dialog">
-                    <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
-                      <initialOperation/>
-                    </buttons>
-                    <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
-                      <initialOperation/>
-                    </buttons>
-                    <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='ActorNodeCreation']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.1/@groups.0"/>
-                    <groups name="Default Group" labelExpression="Group" semanticCandidateExpression="var:self">
-                      <controls xsi:type="properties:TextDescription" name="NewActor_TextForName" labelExpression="aql:'Name'" valueExpression="aql:self.name">
-                        <initialOperation>
-                          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
-                          </firstModelOperations>
-                        </initialOperation>
-                      </controls>
-                    </groups>
-                  </subModelOperations>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ActorToUseCaseEdgeCreation" label="Actor To UseCase" edgeMappings="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@edgeMappings[name='ActorToUseCaseRelationBasedEdge']">
-            <sourceVariable name="source"/>
-            <targetVariable name="target"/>
-            <sourceViewVariable name="sourceView"/>
-            <targetViewVariable name="targetView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
-                <subModelOperations xsi:type="tool_1:SetValue" featureName="usecase" valueExpression="var:target"/>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="ActorNodeEdition" mappings="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@nodeMappings[name='ActorNode']">
-            <element name="element"/>
-            <elementView name="elementView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
-                <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Dialog">
-                  <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
-                    <initialOperation/>
-                  </buttons>
-                  <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
-                    <initialOperation/>
-                  </buttons>
-                  <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='ActorNodeEdition']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.0"/>
-                  <groups name="Default Group" labelExpression="Group" semanticCandidateExpression="var:self">
-                    <controls xsi:type="properties:TextDescription" name="EditActor_TextForName" labelExpression="Name" valueExpression="aql:self.name">
-                      <initialOperation>
-                        <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
-                          <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
-                        </firstModelOperations>
-                      </initialOperation>
-                    </controls>
-                  </groups>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-        </toolSections>
-        <toolSections name="UseCaseTools" label="Use Case Tools">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="UseCasePackageContainerCreation" label="UseCase Package" containerMappings="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ryz::UseCasePackage" referenceName="usecasepackages">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'UseCasePackage' + container.usecasepackages->size()"/>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="UseCaseNodeCreation" label="UseCase" nodeMappings="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']/@subNodeMappings[name='UseCaseNode']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ryz::UseCase" referenceName="usecases">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql:'UseCase' +container.usecases->size()"/>
-                  <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Dialog">
-                    <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
-                      <initialOperation/>
-                    </buttons>
-                    <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
-                      <initialOperation/>
-                    </buttons>
-                    <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='UseCaseNodeCreation']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.1/@groups.0"/>
-                    <groups name="Default Group" labelExpression="Group" semanticCandidateExpression="var:self">
-                      <controls xsi:type="properties:TextDescription" name="CreateNewUseCase_TextForName" labelExpression="Name" valueExpression="aql:self.name">
-                        <initialOperation>
-                          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
-                          </firstModelOperations>
-                        </initialOperation>
-                      </controls>
-                    </groups>
-                  </subModelOperations>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="UseCaseNodeEdition" mappings="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']/@subNodeMappings[name='UseCaseNode']">
-            <element name="element"/>
-            <elementView name="elementView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
-                <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Dialog">
-                  <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
-                    <initialOperation/>
-                  </buttons>
-                  <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
-                    <initialOperation/>
-                  </buttons>
-                  <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='UseCaseNodeEdition']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.0"/>
-                  <groups name="Default Group" labelExpression="Group" semanticCandidateExpression="var:self">
-                    <controls xsi:type="properties:TextDescription" name="EditUseCase_TextForName" labelExpression="Name" valueExpression="aql:self.name">
-                      <initialOperation>
-                        <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:self">
-                          <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
-                        </firstModelOperations>
-                      </initialOperation>
-                    </controls>
-                  </groups>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-        </toolSections>
-      </defaultLayer>
-    </ownedRepresentations>
-    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="ViewPresentation Diagram" initialisation="true" domainClass="ryz::AbstractView" enablePopupBars="true">
-      <metamodel href="http://www.eryaz.com/prototype/ryz#/"/>
-      <defaultLayer name="Default">
-        <containerMappings name="FormPresentationContainer" semanticCandidatesExpression="feature:presentationelement" domainClass="ryz::PresentationForm">
-          <subContainerMappings name="InputPresentationContainer" semanticCandidatesExpression="feature:presentationformelement" domainClass="ryz::Input">
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="25" showIcon="false" labelExpression="aql:'&lt;&lt;Input>>\n' + '{label = ' + self.labelText + ', type = ' + self.inputDataType.toString() + '\nreadonly  = ' + self.isReadOnly + ', hidden = ' + self.isHidden + '}'">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelFormat>bold</labelFormat>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
-              <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
-            </style>
-          </subContainerMappings>
-          <subContainerMappings name="ButtonPresentationContainer" semanticCandidatesExpression="feature:presentationformelement" domainClass="ryz::Button">
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="25" showIcon="false" labelExpression="aql:'&lt;&lt;Button>>\n' + '{label = ' + self.labelText + ', type = ' + self.buttonType.toString() + '}'">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelFormat>bold</labelFormat>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
-              <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
-            </style>
-          </subContainerMappings>
-          <subContainerMappings name="MultipleChoicePresentationContainer" semanticCandidatesExpression="feature:presentationformelement" domainClass="ryz::MultipleChoice" childrenPresentation="VerticalStack">
-            <subContainerMappings name="ChoicePresentationContainer" semanticCandidatesExpression="feature:choice" domainClass="ryz::Choice">
-              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="25" showIcon="false" labelExpression="aql:'&lt;&lt;Choice>>\n' + '{text = ' + self.text + ', value = ' + self.value + ', selected = ' + self.selected + '}'">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelFormat>bold</labelFormat>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_chocolate']"/>
-                <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
-              </style>
-            </subContainerMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="25" showIcon="false" labelExpression="aql:'&lt;&lt;MultipleChoice>>\n' + '{label = ' + self.labelText + ', type = ' + self.multipleChoiceType.toString() + ', multipleSelection = ' + self.multipleSelection + '}'">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelFormat>bold</labelFormat>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
-              <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
-            </style>
-          </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="25" showIcon="false" labelExpression="aql:'&lt;&lt;Form>> ' + self.name">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelFormat>bold</labelFormat>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
-            <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.1"/>
-          </style>
-        </containerMappings>
-        <containerMappings name="LinkPresentationContainer" semanticCandidatesExpression="feature:presentationelement" domainClass="ryz::Link">
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="25" showIcon="false" labelExpression="aql:'&lt;&lt;Link>>\n' + '{text = ' + self.text + '}'">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelFormat>bold</labelFormat>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
-            <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
-          </style>
-        </containerMappings>
-        <containerMappings name="TablePresentationContainer" semanticCandidatesExpression="feature:presentationelement" domainClass="ryz::Table">
-          <subContainerMappings name="HeaderPresentation" semanticCandidatesExpression="feature:header" domainClass="ryz::Header">
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="25" showIcon="false" labelExpression="aql:'&lt;&lt;Header>>' + self.name">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelFormat>bold</labelFormat>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
-              <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
-            </style>
-          </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="25" showIcon="false" labelExpression="aql:'&lt;&lt;Table>> ' + self.name">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelFormat>bold</labelFormat>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
-            <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.1"/>
-          </style>
-        </containerMappings>
-        <toolSections name="ViewPresentationFormTools" label="Form Tools">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="CreateNewFormPresentationContainer" label="Form" containerMappings="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='ViewPresentation%20Diagram']/@defaultLayer/@containerMappings[name='FormPresentationContainer']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ryz::PresentationForm" referenceName="presentationelement">
-                  <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Dialog">
-                    <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
-                      <initialOperation/>
-                    </buttons>
-                    <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
-                      <initialOperation/>
-                    </buttons>
-                    <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='ViewPresentation%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='CreateNewFormPresentationContainer']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
-                    <groups name="Default Group" labelExpression="Group" semanticCandidateExpression="var:self">
-                      <controls xsi:type="properties:TextDescription" name="NewPresentationForm_TextForName" labelExpression="aql:'Name'">
-                        <initialOperation>
-                          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
-                          </firstModelOperations>
-                        </initialOperation>
-                      </controls>
-                    </groups>
-                  </subModelOperations>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="ButtonPresentationContainerCreation" label="Button" containerMappings="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='ViewPresentation%20Diagram']/@defaultLayer/@containerMappings[name='FormPresentationContainer']/@subContainerMappings[name='ButtonPresentationContainer']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ryz::Button" referenceName="presentationformelement">
-                  <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Dialog">
-                    <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
-                      <initialOperation/>
-                    </buttons>
-                    <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
-                      <initialOperation/>
-                    </buttons>
-                    <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='ViewPresentation%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='ButtonPresentationContainerCreation']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
-                    <groups name="Default Group" labelExpression="Group" semanticCandidateExpression="var:self">
-                      <controls xsi:type="properties:TextDescription" name="NewButton_TextForLabel" labelExpression="aql:'Label'">
-                        <initialOperation>
-                          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="labelText" valueExpression="var:newValue"/>
-                          </firstModelOperations>
-                        </initialOperation>
-                      </controls>
-                      <controls xsi:type="properties:SelectDescription" name="NewButton_SelectForButtonType" labelExpression="aql:'Button Type'" valueExpression="aql:ryz::ButtonType.getEEnumLiteral(self.buttonType.toString())" candidatesExpression="aql:ryz::ButtonType.eLiterals" candidateDisplayExpression="aql:candidate.name">
-                        <initialOperation>
-                          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="buttonType" valueExpression="aql:newValue.instance"/>
-                          </firstModelOperations>
-                        </initialOperation>
-                      </controls>
-                    </groups>
-                  </subModelOperations>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="InputPresentationContainerCreation" label="Input" containerMappings="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='ViewPresentation%20Diagram']/@defaultLayer/@containerMappings[name='FormPresentationContainer']/@subContainerMappings[name='InputPresentationContainer']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ryz::Input" referenceName="presentationformelement">
-                  <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Dialog">
-                    <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
-                      <initialOperation/>
-                    </buttons>
-                    <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
-                      <initialOperation/>
-                    </buttons>
-                    <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='ViewPresentation%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='InputPresentationContainerCreation']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
-                    <groups name="Default Group" labelExpression="Group" semanticCandidateExpression="var:self">
-                      <controls xsi:type="properties:TextDescription" name="NewInput_TextForLabel" labelExpression="aql:'Label'">
-                        <initialOperation>
-                          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="labelText" valueExpression="var:newValue"/>
-                          </firstModelOperations>
-                        </initialOperation>
-                      </controls>
-                      <controls xsi:type="properties:SelectDescription" name="NewInput_SelectForInputDataType" labelExpression="aql:'Input Data Type'" valueExpression="aql:ryz::InputDataType.getEEnumLiteral(self.inputDataType.toString())" candidatesExpression="aql:ryz::InputDataType.eLiterals" candidateDisplayExpression="aql:candidate.name">
-                        <initialOperation>
-                          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="buttonType" valueExpression="aql:newValue.instance">
-                              <subModelOperations xsi:type="tool_1:SetValue" featureName="inputDataType" valueExpression="aql:newValue.instance"/>
-                            </subModelOperations>
-                          </firstModelOperations>
-                        </initialOperation>
-                      </controls>
-                      <controls xsi:type="properties:CheckboxDescription" name="NewInput_CheckForReadOnly" labelExpression="aql:'Is Read Only'">
-                        <initialOperation>
-                          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="isReadOnly" valueExpression="var:newValue"/>
-                          </firstModelOperations>
-                        </initialOperation>
-                      </controls>
-                      <controls xsi:type="properties:CheckboxDescription" name="NewInput_CheckForHidden" labelExpression="aql:'Is Hidden'">
-                        <initialOperation>
-                          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="isHidden" valueExpression="var:newValue"/>
-                          </firstModelOperations>
-                        </initialOperation>
-                      </controls>
-                    </groups>
-                  </subModelOperations>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="MultipleChoicePresentationContainerCreation" label="Multiple Choice" containerMappings="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='ViewPresentation%20Diagram']/@defaultLayer/@containerMappings[name='FormPresentationContainer']/@subContainerMappings[name='MultipleChoicePresentationContainer']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ryz::MultipleChoice" referenceName="presentationformelement">
-                  <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Dialog">
-                    <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
-                      <initialOperation/>
-                    </buttons>
-                    <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
-                      <initialOperation/>
-                    </buttons>
-                    <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='ViewPresentation%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='MultipleChoicePresentationContainerCreation']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
-                    <groups name="Default Group" labelExpression="Group" semanticCandidateExpression="var:self">
-                      <controls xsi:type="properties:TextDescription" name="NewMultipleChoice_TextForLabel" labelExpression="aql:'Label'">
-                        <initialOperation>
-                          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="labelText" valueExpression="var:newValue"/>
-                          </firstModelOperations>
-                        </initialOperation>
-                      </controls>
-                      <controls xsi:type="properties:SelectDescription" name="NewMultipleChoice_SelectForInputDataType" labelExpression="aql:'Input Data Type'" valueExpression="aql:ryz::MultipleChoiceType.getEEnumLiteral(self.multipleChoiceType.toString())" candidatesExpression="aql:ryz::MultipleChoiceType.eLiterals" candidateDisplayExpression="aql:candidate.name">
-                        <initialOperation>
-                          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="multipleChoiceType" valueExpression="aql:newValue.instance">
-                              <subModelOperations xsi:type="tool_1:SetValue" featureName="inputDataType" valueExpression="aql:newValue.instance"/>
-                            </subModelOperations>
-                          </firstModelOperations>
-                        </initialOperation>
-                      </controls>
-                      <controls xsi:type="properties:CheckboxDescription" name="NewMultipleChoice_MultipleChoice" labelExpression="aql:'Enable Mulitple Choice'">
-                        <initialOperation>
-                          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="multipleSelection" valueExpression="var:newValue"/>
-                          </firstModelOperations>
-                        </initialOperation>
-                      </controls>
-                    </groups>
-                  </subModelOperations>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="ChoicePresentationContainerCreation" label="Choice" containerMappings="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='ViewPresentation%20Diagram']/@defaultLayer/@containerMappings[name='FormPresentationContainer']/@subContainerMappings[name='MultipleChoicePresentationContainer']/@subContainerMappings[name='ChoicePresentationContainer']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ryz::Choice" referenceName="choice">
-                  <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Dialog">
-                    <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
-                      <initialOperation/>
-                    </buttons>
-                    <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
-                      <initialOperation/>
-                    </buttons>
-                    <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='ViewPresentation%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='ChoicePresentationContainerCreation']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
-                    <groups name="Default Group" labelExpression="Group" semanticCandidateExpression="var:self">
-                      <controls xsi:type="properties:TextDescription" name="NewChoice_TextForText" labelExpression="aql:'Text'">
-                        <initialOperation>
-                          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="text" valueExpression="var:newValue"/>
-                          </firstModelOperations>
-                        </initialOperation>
-                      </controls>
-                      <controls xsi:type="properties:TextDescription" name="NewChoice_TextForValue" labelExpression="aql:'Value'">
-                        <initialOperation>
-                          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="value" valueExpression="var:newValue"/>
-                          </firstModelOperations>
-                        </initialOperation>
-                      </controls>
-                      <controls xsi:type="properties:CheckboxDescription" name="NewChoice_EnableChecked" labelExpression="aql:'Selected'">
-                        <initialOperation>
-                          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="selected" valueExpression="var:newValue"/>
-                          </firstModelOperations>
-                        </initialOperation>
-                      </controls>
-                    </groups>
-                  </subModelOperations>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-        </toolSections>
-        <toolSections name="Link Tools">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="CreateNewLinkPresentationContainer" label="Link" containerMappings="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='ViewPresentation%20Diagram']/@defaultLayer/@containerMappings[name='LinkPresentationContainer']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="ryz::Link" referenceName="presentationelement">
-                  <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Dialog">
-                    <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
-                      <initialOperation/>
-                    </buttons>
-                    <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
-                      <initialOperation/>
-                    </buttons>
-                    <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='projects']/@ownedRepresentations[name='ViewPresentation%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='CreateNewLinkPresentationContainer']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
-                    <groups name="Default Group" labelExpression="Group" semanticCandidateExpression="var:self">
-                      <controls xsi:type="properties:TextDescription" name="NewLink_TextForText" labelExpression="aql:'Text'">
-                        <initialOperation>
-                          <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
-                            <subModelOperations xsi:type="tool_1:SetValue" featureName="text" valueExpression="var:newValue"/>
-                          </firstModelOperations>
-                        </initialOperation>
-                      </controls>
-                    </groups>
-                  </subModelOperations>
-                </subModelOperations>
-                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:instance">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="feature:text"/>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-        </toolSections>
       </defaultLayer>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="com.eryaz.prototype.ryz.design.Services"/>

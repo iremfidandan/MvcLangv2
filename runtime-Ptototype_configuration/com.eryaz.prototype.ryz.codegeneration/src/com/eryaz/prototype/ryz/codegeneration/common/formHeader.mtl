@@ -1,29 +1,25 @@
 [comment encoding = UTF-8 /]
 [module formHeader('http://www.eryaz.com/prototype/ryz')]
 
-[import com::eryaz::prototype::ryz::codegeneration::common::enumtypes::httpMethodTypeForRegularHttp /]
-[import com::eryaz::prototype::ryz::codegeneration::common::enumtypes::httpMethodTypeForAjax /]
+[import com::eryaz::prototype::ryz::codegeneration::common::httpMethodTypeForRegularHttp /]
+[import com::eryaz::prototype::ryz::codegeneration::common::httpMethodTypeForAjax /]
 [import com::eryaz::prototype::ryz::codegeneration::common::controllerNameWithoutControllerSuffix /]
-[import com::eryaz::prototype::ryz::codegeneration::common::mvcRelations /]
-[import com::eryaz::prototype::ryz::codegeneration::common::inferences::helperForSendingRequestRouteValueInference /]
 
 [template public generateFormHeader(aForm : Form, anActionMethod : ActionMethod) ? (aForm.requestType = RequestType::REGULAR_HTTP)]
-@using(@Html.BeginForm("[anActionMethod.name/]", "[generateControllerNameWithoutControllerSuffix(anActionMethod.eContainer(Controller))/]", new{[aForm.getViewToControllerRelation().generateHelperForSendingRequestRouteValueInference()/]}, [aForm.httpMethod.generateHttpMethodTypeForRegularHttp()/]))
+[comment Istek gonderilen ActionMethod parametre alýyorsa hangi parametreyi gondereceðimizi nasýl bileceðiz?/]
+[comment Simdilik null gonderdim/]
+@using(@Html.BeginForm("[anActionMethod.name/]", "[generateControllerNameWithoutControllerSuffix(anActionMethod.eContainer(Controller))/]", new{}, [aForm.httpMethod.generateHttpMethodTypeForRegularHttp()/]))
 [/template]
 
 [template public generateFormHeader(aForm : Form, anActionMethod : ActionMethod) ? (aForm.requestType = RequestType::AJAX)]
-<div id="update-[aForm.text.substituteAll(' ', '')/]">
-</div>
-@using(@Ajax.BeginForm("[anActionMethod.name/]", "[generateControllerNameWithoutControllerSuffix(anActionMethod.eContainer(Controller))/]", new{[aForm.getViewToControllerRelation().generateHelperForSendingRequestRouteValueInference()/]}, new AjaxOptions
+[comment Istek gonderilen ActionMethod parametre alýyorsa hangi parametreyi gondereceðimizi nasýl bileceðiz?/]
+[comment Simdilik null gonderdim/]
+@using(@Ajax.BeginForm("[anActionMethod.name/]", "[generateControllerNameWithoutControllerSuffix(anActionMethod.eContainer(Controller))/]", new{}, new AjaxOptions
 	{
-		UpdateTargetId = "update-[aForm.text.substituteAll(' ', '')/]",
+		UpdateTargetId = "",
 		InsertionMode = InsertionMode.Replace,
-		HttpMethod = "[aForm.httpMethod.generateHttpMethodTypeForAjax()/]"
+		HttpMethod = "[aForm.httpMethod.generateHttpMethodTypeForAjax()/]",
+		OnSuccess = ""
 	}
 ))
 [/template]
-
-
-[query private getViewToControllerRelation(aForm : Form) : ViewToControllerRelation = 
-aForm.eContainer(Project).getViewToControllerRelationsInProject()->any(e | e.helperforsendingrequest = aForm)
-/]

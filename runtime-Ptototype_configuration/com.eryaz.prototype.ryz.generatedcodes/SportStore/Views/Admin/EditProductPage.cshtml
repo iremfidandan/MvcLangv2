@@ -3,32 +3,35 @@
 	Layout = null;
 }
 
-@model IEnumerable<SportStore.Models.Product>
+@model SportStore.ViewModels.ProductViewModel
 
 
 
-@Html.Action("GetEditProductForm", "Admin", new{ProductId = Model.Select(m => m.ProductId).FirstOrDefault()})
 
-<div id="update-SelectEditedProduct">
-</div>
-@using(@Ajax.BeginForm("GetEditProductForm", "Admin", new{ProductId = Model.Select(m => m.ProductId).FirstOrDefault()}, new AjaxOptions
-	{
-		UpdateTargetId = "update-SelectEditedProduct",
-		InsertionMode = InsertionMode.Replace,
-		HttpMethod = "GET"
-	}
-))
+
+@using(@Html.BeginForm("EditProduct", "Admin", new{}, FormMethod.Post))
 {
 	@Html.AntiForgeryToken()
-	<label for="Edited Product">Edited Product</label>
-	<select id="Edited Product" name="Edited Product">
-		@foreach(var item in Model)
-	    {
-			<option value="@item.ProductId">@item.ProductId</option>
-	    }
-	</select>
-
-	<input type="submit" name="Select Product" value="Select Product"><br>
+	@Html.HiddenFor(m => m.ProductId)
+	@Html.DisplayNameFor(model => model.Name) <br />
+	@Html.EditorFor(model => model.Name)  <br />
+	@Html.ValidationMessageFor(model => model.Name) <br />
+	
+	@Html.DisplayNameFor(model => model.Category) <br />
+	@Html.EditorFor(model => model.Category)  <br />
+	@Html.ValidationMessageFor(model => model.Category) <br />
+	
+	@Html.DisplayNameFor(model => model.Description) <br />
+	@Html.EditorFor(model => model.Description)  <br />
+	@Html.ValidationMessageFor(model => model.Description) <br />
+	
+	@Html.DisplayNameFor(model => model.Price) <br />
+	@Html.EditorFor(model => model.Price)  <br />
+	@Html.ValidationMessageFor(model => model.Price) <br />
+	@Html.DisplayNameFor(model => model.CartLines) <br />
+	@Html.ListBoxFor(model => model.CartLines_CartLineId, Model.CartLines)<br />
+	
+	
+	<input type="submit" name="EditaProduct" value="Edit a Product">
 }
-
 

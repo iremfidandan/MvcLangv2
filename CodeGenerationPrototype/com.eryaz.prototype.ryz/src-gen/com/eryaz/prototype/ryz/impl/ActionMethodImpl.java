@@ -7,22 +7,20 @@ import com.eryaz.prototype.ryz.ActionMethodReturnType;
 import com.eryaz.prototype.ryz.HttpMethod;
 import com.eryaz.prototype.ryz.Parameter;
 import com.eryaz.prototype.ryz.RyzPackage;
-import com.eryaz.prototype.ryz.UseCase;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -36,7 +34,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.eryaz.prototype.ryz.impl.ActionMethodImpl#getHttpMethod <em>Http Method</em>}</li>
  *   <li>{@link com.eryaz.prototype.ryz.impl.ActionMethodImpl#getParameters <em>Parameters</em>}</li>
  *   <li>{@link com.eryaz.prototype.ryz.impl.ActionMethodImpl#getReturns <em>Returns</em>}</li>
- *   <li>{@link com.eryaz.prototype.ryz.impl.ActionMethodImpl#getUsecase <em>Usecase</em>}</li>
  * </ul>
  *
  * @generated
@@ -93,16 +90,6 @@ public class ActionMethodImpl extends NamedElementImpl implements ActionMethod {
 	protected ActionMethodReturnType returns = RETURNS_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getUsecase() <em>Usecase</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getUsecase()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<UseCase> usecase;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -126,31 +113,6 @@ public class ActionMethodImpl extends NamedElementImpl implements ActionMethod {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public HttpMethod getHttpMethod() {
-		return httpMethod;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setHttpMethod(HttpMethod newHttpMethod) {
-		HttpMethod oldHttpMethod = httpMethod;
-		httpMethod = newHttpMethod == null ? HTTP_METHOD_EDEFAULT : newHttpMethod;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, RyzPackage.ACTÝON_METHOD__HTTP_METHOD, oldHttpMethod,
-					httpMethod));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EList<Parameter> getParameters() {
 		if (parameters == null) {
 			parameters = new EObjectContainmentEList<Parameter>(Parameter.class, this,
@@ -164,7 +126,6 @@ public class ActionMethodImpl extends NamedElementImpl implements ActionMethod {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public ActionMethodReturnType getReturns() {
 		return returns;
 	}
@@ -174,7 +135,6 @@ public class ActionMethodImpl extends NamedElementImpl implements ActionMethod {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setReturns(ActionMethodReturnType newReturns) {
 		ActionMethodReturnType oldReturns = returns;
 		returns = newReturns == null ? RETURNS_EDEFAULT : newReturns;
@@ -189,43 +149,34 @@ public class ActionMethodImpl extends NamedElementImpl implements ActionMethod {
 	 * @generated
 	 */
 	@Override
-	public EList<UseCase> getUsecase() {
-		if (usecase == null) {
-			usecase = new EObjectWithInverseResolvingEList.ManyInverse<UseCase>(UseCase.class, this,
-					RyzPackage.ACTÝON_METHOD__USECASE, RyzPackage.USE_CASE__ACTÝONMETHOD);
-		}
-		return usecase;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case RyzPackage.ACTÝON_METHOD__USECASE:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getUsecase()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case RyzPackage.ACTÝON_METHOD__PARAMETERS:
 			return ((InternalEList<?>) getParameters()).basicRemove(otherEnd, msgs);
-		case RyzPackage.ACTÝON_METHOD__USECASE:
-			return ((InternalEList<?>) getUsecase()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HttpMethod getHttpMethod() {
+		return httpMethod;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setHttpMethod(HttpMethod newHttpMethod) {
+		HttpMethod oldHttpMethod = httpMethod;
+		httpMethod = newHttpMethod == null ? HTTP_METHOD_EDEFAULT : newHttpMethod;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, RyzPackage.ACTÝON_METHOD__HTTP_METHOD, oldHttpMethod,
+					httpMethod));
 	}
 
 	/**
@@ -242,8 +193,6 @@ public class ActionMethodImpl extends NamedElementImpl implements ActionMethod {
 			return getParameters();
 		case RyzPackage.ACTÝON_METHOD__RETURNS:
 			return getReturns();
-		case RyzPackage.ACTÝON_METHOD__USECASE:
-			return getUsecase();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -267,10 +216,6 @@ public class ActionMethodImpl extends NamedElementImpl implements ActionMethod {
 		case RyzPackage.ACTÝON_METHOD__RETURNS:
 			setReturns((ActionMethodReturnType) newValue);
 			return;
-		case RyzPackage.ACTÝON_METHOD__USECASE:
-			getUsecase().clear();
-			getUsecase().addAll((Collection<? extends UseCase>) newValue);
-			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -292,9 +237,6 @@ public class ActionMethodImpl extends NamedElementImpl implements ActionMethod {
 		case RyzPackage.ACTÝON_METHOD__RETURNS:
 			setReturns(RETURNS_EDEFAULT);
 			return;
-		case RyzPackage.ACTÝON_METHOD__USECASE:
-			getUsecase().clear();
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -313,8 +255,6 @@ public class ActionMethodImpl extends NamedElementImpl implements ActionMethod {
 			return parameters != null && !parameters.isEmpty();
 		case RyzPackage.ACTÝON_METHOD__RETURNS:
 			return returns != RETURNS_EDEFAULT;
-		case RyzPackage.ACTÝON_METHOD__USECASE:
-			return usecase != null && !usecase.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

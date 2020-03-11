@@ -15,7 +15,6 @@ namespace SportStore.Models{
 		public string Description {get; set;}
 
 		public int Price {get; set;}
-		
 
 		[Key]
 		public int ProductId {get; set;}

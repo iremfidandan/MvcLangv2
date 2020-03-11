@@ -94,21 +94,6 @@
         </argument>
       </expression>
     </ownedModuleElement>
-    <ownedModuleElement xsi:type="mtl:Query" name="getFormElementToPropertyKeyRelationsInProject" visibility="Public" type="/3/Set(FormElementToPropertyKeyRelation)">
-      <parameter name="aProject">
-        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
-      </parameter>
-      <expression xsi:type="ocl.ecore:OperationCallExp" eType="/3/Set(FormElementToPropertyKeyRelation)" referredOperation="/1/oclstdlib_Collection(T)_Class/filter">
-        <source xsi:type="mtl:QueryInvocation" eType="/3/Set(MainComponentRelation)" definition="/0/getMainComponentRelationsInProject">
-          <argument xsi:type="ocl.ecore:VariableExp" name="aProject" referredVariable="/0/getFormElementToPropertyKeyRelationsInProject/aProject">
-            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
-          </argument>
-        </source>
-        <argument xsi:type="ocl.ecore:TypeExp" eType="/5/FormElementToPropertyKeyRelation">
-          <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//FormElementToPropertyKeyRelation"/>
-        </argument>
-      </expression>
-    </ownedModuleElement>
   </mtl:Module>
   <ecore:EPackage name="additions">
     <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
@@ -175,15 +160,6 @@
           <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
         </eParameters>
       </eOperations>
-      <eOperations name="getFormElementToPropertyKeyRelationsInProject" eType="/3/Set(FormElementToPropertyKeyRelation)">
-        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
-          <contents xsi:type="ocl.ecore:Constraint"/>
-        </eAnnotations>
-        <eAnnotations source="MTL" references="/0/getFormElementToPropertyKeyRelationsInProject"/>
-        <eParameters name="aProject">
-          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
-        </eParameters>
-      </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
@@ -237,9 +213,6 @@
     <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(ViewToModelRelation)" instanceClassName="java.util.Set">
       <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ViewToModelRelation"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(FormElementToPropertyKeyRelation)" instanceClassName="java.util.Set">
-      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//FormElementToPropertyKeyRelation"/>
-    </eClassifiers>
     <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Package)" instanceClassName="java.util.LinkedHashSet">
       <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Package"/>
     </eClassifiers>
@@ -272,19 +245,7 @@
     <eClassifiers xsi:type="ocl.ecore:TypeType" name="ViewToModelRelation">
       <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ViewToModelRelation"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ocl.ecore:TypeType" name="FormElementToPropertyKeyRelation">
-      <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//FormElementToPropertyKeyRelation"/>
-    </eClassifiers>
   </ecore:EPackage>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
-  </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
   </ocl.ecore:Variable>
@@ -501,36 +462,6 @@
     <eAnnotations source="positions.34" references="/0/getViewToModelRelationsInProject/%/%.1">
       <details key="start" value="991"/>
       <details key="end" value="1010"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.35" references="/0/getFormElementToPropertyKeyRelationsInProject">
-      <details key="start" value="1017"/>
-      <details key="end" value="1229"/>
-      <details key="line" value="25"/>
-    </eAnnotations>
-    <eAnnotations source="positions.36" references="/0/getFormElementToPropertyKeyRelationsInProject/aProject">
-      <details key="start" value="1077"/>
-      <details key="end" value="1094"/>
-      <details key="line" value="25"/>
-    </eAnnotations>
-    <eAnnotations source="positions.37" references="/0/getFormElementToPropertyKeyRelationsInProject/%">
-      <details key="start" value="1139"/>
-      <details key="end" value="1226"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.38" references="/0/getFormElementToPropertyKeyRelationsInProject/%/%">
-      <details key="start" value="1139"/>
-      <details key="end" value="1184"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.39" references="/0/getFormElementToPropertyKeyRelationsInProject/%/%/aProject">
-      <details key="start" value="1139"/>
-      <details key="end" value="1147"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.40" references="/0/getFormElementToPropertyKeyRelationsInProject/%/%.1">
-      <details key="start" value="1193"/>
-      <details key="end" value="1225"/>
       <details key="line" value="0"/>
     </eAnnotations>
   </ecore:EAnnotation>

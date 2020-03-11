@@ -27,6 +27,10 @@ public interface ModelAssociation extends NamedElement {
 	/**
 	 * Returns the value of the '<em><b>Principal</b></em>' reference.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Principal</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Principal</em>' reference.
 	 * @see #setPrincipal(Model)
@@ -49,6 +53,10 @@ public interface ModelAssociation extends NamedElement {
 	/**
 	 * Returns the value of the '<em><b>Dependent</b></em>' reference.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Dependent</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Dependent</em>' reference.
 	 * @see #setDependent(Model)
@@ -72,6 +80,10 @@ public interface ModelAssociation extends NamedElement {
 	 * Returns the value of the '<em><b>Cardinality</b></em>' attribute.
 	 * The literals are from the enumeration {@link com.eryaz.prototype.ryz.Cardinality}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Cardinality</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Cardinality</em>' attribute.
 	 * @see com.eryaz.prototype.ryz.Cardinality
@@ -96,6 +108,10 @@ public interface ModelAssociation extends NamedElement {
 	/**
 	 * Returns the value of the '<em><b>›s Required</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>›s Required</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>›s Required</em>' attribute.
 	 * @see #set›sRequired(boolean)
@@ -118,6 +134,10 @@ public interface ModelAssociation extends NamedElement {
 	/**
 	 * Returns the value of the '<em><b>Principal Role Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Principal Role Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Principal Role Name</em>' attribute.
 	 * @see #setPrincipalRoleName(String)
@@ -140,6 +160,10 @@ public interface ModelAssociation extends NamedElement {
 	/**
 	 * Returns the value of the '<em><b>Dependent Role Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Dependent Role Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Dependent Role Name</em>' attribute.
 	 * @see #setDependentRoleName(String)

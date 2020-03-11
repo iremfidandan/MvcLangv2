@@ -1,13 +1,13 @@
 [comment encoding = UTF-8 /]
 [module tableKey('http://www.eryaz.com/prototype/ryz')]
-[import com::eryaz::prototype::ryz::codegeneration::common::enumtypes::modelPropertyType /]
+[import com::eryaz::prototype::ryz::codegeneration::common::modelPropertyType /]
 
 [template public generateTableKey(aTableKey : TableKey) ? (aTableKey.isRequired)]
 [if (aTableKey.isPrimaryKey)]
 [ '[' /]Key[ ']' /]
 [/if]
 [if (aTableKey.isForeignKey)]
-[ '[' /]ForeignKey("[aTableKey.name.first(aTableKey.name.lastIndexOf('_') - 1)/]")[ ']' /]
+[ '[' /]ForeignKey("[aTableKey.name.first(aTableKey.name.index('_') - 1)/]")[ ']' /]
 [/if]
 public [generateModelPropertyType(aTableKey.type)/] [aTableKey.name/] {get; set;}
 [/template]
@@ -17,7 +17,7 @@ public [generateModelPropertyType(aTableKey.type)/] [aTableKey.name/] {get; set;
 [ '[' /]Key[ ']' /]
 [/if]
 [if (aTableKey.isForeignKey)]
-[ '[' /]ForeignKey("[aTableKey.name.first(aTableKey.name.lastIndexOf('_') - 1)/]")[ ']' /]
+[ '[' /]ForeignKey("[aTableKey.name.first(aTableKey.name.size() - 3)/]")[ ']' /]
 [/if]
 public Nullable<[generateModelPropertyType(aTableKey.type)/]> [aTableKey.name/] {get; set;}
 [/template]

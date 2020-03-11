@@ -2,7 +2,7 @@
 [module htmlAction('http://www.eryaz.com/prototype/ryz')]
 
 [import com::eryaz::prototype::ryz::codegeneration::common::controllerNameWithoutControllerSuffix /]
-[import com::eryaz::prototype::ryz::codegeneration::common::inferences::htmlActionRouteValueInference /]
+[import com::eryaz::prototype::ryz::codegeneration::common::htmlActionRouteValueInference /]
 
 [template public generateHtmlAction(anActionMethod : ActionMethod)]
 @Html.Action("[anActionMethod.name/]", "[generateControllerNameWithoutControllerSuffix(anActionMethod.eContainer(Controller))/]")

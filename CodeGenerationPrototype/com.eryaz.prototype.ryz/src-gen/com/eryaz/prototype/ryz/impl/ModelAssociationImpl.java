@@ -157,7 +157,6 @@ public class ModelAssociationImpl extends NamedElementImpl implements ModelAssoc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Model getPrincipal() {
 		if (principal != null && principal.eIsProxy()) {
 			InternalEObject oldPrincipal = (InternalEObject) principal;
@@ -185,7 +184,6 @@ public class ModelAssociationImpl extends NamedElementImpl implements ModelAssoc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setPrincipal(Model newPrincipal) {
 		Model oldPrincipal = principal;
 		principal = newPrincipal;
@@ -199,7 +197,6 @@ public class ModelAssociationImpl extends NamedElementImpl implements ModelAssoc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Model getDependent() {
 		if (dependent != null && dependent.eIsProxy()) {
 			InternalEObject oldDependent = (InternalEObject) dependent;
@@ -227,7 +224,6 @@ public class ModelAssociationImpl extends NamedElementImpl implements ModelAssoc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setDependent(Model newDependent) {
 		Model oldDependent = dependent;
 		dependent = newDependent;
@@ -241,7 +237,6 @@ public class ModelAssociationImpl extends NamedElementImpl implements ModelAssoc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Cardinality getCardinality() {
 		return cardinality;
 	}
@@ -251,7 +246,6 @@ public class ModelAssociationImpl extends NamedElementImpl implements ModelAssoc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setCardinality(Cardinality newCardinality) {
 		Cardinality oldCardinality = cardinality;
 		cardinality = newCardinality == null ? CARD›NAL›TY_EDEFAULT : newCardinality;
@@ -265,7 +259,6 @@ public class ModelAssociationImpl extends NamedElementImpl implements ModelAssoc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public boolean is›sRequired() {
 		return isRequired;
 	}
@@ -275,7 +268,6 @@ public class ModelAssociationImpl extends NamedElementImpl implements ModelAssoc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void set›sRequired(boolean new›sRequired) {
 		boolean old›sRequired = isRequired;
 		isRequired = new›sRequired;
@@ -289,7 +281,6 @@ public class ModelAssociationImpl extends NamedElementImpl implements ModelAssoc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getPrincipalRoleName() {
 		return principalRoleName;
 	}
@@ -299,7 +290,6 @@ public class ModelAssociationImpl extends NamedElementImpl implements ModelAssoc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setPrincipalRoleName(String newPrincipalRoleName) {
 		String oldPrincipalRoleName = principalRoleName;
 		principalRoleName = newPrincipalRoleName;
@@ -313,7 +303,6 @@ public class ModelAssociationImpl extends NamedElementImpl implements ModelAssoc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getDependentRoleName() {
 		return dependentRoleName;
 	}
@@ -323,7 +312,6 @@ public class ModelAssociationImpl extends NamedElementImpl implements ModelAssoc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setDependentRoleName(String newDependentRoleName) {
 		String oldDependentRoleName = dependentRoleName;
 		dependentRoleName = newDependentRoleName;

@@ -7,25 +7,17 @@ import com.eryaz.prototype.ryz.ActionLink;
 import com.eryaz.prototype.ryz.ActionMethod;
 import com.eryaz.prototype.ryz.ActionMethodParameterType;
 import com.eryaz.prototype.ryz.ActionMethodReturnType;
-import com.eryaz.prototype.ryz.Actor;
-import com.eryaz.prototype.ryz.Button;
-import com.eryaz.prototype.ryz.ButtonType;
 import com.eryaz.prototype.ryz.Cardinality;
-import com.eryaz.prototype.ryz.Choice;
 import com.eryaz.prototype.ryz.ComponentPackage;
 import com.eryaz.prototype.ryz.Controller;
 import com.eryaz.prototype.ryz.ControllerPackage;
 import com.eryaz.prototype.ryz.ControllerToModelRelation;
 import com.eryaz.prototype.ryz.ControllerToViewRelation;
 import com.eryaz.prototype.ryz.Form;
-import com.eryaz.prototype.ryz.FormElementToPropertyKeyRelation;
-import com.eryaz.prototype.ryz.Header;
 import com.eryaz.prototype.ryz.HelperForSendingRequest;
+import com.eryaz.prototype.ryz.HtmlElement;
 import com.eryaz.prototype.ryz.HttpMethod;
-import com.eryaz.prototype.ryz.Input;
-import com.eryaz.prototype.ryz.InputDataType;
 import com.eryaz.prototype.ryz.Layout;
-import com.eryaz.prototype.ryz.Link;
 import com.eryaz.prototype.ryz.MainComponent;
 import com.eryaz.prototype.ryz.MainComponentRelation;
 import com.eryaz.prototype.ryz.Model;
@@ -34,29 +26,20 @@ import com.eryaz.prototype.ryz.ModelCardinality;
 import com.eryaz.prototype.ryz.ModelOperation;
 import com.eryaz.prototype.ryz.ModelPackage;
 import com.eryaz.prototype.ryz.ModelPropertyType;
-import com.eryaz.prototype.ryz.MultipleChoice;
-import com.eryaz.prototype.ryz.MultipleChoiceType;
 import com.eryaz.prototype.ryz.MvcPackage;
 import com.eryaz.prototype.ryz.NamedElement;
 import com.eryaz.prototype.ryz.Parameter;
 import com.eryaz.prototype.ryz.Partial;
-import com.eryaz.prototype.ryz.PresentationElement;
-import com.eryaz.prototype.ryz.PresentationForm;
-import com.eryaz.prototype.ryz.PresentationFormElement;
-import com.eryaz.prototype.ryz.PresentationFormElementToPropertyKey;
 import com.eryaz.prototype.ryz.Project;
 import com.eryaz.prototype.ryz.Property;
 import com.eryaz.prototype.ryz.RequestType;
 import com.eryaz.prototype.ryz.RyzFactory;
 import com.eryaz.prototype.ryz.RyzPackage;
-import com.eryaz.prototype.ryz.Table;
 import com.eryaz.prototype.ryz.TableKey;
-import com.eryaz.prototype.ryz.UseCase;
-import com.eryaz.prototype.ryz.UseCaseActorPackage;
-import com.eryaz.prototype.ryz.UseCasePackage;
 import com.eryaz.prototype.ryz.View;
 import com.eryaz.prototype.ryz.ViewPackage;
 import com.eryaz.prototype.ryz.ViewToControllerRelation;
+
 import com.eryaz.prototype.ryz.ViewToModelRelation;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -65,8 +48,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-
-import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -234,6 +215,13 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass htmlElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass actionLinkEClass = null;
 
 	/**
@@ -270,118 +258,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * @generated
 	 */
 	private EClass viewToModelRelationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass useCaseActorPackageEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass actorEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass useCaseEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass useCasePackageEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass presentationElementEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass presentationFormEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass multipleChoiceEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass choiceEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass buttonEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass presentationFormElementEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass ýnputEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass linkEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tableEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass headerEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass formElementToPropertyKeyRelationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass presentationFormElementToPropertyKeyEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -440,27 +316,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	private EEnum actionMethodReturnTypeEEnum = null;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum multipleChoiceTypeEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum buttonTypeEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum ýnputDataTypeEEnum = null;
-
-	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -510,9 +365,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 
 		isInited = true;
 
-		// Initialize simple dependencies
-		XMLTypePackage.eINSTANCE.eClass();
-
 		// Create package meta-data objects
 		theRyzPackage.createPackageContents();
 
@@ -532,7 +384,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getProject() {
 		return projectEClass;
 	}
@@ -542,7 +393,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getProject_Packages() {
 		return (EReference) projectEClass.getEStructuralFeatures().get(0);
 	}
@@ -552,7 +402,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getPackage() {
 		return packageEClass;
 	}
@@ -562,7 +411,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getComponentPackage() {
 		return componentPackageEClass;
 	}
@@ -572,7 +420,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getMvcPackage() {
 		return mvcPackageEClass;
 	}
@@ -582,7 +429,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getMvcPackage_Maincomponents() {
 		return (EReference) mvcPackageEClass.getEStructuralFeatures().get(0);
 	}
@@ -592,7 +438,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getMvcPackage_Maincomponentrelations() {
 		return (EReference) mvcPackageEClass.getEStructuralFeatures().get(1);
 	}
@@ -602,7 +447,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getNamedElement() {
 		return namedElementEClass;
 	}
@@ -612,7 +456,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getNamedElement_Name() {
 		return (EAttribute) namedElementEClass.getEStructuralFeatures().get(0);
 	}
@@ -622,7 +465,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getModelPackage() {
 		return modelPackageEClass;
 	}
@@ -632,7 +474,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getModelPackage_Models() {
 		return (EReference) modelPackageEClass.getEStructuralFeatures().get(0);
 	}
@@ -642,7 +483,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getModelPackage_Modelassociations() {
 		return (EReference) modelPackageEClass.getEStructuralFeatures().get(1);
 	}
@@ -652,7 +492,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getViewPackage() {
 		return viewPackageEClass;
 	}
@@ -662,7 +501,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getViewPackage_Views() {
 		return (EReference) viewPackageEClass.getEStructuralFeatures().get(0);
 	}
@@ -672,7 +510,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getControllerPackage() {
 		return controllerPackageEClass;
 	}
@@ -682,7 +519,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getControllerPackage_Controllers() {
 		return (EReference) controllerPackageEClass.getEStructuralFeatures().get(0);
 	}
@@ -692,7 +528,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getModel() {
 		return modelEClass;
 	}
@@ -702,7 +537,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getModel_ÝsAbstract() {
 		return (EAttribute) modelEClass.getEStructuralFeatures().get(0);
 	}
@@ -712,7 +546,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getModel_Properties() {
 		return (EReference) modelEClass.getEStructuralFeatures().get(1);
 	}
@@ -722,7 +555,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getModel_Ýnherits() {
 		return (EReference) modelEClass.getEStructuralFeatures().get(2);
 	}
@@ -732,7 +564,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getModel_Tablekeys() {
 		return (EReference) modelEClass.getEStructuralFeatures().get(3);
 	}
@@ -742,7 +573,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getAbstractView() {
 		return abstractViewEClass;
 	}
@@ -752,7 +582,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getAbstractView_Renders() {
 		return (EReference) abstractViewEClass.getEStructuralFeatures().get(0);
 	}
@@ -762,7 +591,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getAbstractView_Htmlelements() {
 		return (EReference) abstractViewEClass.getEStructuralFeatures().get(1);
 	}
@@ -772,17 +600,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EReference getAbstractView_Presentationelement() {
-		return (EReference) abstractViewEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getController() {
 		return controllerEClass;
 	}
@@ -792,7 +609,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getController_Actionmethods() {
 		return (EReference) controllerEClass.getEStructuralFeatures().get(0);
 	}
@@ -802,7 +618,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getMainComponent() {
 		return mainComponentEClass;
 	}
@@ -812,7 +627,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getProperty() {
 		return propertyEClass;
 	}
@@ -822,7 +636,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getProperty_Type() {
 		return (EAttribute) propertyEClass.getEStructuralFeatures().get(0);
 	}
@@ -832,7 +645,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getProperty_ÝsRequired() {
 		return (EAttribute) propertyEClass.getEStructuralFeatures().get(1);
 	}
@@ -842,7 +654,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getModelAssociation() {
 		return modelAssociationEClass;
 	}
@@ -852,7 +663,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getModelAssociation_Principal() {
 		return (EReference) modelAssociationEClass.getEStructuralFeatures().get(0);
 	}
@@ -862,7 +672,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getModelAssociation_Dependent() {
 		return (EReference) modelAssociationEClass.getEStructuralFeatures().get(1);
 	}
@@ -872,7 +681,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getModelAssociation_Cardinality() {
 		return (EAttribute) modelAssociationEClass.getEStructuralFeatures().get(2);
 	}
@@ -882,7 +690,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getModelAssociation_ÝsRequired() {
 		return (EAttribute) modelAssociationEClass.getEStructuralFeatures().get(3);
 	}
@@ -892,7 +699,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getModelAssociation_PrincipalRoleName() {
 		return (EAttribute) modelAssociationEClass.getEStructuralFeatures().get(4);
 	}
@@ -902,7 +708,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getModelAssociation_DependentRoleName() {
 		return (EAttribute) modelAssociationEClass.getEStructuralFeatures().get(5);
 	}
@@ -912,7 +717,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getPartial() {
 		return partialEClass;
 	}
@@ -922,7 +726,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getActionMethod() {
 		return actionMethodEClass;
 	}
@@ -932,17 +735,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EAttribute getActionMethod_HttpMethod() {
-		return (EAttribute) actionMethodEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EReference getActionMethod_Parameters() {
 		return (EReference) actionMethodEClass.getEStructuralFeatures().get(1);
 	}
@@ -952,7 +744,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getActionMethod_Returns() {
 		return (EAttribute) actionMethodEClass.getEStructuralFeatures().get(2);
 	}
@@ -962,9 +753,8 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EReference getActionMethod_Usecase() {
-		return (EReference) actionMethodEClass.getEStructuralFeatures().get(3);
+	public EAttribute getActionMethod_HttpMethod() {
+		return (EAttribute) actionMethodEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -972,7 +762,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getLayout() {
 		return layoutEClass;
 	}
@@ -982,7 +771,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getView() {
 		return viewEClass;
 	}
@@ -992,7 +780,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getView_Layout() {
 		return (EReference) viewEClass.getEStructuralFeatures().get(0);
 	}
@@ -1002,7 +789,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getParameter() {
 		return parameterEClass;
 	}
@@ -1012,7 +798,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getParameter_Type() {
 		return (EAttribute) parameterEClass.getEStructuralFeatures().get(0);
 	}
@@ -1022,7 +807,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getParameter_ÝsNullable() {
 		return (EAttribute) parameterEClass.getEStructuralFeatures().get(1);
 	}
@@ -1032,7 +816,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getParameter_ÝsList() {
 		return (EAttribute) parameterEClass.getEStructuralFeatures().get(2);
 	}
@@ -1042,7 +825,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getMainComponentRelation() {
 		return mainComponentRelationEClass;
 	}
@@ -1052,7 +834,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getViewToControllerRelation() {
 		return viewToControllerRelationEClass;
 	}
@@ -1062,7 +843,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getViewToControllerRelation_Helperforsendingrequest() {
 		return (EReference) viewToControllerRelationEClass.getEStructuralFeatures().get(0);
 	}
@@ -1072,7 +852,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getViewToControllerRelation_Actionmethod() {
 		return (EReference) viewToControllerRelationEClass.getEStructuralFeatures().get(1);
 	}
@@ -1082,7 +861,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getViewToControllerRelation_Model() {
 		return (EReference) viewToControllerRelationEClass.getEStructuralFeatures().get(2);
 	}
@@ -1092,7 +870,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getViewToControllerRelation_Properties() {
 		return (EReference) viewToControllerRelationEClass.getEStructuralFeatures().get(3);
 	}
@@ -1102,7 +879,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getControllerToModelRelation() {
 		return controllerToModelRelationEClass;
 	}
@@ -1112,7 +888,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getControllerToModelRelation_Actionmethod() {
 		return (EReference) controllerToModelRelationEClass.getEStructuralFeatures().get(0);
 	}
@@ -1122,7 +897,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getControllerToModelRelation_Model() {
 		return (EReference) controllerToModelRelationEClass.getEStructuralFeatures().get(1);
 	}
@@ -1132,7 +906,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getControllerToModelRelation_Modelproperties() {
 		return (EReference) controllerToModelRelationEClass.getEStructuralFeatures().get(2);
 	}
@@ -1142,7 +915,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getControllerToModelRelation_ModelCardinality() {
 		return (EAttribute) controllerToModelRelationEClass.getEStructuralFeatures().get(3);
 	}
@@ -1152,7 +924,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getControllerToModelRelation_ModelOperation() {
 		return (EAttribute) controllerToModelRelationEClass.getEStructuralFeatures().get(4);
 	}
@@ -1162,7 +933,15 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
+	public EClass getHtmlElement() {
+		return htmlElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getActionLink() {
 		return actionLinkEClass;
 	}
@@ -1172,7 +951,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getForm() {
 		return formEClass;
 	}
@@ -1182,7 +960,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getHelperForSendingRequest() {
 		return helperForSendingRequestEClass;
 	}
@@ -1192,7 +969,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getHelperForSendingRequest_RequestType() {
 		return (EAttribute) helperForSendingRequestEClass.getEStructuralFeatures().get(0);
 	}
@@ -1202,7 +978,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getHelperForSendingRequest_HttpMethod() {
 		return (EAttribute) helperForSendingRequestEClass.getEStructuralFeatures().get(1);
 	}
@@ -1212,7 +987,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getHelperForSendingRequest_Text() {
 		return (EAttribute) helperForSendingRequestEClass.getEStructuralFeatures().get(2);
 	}
@@ -1222,27 +996,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EReference getHelperForSendingRequest_Usecase() {
-		return (EReference) helperForSendingRequestEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getHelperForSendingRequest_Presentationelement() {
-		return (EReference) helperForSendingRequestEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getControllerToViewRelation() {
 		return controllerToViewRelationEClass;
 	}
@@ -1252,7 +1005,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getControllerToViewRelation_Actionmethod() {
 		return (EReference) controllerToViewRelationEClass.getEStructuralFeatures().get(0);
 	}
@@ -1262,7 +1014,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getControllerToViewRelation_Returns() {
 		return (EReference) controllerToViewRelationEClass.getEStructuralFeatures().get(1);
 	}
@@ -1272,7 +1023,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getTableKey() {
 		return tableKeyEClass;
 	}
@@ -1282,7 +1032,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getTableKey_Type() {
 		return (EAttribute) tableKeyEClass.getEStructuralFeatures().get(0);
 	}
@@ -1292,7 +1041,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getTableKey_ÝsRequired() {
 		return (EAttribute) tableKeyEClass.getEStructuralFeatures().get(1);
 	}
@@ -1302,7 +1050,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getTableKey_ÝsPrimaryKey() {
 		return (EAttribute) tableKeyEClass.getEStructuralFeatures().get(2);
 	}
@@ -1312,7 +1059,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getTableKey_ÝsForeignKey() {
 		return (EAttribute) tableKeyEClass.getEStructuralFeatures().get(3);
 	}
@@ -1322,7 +1068,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EClass getViewToModelRelation() {
 		return viewToModelRelationEClass;
 	}
@@ -1332,7 +1077,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getViewToModelRelation_Abstractview() {
 		return (EReference) viewToModelRelationEClass.getEStructuralFeatures().get(0);
 	}
@@ -1342,7 +1086,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getViewToModelRelation_Model() {
 		return (EReference) viewToModelRelationEClass.getEStructuralFeatures().get(1);
 	}
@@ -1352,7 +1095,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EAttribute getViewToModelRelation_Modelcardinality() {
 		return (EAttribute) viewToModelRelationEClass.getEStructuralFeatures().get(2);
 	}
@@ -1362,7 +1104,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EReference getViewToModelRelation_Properties() {
 		return (EReference) viewToModelRelationEClass.getEStructuralFeatures().get(3);
 	}
@@ -1372,467 +1113,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EClass getUseCaseActorPackage() {
-		return useCaseActorPackageEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getUseCaseActorPackage_Actors() {
-		return (EReference) useCaseActorPackageEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getUseCaseActorPackage_Usecasepackages() {
-		return (EReference) useCaseActorPackageEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getActor() {
-		return actorEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getActor_Usecase() {
-		return (EReference) actorEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getUseCase() {
-		return useCaseEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getUseCase_Actor() {
-		return (EReference) useCaseEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getUseCase_Helperforsendingrequest() {
-		return (EReference) useCaseEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getUseCase_Actionmethod() {
-		return (EReference) useCaseEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getUseCasePackage() {
-		return useCasePackageEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getUseCasePackage_Usecases() {
-		return (EReference) useCasePackageEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getPresentationElement() {
-		return presentationElementEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getPresentationElement_Helperforsendingrequest() {
-		return (EReference) presentationElementEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getPresentationForm() {
-		return presentationFormEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getPresentationForm_Presentationformelement() {
-		return (EReference) presentationFormEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getMultipleChoice() {
-		return multipleChoiceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getMultipleChoice_Choice() {
-		return (EReference) multipleChoiceEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getMultipleChoice_MultipleChoiceType() {
-		return (EAttribute) multipleChoiceEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getMultipleChoice_MultipleSelection() {
-		return (EAttribute) multipleChoiceEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getChoice() {
-		return choiceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getChoice_Text() {
-		return (EAttribute) choiceEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getChoice_Value() {
-		return (EAttribute) choiceEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getChoice_Selected() {
-		return (EAttribute) choiceEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getButton() {
-		return buttonEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getButton_ButtonType() {
-		return (EAttribute) buttonEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getPresentationFormElement() {
-		return presentationFormElementEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getPresentationFormElement_LabelText() {
-		return (EAttribute) presentationFormElementEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getInput() {
-		return ýnputEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getInput_ÝnputDataType() {
-		return (EAttribute) ýnputEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getInput_ÝsReadOnly() {
-		return (EAttribute) ýnputEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getInput_ÝsHidden() {
-		return (EAttribute) ýnputEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getLink() {
-		return linkEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getLink_Text() {
-		return (EAttribute) linkEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getTable() {
-		return tableEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getTable_Header() {
-		return (EReference) tableEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getHeader() {
-		return headerEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getHeader_LabelText() {
-		return (EAttribute) headerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getHeader_Name() {
-		return (EAttribute) headerEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getFormElementToPropertyKeyRelation() {
-		return formElementToPropertyKeyRelationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getFormElementToPropertyKeyRelation_Helperforsendingrequest() {
-		return (EReference) formElementToPropertyKeyRelationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getFormElementToPropertyKeyRelation_Model() {
-		return (EReference) formElementToPropertyKeyRelationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getFormElementToPropertyKeyRelation_Presentationformelementtoproperty() {
-		return (EReference) formElementToPropertyKeyRelationEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getPresentationFormElementToPropertyKey() {
-		return presentationFormElementToPropertyKeyEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getPresentationFormElementToPropertyKey_Presentationformelement() {
-		return (EReference) presentationFormElementToPropertyKeyEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getPresentationFormElementToPropertyKey_Property() {
-		return (EReference) presentationFormElementToPropertyKeyEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EReference getPresentationFormElementToPropertyKey_Tablekey() {
-		return (EReference) presentationFormElementToPropertyKeyEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EEnum getModelPropertyType() {
 		return modelPropertyTypeEEnum;
 	}
@@ -1842,7 +1122,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EEnum getCardinality() {
 		return cardinalityEEnum;
 	}
@@ -1852,7 +1131,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EEnum getActionMethodParameterType() {
 		return actionMethodParameterTypeEEnum;
 	}
@@ -1862,7 +1140,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EEnum getRequestType() {
 		return requestTypeEEnum;
 	}
@@ -1872,7 +1149,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EEnum getHttpMethod() {
 		return httpMethodEEnum;
 	}
@@ -1882,7 +1158,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EEnum getModelCardinality() {
 		return modelCardinalityEEnum;
 	}
@@ -1892,7 +1167,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EEnum getModelOperation() {
 		return modelOperationEEnum;
 	}
@@ -1902,7 +1176,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EEnum getActionMethodReturnType() {
 		return actionMethodReturnTypeEEnum;
 	}
@@ -1912,37 +1185,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EEnum getMultipleChoiceType() {
-		return multipleChoiceTypeEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EEnum getButtonType() {
-		return buttonTypeEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EEnum getInputDataType() {
-		return ýnputDataTypeEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public RyzFactory getRyzFactory() {
 		return (RyzFactory) getEFactoryInstance();
 	}
@@ -2000,7 +1242,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 		abstractViewEClass = createEClass(ABSTRACT_VÝEW);
 		createEReference(abstractViewEClass, ABSTRACT_VÝEW__RENDERS);
 		createEReference(abstractViewEClass, ABSTRACT_VÝEW__HTMLELEMENTS);
-		createEReference(abstractViewEClass, ABSTRACT_VÝEW__PRESENTATÝONELEMENT);
 
 		controllerEClass = createEClass(CONTROLLER);
 		createEReference(controllerEClass, CONTROLLER__ACTÝONMETHODS);
@@ -2025,7 +1266,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 		createEAttribute(actionMethodEClass, ACTÝON_METHOD__HTTP_METHOD);
 		createEReference(actionMethodEClass, ACTÝON_METHOD__PARAMETERS);
 		createEAttribute(actionMethodEClass, ACTÝON_METHOD__RETURNS);
-		createEReference(actionMethodEClass, ACTÝON_METHOD__USECASE);
 
 		layoutEClass = createEClass(LAYOUT);
 
@@ -2052,6 +1292,8 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 		createEAttribute(controllerToModelRelationEClass, CONTROLLER_TO_MODEL_RELATÝON__MODEL_CARDÝNALÝTY);
 		createEAttribute(controllerToModelRelationEClass, CONTROLLER_TO_MODEL_RELATÝON__MODEL_OPERATÝON);
 
+		htmlElementEClass = createEClass(HTML_ELEMENT);
+
 		actionLinkEClass = createEClass(ACTÝON_LÝNK);
 
 		formEClass = createEClass(FORM);
@@ -2060,8 +1302,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 		createEAttribute(helperForSendingRequestEClass, HELPER_FOR_SENDÝNG_REQUEST__REQUEST_TYPE);
 		createEAttribute(helperForSendingRequestEClass, HELPER_FOR_SENDÝNG_REQUEST__HTTP_METHOD);
 		createEAttribute(helperForSendingRequestEClass, HELPER_FOR_SENDÝNG_REQUEST__TEXT);
-		createEReference(helperForSendingRequestEClass, HELPER_FOR_SENDÝNG_REQUEST__USECASE);
-		createEReference(helperForSendingRequestEClass, HELPER_FOR_SENDÝNG_REQUEST__PRESENTATÝONELEMENT);
 
 		controllerToViewRelationEClass = createEClass(CONTROLLER_TO_VÝEW_RELATÝON);
 		createEReference(controllerToViewRelationEClass, CONTROLLER_TO_VÝEW_RELATÝON__ACTÝONMETHOD);
@@ -2079,73 +1319,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 		createEAttribute(viewToModelRelationEClass, VÝEW_TO_MODEL_RELATÝON__MODELCARDÝNALÝTY);
 		createEReference(viewToModelRelationEClass, VÝEW_TO_MODEL_RELATÝON__PROPERTÝES);
 
-		useCaseActorPackageEClass = createEClass(USE_CASE_ACTOR_PACKAGE);
-		createEReference(useCaseActorPackageEClass, USE_CASE_ACTOR_PACKAGE__ACTORS);
-		createEReference(useCaseActorPackageEClass, USE_CASE_ACTOR_PACKAGE__USECASEPACKAGES);
-
-		actorEClass = createEClass(ACTOR);
-		createEReference(actorEClass, ACTOR__USECASE);
-
-		useCaseEClass = createEClass(USE_CASE);
-		createEReference(useCaseEClass, USE_CASE__ACTOR);
-		createEReference(useCaseEClass, USE_CASE__HELPERFORSENDÝNGREQUEST);
-		createEReference(useCaseEClass, USE_CASE__ACTÝONMETHOD);
-
-		useCasePackageEClass = createEClass(USE_CASE_PACKAGE);
-		createEReference(useCasePackageEClass, USE_CASE_PACKAGE__USECASES);
-
-		presentationElementEClass = createEClass(PRESENTATÝON_ELEMENT);
-		createEReference(presentationElementEClass, PRESENTATÝON_ELEMENT__HELPERFORSENDÝNGREQUEST);
-
-		presentationFormEClass = createEClass(PRESENTATÝON_FORM);
-		createEReference(presentationFormEClass, PRESENTATÝON_FORM__PRESENTATÝONFORMELEMENT);
-
-		multipleChoiceEClass = createEClass(MULTÝPLE_CHOÝCE);
-		createEReference(multipleChoiceEClass, MULTÝPLE_CHOÝCE__CHOÝCE);
-		createEAttribute(multipleChoiceEClass, MULTÝPLE_CHOÝCE__MULTÝPLE_CHOÝCE_TYPE);
-		createEAttribute(multipleChoiceEClass, MULTÝPLE_CHOÝCE__MULTÝPLE_SELECTÝON);
-
-		choiceEClass = createEClass(CHOÝCE);
-		createEAttribute(choiceEClass, CHOÝCE__TEXT);
-		createEAttribute(choiceEClass, CHOÝCE__VALUE);
-		createEAttribute(choiceEClass, CHOÝCE__SELECTED);
-
-		buttonEClass = createEClass(BUTTON);
-		createEAttribute(buttonEClass, BUTTON__BUTTON_TYPE);
-
-		presentationFormElementEClass = createEClass(PRESENTATÝON_FORM_ELEMENT);
-		createEAttribute(presentationFormElementEClass, PRESENTATÝON_FORM_ELEMENT__LABEL_TEXT);
-
-		ýnputEClass = createEClass(INPUT);
-		createEAttribute(ýnputEClass, INPUT__ÝNPUT_DATA_TYPE);
-		createEAttribute(ýnputEClass, INPUT__ÝS_READ_ONLY);
-		createEAttribute(ýnputEClass, INPUT__ÝS_HÝDDEN);
-
-		linkEClass = createEClass(LÝNK);
-		createEAttribute(linkEClass, LÝNK__TEXT);
-
-		tableEClass = createEClass(TABLE);
-		createEReference(tableEClass, TABLE__HEADER);
-
-		headerEClass = createEClass(HEADER);
-		createEAttribute(headerEClass, HEADER__LABEL_TEXT);
-		createEAttribute(headerEClass, HEADER__NAME);
-
-		formElementToPropertyKeyRelationEClass = createEClass(FORM_ELEMENT_TO_PROPERTY_KEY_RELATÝON);
-		createEReference(formElementToPropertyKeyRelationEClass,
-				FORM_ELEMENT_TO_PROPERTY_KEY_RELATÝON__HELPERFORSENDÝNGREQUEST);
-		createEReference(formElementToPropertyKeyRelationEClass, FORM_ELEMENT_TO_PROPERTY_KEY_RELATÝON__MODEL);
-		createEReference(formElementToPropertyKeyRelationEClass,
-				FORM_ELEMENT_TO_PROPERTY_KEY_RELATÝON__PRESENTATÝONFORMELEMENTTOPROPERTY);
-
-		presentationFormElementToPropertyKeyEClass = createEClass(PRESENTATÝON_FORM_ELEMENT_TO_PROPERTY_KEY);
-		createEReference(presentationFormElementToPropertyKeyEClass,
-				PRESENTATÝON_FORM_ELEMENT_TO_PROPERTY_KEY__PRESENTATÝONFORMELEMENT);
-		createEReference(presentationFormElementToPropertyKeyEClass,
-				PRESENTATÝON_FORM_ELEMENT_TO_PROPERTY_KEY__PROPERTY);
-		createEReference(presentationFormElementToPropertyKeyEClass,
-				PRESENTATÝON_FORM_ELEMENT_TO_PROPERTY_KEY__TABLEKEY);
-
 		// Create enums
 		modelPropertyTypeEEnum = createEEnum(MODEL_PROPERTY_TYPE);
 		cardinalityEEnum = createEEnum(CARDÝNALÝTY);
@@ -2155,9 +1328,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 		modelCardinalityEEnum = createEEnum(MODEL_CARDÝNALÝTY);
 		modelOperationEEnum = createEEnum(MODEL_OPERATÝON);
 		actionMethodReturnTypeEEnum = createEEnum(ACTÝON_METHOD_RETURN_TYPE);
-		multipleChoiceTypeEEnum = createEEnum(MULTÝPLE_CHOÝCE_TYPE);
-		buttonTypeEEnum = createEEnum(BUTTON_TYPE);
-		ýnputDataTypeEEnum = createEEnum(INPUT_DATA_TYPE);
 	}
 
 	/**
@@ -2183,10 +1353,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 		setName(eNAME);
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
-
-		// Obtain other dependent packages
-		XMLTypePackage theXMLTypePackage = (XMLTypePackage) EPackage.Registry.INSTANCE
-				.getEPackage(XMLTypePackage.eNS_URI);
 
 		// Create type parameters
 
@@ -2214,23 +1380,13 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 		mainComponentRelationEClass.getESuperTypes().add(this.getNamedElement());
 		viewToControllerRelationEClass.getESuperTypes().add(this.getMainComponentRelation());
 		controllerToModelRelationEClass.getESuperTypes().add(this.getMainComponentRelation());
+		htmlElementEClass.getESuperTypes().add(this.getNamedElement());
 		actionLinkEClass.getESuperTypes().add(this.getHelperForSendingRequest());
 		formEClass.getESuperTypes().add(this.getHelperForSendingRequest());
+		helperForSendingRequestEClass.getESuperTypes().add(this.getHtmlElement());
 		controllerToViewRelationEClass.getESuperTypes().add(this.getMainComponentRelation());
 		tableKeyEClass.getESuperTypes().add(this.getNamedElement());
 		viewToModelRelationEClass.getESuperTypes().add(this.getMainComponentRelation());
-		useCaseActorPackageEClass.getESuperTypes().add(this.getPackage());
-		actorEClass.getESuperTypes().add(this.getNamedElement());
-		useCaseEClass.getESuperTypes().add(this.getNamedElement());
-		useCasePackageEClass.getESuperTypes().add(this.getNamedElement());
-		presentationElementEClass.getESuperTypes().add(this.getNamedElement());
-		presentationFormEClass.getESuperTypes().add(this.getPresentationElement());
-		multipleChoiceEClass.getESuperTypes().add(this.getPresentationFormElement());
-		buttonEClass.getESuperTypes().add(this.getPresentationFormElement());
-		ýnputEClass.getESuperTypes().add(this.getPresentationFormElement());
-		linkEClass.getESuperTypes().add(this.getPresentationElement());
-		tableEClass.getESuperTypes().add(this.getPresentationElement());
-		formElementToPropertyKeyRelationEClass.getESuperTypes().add(this.getMainComponentRelation());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(projectEClass, Project.class, "Project", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2297,12 +1453,9 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 		initEReference(getAbstractView_Renders(), this.getPartial(), null, "renders", null, 0, -1, AbstractView.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractView_Htmlelements(), this.getHelperForSendingRequest(), null, "htmlelements", null, 0,
-				-1, AbstractView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEReference(getAbstractView_Htmlelements(), this.getHtmlElement(), null, "htmlelements", null, 0, -1,
+				AbstractView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAbstractView_Presentationelement(), this.getPresentationElement(), null,
-				"presentationelement", null, 0, -1, AbstractView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(controllerEClass, Controller.class, "Controller", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -2353,9 +1506,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 		initEAttribute(getActionMethod_Returns(), this.getActionMethodReturnType(), "returns", null, 1, 1,
 				ActionMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEReference(getActionMethod_Usecase(), this.getUseCase(), this.getUseCase_Actionmethod(), "usecase", null, 0,
-				-1, ActionMethod.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(layoutEClass, Layout.class, "Layout", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2409,6 +1559,9 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 				1, 1, ControllerToModelRelation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(htmlElementEClass, HtmlElement.class, "HtmlElement", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(actionLinkEClass, ActionLink.class, "ActionLink", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
@@ -2425,14 +1578,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 		initEAttribute(getHelperForSendingRequest_Text(), ecorePackage.getEString(), "text", null, 1, 1,
 				HelperForSendingRequest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getHelperForSendingRequest_Usecase(), this.getUseCase(),
-				this.getUseCase_Helperforsendingrequest(), "usecase", null, 0, -1, HelperForSendingRequest.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getHelperForSendingRequest_Presentationelement(), this.getPresentationElement(),
-				this.getPresentationElement_Helperforsendingrequest(), "presentationelement", null, 0, -1,
-				HelperForSendingRequest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(controllerToViewRelationEClass, ControllerToViewRelation.class, "ControllerToViewRelation",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2470,131 +1615,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 		initEReference(getViewToModelRelation_Properties(), this.getProperty(), null, "properties", null, 0, -1,
 				ViewToModelRelation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(useCaseActorPackageEClass, UseCaseActorPackage.class, "UseCaseActorPackage", !IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getUseCaseActorPackage_Actors(), this.getActor(), null, "actors", null, 0, -1,
-				UseCaseActorPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUseCaseActorPackage_Usecasepackages(), this.getUseCasePackage(), null, "usecasepackages",
-				null, 0, -1, UseCaseActorPackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(actorEClass, Actor.class, "Actor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getActor_Usecase(), this.getUseCase(), this.getUseCase_Actor(), "usecase", null, 0, -1,
-				Actor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(useCaseEClass, UseCase.class, "UseCase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getUseCase_Actor(), this.getActor(), this.getActor_Usecase(), "actor", null, 0, -1,
-				UseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUseCase_Helperforsendingrequest(), this.getHelperForSendingRequest(),
-				this.getHelperForSendingRequest_Usecase(), "helperforsendingrequest", null, 0, -1, UseCase.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUseCase_Actionmethod(), this.getActionMethod(), this.getActionMethod_Usecase(),
-				"actionmethod", null, 0, -1, UseCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(useCasePackageEClass, UseCasePackage.class, "UseCasePackage", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getUseCasePackage_Usecases(), this.getUseCase(), null, "usecases", null, 0, -1,
-				UseCasePackage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(presentationElementEClass, PresentationElement.class, "PresentationElement", IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPresentationElement_Helperforsendingrequest(), this.getHelperForSendingRequest(),
-				this.getHelperForSendingRequest_Presentationelement(), "helperforsendingrequest", null, 0, -1,
-				PresentationElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(presentationFormEClass, PresentationForm.class, "PresentationForm", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPresentationForm_Presentationformelement(), this.getPresentationFormElement(), null,
-				"presentationformelement", null, 0, -1, PresentationForm.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(multipleChoiceEClass, MultipleChoice.class, "MultipleChoice", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMultipleChoice_Choice(), this.getChoice(), null, "choice", null, 0, -1, MultipleChoice.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMultipleChoice_MultipleChoiceType(), this.getMultipleChoiceType(), "multipleChoiceType", null,
-				1, 1, MultipleChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMultipleChoice_MultipleSelection(), ecorePackage.getEBoolean(), "multipleSelection", "false",
-				1, 1, MultipleChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(choiceEClass, Choice.class, "Choice", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getChoice_Text(), theXMLTypePackage.getString(), "text", null, 1, 1, Choice.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getChoice_Value(), theXMLTypePackage.getString(), "value", null, 1, 1, Choice.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getChoice_Selected(), theXMLTypePackage.getBoolean(), "selected", "false", 1, 1, Choice.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(buttonEClass, Button.class, "Button", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getButton_ButtonType(), this.getButtonType(), "buttonType", null, 1, 1, Button.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(presentationFormElementEClass, PresentationFormElement.class, "PresentationFormElement", IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPresentationFormElement_LabelText(), ecorePackage.getEString(), "labelText", null, 1, 1,
-				PresentationFormElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(ýnputEClass, Input.class, "Input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getInput_ÝnputDataType(), this.getInputDataType(), "inputDataType", null, 1, 1, Input.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInput_ÝsReadOnly(), ecorePackage.getEBoolean(), "isReadOnly", null, 1, 1, Input.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInput_ÝsHidden(), ecorePackage.getEBoolean(), "isHidden", null, 1, 1, Input.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getLink_Text(), ecorePackage.getEString(), "text", null, 1, 1, Link.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(tableEClass, Table.class, "Table", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTable_Header(), this.getHeader(), null, "header", null, 0, -1, Table.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-
-		initEClass(headerEClass, Header.class, "Header", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getHeader_LabelText(), ecorePackage.getEString(), "labelText", null, 1, 1, Header.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getHeader_Name(), theXMLTypePackage.getString(), "name", null, 1, 1, Header.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(formElementToPropertyKeyRelationEClass, FormElementToPropertyKeyRelation.class,
-				"FormElementToPropertyKeyRelation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getFormElementToPropertyKeyRelation_Helperforsendingrequest(), this.getHelperForSendingRequest(),
-				null, "helperforsendingrequest", null, 1, 1, FormElementToPropertyKeyRelation.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEReference(getFormElementToPropertyKeyRelation_Model(), this.getModel(), null, "model", null, 1, 1,
-				FormElementToPropertyKeyRelation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFormElementToPropertyKeyRelation_Presentationformelementtoproperty(),
-				this.getPresentationFormElementToPropertyKey(), null, "presentationformelementtoproperty", null, 0, -1,
-				FormElementToPropertyKeyRelation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(presentationFormElementToPropertyKeyEClass, PresentationFormElementToPropertyKey.class,
-				"PresentationFormElementToPropertyKey", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPresentationFormElementToPropertyKey_Presentationformelement(),
-				this.getPresentationFormElement(), null, "presentationformelement", null, 1, 1,
-				PresentationFormElementToPropertyKey.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPresentationFormElementToPropertyKey_Property(), this.getProperty(), null, "property", null,
-				0, 1, PresentationFormElementToPropertyKey.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPresentationFormElementToPropertyKey_Tablekey(), this.getTableKey(), null, "tablekey", null,
-				0, 1, PresentationFormElementToPropertyKey.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(modelPropertyTypeEEnum, ModelPropertyType.class, "ModelPropertyType");
@@ -2637,25 +1657,6 @@ public class RyzPackageImpl extends EPackageImpl implements RyzPackage {
 		addEEnumLiteral(actionMethodReturnTypeEEnum, ActionMethodReturnType.REDÝRECT_TO_ACTÝON);
 		addEEnumLiteral(actionMethodReturnTypeEEnum, ActionMethodReturnType.JSON);
 		addEEnumLiteral(actionMethodReturnTypeEEnum, ActionMethodReturnType.CONTENT);
-
-		initEEnum(multipleChoiceTypeEEnum, MultipleChoiceType.class, "MultipleChoiceType");
-		addEEnumLiteral(multipleChoiceTypeEEnum, MultipleChoiceType.RADIO_BUTTON);
-		addEEnumLiteral(multipleChoiceTypeEEnum, MultipleChoiceType.CHECKBOX_GROUP);
-		addEEnumLiteral(multipleChoiceTypeEEnum, MultipleChoiceType.DROPDOWN_LIST);
-
-		initEEnum(buttonTypeEEnum, ButtonType.class, "ButtonType");
-		addEEnumLiteral(buttonTypeEEnum, ButtonType.SUBMIT);
-		addEEnumLiteral(buttonTypeEEnum, ButtonType.RESET);
-
-		initEEnum(ýnputDataTypeEEnum, InputDataType.class, "InputDataType");
-		addEEnumLiteral(ýnputDataTypeEEnum, InputDataType.TEXT);
-		addEEnumLiteral(ýnputDataTypeEEnum, InputDataType.NUMBER);
-		addEEnumLiteral(ýnputDataTypeEEnum, InputDataType.PASSWORD);
-		addEEnumLiteral(ýnputDataTypeEEnum, InputDataType.EMAIL);
-		addEEnumLiteral(ýnputDataTypeEEnum, InputDataType.TEL);
-		addEEnumLiteral(ýnputDataTypeEEnum, InputDataType.DATE);
-		addEEnumLiteral(ýnputDataTypeEEnum, InputDataType.TIME);
-		addEEnumLiteral(ýnputDataTypeEEnum, InputDataType.FILE);
 
 		// Create resource
 		createResource(eNS_URI);

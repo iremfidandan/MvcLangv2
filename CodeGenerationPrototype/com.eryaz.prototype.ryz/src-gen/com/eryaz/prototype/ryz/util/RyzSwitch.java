@@ -5,46 +5,32 @@ package com.eryaz.prototype.ryz.util;
 import com.eryaz.prototype.ryz.AbstractView;
 import com.eryaz.prototype.ryz.ActionLink;
 import com.eryaz.prototype.ryz.ActionMethod;
-import com.eryaz.prototype.ryz.Actor;
-import com.eryaz.prototype.ryz.Button;
-import com.eryaz.prototype.ryz.Choice;
 import com.eryaz.prototype.ryz.ComponentPackage;
 import com.eryaz.prototype.ryz.Controller;
 import com.eryaz.prototype.ryz.ControllerPackage;
 import com.eryaz.prototype.ryz.ControllerToModelRelation;
 import com.eryaz.prototype.ryz.ControllerToViewRelation;
 import com.eryaz.prototype.ryz.Form;
-import com.eryaz.prototype.ryz.FormElementToPropertyKeyRelation;
-import com.eryaz.prototype.ryz.Header;
 import com.eryaz.prototype.ryz.HelperForSendingRequest;
-import com.eryaz.prototype.ryz.Input;
+import com.eryaz.prototype.ryz.HtmlElement;
 import com.eryaz.prototype.ryz.Layout;
-import com.eryaz.prototype.ryz.Link;
 import com.eryaz.prototype.ryz.MainComponent;
 import com.eryaz.prototype.ryz.MainComponentRelation;
 import com.eryaz.prototype.ryz.Model;
 import com.eryaz.prototype.ryz.ModelAssociation;
 import com.eryaz.prototype.ryz.ModelPackage;
-import com.eryaz.prototype.ryz.MultipleChoice;
 import com.eryaz.prototype.ryz.MvcPackage;
 import com.eryaz.prototype.ryz.NamedElement;
 import com.eryaz.prototype.ryz.Parameter;
 import com.eryaz.prototype.ryz.Partial;
-import com.eryaz.prototype.ryz.PresentationElement;
-import com.eryaz.prototype.ryz.PresentationForm;
-import com.eryaz.prototype.ryz.PresentationFormElement;
-import com.eryaz.prototype.ryz.PresentationFormElementToPropertyKey;
 import com.eryaz.prototype.ryz.Project;
 import com.eryaz.prototype.ryz.Property;
 import com.eryaz.prototype.ryz.RyzPackage;
-import com.eryaz.prototype.ryz.Table;
 import com.eryaz.prototype.ryz.TableKey;
-import com.eryaz.prototype.ryz.UseCase;
-import com.eryaz.prototype.ryz.UseCaseActorPackage;
-import com.eryaz.prototype.ryz.UseCasePackage;
 import com.eryaz.prototype.ryz.View;
 import com.eryaz.prototype.ryz.ViewPackage;
 import com.eryaz.prototype.ryz.ViewToControllerRelation;
+
 import com.eryaz.prototype.ryz.ViewToModelRelation;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -342,11 +328,24 @@ public class RyzSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case RyzPackage.HTML_ELEMENT: {
+			HtmlElement htmlElement = (HtmlElement) theEObject;
+			T result = caseHtmlElement(htmlElement);
+			if (result == null)
+				result = caseNamedElement(htmlElement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case RyzPackage.ACTÝON_LÝNK: {
 			ActionLink actionLink = (ActionLink) theEObject;
 			T result = caseActionLink(actionLink);
 			if (result == null)
 				result = caseHelperForSendingRequest(actionLink);
+			if (result == null)
+				result = caseHtmlElement(actionLink);
+			if (result == null)
+				result = caseNamedElement(actionLink);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -357,12 +356,20 @@ public class RyzSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseHelperForSendingRequest(form);
 			if (result == null)
+				result = caseHtmlElement(form);
+			if (result == null)
+				result = caseNamedElement(form);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case RyzPackage.HELPER_FOR_SENDÝNG_REQUEST: {
 			HelperForSendingRequest helperForSendingRequest = (HelperForSendingRequest) theEObject;
 			T result = caseHelperForSendingRequest(helperForSendingRequest);
+			if (result == null)
+				result = caseHtmlElement(helperForSendingRequest);
+			if (result == null)
+				result = caseNamedElement(helperForSendingRequest);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -394,152 +401,6 @@ public class RyzSwitch<T> extends Switch<T> {
 				result = caseMainComponentRelation(viewToModelRelation);
 			if (result == null)
 				result = caseNamedElement(viewToModelRelation);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case RyzPackage.USE_CASE_ACTOR_PACKAGE: {
-			UseCaseActorPackage useCaseActorPackage = (UseCaseActorPackage) theEObject;
-			T result = caseUseCaseActorPackage(useCaseActorPackage);
-			if (result == null)
-				result = casePackage(useCaseActorPackage);
-			if (result == null)
-				result = caseNamedElement(useCaseActorPackage);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case RyzPackage.ACTOR: {
-			Actor actor = (Actor) theEObject;
-			T result = caseActor(actor);
-			if (result == null)
-				result = caseNamedElement(actor);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case RyzPackage.USE_CASE: {
-			UseCase useCase = (UseCase) theEObject;
-			T result = caseUseCase(useCase);
-			if (result == null)
-				result = caseNamedElement(useCase);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case RyzPackage.USE_CASE_PACKAGE: {
-			UseCasePackage useCasePackage = (UseCasePackage) theEObject;
-			T result = caseUseCasePackage(useCasePackage);
-			if (result == null)
-				result = caseNamedElement(useCasePackage);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case RyzPackage.PRESENTATÝON_ELEMENT: {
-			PresentationElement presentationElement = (PresentationElement) theEObject;
-			T result = casePresentationElement(presentationElement);
-			if (result == null)
-				result = caseNamedElement(presentationElement);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case RyzPackage.PRESENTATÝON_FORM: {
-			PresentationForm presentationForm = (PresentationForm) theEObject;
-			T result = casePresentationForm(presentationForm);
-			if (result == null)
-				result = casePresentationElement(presentationForm);
-			if (result == null)
-				result = caseNamedElement(presentationForm);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case RyzPackage.MULTÝPLE_CHOÝCE: {
-			MultipleChoice multipleChoice = (MultipleChoice) theEObject;
-			T result = caseMultipleChoice(multipleChoice);
-			if (result == null)
-				result = casePresentationFormElement(multipleChoice);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case RyzPackage.CHOÝCE: {
-			Choice choice = (Choice) theEObject;
-			T result = caseChoice(choice);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case RyzPackage.BUTTON: {
-			Button button = (Button) theEObject;
-			T result = caseButton(button);
-			if (result == null)
-				result = casePresentationFormElement(button);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case RyzPackage.PRESENTATÝON_FORM_ELEMENT: {
-			PresentationFormElement presentationFormElement = (PresentationFormElement) theEObject;
-			T result = casePresentationFormElement(presentationFormElement);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case RyzPackage.INPUT: {
-			Input ýnput = (Input) theEObject;
-			T result = caseInput(ýnput);
-			if (result == null)
-				result = casePresentationFormElement(ýnput);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case RyzPackage.LÝNK: {
-			Link link = (Link) theEObject;
-			T result = caseLink(link);
-			if (result == null)
-				result = casePresentationElement(link);
-			if (result == null)
-				result = caseNamedElement(link);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case RyzPackage.TABLE: {
-			Table table = (Table) theEObject;
-			T result = caseTable(table);
-			if (result == null)
-				result = casePresentationElement(table);
-			if (result == null)
-				result = caseNamedElement(table);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case RyzPackage.HEADER: {
-			Header header = (Header) theEObject;
-			T result = caseHeader(header);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case RyzPackage.FORM_ELEMENT_TO_PROPERTY_KEY_RELATÝON: {
-			FormElementToPropertyKeyRelation formElementToPropertyKeyRelation = (FormElementToPropertyKeyRelation) theEObject;
-			T result = caseFormElementToPropertyKeyRelation(formElementToPropertyKeyRelation);
-			if (result == null)
-				result = caseMainComponentRelation(formElementToPropertyKeyRelation);
-			if (result == null)
-				result = caseNamedElement(formElementToPropertyKeyRelation);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case RyzPackage.PRESENTATÝON_FORM_ELEMENT_TO_PROPERTY_KEY: {
-			PresentationFormElementToPropertyKey presentationFormElementToPropertyKey = (PresentationFormElementToPropertyKey) theEObject;
-			T result = casePresentationFormElementToPropertyKey(presentationFormElementToPropertyKey);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -880,6 +741,21 @@ public class RyzSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Html Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Html Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseHtmlElement(HtmlElement object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Action Link</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -966,246 +842,6 @@ public class RyzSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseViewToModelRelation(ViewToModelRelation object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Use Case Actor Package</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Use Case Actor Package</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseUseCaseActorPackage(UseCaseActorPackage object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Actor</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Actor</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseActor(Actor object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Use Case</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Use Case</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseUseCase(UseCase object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Use Case Package</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Use Case Package</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseUseCasePackage(UseCasePackage object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Presentation Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Presentation Element</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePresentationElement(PresentationElement object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Presentation Form</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Presentation Form</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePresentationForm(PresentationForm object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Multiple Choice</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Multiple Choice</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMultipleChoice(MultipleChoice object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Choice</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Choice</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseChoice(Choice object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Button</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Button</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseButton(Button object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Presentation Form Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Presentation Form Element</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePresentationFormElement(PresentationFormElement object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Input</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Input</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseInput(Input object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Link</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Link</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseLink(Link object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Table</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Table</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTable(Table object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Header</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Header</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseHeader(Header object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Form Element To Property Key Relation</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Form Element To Property Key Relation</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFormElementToPropertyKeyRelation(FormElementToPropertyKeyRelation object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Presentation Form Element To Property Key</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Presentation Form Element To Property Key</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePresentationFormElementToPropertyKey(PresentationFormElementToPropertyKey object) {
 		return null;
 	}
 

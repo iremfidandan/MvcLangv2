@@ -6,7 +6,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace SportStore.Models{
 	public class CartLine{
 		public int Quantity {get; set;}
-		
 
 		[Key]
 		public int CartLineId {get; set;}
@@ -17,9 +16,9 @@ namespace SportStore.Models{
 		[ForeignKey("Cart")]
 		public int Cart_CartId {get; set;}
 
-		public Product Product {get; set;}
-
 		public Cart Cart {get; set;}
+
+		public Product Product {get; set;}
 
 		public CartLine(){
 		}

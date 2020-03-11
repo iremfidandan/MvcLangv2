@@ -28,6 +28,10 @@ public interface ControllerToModelRelation extends MainComponentRelation {
 	/**
 	 * Returns the value of the '<em><b>Actionmethod</b></em>' reference.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Actionmethod</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Actionmethod</em>' reference.
 	 * @see #setActionmethod(ActionMethod)
@@ -50,6 +54,10 @@ public interface ControllerToModelRelation extends MainComponentRelation {
 	/**
 	 * Returns the value of the '<em><b>Model</b></em>' reference.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Model</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Model</em>' reference.
 	 * @see #setModel(Model)
@@ -73,6 +81,10 @@ public interface ControllerToModelRelation extends MainComponentRelation {
 	 * Returns the value of the '<em><b>Modelproperties</b></em>' reference list.
 	 * The list contents are of type {@link com.eryaz.prototype.ryz.Property}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Modelproperties</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Modelproperties</em>' reference list.
 	 * @see com.eryaz.prototype.ryz.RyzPackage#getControllerToModelRelation_Modelproperties()
@@ -85,6 +97,10 @@ public interface ControllerToModelRelation extends MainComponentRelation {
 	 * Returns the value of the '<em><b>Model Cardinality</b></em>' attribute.
 	 * The literals are from the enumeration {@link com.eryaz.prototype.ryz.ModelCardinality}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Model Cardinality</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Model Cardinality</em>' attribute.
 	 * @see com.eryaz.prototype.ryz.ModelCardinality
@@ -110,6 +126,10 @@ public interface ControllerToModelRelation extends MainComponentRelation {
 	 * Returns the value of the '<em><b>Model Operation</b></em>' attribute.
 	 * The literals are from the enumeration {@link com.eryaz.prototype.ryz.ModelOperation}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Model Operation</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Model Operation</em>' attribute.
 	 * @see com.eryaz.prototype.ryz.ModelOperation

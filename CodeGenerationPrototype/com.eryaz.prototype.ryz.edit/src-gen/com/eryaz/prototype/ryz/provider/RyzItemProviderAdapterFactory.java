@@ -556,335 +556,11 @@ public class RyzItemProviderAdapterFactory extends RyzAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link com.eryaz.prototype.ryz.UseCaseActorPackage} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected UseCaseActorPackageItemProvider useCaseActorPackageItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.eryaz.prototype.ryz.UseCaseActorPackage}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createUseCaseActorPackageAdapter() {
-		if (useCaseActorPackageItemProvider == null) {
-			useCaseActorPackageItemProvider = new UseCaseActorPackageItemProvider(this);
-		}
-
-		return useCaseActorPackageItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.eryaz.prototype.ryz.Actor} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ActorItemProvider actorItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.eryaz.prototype.ryz.Actor}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createActorAdapter() {
-		if (actorItemProvider == null) {
-			actorItemProvider = new ActorItemProvider(this);
-		}
-
-		return actorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.eryaz.prototype.ryz.UseCase} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected UseCaseItemProvider useCaseItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.eryaz.prototype.ryz.UseCase}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createUseCaseAdapter() {
-		if (useCaseItemProvider == null) {
-			useCaseItemProvider = new UseCaseItemProvider(this);
-		}
-
-		return useCaseItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.eryaz.prototype.ryz.UseCasePackage} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected UseCasePackageItemProvider useCasePackageItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.eryaz.prototype.ryz.UseCasePackage}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createUseCasePackageAdapter() {
-		if (useCasePackageItemProvider == null) {
-			useCasePackageItemProvider = new UseCasePackageItemProvider(this);
-		}
-
-		return useCasePackageItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.eryaz.prototype.ryz.PresentationForm} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PresentationFormItemProvider presentationFormItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.eryaz.prototype.ryz.PresentationForm}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPresentationFormAdapter() {
-		if (presentationFormItemProvider == null) {
-			presentationFormItemProvider = new PresentationFormItemProvider(this);
-		}
-
-		return presentationFormItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.eryaz.prototype.ryz.MultipleChoice} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected MultipleChoiceItemProvider multipleChoiceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.eryaz.prototype.ryz.MultipleChoice}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createMultipleChoiceAdapter() {
-		if (multipleChoiceItemProvider == null) {
-			multipleChoiceItemProvider = new MultipleChoiceItemProvider(this);
-		}
-
-		return multipleChoiceItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.eryaz.prototype.ryz.Choice} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ChoiceItemProvider choiceItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.eryaz.prototype.ryz.Choice}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createChoiceAdapter() {
-		if (choiceItemProvider == null) {
-			choiceItemProvider = new ChoiceItemProvider(this);
-		}
-
-		return choiceItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.eryaz.prototype.ryz.Button} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ButtonItemProvider buttonItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.eryaz.prototype.ryz.Button}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createButtonAdapter() {
-		if (buttonItemProvider == null) {
-			buttonItemProvider = new ButtonItemProvider(this);
-		}
-
-		return buttonItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.eryaz.prototype.ryz.Input} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InputItemProvider ýnputItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.eryaz.prototype.ryz.Input}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInputAdapter() {
-		if (ýnputItemProvider == null) {
-			ýnputItemProvider = new InputItemProvider(this);
-		}
-
-		return ýnputItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.eryaz.prototype.ryz.Link} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected LinkItemProvider linkItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.eryaz.prototype.ryz.Link}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createLinkAdapter() {
-		if (linkItemProvider == null) {
-			linkItemProvider = new LinkItemProvider(this);
-		}
-
-		return linkItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.eryaz.prototype.ryz.Table} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TableItemProvider tableItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.eryaz.prototype.ryz.Table}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTableAdapter() {
-		if (tableItemProvider == null) {
-			tableItemProvider = new TableItemProvider(this);
-		}
-
-		return tableItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.eryaz.prototype.ryz.Header} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected HeaderItemProvider headerItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.eryaz.prototype.ryz.Header}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createHeaderAdapter() {
-		if (headerItemProvider == null) {
-			headerItemProvider = new HeaderItemProvider(this);
-		}
-
-		return headerItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.eryaz.prototype.ryz.FormElementToPropertyKeyRelation} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FormElementToPropertyKeyRelationItemProvider formElementToPropertyKeyRelationItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.eryaz.prototype.ryz.FormElementToPropertyKeyRelation}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFormElementToPropertyKeyRelationAdapter() {
-		if (formElementToPropertyKeyRelationItemProvider == null) {
-			formElementToPropertyKeyRelationItemProvider = new FormElementToPropertyKeyRelationItemProvider(this);
-		}
-
-		return formElementToPropertyKeyRelationItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link com.eryaz.prototype.ryz.PresentationFormElementToPropertyKey} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PresentationFormElementToPropertyKeyItemProvider presentationFormElementToPropertyKeyItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link com.eryaz.prototype.ryz.PresentationFormElementToPropertyKey}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPresentationFormElementToPropertyKeyAdapter() {
-		if (presentationFormElementToPropertyKeyItemProvider == null) {
-			presentationFormElementToPropertyKeyItemProvider = new PresentationFormElementToPropertyKeyItemProvider(
-					this);
-		}
-
-		return presentationFormElementToPropertyKeyItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public ComposeableAdapterFactory getRootAdapterFactory() {
 		return parentAdapterFactory == null ? this : parentAdapterFactory.getRootAdapterFactory();
 	}
@@ -895,7 +571,6 @@ public class RyzItemProviderAdapterFactory extends RyzAdapterFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setParentAdapterFactory(ComposedAdapterFactory parentAdapterFactory) {
 		this.parentAdapterFactory = parentAdapterFactory;
 	}
@@ -944,7 +619,6 @@ public class RyzItemProviderAdapterFactory extends RyzAdapterFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void addListener(INotifyChangedListener notifyChangedListener) {
 		changeNotifier.addListener(notifyChangedListener);
 	}
@@ -955,7 +629,6 @@ public class RyzItemProviderAdapterFactory extends RyzAdapterFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void removeListener(INotifyChangedListener notifyChangedListener) {
 		changeNotifier.removeListener(notifyChangedListener);
 	}
@@ -966,7 +639,6 @@ public class RyzItemProviderAdapterFactory extends RyzAdapterFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void fireNotifyChanged(Notification notification) {
 		changeNotifier.fireNotifyChanged(notification);
 
@@ -981,7 +653,6 @@ public class RyzItemProviderAdapterFactory extends RyzAdapterFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void dispose() {
 		if (projectItemProvider != null)
 			projectItemProvider.dispose();
@@ -1025,34 +696,6 @@ public class RyzItemProviderAdapterFactory extends RyzAdapterFactory
 			tableKeyItemProvider.dispose();
 		if (viewToModelRelationItemProvider != null)
 			viewToModelRelationItemProvider.dispose();
-		if (useCaseActorPackageItemProvider != null)
-			useCaseActorPackageItemProvider.dispose();
-		if (actorItemProvider != null)
-			actorItemProvider.dispose();
-		if (useCaseItemProvider != null)
-			useCaseItemProvider.dispose();
-		if (useCasePackageItemProvider != null)
-			useCasePackageItemProvider.dispose();
-		if (presentationFormItemProvider != null)
-			presentationFormItemProvider.dispose();
-		if (multipleChoiceItemProvider != null)
-			multipleChoiceItemProvider.dispose();
-		if (choiceItemProvider != null)
-			choiceItemProvider.dispose();
-		if (buttonItemProvider != null)
-			buttonItemProvider.dispose();
-		if (ýnputItemProvider != null)
-			ýnputItemProvider.dispose();
-		if (linkItemProvider != null)
-			linkItemProvider.dispose();
-		if (tableItemProvider != null)
-			tableItemProvider.dispose();
-		if (headerItemProvider != null)
-			headerItemProvider.dispose();
-		if (formElementToPropertyKeyRelationItemProvider != null)
-			formElementToPropertyKeyRelationItemProvider.dispose();
-		if (presentationFormElementToPropertyKeyItemProvider != null)
-			presentationFormElementToPropertyKeyItemProvider.dispose();
 	}
 
 }

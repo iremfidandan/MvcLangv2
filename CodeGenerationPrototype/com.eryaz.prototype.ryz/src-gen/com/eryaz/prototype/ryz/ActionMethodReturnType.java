@@ -71,6 +71,10 @@ public enum ActionMethodReturnType implements Enumerator {
 	/**
 	 * The '<em><b>View</b></em>' literal value.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>View</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #VÝEW
 	 * @model name="View"
@@ -82,6 +86,10 @@ public enum ActionMethodReturnType implements Enumerator {
 	/**
 	 * The '<em><b>Partial View</b></em>' literal value.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Partial View</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #PARTÝAL_VÝEW
 	 * @model name="PartialView"
@@ -93,6 +101,10 @@ public enum ActionMethodReturnType implements Enumerator {
 	/**
 	 * The '<em><b>Redirect To Action</b></em>' literal value.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Redirect To Action</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #REDÝRECT_TO_ACTÝON
 	 * @model name="RedirectToAction"
@@ -104,6 +116,10 @@ public enum ActionMethodReturnType implements Enumerator {
 	/**
 	 * The '<em><b>Json</b></em>' literal value.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Json</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #JSON
 	 * @model name="Json"
@@ -115,6 +131,10 @@ public enum ActionMethodReturnType implements Enumerator {
 	/**
 	 * The '<em><b>Content</b></em>' literal value.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Content</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #CONTENT
 	 * @model name="Content"
@@ -238,7 +258,6 @@ public enum ActionMethodReturnType implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public int getValue() {
 		return value;
 	}
@@ -248,7 +267,6 @@ public enum ActionMethodReturnType implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getName() {
 		return name;
 	}
@@ -258,7 +276,6 @@ public enum ActionMethodReturnType implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getLiteral() {
 		return literal;
 	}

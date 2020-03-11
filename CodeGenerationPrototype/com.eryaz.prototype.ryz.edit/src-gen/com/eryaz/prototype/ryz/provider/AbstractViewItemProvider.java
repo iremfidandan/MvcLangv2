@@ -79,7 +79,6 @@ public class AbstractViewItemProvider extends MainComponentItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(RyzPackage.Literals.ABSTRACT_VÝEW__HTMLELEMENTS);
-			childrenFeatures.add(RyzPackage.Literals.ABSTRACT_VÝEW__PRESENTATÝONELEMENT);
 		}
 		return childrenFeatures;
 	}
@@ -144,7 +143,6 @@ public class AbstractViewItemProvider extends MainComponentItemProvider {
 
 		switch (notification.getFeatureID(AbstractView.class)) {
 		case RyzPackage.ABSTRACT_VÝEW__HTMLELEMENTS:
-		case RyzPackage.ABSTRACT_VÝEW__PRESENTATÝONELEMENT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -167,15 +165,6 @@ public class AbstractViewItemProvider extends MainComponentItemProvider {
 
 		newChildDescriptors.add(createChildParameter(RyzPackage.Literals.ABSTRACT_VÝEW__HTMLELEMENTS,
 				RyzFactory.eINSTANCE.createForm()));
-
-		newChildDescriptors.add(createChildParameter(RyzPackage.Literals.ABSTRACT_VÝEW__PRESENTATÝONELEMENT,
-				RyzFactory.eINSTANCE.createPresentationForm()));
-
-		newChildDescriptors.add(createChildParameter(RyzPackage.Literals.ABSTRACT_VÝEW__PRESENTATÝONELEMENT,
-				RyzFactory.eINSTANCE.createLink()));
-
-		newChildDescriptors.add(createChildParameter(RyzPackage.Literals.ABSTRACT_VÝEW__PRESENTATÝONELEMENT,
-				RyzFactory.eINSTANCE.createTable()));
 	}
 
 }

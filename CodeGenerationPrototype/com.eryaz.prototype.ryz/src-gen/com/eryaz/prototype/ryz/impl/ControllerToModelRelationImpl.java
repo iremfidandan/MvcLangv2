@@ -135,7 +135,6 @@ public class ControllerToModelRelationImpl extends MainComponentRelationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public ActionMethod getActionmethod() {
 		if (actionmethod != null && actionmethod.eIsProxy()) {
 			InternalEObject oldActionmethod = (InternalEObject) actionmethod;
@@ -163,7 +162,6 @@ public class ControllerToModelRelationImpl extends MainComponentRelationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setActionmethod(ActionMethod newActionmethod) {
 		ActionMethod oldActionmethod = actionmethod;
 		actionmethod = newActionmethod;
@@ -177,7 +175,6 @@ public class ControllerToModelRelationImpl extends MainComponentRelationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Model getModel() {
 		if (model != null && model.eIsProxy()) {
 			InternalEObject oldModel = (InternalEObject) model;
@@ -205,7 +202,6 @@ public class ControllerToModelRelationImpl extends MainComponentRelationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setModel(Model newModel) {
 		Model oldModel = model;
 		model = newModel;
@@ -219,7 +215,6 @@ public class ControllerToModelRelationImpl extends MainComponentRelationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EList<Property> getModelproperties() {
 		if (modelproperties == null) {
 			modelproperties = new EObjectResolvingEList<Property>(Property.class, this,
@@ -233,7 +228,6 @@ public class ControllerToModelRelationImpl extends MainComponentRelationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public ModelCardinality getModelCardinality() {
 		return modelCardinality;
 	}
@@ -243,7 +237,6 @@ public class ControllerToModelRelationImpl extends MainComponentRelationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setModelCardinality(ModelCardinality newModelCardinality) {
 		ModelCardinality oldModelCardinality = modelCardinality;
 		modelCardinality = newModelCardinality == null ? MODEL_CARDÝNALÝTY_EDEFAULT : newModelCardinality;
@@ -257,7 +250,6 @@ public class ControllerToModelRelationImpl extends MainComponentRelationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public ModelOperation getModelOperation() {
 		return modelOperation;
 	}
@@ -267,7 +259,6 @@ public class ControllerToModelRelationImpl extends MainComponentRelationImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setModelOperation(ModelOperation newModelOperation) {
 		ModelOperation oldModelOperation = modelOperation;
 		modelOperation = newModelOperation == null ? MODEL_OPERATÝON_EDEFAULT : newModelOperation;

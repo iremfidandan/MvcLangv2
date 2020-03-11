@@ -66,7 +66,6 @@ public class ViewPackageImpl extends ComponentPackageImpl implements ViewPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EList<AbstractView> getViews() {
 		if (views == null) {
 			views = new EObjectContainmentEList<AbstractView>(AbstractView.class, this, RyzPackage.VÝEW_PACKAGE__VÝEWS);

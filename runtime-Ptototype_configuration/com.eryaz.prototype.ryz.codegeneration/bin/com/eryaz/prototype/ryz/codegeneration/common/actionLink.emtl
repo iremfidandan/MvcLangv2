@@ -5,10 +5,10 @@
       <takesTypesFrom href="http://www.eryaz.com/prototype/ryz#/"/>
     </input>
     <imports href="helperForSendingRequest.emtl#/0"/>
-    <imports href="enumtypes/httpMethodTypeForRegularHttp.emtl#/0"/>
-    <imports href="enumtypes/httpMethodTypeForAjax.emtl#/0"/>
+    <imports href="httpMethodTypeForRegularHttp.emtl#/0"/>
+    <imports href="httpMethodTypeForAjax.emtl#/0"/>
     <imports href="controllerNameWithoutControllerSuffix.emtl#/0"/>
-    <imports href="inferences/helperForSendingRequestRouteValueInference.emtl#/0"/>
+    <imports href="actionLinkRouteValueInference.emtl#/0"/>
     <imports href="mvcRelations.emtl#/0"/>
     <ownedModuleElement xsi:type="mtl:Template" name="generateActionLink" visibility="Public">
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="@Html.ActionLink(&quot;"/>
@@ -52,7 +52,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;, new{"/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="inferences/helperForSendingRequestRouteValueInference.emtl#/0/generateHelperForSendingRequestRouteValueInference"/>
+        <definition href="actionLinkRouteValueInference.emtl#/0/generateActionLinkRouteValueInference"/>
         <argument xsi:type="mtl:QueryInvocation" definition="/0/getViewToControllerRelation">
           <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ViewToControllerRelation"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="anActionLink" referredVariable="/0/generateActionLink/anActionLink">
@@ -81,24 +81,7 @@
       </guard>
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Template" name="generateActionLink" visibility="Public">
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;div id=&quot;update-"/>
-      <body xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/substituteAll">
-        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <source xsi:type="ocl.ecore:PropertyCallExp">
-          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <source xsi:type="ocl.ecore:VariableExp" name="anActionLink" referredVariable="/0/generateActionLink.1/anActionLink">
-            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionLink"/>
-          </source>
-          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//HelperForSendingRequest/text"/>
-        </source>
-        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" ">
-          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        </argument>
-        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="">
-          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        </argument>
-      </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;>&#xA;&lt;/div>&#xA;@Ajax.ActionLink(&quot;"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="@Ajax.ActionLink(&quot;"/>
       <body xsi:type="ocl.ecore:PropertyCallExp">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <source xsi:type="ocl.ecore:VariableExp" name="anActionLink" referredVariable="/0/generateActionLink.1/anActionLink">
@@ -139,7 +122,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;, new{"/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="inferences/helperForSendingRequestRouteValueInference.emtl#/0/generateHelperForSendingRequestRouteValueInference"/>
+        <definition href="actionLinkRouteValueInference.emtl#/0/generateActionLinkRouteValueInference"/>
         <argument xsi:type="mtl:QueryInvocation" definition="/0/getViewToControllerRelation">
           <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ViewToControllerRelation"/>
           <argument xsi:type="ocl.ecore:VariableExp" name="anActionLink" referredVariable="/0/generateActionLink.1/anActionLink">
@@ -147,27 +130,10 @@
           </argument>
         </argument>
       </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="}, new AjaxOptions&#xA;&#x9;{&#xA;&#x9;&#x9;UpdateTargetId = &quot;update-"/>
-      <body xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/substituteAll">
-        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <source xsi:type="ocl.ecore:PropertyCallExp">
-          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <source xsi:type="ocl.ecore:VariableExp" name="anActionLink" referredVariable="/0/generateActionLink.1/anActionLink">
-            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionLink"/>
-          </source>
-          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//HelperForSendingRequest/text"/>
-        </source>
-        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" ">
-          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        </argument>
-        <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="">
-          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        </argument>
-      </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;,&#xA;&#x9;&#x9;InsertionMode = InsertionMode.Replace,&#xA;&#x9;&#x9;HttpMethod = &quot;"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="}, new AjaxOptions&#xA;&#x9;{&#xA;&#x9;&#x9;UpdateTargetId = &quot;&quot;,&#xA;&#x9;&#x9;InsertionMode = InsertionMode.Replace,&#xA;&#x9;&#x9;HttpMethod = &quot;"/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="enumtypes/httpMethodTypeForAjax.emtl#/0/generateHttpMethodTypeForAjax"/>
+        <definition href="httpMethodTypeForAjax.emtl#/0/generateHttpMethodTypeForAjax"/>
         <argument xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//HttpMethod"/>
           <source xsi:type="ocl.ecore:VariableExp" name="anActionLink" referredVariable="/0/generateActionLink.1/anActionLink">
@@ -176,7 +142,7 @@
           <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//HelperForSendingRequest/httpMethod"/>
         </argument>
       </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;&#xA;&#x9;})"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;,&#xA;&#x9;&#x9;OnSuccess = &quot;&quot;&#xA;&#x9;})"/>
       <parameter name="anActionLink">
         <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionLink"/>
       </parameter>
@@ -202,7 +168,7 @@
       </parameter>
       <expression xsi:type="ocl.ecore:IteratorExp" name="any">
         <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ViewToControllerRelation"/>
-        <source xsi:type="mtl:QueryInvocation" eType="/26/Set(ViewToControllerRelation)">
+        <source xsi:type="mtl:QueryInvocation" eType="/24/Set(ViewToControllerRelation)">
           <definition href="mvcRelations.emtl#/0/getViewToControllerRelationsInProject"/>
           <argument xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/ecore_EObject_Class/eContainer">
             <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
@@ -240,16 +206,6 @@
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
         <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
       </eAnnotations>
-      <eOperations name="substituteAll">
-        <eAnnotations source="MTL non-standard"/>
-        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <eParameters name="substring">
-          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        </eParameters>
-        <eParameters name="replacement">
-          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        </eParameters>
-      </eOperations>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
@@ -309,7 +265,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="enumtypes/httpMethodTypeForAjax.emtl#/0/generateHttpMethodTypeForAjax"/>
+          <references href="httpMethodTypeForAjax.emtl#/0/generateHttpMethodTypeForAjax"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="aHttpMethod">
@@ -328,12 +284,12 @@
           <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Controller"/>
         </eParameters>
       </eOperations>
-      <eOperations name="generateHelperForSendingRequestRouteValueInference">
+      <eOperations name="generateActionLinkRouteValueInference">
         <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="inferences/helperForSendingRequestRouteValueInference.emtl#/0/generateHelperForSendingRequestRouteValueInference"/>
+          <references href="actionLinkRouteValueInference.emtl#/0/generateActionLinkRouteValueInference"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="aViewToControllerRelation">
@@ -475,12 +431,6 @@
     <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionLink"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionLink"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionLink"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
@@ -499,383 +449,323 @@
   </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/generateActionLink">
-      <details key="start" value="670"/>
-      <details key="end" value="1148"/>
+      <details key="start" value="623"/>
+      <details key="end" value="1086"/>
       <details key="line" value="11"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/generateActionLink/%">
-      <details key="start" value="791"/>
-      <details key="end" value="809"/>
+      <details key="start" value="744"/>
+      <details key="end" value="762"/>
       <details key="line" value="12"/>
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/generateActionLink/%.1">
-      <details key="start" value="810"/>
-      <details key="end" value="827"/>
+      <details key="start" value="763"/>
+      <details key="end" value="780"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.3" references="/0/generateActionLink/%.1/anActionLink">
-      <details key="start" value="810"/>
-      <details key="end" value="822"/>
+      <details key="start" value="763"/>
+      <details key="end" value="775"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.4" references="/0/generateActionLink/%.2">
-      <details key="start" value="829"/>
-      <details key="end" value="833"/>
+      <details key="start" value="782"/>
+      <details key="end" value="786"/>
       <details key="line" value="12"/>
     </eAnnotations>
     <eAnnotations source="positions.5" references="/0/generateActionLink/%.3">
-      <details key="start" value="834"/>
-      <details key="end" value="885"/>
+      <details key="start" value="787"/>
+      <details key="end" value="838"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.6" references="/0/generateActionLink/%.3/%">
-      <details key="start" value="834"/>
-      <details key="end" value="880"/>
+      <details key="start" value="787"/>
+      <details key="end" value="833"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.7" references="/0/generateActionLink/%.3/%/anActionLink">
-      <details key="start" value="834"/>
-      <details key="end" value="846"/>
+      <details key="start" value="787"/>
+      <details key="end" value="799"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.8" references="/0/generateActionLink/%.4">
-      <details key="start" value="887"/>
-      <details key="end" value="891"/>
+      <details key="start" value="840"/>
+      <details key="end" value="844"/>
       <details key="line" value="12"/>
     </eAnnotations>
     <eAnnotations source="positions.9" references="/0/generateActionLink/%.5">
-      <details key="start" value="892"/>
-      <details key="end" value="1009"/>
+      <details key="start" value="845"/>
+      <details key="end" value="962"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.10" references="/0/generateActionLink/%.5/%">
-      <details key="start" value="892"/>
-      <details key="end" value="961"/>
+      <details key="start" value="845"/>
+      <details key="end" value="914"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.11" references="/0/generateActionLink/%.5/%/%">
-      <details key="start" value="892"/>
-      <details key="end" value="938"/>
+      <details key="start" value="845"/>
+      <details key="end" value="891"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.12" references="/0/generateActionLink/%.5/%/%/anActionLink">
-      <details key="start" value="892"/>
-      <details key="end" value="904"/>
+      <details key="start" value="845"/>
+      <details key="end" value="857"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.13" references="/0/generateActionLink/%.5/%/%.1">
-      <details key="start" value="950"/>
-      <details key="end" value="960"/>
+      <details key="start" value="903"/>
+      <details key="end" value="913"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.14" references="/0/generateActionLink/%.6">
-      <details key="start" value="1011"/>
-      <details key="end" value="1018"/>
+      <details key="start" value="964"/>
+      <details key="end" value="971"/>
       <details key="line" value="12"/>
     </eAnnotations>
     <eAnnotations source="positions.15" references="/0/generateActionLink/%.7">
-      <details key="start" value="1019"/>
-      <details key="end" value="1114"/>
+      <details key="start" value="972"/>
+      <details key="end" value="1052"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.16" references="/0/generateActionLink/%.7/%">
-      <details key="start" value="1019"/>
-      <details key="end" value="1061"/>
+      <details key="start" value="1010"/>
+      <details key="end" value="1051"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.17" references="/0/generateActionLink/%.7/%/anActionLink">
-      <details key="start" value="1019"/>
-      <details key="end" value="1031"/>
+      <details key="start" value="1038"/>
+      <details key="end" value="1050"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.18" references="/0/generateActionLink/%.8">
-      <details key="start" value="1116"/>
-      <details key="end" value="1136"/>
+      <details key="start" value="1054"/>
+      <details key="end" value="1074"/>
       <details key="line" value="12"/>
     </eAnnotations>
     <eAnnotations source="positions.19" references="/0/generateActionLink/anActionLink">
-      <details key="start" value="706"/>
-      <details key="end" value="731"/>
+      <details key="start" value="659"/>
+      <details key="end" value="684"/>
       <details key="line" value="11"/>
     </eAnnotations>
     <eAnnotations source="positions.20" references="/0/generateActionLink/%.9">
-      <details key="start" value="736"/>
-      <details key="end" value="788"/>
+      <details key="start" value="689"/>
+      <details key="end" value="741"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.21" references="/0/generateActionLink/%.9/%">
-      <details key="start" value="736"/>
-      <details key="end" value="760"/>
+      <details key="start" value="689"/>
+      <details key="end" value="713"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.22" references="/0/generateActionLink/%.9/%/anActionLink">
-      <details key="start" value="736"/>
-      <details key="end" value="748"/>
+      <details key="start" value="689"/>
+      <details key="end" value="701"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.23" references="/0/generateActionLink/%.9/%.1">
-      <details key="start" value="763"/>
-      <details key="end" value="788"/>
+      <details key="start" value="716"/>
+      <details key="end" value="741"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.24" references="/0/generateActionLink.1">
-      <details key="start" value="1150"/>
-      <details key="end" value="1884"/>
+      <details key="start" value="1088"/>
+      <details key="end" value="1706"/>
       <details key="line" value="15"/>
     </eAnnotations>
     <eAnnotations source="positions.25" references="/0/generateActionLink.1/%">
-      <details key="start" value="1263"/>
-      <details key="end" value="1279"/>
+      <details key="start" value="1201"/>
+      <details key="end" value="1219"/>
       <details key="line" value="16"/>
     </eAnnotations>
     <eAnnotations source="positions.26" references="/0/generateActionLink.1/%.1">
-      <details key="start" value="1280"/>
-      <details key="end" value="1320"/>
+      <details key="start" value="1220"/>
+      <details key="end" value="1237"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.27" references="/0/generateActionLink.1/%.1/%">
-      <details key="start" value="1280"/>
-      <details key="end" value="1297"/>
+    <eAnnotations source="positions.27" references="/0/generateActionLink.1/%.1/anActionLink">
+      <details key="start" value="1220"/>
+      <details key="end" value="1232"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.28" references="/0/generateActionLink.1/%.1/%/anActionLink">
-      <details key="start" value="1280"/>
-      <details key="end" value="1292"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.29" references="/0/generateActionLink.1/%.1/%.1">
-      <details key="start" value="1312"/>
-      <details key="end" value="1315"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.30" references="/0/generateActionLink.1/%.1/%.2">
-      <details key="start" value="1317"/>
-      <details key="end" value="1319"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.31" references="/0/generateActionLink.1/%.2">
-      <details key="start" value="1322"/>
-      <details key="end" value="1350"/>
+    <eAnnotations source="positions.28" references="/0/generateActionLink.1/%.2">
+      <details key="start" value="1239"/>
+      <details key="end" value="1243"/>
       <details key="line" value="16"/>
     </eAnnotations>
-    <eAnnotations source="positions.32" references="/0/generateActionLink.1/%.3">
-      <details key="start" value="1351"/>
-      <details key="end" value="1368"/>
+    <eAnnotations source="positions.29" references="/0/generateActionLink.1/%.3">
+      <details key="start" value="1244"/>
+      <details key="end" value="1295"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.33" references="/0/generateActionLink.1/%.3/anActionLink">
-      <details key="start" value="1351"/>
-      <details key="end" value="1363"/>
+    <eAnnotations source="positions.30" references="/0/generateActionLink.1/%.3/%">
+      <details key="start" value="1244"/>
+      <details key="end" value="1290"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.34" references="/0/generateActionLink.1/%.4">
-      <details key="start" value="1370"/>
-      <details key="end" value="1374"/>
-      <details key="line" value="18"/>
-    </eAnnotations>
-    <eAnnotations source="positions.35" references="/0/generateActionLink.1/%.5">
-      <details key="start" value="1375"/>
-      <details key="end" value="1426"/>
+    <eAnnotations source="positions.31" references="/0/generateActionLink.1/%.3/%/anActionLink">
+      <details key="start" value="1244"/>
+      <details key="end" value="1256"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.36" references="/0/generateActionLink.1/%.5/%">
-      <details key="start" value="1375"/>
-      <details key="end" value="1421"/>
+    <eAnnotations source="positions.32" references="/0/generateActionLink.1/%.4">
+      <details key="start" value="1297"/>
+      <details key="end" value="1301"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/generateActionLink.1/%.5">
+      <details key="start" value="1302"/>
+      <details key="end" value="1419"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.37" references="/0/generateActionLink.1/%.5/%/anActionLink">
-      <details key="start" value="1375"/>
-      <details key="end" value="1387"/>
+    <eAnnotations source="positions.34" references="/0/generateActionLink.1/%.5/%">
+      <details key="start" value="1302"/>
+      <details key="end" value="1371"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/generateActionLink.1/%.5/%/%">
+      <details key="start" value="1302"/>
+      <details key="end" value="1348"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/generateActionLink.1/%.5/%/%/anActionLink">
+      <details key="start" value="1302"/>
+      <details key="end" value="1314"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/generateActionLink.1/%.5/%/%.1">
+      <details key="start" value="1360"/>
+      <details key="end" value="1370"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.38" references="/0/generateActionLink.1/%.6">
-      <details key="start" value="1428"/>
-      <details key="end" value="1432"/>
-      <details key="line" value="18"/>
+      <details key="start" value="1421"/>
+      <details key="end" value="1428"/>
+      <details key="line" value="16"/>
     </eAnnotations>
     <eAnnotations source="positions.39" references="/0/generateActionLink.1/%.7">
-      <details key="start" value="1433"/>
-      <details key="end" value="1550"/>
+      <details key="start" value="1429"/>
+      <details key="end" value="1509"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.40" references="/0/generateActionLink.1/%.7/%">
-      <details key="start" value="1433"/>
-      <details key="end" value="1502"/>
+      <details key="start" value="1467"/>
+      <details key="end" value="1508"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.41" references="/0/generateActionLink.1/%.7/%/%">
-      <details key="start" value="1433"/>
-      <details key="end" value="1479"/>
+    <eAnnotations source="positions.41" references="/0/generateActionLink.1/%.7/%/anActionLink">
+      <details key="start" value="1495"/>
+      <details key="end" value="1507"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.42" references="/0/generateActionLink.1/%.7/%/%/anActionLink">
-      <details key="start" value="1433"/>
-      <details key="end" value="1445"/>
+    <eAnnotations source="positions.42" references="/0/generateActionLink.1/%.8">
+      <details key="start" value="1511"/>
+      <details key="end" value="1613"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/generateActionLink.1/%.9">
+      <details key="start" value="1614"/>
+      <details key="end" value="1669"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.43" references="/0/generateActionLink.1/%.7/%/%.1">
-      <details key="start" value="1491"/>
-      <details key="end" value="1501"/>
+    <eAnnotations source="positions.44" references="/0/generateActionLink.1/%.9/%">
+      <details key="start" value="1614"/>
+      <details key="end" value="1637"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.44" references="/0/generateActionLink.1/%.8">
-      <details key="start" value="1552"/>
-      <details key="end" value="1559"/>
-      <details key="line" value="18"/>
-    </eAnnotations>
-    <eAnnotations source="positions.45" references="/0/generateActionLink.1/%.9">
-      <details key="start" value="1560"/>
-      <details key="end" value="1655"/>
+    <eAnnotations source="positions.45" references="/0/generateActionLink.1/%.9/%/anActionLink">
+      <details key="start" value="1614"/>
+      <details key="end" value="1626"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.46" references="/0/generateActionLink.1/%.9/%">
-      <details key="start" value="1560"/>
-      <details key="end" value="1602"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.47" references="/0/generateActionLink.1/%.9/%/anActionLink">
-      <details key="start" value="1560"/>
-      <details key="end" value="1572"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.48" references="/0/generateActionLink.1/%.10">
-      <details key="start" value="1657"/>
-      <details key="end" value="1706"/>
-      <details key="line" value="18"/>
-    </eAnnotations>
-    <eAnnotations source="positions.49" references="/0/generateActionLink.1/%.11">
-      <details key="start" value="1707"/>
-      <details key="end" value="1747"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.50" references="/0/generateActionLink.1/%.11/%">
-      <details key="start" value="1707"/>
-      <details key="end" value="1724"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.51" references="/0/generateActionLink.1/%.11/%/anActionLink">
-      <details key="start" value="1707"/>
-      <details key="end" value="1719"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.52" references="/0/generateActionLink.1/%.11/%.1">
-      <details key="start" value="1739"/>
-      <details key="end" value="1742"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.53" references="/0/generateActionLink.1/%.11/%.2">
-      <details key="start" value="1744"/>
-      <details key="end" value="1746"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.54" references="/0/generateActionLink.1/%.12">
-      <details key="start" value="1749"/>
-      <details key="end" value="1809"/>
+    <eAnnotations source="positions.46" references="/0/generateActionLink.1/%.10">
+      <details key="start" value="1671"/>
+      <details key="end" value="1694"/>
       <details key="line" value="20"/>
     </eAnnotations>
-    <eAnnotations source="positions.55" references="/0/generateActionLink.1/%.13">
-      <details key="start" value="1810"/>
-      <details key="end" value="1865"/>
+    <eAnnotations source="positions.47" references="/0/generateActionLink.1/anActionLink">
+      <details key="start" value="1124"/>
+      <details key="end" value="1149"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/generateActionLink.1/%.11">
+      <details key="start" value="1154"/>
+      <details key="end" value="1198"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.56" references="/0/generateActionLink.1/%.13/%">
-      <details key="start" value="1810"/>
-      <details key="end" value="1833"/>
+    <eAnnotations source="positions.49" references="/0/generateActionLink.1/%.11/%">
+      <details key="start" value="1154"/>
+      <details key="end" value="1178"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.57" references="/0/generateActionLink.1/%.13/%/anActionLink">
+    <eAnnotations source="positions.50" references="/0/generateActionLink.1/%.11/%/anActionLink">
+      <details key="start" value="1154"/>
+      <details key="end" value="1166"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/generateActionLink.1/%.11/%.1">
+      <details key="start" value="1181"/>
+      <details key="end" value="1198"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/getViewToControllerRelation">
+      <details key="start" value="1710"/>
+      <details key="end" value="1936"/>
+      <details key="line" value="27"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/getViewToControllerRelation/anActionLink">
+      <details key="start" value="1753"/>
+      <details key="end" value="1778"/>
+      <details key="line" value="27"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/getViewToControllerRelation/any">
+      <details key="start" value="1810"/>
+      <details key="end" value="1933"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/getViewToControllerRelation/any/%">
+      <details key="start" value="1810"/>
+      <details key="end" value="1882"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/getViewToControllerRelation/any/%/%">
+      <details key="start" value="1810"/>
+      <details key="end" value="1842"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/getViewToControllerRelation/any/%/%/anActionLink">
       <details key="start" value="1810"/>
       <details key="end" value="1822"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.58" references="/0/generateActionLink.1/%.14">
-      <details key="start" value="1867"/>
-      <details key="end" value="1872"/>
-      <details key="line" value="22"/>
-    </eAnnotations>
-    <eAnnotations source="positions.59" references="/0/generateActionLink.1/anActionLink">
-      <details key="start" value="1186"/>
-      <details key="end" value="1211"/>
-      <details key="line" value="15"/>
-    </eAnnotations>
-    <eAnnotations source="positions.60" references="/0/generateActionLink.1/%.15">
-      <details key="start" value="1216"/>
-      <details key="end" value="1260"/>
+    <eAnnotations source="positions.58" references="/0/getViewToControllerRelation/any/%/%/%">
+      <details key="start" value="1834"/>
+      <details key="end" value="1841"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.61" references="/0/generateActionLink.1/%.15/%">
-      <details key="start" value="1216"/>
-      <details key="end" value="1240"/>
+    <eAnnotations source="positions.59" references="/0/getViewToControllerRelation/any/%.1">
+      <details key="start" value="1892"/>
+      <details key="end" value="1932"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.62" references="/0/generateActionLink.1/%.15/%/anActionLink">
-      <details key="start" value="1216"/>
-      <details key="end" value="1228"/>
+    <eAnnotations source="positions.60" references="/0/getViewToControllerRelation/any/%.1/%">
+      <details key="start" value="1892"/>
+      <details key="end" value="1917"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.63" references="/0/generateActionLink.1/%.15/%.1">
-      <details key="start" value="1243"/>
-      <details key="end" value="1260"/>
+    <eAnnotations source="positions.61" references="/0/getViewToControllerRelation/any/%.1/%/e">
+      <details key="start" value="1892"/>
+      <details key="end" value="1893"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.64" references="/0/getViewToControllerRelation">
+    <eAnnotations source="positions.62" references="/0/getViewToControllerRelation/any/%.1/anActionLink">
+      <details key="start" value="1920"/>
+      <details key="end" value="1932"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/getViewToControllerRelation/any/e">
       <details key="start" value="1888"/>
-      <details key="end" value="2114"/>
-      <details key="line" value="28"/>
-    </eAnnotations>
-    <eAnnotations source="positions.65" references="/0/getViewToControllerRelation/anActionLink">
-      <details key="start" value="1931"/>
-      <details key="end" value="1956"/>
-      <details key="line" value="28"/>
-    </eAnnotations>
-    <eAnnotations source="positions.66" references="/0/getViewToControllerRelation/any">
-      <details key="start" value="1988"/>
-      <details key="end" value="2111"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.67" references="/0/getViewToControllerRelation/any/%">
-      <details key="start" value="1988"/>
-      <details key="end" value="2060"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.68" references="/0/getViewToControllerRelation/any/%/%">
-      <details key="start" value="1988"/>
-      <details key="end" value="2020"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.69" references="/0/getViewToControllerRelation/any/%/%/anActionLink">
-      <details key="start" value="1988"/>
-      <details key="end" value="2000"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.70" references="/0/getViewToControllerRelation/any/%/%/%">
-      <details key="start" value="2012"/>
-      <details key="end" value="2019"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.71" references="/0/getViewToControllerRelation/any/%.1">
-      <details key="start" value="2070"/>
-      <details key="end" value="2110"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.72" references="/0/getViewToControllerRelation/any/%.1/%">
-      <details key="start" value="2070"/>
-      <details key="end" value="2095"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.73" references="/0/getViewToControllerRelation/any/%.1/%/e">
-      <details key="start" value="2070"/>
-      <details key="end" value="2071"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.74" references="/0/getViewToControllerRelation/any/%.1/anActionLink">
-      <details key="start" value="2098"/>
-      <details key="end" value="2110"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.75" references="/0/getViewToControllerRelation/any/e">
-      <details key="start" value="2066"/>
-      <details key="end" value="2067"/>
+      <details key="end" value="1889"/>
       <details key="line" value="0"/>
     </eAnnotations>
   </ecore:EAnnotation>

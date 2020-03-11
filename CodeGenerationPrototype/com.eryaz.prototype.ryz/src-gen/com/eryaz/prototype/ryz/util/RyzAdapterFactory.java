@@ -5,46 +5,32 @@ package com.eryaz.prototype.ryz.util;
 import com.eryaz.prototype.ryz.AbstractView;
 import com.eryaz.prototype.ryz.ActionLink;
 import com.eryaz.prototype.ryz.ActionMethod;
-import com.eryaz.prototype.ryz.Actor;
-import com.eryaz.prototype.ryz.Button;
-import com.eryaz.prototype.ryz.Choice;
 import com.eryaz.prototype.ryz.ComponentPackage;
 import com.eryaz.prototype.ryz.Controller;
 import com.eryaz.prototype.ryz.ControllerPackage;
 import com.eryaz.prototype.ryz.ControllerToModelRelation;
 import com.eryaz.prototype.ryz.ControllerToViewRelation;
 import com.eryaz.prototype.ryz.Form;
-import com.eryaz.prototype.ryz.FormElementToPropertyKeyRelation;
-import com.eryaz.prototype.ryz.Header;
 import com.eryaz.prototype.ryz.HelperForSendingRequest;
-import com.eryaz.prototype.ryz.Input;
+import com.eryaz.prototype.ryz.HtmlElement;
 import com.eryaz.prototype.ryz.Layout;
-import com.eryaz.prototype.ryz.Link;
 import com.eryaz.prototype.ryz.MainComponent;
 import com.eryaz.prototype.ryz.MainComponentRelation;
 import com.eryaz.prototype.ryz.Model;
 import com.eryaz.prototype.ryz.ModelAssociation;
 import com.eryaz.prototype.ryz.ModelPackage;
-import com.eryaz.prototype.ryz.MultipleChoice;
 import com.eryaz.prototype.ryz.MvcPackage;
 import com.eryaz.prototype.ryz.NamedElement;
 import com.eryaz.prototype.ryz.Parameter;
 import com.eryaz.prototype.ryz.Partial;
-import com.eryaz.prototype.ryz.PresentationElement;
-import com.eryaz.prototype.ryz.PresentationForm;
-import com.eryaz.prototype.ryz.PresentationFormElement;
-import com.eryaz.prototype.ryz.PresentationFormElementToPropertyKey;
 import com.eryaz.prototype.ryz.Project;
 import com.eryaz.prototype.ryz.Property;
 import com.eryaz.prototype.ryz.RyzPackage;
-import com.eryaz.prototype.ryz.Table;
 import com.eryaz.prototype.ryz.TableKey;
-import com.eryaz.prototype.ryz.UseCase;
-import com.eryaz.prototype.ryz.UseCaseActorPackage;
-import com.eryaz.prototype.ryz.UseCasePackage;
 import com.eryaz.prototype.ryz.View;
 import com.eryaz.prototype.ryz.ViewPackage;
 import com.eryaz.prototype.ryz.ViewToControllerRelation;
+
 import com.eryaz.prototype.ryz.ViewToModelRelation;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -219,6 +205,11 @@ public class RyzAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseHtmlElement(HtmlElement object) {
+			return createHtmlElementAdapter();
+		}
+
+		@Override
 		public Adapter caseActionLink(ActionLink object) {
 			return createActionLinkAdapter();
 		}
@@ -246,86 +237,6 @@ public class RyzAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseViewToModelRelation(ViewToModelRelation object) {
 			return createViewToModelRelationAdapter();
-		}
-
-		@Override
-		public Adapter caseUseCaseActorPackage(UseCaseActorPackage object) {
-			return createUseCaseActorPackageAdapter();
-		}
-
-		@Override
-		public Adapter caseActor(Actor object) {
-			return createActorAdapter();
-		}
-
-		@Override
-		public Adapter caseUseCase(UseCase object) {
-			return createUseCaseAdapter();
-		}
-
-		@Override
-		public Adapter caseUseCasePackage(UseCasePackage object) {
-			return createUseCasePackageAdapter();
-		}
-
-		@Override
-		public Adapter casePresentationElement(PresentationElement object) {
-			return createPresentationElementAdapter();
-		}
-
-		@Override
-		public Adapter casePresentationForm(PresentationForm object) {
-			return createPresentationFormAdapter();
-		}
-
-		@Override
-		public Adapter caseMultipleChoice(MultipleChoice object) {
-			return createMultipleChoiceAdapter();
-		}
-
-		@Override
-		public Adapter caseChoice(Choice object) {
-			return createChoiceAdapter();
-		}
-
-		@Override
-		public Adapter caseButton(Button object) {
-			return createButtonAdapter();
-		}
-
-		@Override
-		public Adapter casePresentationFormElement(PresentationFormElement object) {
-			return createPresentationFormElementAdapter();
-		}
-
-		@Override
-		public Adapter caseInput(Input object) {
-			return createInputAdapter();
-		}
-
-		@Override
-		public Adapter caseLink(Link object) {
-			return createLinkAdapter();
-		}
-
-		@Override
-		public Adapter caseTable(Table object) {
-			return createTableAdapter();
-		}
-
-		@Override
-		public Adapter caseHeader(Header object) {
-			return createHeaderAdapter();
-		}
-
-		@Override
-		public Adapter caseFormElementToPropertyKeyRelation(FormElementToPropertyKeyRelation object) {
-			return createFormElementToPropertyKeyRelationAdapter();
-		}
-
-		@Override
-		public Adapter casePresentationFormElementToPropertyKey(PresentationFormElementToPropertyKey object) {
-			return createPresentationFormElementToPropertyKeyAdapter();
 		}
 
 		@Override
@@ -656,6 +567,20 @@ public class RyzAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link com.eryaz.prototype.ryz.HtmlElement <em>Html Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see com.eryaz.prototype.ryz.HtmlElement
+	 * @generated
+	 */
+	public Adapter createHtmlElementAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link com.eryaz.prototype.ryz.ActionLink <em>Action Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -736,230 +661,6 @@ public class RyzAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createViewToModelRelationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.eryaz.prototype.ryz.UseCaseActorPackage <em>Use Case Actor Package</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.eryaz.prototype.ryz.UseCaseActorPackage
-	 * @generated
-	 */
-	public Adapter createUseCaseActorPackageAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.eryaz.prototype.ryz.Actor <em>Actor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.eryaz.prototype.ryz.Actor
-	 * @generated
-	 */
-	public Adapter createActorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.eryaz.prototype.ryz.UseCase <em>Use Case</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.eryaz.prototype.ryz.UseCase
-	 * @generated
-	 */
-	public Adapter createUseCaseAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.eryaz.prototype.ryz.UseCasePackage <em>Use Case Package</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.eryaz.prototype.ryz.UseCasePackage
-	 * @generated
-	 */
-	public Adapter createUseCasePackageAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.eryaz.prototype.ryz.PresentationElement <em>Presentation Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.eryaz.prototype.ryz.PresentationElement
-	 * @generated
-	 */
-	public Adapter createPresentationElementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.eryaz.prototype.ryz.PresentationForm <em>Presentation Form</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.eryaz.prototype.ryz.PresentationForm
-	 * @generated
-	 */
-	public Adapter createPresentationFormAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.eryaz.prototype.ryz.MultipleChoice <em>Multiple Choice</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.eryaz.prototype.ryz.MultipleChoice
-	 * @generated
-	 */
-	public Adapter createMultipleChoiceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.eryaz.prototype.ryz.Choice <em>Choice</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.eryaz.prototype.ryz.Choice
-	 * @generated
-	 */
-	public Adapter createChoiceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.eryaz.prototype.ryz.Button <em>Button</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.eryaz.prototype.ryz.Button
-	 * @generated
-	 */
-	public Adapter createButtonAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.eryaz.prototype.ryz.PresentationFormElement <em>Presentation Form Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.eryaz.prototype.ryz.PresentationFormElement
-	 * @generated
-	 */
-	public Adapter createPresentationFormElementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.eryaz.prototype.ryz.Input <em>Input</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.eryaz.prototype.ryz.Input
-	 * @generated
-	 */
-	public Adapter createInputAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.eryaz.prototype.ryz.Link <em>Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.eryaz.prototype.ryz.Link
-	 * @generated
-	 */
-	public Adapter createLinkAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.eryaz.prototype.ryz.Table <em>Table</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.eryaz.prototype.ryz.Table
-	 * @generated
-	 */
-	public Adapter createTableAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.eryaz.prototype.ryz.Header <em>Header</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.eryaz.prototype.ryz.Header
-	 * @generated
-	 */
-	public Adapter createHeaderAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.eryaz.prototype.ryz.FormElementToPropertyKeyRelation <em>Form Element To Property Key Relation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.eryaz.prototype.ryz.FormElementToPropertyKeyRelation
-	 * @generated
-	 */
-	public Adapter createFormElementToPropertyKeyRelationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link com.eryaz.prototype.ryz.PresentationFormElementToPropertyKey <em>Presentation Form Element To Property Key</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see com.eryaz.prototype.ryz.PresentationFormElementToPropertyKey
-	 * @generated
-	 */
-	public Adapter createPresentationFormElementToPropertyKeyAdapter() {
 		return null;
 	}
 

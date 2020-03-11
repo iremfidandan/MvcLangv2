@@ -24,6 +24,10 @@ public interface Property extends NamedElement {
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
 	 * The literals are from the enumeration {@link com.eryaz.prototype.ryz.ModelPropertyType}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see com.eryaz.prototype.ryz.ModelPropertyType
@@ -48,6 +52,10 @@ public interface Property extends NamedElement {
 	/**
 	 * Returns the value of the '<em><b>›s Required</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>›s Required</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>›s Required</em>' attribute.
 	 * @see #set›sRequired(boolean)

@@ -27,6 +27,10 @@ public interface Model extends MainComponent {
 	/**
 	 * Returns the value of the '<em><b>›s Abstract</b></em>' attribute.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>›s Abstract</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>›s Abstract</em>' attribute.
 	 * @see #set›sAbstract(boolean)
@@ -50,6 +54,10 @@ public interface Model extends MainComponent {
 	 * Returns the value of the '<em><b>Properties</b></em>' containment reference list.
 	 * The list contents are of type {@link com.eryaz.prototype.ryz.Property}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Properties</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Properties</em>' containment reference list.
 	 * @see com.eryaz.prototype.ryz.RyzPackage#getModel_Properties()
@@ -61,6 +69,10 @@ public interface Model extends MainComponent {
 	/**
 	 * Returns the value of the '<em><b>›nherits</b></em>' reference.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>›nherits</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>›nherits</em>' reference.
 	 * @see #set›nherits(Model)
@@ -84,6 +96,10 @@ public interface Model extends MainComponent {
 	 * Returns the value of the '<em><b>Tablekeys</b></em>' containment reference list.
 	 * The list contents are of type {@link com.eryaz.prototype.ryz.TableKey}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Tablekeys</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tablekeys</em>' containment reference list.
 	 * @see com.eryaz.prototype.ryz.RyzPackage#getModel_Tablekeys()

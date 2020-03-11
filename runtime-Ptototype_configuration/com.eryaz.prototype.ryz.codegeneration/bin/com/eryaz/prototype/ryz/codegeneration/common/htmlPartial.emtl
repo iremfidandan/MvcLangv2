@@ -6,41 +6,56 @@
     </input>
     <imports href="mvcRelations.emtl#/0"/>
     <ownedModuleElement xsi:type="mtl:Template" name="generateHtmlPartial" visibility="Public">
-      <body xsi:type="mtl:IfBlock">
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="@Html.Partial(&quot;"/>
-        <body xsi:type="ocl.ecore:PropertyCallExp">
-          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <source xsi:type="ocl.ecore:VariableExp" name="aPartial" referredVariable="/0/generateHtmlPartial/aPartial">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="@Html.Partial(&quot;"/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="aPartial" referredVariable="/0/generateHtmlPartial/aPartial">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;)"/>
+      <parameter name="aPartial">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
+      </parameter>
+      <guard xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <source xsi:type="mtl:QueryInvocation" definition="/0/getModelForPartial">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="aPartial" referredVariable="/0/generateHtmlPartial/aPartial">
             <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
-          </source>
-          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
-        </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;)&#xA;"/>
-        <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+          </argument>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsUndefined"/>
+      </guard>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateHtmlPartial" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="@Html.Partial(&quot;"/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="aPartial" referredVariable="/0/generateHtmlPartial.1/aPartial">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;, Model)"/>
+      <parameter name="aPartial">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
+      </parameter>
+      <guard xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <source xsi:type="ocl.ecore:OperationCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
           <source xsi:type="mtl:QueryInvocation" definition="/0/getModelForPartial">
             <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
-            <argument xsi:type="ocl.ecore:VariableExp" name="aPartial" referredVariable="/0/generateHtmlPartial/aPartial">
+            <argument xsi:type="ocl.ecore:VariableExp" name="aPartial" referredVariable="/0/generateHtmlPartial.1/aPartial">
               <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
             </argument>
           </source>
           <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsUndefined"/>
-        </ifExpr>
-        <else>
-          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="@Html.Partial(&quot;"/>
-          <body xsi:type="ocl.ecore:PropertyCallExp">
-            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="aPartial" referredVariable="/0/generateHtmlPartial/aPartial">
-              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
-            </source>
-            <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
-          </body>
-          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;, Model)&#x9;&#xA;"/>
-        </else>
-      </body>
-      <parameter name="aPartial">
-        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
-      </parameter>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/not"/>
+      </guard>
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="getModelForPartial">
       <parameter name="aPartial">
@@ -50,14 +65,14 @@
         <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
         <source xsi:type="ocl.ecore:IteratorExp" name="any">
           <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ViewToModelRelation"/>
-          <source xsi:type="mtl:QueryInvocation" eType="/12/Set(ViewToModelRelation)">
+          <source xsi:type="mtl:QueryInvocation" eType="/17/Set(ViewToModelRelation)">
             <definition href="mvcRelations.emtl#/0/getViewToModelRelationsInProject"/>
             <argument xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/ecore_EObject_Class/eContainer">
               <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
               <source xsi:type="ocl.ecore:VariableExp" name="aPartial" referredVariable="/0/getModelForPartial/aPartial">
                 <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
               </source>
-              <argument xsi:type="ocl.ecore:TypeExp" eType="/11/Project">
+              <argument xsi:type="ocl.ecore:TypeExp" eType="/16/Project">
                 <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
               </argument>
             </argument>
@@ -183,6 +198,9 @@
     <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
@@ -190,6 +208,18 @@
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
@@ -221,143 +251,163 @@
   </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/generateHtmlPartial">
-      <details key="start" value="167"/>
-      <details key="end" value="379"/>
-      <details key="line" value="7"/>
+      <details key="start" value="166"/>
+      <details key="end" value="319"/>
+      <details key="line" value="6"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/generateHtmlPartial/%">
-      <details key="start" value="225"/>
-      <details key="end" value="367"/>
-      <details key="line" value="8"/>
+      <details key="start" value="274"/>
+      <details key="end" value="289"/>
+      <details key="line" value="7"/>
     </eAnnotations>
-    <eAnnotations source="positions.2" references="/0/generateHtmlPartial/%/%">
-      <details key="start" value="279"/>
-      <details key="end" value="294"/>
-      <details key="line" value="9"/>
-    </eAnnotations>
-    <eAnnotations source="positions.3" references="/0/generateHtmlPartial/%/%.1">
-      <details key="start" value="295"/>
-      <details key="end" value="308"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.4" references="/0/generateHtmlPartial/%/%.1/aPartial">
-      <details key="start" value="295"/>
+    <eAnnotations source="positions.2" references="/0/generateHtmlPartial/%.1">
+      <details key="start" value="290"/>
       <details key="end" value="303"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.5" references="/0/generateHtmlPartial/%/%.2">
-      <details key="start" value="310"/>
-      <details key="end" value="313"/>
-      <details key="line" value="9"/>
-    </eAnnotations>
-    <eAnnotations source="positions.6" references="/0/generateHtmlPartial/%/%.3">
-      <details key="start" value="229"/>
-      <details key="end" value="277"/>
+    <eAnnotations source="positions.3" references="/0/generateHtmlPartial/%.1/aPartial">
+      <details key="start" value="290"/>
+      <details key="end" value="298"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.7" references="/0/generateHtmlPartial/%/%.3/%">
-      <details key="start" value="230"/>
-      <details key="end" value="259"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.8" references="/0/generateHtmlPartial/%/%.3/%/aPartial">
-      <details key="start" value="230"/>
-      <details key="end" value="238"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.9" references="/0/generateHtmlPartial/%/%.4">
-      <details key="start" value="313"/>
-      <details key="end" value="362"/>
-      <details key="line" value="10"/>
-    </eAnnotations>
-    <eAnnotations source="positions.10" references="/0/generateHtmlPartial/%/%.4/%">
-      <details key="start" value="320"/>
-      <details key="end" value="335"/>
-      <details key="line" value="11"/>
-    </eAnnotations>
-    <eAnnotations source="positions.11" references="/0/generateHtmlPartial/%/%.4/%.1">
-      <details key="start" value="336"/>
-      <details key="end" value="349"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.12" references="/0/generateHtmlPartial/%/%.4/%.1/aPartial">
-      <details key="start" value="336"/>
-      <details key="end" value="344"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.13" references="/0/generateHtmlPartial/%/%.4/%.2">
-      <details key="start" value="351"/>
-      <details key="end" value="362"/>
-      <details key="line" value="11"/>
-    </eAnnotations>
-    <eAnnotations source="positions.14" references="/0/generateHtmlPartial/aPartial">
-      <details key="start" value="204"/>
-      <details key="end" value="222"/>
+    <eAnnotations source="positions.4" references="/0/generateHtmlPartial/%.2">
+      <details key="start" value="305"/>
+      <details key="end" value="307"/>
       <details key="line" value="7"/>
     </eAnnotations>
-    <eAnnotations source="positions.15" references="/0/getModelForPartial">
-      <details key="start" value="383"/>
-      <details key="end" value="556"/>
-      <details key="line" value="17"/>
+    <eAnnotations source="positions.5" references="/0/generateHtmlPartial/aPartial">
+      <details key="start" value="203"/>
+      <details key="end" value="221"/>
+      <details key="line" value="6"/>
     </eAnnotations>
-    <eAnnotations source="positions.16" references="/0/getModelForPartial/aPartial">
-      <details key="start" value="417"/>
-      <details key="end" value="435"/>
-      <details key="line" value="17"/>
-    </eAnnotations>
-    <eAnnotations source="positions.17" references="/0/getModelForPartial/%">
-      <details key="start" value="448"/>
-      <details key="end" value="553"/>
+    <eAnnotations source="positions.6" references="/0/generateHtmlPartial/%.3">
+      <details key="start" value="226"/>
+      <details key="end" value="271"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.18" references="/0/getModelForPartial/%/any">
-      <details key="start" value="448"/>
-      <details key="end" value="547"/>
+    <eAnnotations source="positions.7" references="/0/generateHtmlPartial/%.3/%">
+      <details key="start" value="226"/>
+      <details key="end" value="254"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.19" references="/0/getModelForPartial/%/any/%">
-      <details key="start" value="448"/>
-      <details key="end" value="511"/>
+    <eAnnotations source="positions.8" references="/0/generateHtmlPartial/%.3/%/aPartial">
+      <details key="start" value="245"/>
+      <details key="end" value="253"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.20" references="/0/getModelForPartial/%/any/%/%">
-      <details key="start" value="448"/>
+    <eAnnotations source="positions.9" references="/0/generateHtmlPartial.1">
+      <details key="start" value="321"/>
+      <details key="end" value="488"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateHtmlPartial.1/%">
+      <details key="start" value="436"/>
+      <details key="end" value="451"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateHtmlPartial.1/%.1">
+      <details key="start" value="452"/>
+      <details key="end" value="465"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateHtmlPartial.1/%.1/aPartial">
+      <details key="start" value="452"/>
+      <details key="end" value="460"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateHtmlPartial.1/%.2">
+      <details key="start" value="467"/>
       <details key="end" value="476"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateHtmlPartial.1/aPartial">
+      <details key="start" value="358"/>
+      <details key="end" value="376"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateHtmlPartial.1/%.3">
+      <details key="start" value="381"/>
+      <details key="end" value="433"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.21" references="/0/getModelForPartial/%/any/%/%/aPartial">
-      <details key="start" value="448"/>
-      <details key="end" value="456"/>
+    <eAnnotations source="positions.16" references="/0/generateHtmlPartial.1/%.3/%">
+      <details key="start" value="381"/>
+      <details key="end" value="426"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.22" references="/0/getModelForPartial/%/any/%/%/%">
-      <details key="start" value="468"/>
-      <details key="end" value="475"/>
+    <eAnnotations source="positions.17" references="/0/generateHtmlPartial.1/%.3/%/%">
+      <details key="start" value="381"/>
+      <details key="end" value="409"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.23" references="/0/getModelForPartial/%/any/%.1">
-      <details key="start" value="521"/>
-      <details key="end" value="546"/>
+    <eAnnotations source="positions.18" references="/0/generateHtmlPartial.1/%.3/%/%/aPartial">
+      <details key="start" value="400"/>
+      <details key="end" value="408"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.24" references="/0/getModelForPartial/%/any/%.1/%">
-      <details key="start" value="521"/>
-      <details key="end" value="535"/>
+    <eAnnotations source="positions.19" references="/0/getModelForPartial">
+      <details key="start" value="492"/>
+      <details key="end" value="665"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/getModelForPartial/aPartial">
+      <details key="start" value="526"/>
+      <details key="end" value="544"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/getModelForPartial/%">
+      <details key="start" value="557"/>
+      <details key="end" value="662"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.25" references="/0/getModelForPartial/%/any/%.1/%/e">
-      <details key="start" value="521"/>
-      <details key="end" value="522"/>
+    <eAnnotations source="positions.22" references="/0/getModelForPartial/%/any">
+      <details key="start" value="557"/>
+      <details key="end" value="656"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.26" references="/0/getModelForPartial/%/any/%.1/aPartial">
-      <details key="start" value="538"/>
-      <details key="end" value="546"/>
+    <eAnnotations source="positions.23" references="/0/getModelForPartial/%/any/%">
+      <details key="start" value="557"/>
+      <details key="end" value="620"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.27" references="/0/getModelForPartial/%/any/e">
-      <details key="start" value="517"/>
-      <details key="end" value="518"/>
+    <eAnnotations source="positions.24" references="/0/getModelForPartial/%/any/%/%">
+      <details key="start" value="557"/>
+      <details key="end" value="585"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/getModelForPartial/%/any/%/%/aPartial">
+      <details key="start" value="557"/>
+      <details key="end" value="565"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/getModelForPartial/%/any/%/%/%">
+      <details key="start" value="577"/>
+      <details key="end" value="584"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/getModelForPartial/%/any/%.1">
+      <details key="start" value="630"/>
+      <details key="end" value="655"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/getModelForPartial/%/any/%.1/%">
+      <details key="start" value="630"/>
+      <details key="end" value="644"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/getModelForPartial/%/any/%.1/%/e">
+      <details key="start" value="630"/>
+      <details key="end" value="631"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/getModelForPartial/%/any/%.1/aPartial">
+      <details key="start" value="647"/>
+      <details key="end" value="655"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/getModelForPartial/%/any/e">
+      <details key="start" value="626"/>
+      <details key="end" value="627"/>
       <details key="line" value="0"/>
     </eAnnotations>
   </ecore:EAnnotation>

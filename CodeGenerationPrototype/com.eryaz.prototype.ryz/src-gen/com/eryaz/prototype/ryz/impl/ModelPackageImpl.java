@@ -78,7 +78,6 @@ public class ModelPackageImpl extends ComponentPackageImpl implements ModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EList<Model> getModels() {
 		if (models == null) {
 			models = new EObjectContainmentEList<Model>(Model.class, this, RyzPackage.MODEL_PACKAGE__MODELS);
@@ -91,7 +90,6 @@ public class ModelPackageImpl extends ComponentPackageImpl implements ModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EList<ModelAssociation> getModelassociations() {
 		if (modelassociations == null) {
 			modelassociations = new EObjectContainmentEList<ModelAssociation>(ModelAssociation.class, this,

@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
-  <mtl:Module name="actionMethodParameters" nsURI="com::eryaz::prototype::ryz::codegeneration::common::actionMethodParameters" startHeaderPosition="29" endHeaderPosition="190">
+  <mtl:Module name="actionMethodParameters" nsURI="com::eryaz::prototype::ryz::codegeneration::common::actionMethodParameters" startHeaderPosition="29" endHeaderPosition="173">
     <input>
       <takesTypesFrom href="http://www.eryaz.com/prototype/ryz#/"/>
     </input>
+    <imports href="mvcRelations.emtl#/0"/>
+    <imports href="actionMethodViewModelParameter.emtl#/0"/>
     <imports href="actionMethodRequiredParameter.emtl#/0"/>
     <imports href="actionMethodOptionalParameter.emtl#/0"/>
     <ownedModuleElement xsi:type="mtl:Template" name="generateActionMethodParameters" visibility="Public">
       <body xsi:type="mtl:ForBlock">
-        <body xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/10">
+        <body xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/11">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </body>
         <iterSet xsi:type="ocl.ecore:OperationCallExp" eType="/3/Sequence(String)" referredOperation="/1/oclstdlib_Collection(T)_Class/addAll">
@@ -30,6 +32,178 @@
       <parameter name="anActionMethod">
         <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
       </parameter>
+      <guard xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//HttpMethod"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/5">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//ActionMethod/httpMethod"/>
+        </source>
+        <argument xsi:type="ocl.ecore:EnumLiteralExp">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//HttpMethod"/>
+          <referredEnumLiteral xsi:type="ecore:EEnumLiteral" href="http://www.eryaz.com/prototype/ryz#//HttpMethod/GET"/>
+        </argument>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+      </guard>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateActionMethodParameters" visibility="Public">
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/22">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <iterSet xsi:type="ocl.ecore:OperationCallExp" eType="/3/Sequence(String)" referredOperation="/1/oclstdlib_Collection(T)_Class/addAll">
+          <source xsi:type="mtl:QueryInvocation" eType="/3/Sequence(String)" definition="/0/viewModelParamSeq">
+            <argument xsi:type="ocl.ecore:VariableExp" name="anActionMethod" referredVariable="/0/generateActionMethodParameters.1/anActionMethod">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+            </argument>
+          </source>
+          <argument xsi:type="ocl.ecore:OperationCallExp" eType="/3/Sequence(String)" referredOperation="/1/oclstdlib_Collection(T)_Class/addAll">
+            <source xsi:type="mtl:QueryInvocation" eType="/3/Sequence(String)" definition="/0/reqParamSeq">
+              <argument xsi:type="ocl.ecore:VariableExp" name="anActionMethod" referredVariable="/0/generateActionMethodParameters.1/anActionMethod">
+                <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+              </argument>
+            </source>
+            <argument xsi:type="mtl:QueryInvocation" eType="/3/Sequence(String)" definition="/0/optParamSeq">
+              <argument xsi:type="ocl.ecore:VariableExp" name="anActionMethod" referredVariable="/0/generateActionMethodParameters.1/anActionMethod">
+                <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+              </argument>
+            </argument>
+          </argument>
+        </iterSet>
+        <each xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=", ">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </each>
+      </body>
+      <parameter name="anActionMethod">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+      </parameter>
+      <guard xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//HttpMethod"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="self" referredVariable="/16">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//ActionMethod/httpMethod"/>
+        </source>
+        <argument xsi:type="ocl.ecore:EnumLiteralExp">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//HttpMethod"/>
+          <referredEnumLiteral xsi:type="ecore:EEnumLiteral" href="http://www.eryaz.com/prototype/ryz#//HttpMethod/POST"/>
+        </argument>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+      </guard>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="getControllerToModelRelations" type="/3/Set(ControllerToModelRelation)">
+      <parameter name="anActionMethod">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:IteratorExp" name="select" eType="/3/Set(ControllerToModelRelation)">
+        <source xsi:type="mtl:QueryInvocation" eType="/3/Set(ControllerToModelRelation)">
+          <definition href="mvcRelations.emtl#/0/getControllerToModelRelationsInProject"/>
+          <argument xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/ecore_EObject_Class/eContainer">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="anActionMethod" referredVariable="/0/getControllerToModelRelations/anActionMethod">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+            </source>
+            <argument xsi:type="ocl.ecore:TypeExp" eType="/27/Project">
+              <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+            </argument>
+          </argument>
+        </source>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="r" referredVariable="/0/getControllerToModelRelations/select/r">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation/actionmethod"/>
+          </source>
+          <argument xsi:type="ocl.ecore:VariableExp" name="anActionMethod" referredVariable="/0/getControllerToModelRelations/anActionMethod">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+        </body>
+        <iterator xsi:type="ocl.ecore:Variable" name="r">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+        </iterator>
+      </expression>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="getCreateOrUpdateModels" type="/3/Set(ControllerToModelRelation)">
+      <parameter name="anActionMethod">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:IteratorExp" name="select" eType="/3/Set(ControllerToModelRelation)">
+        <source xsi:type="mtl:QueryInvocation" eType="/3/Set(ControllerToModelRelation)" definition="/0/getControllerToModelRelations">
+          <argument xsi:type="ocl.ecore:VariableExp" name="anActionMethod" referredVariable="/0/getCreateOrUpdateModels/anActionMethod">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+          </argument>
+        </source>
+        <body xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//ModelOperation"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="r" referredVariable="/0/getCreateOrUpdateModels/select/r">
+                <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation/modelOperation"/>
+            </source>
+            <argument xsi:type="ocl.ecore:EnumLiteralExp">
+              <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//ModelOperation"/>
+              <referredEnumLiteral xsi:type="ecore:EEnumLiteral" href="http://www.eryaz.com/prototype/ryz#//ModelOperation/CREATE"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+          </source>
+          <argument xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//ModelOperation"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="r" referredVariable="/0/getCreateOrUpdateModels/select/r">
+                <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation/modelOperation"/>
+            </source>
+            <argument xsi:type="ocl.ecore:EnumLiteralExp">
+              <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//ModelOperation"/>
+              <referredEnumLiteral xsi:type="ecore:EEnumLiteral" href="http://www.eryaz.com/prototype/ryz#//ModelOperation/UPDATE"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/or"/>
+        </body>
+        <iterator xsi:type="ocl.ecore:Variable" name="r">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+        </iterator>
+      </expression>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="viewModelParamSeq" type="/3/Sequence(String)">
+      <parameter name="anActionMethod">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:OperationCallExp" eType="/3/Sequence(String)">
+        <source xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/3/Bag(String)">
+          <source xsi:type="mtl:QueryInvocation" eType="/3/Set(ControllerToModelRelation)" definition="/0/getCreateOrUpdateModels">
+            <argument xsi:type="ocl.ecore:VariableExp" name="anActionMethod" referredVariable="/0/viewModelParamSeq/anActionMethod">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+            </argument>
+          </source>
+          <body xsi:type="mtl:TemplateInvocation">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <definition href="actionMethodViewModelParameter.emtl#/0/generateActionMethodViewModelParameter"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="r" referredVariable="/0/viewModelParamSeq/%/collect/r">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+            </argument>
+          </body>
+          <iterator xsi:type="ocl.ecore:Variable" name="r">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+          </iterator>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Bag(T)_Class/asSequence"/>
+      </expression>
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Query" name="reqParamSeq" type="/3/Sequence(String)">
       <parameter name="anActionMethod">
@@ -126,12 +300,46 @@
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
         <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
       </eAnnotations>
+      <eOperations name="eContainer">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/acceleo/mtl/3.0/mtlnonstdlib.ecore#//OclAny"/>
+        <eParameters name="filter">
+          <eType xsi:type="ocl.ecore:TypeType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclType"/>
+        </eParameters>
+      </eOperations>
       <eOperations name="generateActionMethodParameters">
         <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL" references="/0/generateActionMethodParameters"/>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="anActionMethod">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="getControllerToModelRelations" eType="/3/Set(ControllerToModelRelation)">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/getControllerToModelRelations"/>
+        <eParameters name="anActionMethod">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="getCreateOrUpdateModels" eType="/3/Set(ControllerToModelRelation)">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/getCreateOrUpdateModels"/>
+        <eParameters name="anActionMethod">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="viewModelParamSeq" eType="/3/Sequence(String)">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/viewModelParamSeq"/>
         <eParameters name="anActionMethod">
           <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
         </eParameters>
@@ -152,6 +360,30 @@
         <eAnnotations source="MTL" references="/0/optParamSeq"/>
         <eParameters name="anActionMethod">
           <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="getControllerToModelRelationsInProject">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="mvcRelations.emtl#/0/getControllerToModelRelationsInProject"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:SetType" href="mvcRelations.emtl#/3/Set(ControllerToModelRelation)"/>
+        <eParameters name="aProject">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateActionMethodViewModelParameter">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="actionMethodViewModelParameter.emtl#/0/generateActionMethodViewModelParameter"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aControllerToModelRelation">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
         </eParameters>
       </eOperations>
       <eOperations name="generateActionMethodRequiredParameter">
@@ -211,6 +443,16 @@
         <references href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
       </eAnnotations>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ryz_Project_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eryaz.com/prototype/ryz#//Project"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ryz_ControllerToModelRelation_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+      </eAnnotations>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ryz_Parameter_Class">
       <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
         <references href="http://www.eryaz.com/prototype/ryz#//Parameter"/>
@@ -221,16 +463,25 @@
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(ControllerToModelRelation)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+    </eClassifiers>
     <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(String)" instanceClassName="java.util.List">
       <elementType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
     </eClassifiers>
     <eClassifiers xsi:type="ocl.ecore:CollectionType" name="Collection(String)" instanceClassName="java.util.Collection">
       <elementType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:BagType" name="Bag(String)" instanceClassName="org.eclipse.ocl.util.Bag">
+      <elementType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </eClassifiers>
     <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Parameter)" instanceClassName="java.util.LinkedHashSet">
       <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Parameter"/>
     </eClassifiers>
   </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+  </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
   </ocl.ecore:Variable>
@@ -268,6 +519,71 @@
     <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="types">
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="Project">
+      <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
@@ -281,178 +597,463 @@
   </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/generateActionMethodParameters">
-      <details key="start" value="288"/>
-      <details key="end" value="482"/>
-      <details key="line" value="8"/>
+      <details key="start" value="458"/>
+      <details key="end" value="685"/>
+      <details key="line" value="10"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/generateActionMethodParameters/%">
-      <details key="start" value="368"/>
-      <details key="end" value="470"/>
-      <details key="line" value="9"/>
+      <details key="start" value="571"/>
+      <details key="end" value="673"/>
+      <details key="line" value="11"/>
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/generateActionMethodParameters/%/self">
-      <details key="start" value="458"/>
-      <details key="end" value="462"/>
+      <details key="start" value="661"/>
+      <details key="end" value="665"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.3" references="/0/generateActionMethodParameters/%/%">
-      <details key="start" value="374"/>
-      <details key="end" value="438"/>
+      <details key="start" value="577"/>
+      <details key="end" value="641"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.4" references="/0/generateActionMethodParameters/%/%/%">
-      <details key="start" value="374"/>
-      <details key="end" value="401"/>
+      <details key="start" value="577"/>
+      <details key="end" value="604"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.5" references="/0/generateActionMethodParameters/%/%/%/anActionMethod">
-      <details key="start" value="386"/>
-      <details key="end" value="400"/>
+      <details key="start" value="589"/>
+      <details key="end" value="603"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.6" references="/0/generateActionMethodParameters/%/%/%.1">
-      <details key="start" value="410"/>
-      <details key="end" value="437"/>
+      <details key="start" value="613"/>
+      <details key="end" value="640"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.7" references="/0/generateActionMethodParameters/%/%/%.1/anActionMethod">
-      <details key="start" value="422"/>
-      <details key="end" value="436"/>
+      <details key="start" value="625"/>
+      <details key="end" value="639"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.8" references="/0/generateActionMethodParameters/%/%.1">
-      <details key="start" value="451"/>
-      <details key="end" value="455"/>
+      <details key="start" value="654"/>
+      <details key="end" value="658"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.9" references="/0/generateActionMethodParameters/anActionMethod">
-      <details key="start" value="336"/>
-      <details key="end" value="365"/>
-      <details key="line" value="8"/>
+      <details key="start" value="506"/>
+      <details key="end" value="535"/>
+      <details key="line" value="10"/>
     </eAnnotations>
-    <eAnnotations source="positions.10" references="/0/reqParamSeq">
-      <details key="start" value="485"/>
-      <details key="end" value="683"/>
-      <details key="line" value="13"/>
-    </eAnnotations>
-    <eAnnotations source="positions.11" references="/0/reqParamSeq/anActionMethod">
-      <details key="start" value="512"/>
-      <details key="end" value="541"/>
-      <details key="line" value="13"/>
-    </eAnnotations>
-    <eAnnotations source="positions.12" references="/0/reqParamSeq/collect">
-      <details key="start" value="565"/>
-      <details key="end" value="680"/>
+    <eAnnotations source="positions.10" references="/0/generateActionMethodParameters/%.1">
+      <details key="start" value="540"/>
+      <details key="end" value="568"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.13" references="/0/reqParamSeq/collect/select">
-      <details key="start" value="565"/>
-      <details key="end" value="625"/>
+    <eAnnotations source="positions.11" references="/0/generateActionMethodParameters/%.1/%">
+      <details key="start" value="540"/>
+      <details key="end" value="550"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.14" references="/0/reqParamSeq/collect/select/%">
-      <details key="start" value="565"/>
-      <details key="end" value="590"/>
+    <eAnnotations source="positions.12" references="/0/generateActionMethodParameters/%.1/%/self">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.15" references="/0/reqParamSeq/collect/select/%/anActionMethod">
-      <details key="start" value="565"/>
-      <details key="end" value="579"/>
+    <eAnnotations source="positions.13" references="/0/generateActionMethodParameters/%.1/%.1">
+      <details key="start" value="553"/>
+      <details key="end" value="568"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.16" references="/0/reqParamSeq/collect/select/%.1">
-      <details key="start" value="603"/>
-      <details key="end" value="624"/>
+    <eAnnotations source="positions.14" references="/0/generateActionMethodParameters.1">
+      <details key="start" value="687"/>
+      <details key="end" value="958"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateActionMethodParameters.1/%">
+      <details key="start" value="801"/>
+      <details key="end" value="946"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generateActionMethodParameters.1/%/self">
+      <details key="start" value="934"/>
+      <details key="end" value="938"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.17" references="/0/reqParamSeq/collect/select/%.1/%">
-      <details key="start" value="603"/>
-      <details key="end" value="617"/>
+    <eAnnotations source="positions.17" references="/0/generateActionMethodParameters.1/%/%">
+      <details key="start" value="807"/>
+      <details key="end" value="914"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.18" references="/0/reqParamSeq/collect/select/%.1/%/p">
-      <details key="start" value="604"/>
-      <details key="end" value="605"/>
+    <eAnnotations source="positions.18" references="/0/generateActionMethodParameters.1/%/%/%">
+      <details key="start" value="807"/>
+      <details key="end" value="840"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.19" references="/0/reqParamSeq/collect/select/p">
-      <details key="start" value="599"/>
-      <details key="end" value="600"/>
+    <eAnnotations source="positions.19" references="/0/generateActionMethodParameters.1/%/%/%/anActionMethod">
+      <details key="start" value="825"/>
+      <details key="end" value="839"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.20" references="/0/reqParamSeq/collect/%">
-      <details key="start" value="639"/>
-      <details key="end" value="679"/>
+    <eAnnotations source="positions.20" references="/0/generateActionMethodParameters.1/%/%/%.1">
+      <details key="start" value="849"/>
+      <details key="end" value="913"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.21" references="/0/reqParamSeq/collect/%/p">
-      <details key="start" value="677"/>
-      <details key="end" value="678"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.22" references="/0/reqParamSeq/collect/p">
-      <details key="start" value="635"/>
-      <details key="end" value="636"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.23" references="/0/optParamSeq">
-      <details key="start" value="685"/>
+    <eAnnotations source="positions.21" references="/0/generateActionMethodParameters.1/%/%/%.1/%">
+      <details key="start" value="849"/>
       <details key="end" value="876"/>
-      <details key="line" value="17"/>
-    </eAnnotations>
-    <eAnnotations source="positions.24" references="/0/optParamSeq/anActionMethod">
-      <details key="start" value="712"/>
-      <details key="end" value="741"/>
-      <details key="line" value="17"/>
-    </eAnnotations>
-    <eAnnotations source="positions.25" references="/0/optParamSeq/collect">
-      <details key="start" value="765"/>
-      <details key="end" value="873"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.26" references="/0/optParamSeq/collect/select">
-      <details key="start" value="765"/>
-      <details key="end" value="818"/>
+    <eAnnotations source="positions.22" references="/0/generateActionMethodParameters.1/%/%/%.1/%/anActionMethod">
+      <details key="start" value="861"/>
+      <details key="end" value="875"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.27" references="/0/optParamSeq/collect/select/%">
-      <details key="start" value="765"/>
-      <details key="end" value="790"/>
+    <eAnnotations source="positions.23" references="/0/generateActionMethodParameters.1/%/%/%.1/%.1">
+      <details key="start" value="885"/>
+      <details key="end" value="912"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.28" references="/0/optParamSeq/collect/select/%/anActionMethod">
-      <details key="start" value="765"/>
+    <eAnnotations source="positions.24" references="/0/generateActionMethodParameters.1/%/%/%.1/%.1/anActionMethod">
+      <details key="start" value="897"/>
+      <details key="end" value="911"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/generateActionMethodParameters.1/%/%.1">
+      <details key="start" value="927"/>
+      <details key="end" value="931"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/generateActionMethodParameters.1/anActionMethod">
+      <details key="start" value="735"/>
+      <details key="end" value="764"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/generateActionMethodParameters.1/%.1">
+      <details key="start" value="769"/>
+      <details key="end" value="798"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/generateActionMethodParameters.1/%.1/%">
+      <details key="start" value="769"/>
       <details key="end" value="779"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.29" references="/0/optParamSeq/collect/select/%.1">
-      <details key="start" value="803"/>
-      <details key="end" value="817"/>
+    <eAnnotations source="positions.29" references="/0/generateActionMethodParameters.1/%.1/%/self">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.30" references="/0/optParamSeq/collect/select/%.1/p">
-      <details key="start" value="804"/>
-      <details key="end" value="805"/>
+    <eAnnotations source="positions.30" references="/0/generateActionMethodParameters.1/%.1/%.1">
+      <details key="start" value="782"/>
+      <details key="end" value="798"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.31" references="/0/optParamSeq/collect/select/p">
-      <details key="start" value="799"/>
-      <details key="end" value="800"/>
+    <eAnnotations source="positions.31" references="/0/getControllerToModelRelations">
+      <details key="start" value="960"/>
+      <details key="end" value="1194"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/getControllerToModelRelations/anActionMethod">
+      <details key="start" value="1005"/>
+      <details key="end" value="1034"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/getControllerToModelRelations/select">
+      <details key="start" value="1072"/>
+      <details key="end" value="1191"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.32" references="/0/optParamSeq/collect/%">
-      <details key="start" value="832"/>
-      <details key="end" value="872"/>
+    <eAnnotations source="positions.34" references="/0/getControllerToModelRelations/select/%">
+      <details key="start" value="1072"/>
+      <details key="end" value="1146"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.33" references="/0/optParamSeq/collect/%/p">
-      <details key="start" value="870"/>
-      <details key="end" value="871"/>
+    <eAnnotations source="positions.35" references="/0/getControllerToModelRelations/select/%/%">
+      <details key="start" value="1111"/>
+      <details key="end" value="1145"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.34" references="/0/optParamSeq/collect/p">
-      <details key="start" value="828"/>
-      <details key="end" value="829"/>
+    <eAnnotations source="positions.36" references="/0/getControllerToModelRelations/select/%/%/anActionMethod">
+      <details key="start" value="1111"/>
+      <details key="end" value="1125"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/getControllerToModelRelations/select/%/%/%">
+      <details key="start" value="1137"/>
+      <details key="end" value="1144"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/getControllerToModelRelations/select/%.1">
+      <details key="start" value="1159"/>
+      <details key="end" value="1190"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/getControllerToModelRelations/select/%.1/%">
+      <details key="start" value="1159"/>
+      <details key="end" value="1173"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/getControllerToModelRelations/select/%.1/%/r">
+      <details key="start" value="1159"/>
+      <details key="end" value="1160"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/getControllerToModelRelations/select/%.1/anActionMethod">
+      <details key="start" value="1176"/>
+      <details key="end" value="1190"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/getControllerToModelRelations/select/r">
+      <details key="start" value="1155"/>
+      <details key="end" value="1156"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/getCreateOrUpdateModels">
+      <details key="start" value="1196"/>
+      <details key="end" value="1454"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/getCreateOrUpdateModels/anActionMethod">
+      <details key="start" value="1235"/>
+      <details key="end" value="1264"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/getCreateOrUpdateModels/select">
+      <details key="start" value="1302"/>
+      <details key="end" value="1451"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/getCreateOrUpdateModels/select/%">
+      <details key="start" value="1302"/>
+      <details key="end" value="1347"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/getCreateOrUpdateModels/select/%/anActionMethod">
+      <details key="start" value="1332"/>
+      <details key="end" value="1346"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/getCreateOrUpdateModels/select/%.1">
+      <details key="start" value="1360"/>
+      <details key="end" value="1450"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/getCreateOrUpdateModels/select/%.1/%">
+      <details key="start" value="1360"/>
+      <details key="end" value="1403"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/getCreateOrUpdateModels/select/%.1/%/%">
+      <details key="start" value="1361"/>
+      <details key="end" value="1377"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/getCreateOrUpdateModels/select/%.1/%/%/r">
+      <details key="start" value="1361"/>
+      <details key="end" value="1362"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/getCreateOrUpdateModels/select/%.1/%/%.1">
+      <details key="start" value="1380"/>
+      <details key="end" value="1402"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/getCreateOrUpdateModels/select/%.1/%.1">
+      <details key="start" value="1408"/>
+      <details key="end" value="1449"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/getCreateOrUpdateModels/select/%.1/%.1/%">
+      <details key="start" value="1408"/>
+      <details key="end" value="1424"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/getCreateOrUpdateModels/select/%.1/%.1/%/r">
+      <details key="start" value="1408"/>
+      <details key="end" value="1409"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/getCreateOrUpdateModels/select/%.1/%.1/%.1">
+      <details key="start" value="1427"/>
+      <details key="end" value="1449"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/getCreateOrUpdateModels/select/r">
+      <details key="start" value="1356"/>
+      <details key="end" value="1357"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/viewModelParamSeq">
+      <details key="start" value="1456"/>
+      <details key="end" value="1654"/>
+      <details key="line" value="26"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/viewModelParamSeq/anActionMethod">
+      <details key="start" value="1489"/>
+      <details key="end" value="1518"/>
+      <details key="line" value="26"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/viewModelParamSeq/%">
+      <details key="start" value="1542"/>
+      <details key="end" value="1651"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/viewModelParamSeq/%/collect">
+      <details key="start" value="1542"/>
+      <details key="end" value="1637"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/viewModelParamSeq/%/collect/%">
+      <details key="start" value="1542"/>
+      <details key="end" value="1581"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/viewModelParamSeq/%/collect/%/anActionMethod">
+      <details key="start" value="1566"/>
+      <details key="end" value="1580"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.64" references="/0/viewModelParamSeq/%/collect/%.1">
+      <details key="start" value="1595"/>
+      <details key="end" value="1636"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.65" references="/0/viewModelParamSeq/%/collect/%.1/r">
+      <details key="start" value="1634"/>
+      <details key="end" value="1635"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.66" references="/0/viewModelParamSeq/%/collect/r">
+      <details key="start" value="1591"/>
+      <details key="end" value="1592"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/reqParamSeq">
+      <details key="start" value="1656"/>
+      <details key="end" value="1854"/>
+      <details key="line" value="30"/>
+    </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/reqParamSeq/anActionMethod">
+      <details key="start" value="1683"/>
+      <details key="end" value="1712"/>
+      <details key="line" value="30"/>
+    </eAnnotations>
+    <eAnnotations source="positions.69" references="/0/reqParamSeq/collect">
+      <details key="start" value="1736"/>
+      <details key="end" value="1851"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.70" references="/0/reqParamSeq/collect/select">
+      <details key="start" value="1736"/>
+      <details key="end" value="1796"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.71" references="/0/reqParamSeq/collect/select/%">
+      <details key="start" value="1736"/>
+      <details key="end" value="1761"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.72" references="/0/reqParamSeq/collect/select/%/anActionMethod">
+      <details key="start" value="1736"/>
+      <details key="end" value="1750"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.73" references="/0/reqParamSeq/collect/select/%.1">
+      <details key="start" value="1774"/>
+      <details key="end" value="1795"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.74" references="/0/reqParamSeq/collect/select/%.1/%">
+      <details key="start" value="1774"/>
+      <details key="end" value="1788"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.75" references="/0/reqParamSeq/collect/select/%.1/%/p">
+      <details key="start" value="1775"/>
+      <details key="end" value="1776"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.76" references="/0/reqParamSeq/collect/select/p">
+      <details key="start" value="1770"/>
+      <details key="end" value="1771"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.77" references="/0/reqParamSeq/collect/%">
+      <details key="start" value="1810"/>
+      <details key="end" value="1850"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.78" references="/0/reqParamSeq/collect/%/p">
+      <details key="start" value="1848"/>
+      <details key="end" value="1849"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.79" references="/0/reqParamSeq/collect/p">
+      <details key="start" value="1806"/>
+      <details key="end" value="1807"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.80" references="/0/optParamSeq">
+      <details key="start" value="1856"/>
+      <details key="end" value="2047"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.81" references="/0/optParamSeq/anActionMethod">
+      <details key="start" value="1883"/>
+      <details key="end" value="1912"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.82" references="/0/optParamSeq/collect">
+      <details key="start" value="1936"/>
+      <details key="end" value="2044"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.83" references="/0/optParamSeq/collect/select">
+      <details key="start" value="1936"/>
+      <details key="end" value="1989"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.84" references="/0/optParamSeq/collect/select/%">
+      <details key="start" value="1936"/>
+      <details key="end" value="1961"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.85" references="/0/optParamSeq/collect/select/%/anActionMethod">
+      <details key="start" value="1936"/>
+      <details key="end" value="1950"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.86" references="/0/optParamSeq/collect/select/%.1">
+      <details key="start" value="1974"/>
+      <details key="end" value="1988"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.87" references="/0/optParamSeq/collect/select/%.1/p">
+      <details key="start" value="1975"/>
+      <details key="end" value="1976"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.88" references="/0/optParamSeq/collect/select/p">
+      <details key="start" value="1970"/>
+      <details key="end" value="1971"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.89" references="/0/optParamSeq/collect/%">
+      <details key="start" value="2003"/>
+      <details key="end" value="2043"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.90" references="/0/optParamSeq/collect/%/p">
+      <details key="start" value="2041"/>
+      <details key="end" value="2042"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.91" references="/0/optParamSeq/collect/p">
+      <details key="start" value="1999"/>
+      <details key="end" value="2000"/>
       <details key="line" value="0"/>
     </eAnnotations>
   </ecore:EAnnotation>

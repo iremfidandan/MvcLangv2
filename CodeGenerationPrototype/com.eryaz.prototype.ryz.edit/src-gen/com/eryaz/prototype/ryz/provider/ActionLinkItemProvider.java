@@ -3,7 +3,6 @@
 package com.eryaz.prototype.ryz.provider;
 
 import com.eryaz.prototype.ryz.ActionLink;
-import com.eryaz.prototype.ryz.RequestType;
 
 import java.util.Collection;
 import java.util.List;
@@ -74,8 +73,7 @@ public class ActionLinkItemProvider extends HelperForSendingRequestItemProvider 
 	 */
 	@Override
 	public String getText(Object object) {
-		RequestType labelValue = ((ActionLink) object).getRequestType();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((ActionLink) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_ActionLink_type")
 				: getString("_UI_ActionLink_type") + " " + label;
 	}

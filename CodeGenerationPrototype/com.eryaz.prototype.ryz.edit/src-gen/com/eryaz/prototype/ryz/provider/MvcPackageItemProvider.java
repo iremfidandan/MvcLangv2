@@ -171,9 +171,6 @@ public class MvcPackageItemProvider extends PackageItemProvider {
 
 		newChildDescriptors.add(createChildParameter(RyzPackage.Literals.MVC_PACKAGE__MAÝNCOMPONENTRELATÝONS,
 				RyzFactory.eINSTANCE.createViewToModelRelation()));
-
-		newChildDescriptors.add(createChildParameter(RyzPackage.Literals.MVC_PACKAGE__MAÝNCOMPONENTRELATÝONS,
-				RyzFactory.eINSTANCE.createFormElementToPropertyKeyRelation()));
 	}
 
 }

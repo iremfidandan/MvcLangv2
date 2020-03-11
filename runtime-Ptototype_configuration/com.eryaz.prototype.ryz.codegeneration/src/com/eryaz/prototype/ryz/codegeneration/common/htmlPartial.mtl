@@ -3,13 +3,12 @@
 
 [import com::eryaz::prototype::ryz::codegeneration::common::mvcRelations /]
 
-
-[template public generateHtmlPartial(aPartial : Partial)]
-[if (aPartial.getModelForPartial().oclIsUndefined())]
+[template public generateHtmlPartial(aPartial : Partial) ? (getModelForPartial(aPartial).oclIsUndefined())]
 @Html.Partial("[aPartial.name/]")
-[else]
-@Html.Partial("[aPartial.name/]", Model)	
-[/if]
+[/template]
+
+[template public generateHtmlPartial(aPartial : Partial) ? (getModelForPartial(aPartial).oclIsUndefined()._not())]
+@Html.Partial("[aPartial.name/]", Model)
 [/template]
 
 

@@ -19,49 +19,101 @@ namespace SportStore.Controllers{
 		
 		[HttpGet]
 		public ActionResult Click_CreateProduct(){
-			Product Product = new Product();
+			ProductViewModel ProductViewModel = new ProductViewModel();
+			ProductViewModel.CartLines = new MultiSelectList(_uow.CartLineRepository.GetAll(), "CartLineId", "CartLineId", ProductViewModel.CartLines_CartLineId);
+			
 		
-			return View("~/Views/Admin/CreateProductPage.cshtml", Product);
+			return View("~/Views/Admin/CreateProductPage.cshtml", ProductViewModel
+			);
 		}
 
 		
 		[HttpGet]
-		public ActionResult Click_EditProduct(){
-			List<Product> Product = _uow.ProductRepository.GetAll().ToList();
-			
-		
-			return View("~/Views/Admin/EditProductPage.cshtml", Product);
-		}
-
-		
-		[HttpGet]
-		public ActionResult Click_DeleteProduct(){
-			List<Product> Product = _uow.ProductRepository.GetAll().ToList();
-			
-		
-			return View("~/Views/Admin/DeleteProductPage.cshtml", Product);
-		}
-
-		[ValidateAntiForgeryToken]
-		[HttpPost]
-		public ActionResult CreateProduct(){
-			Product Product = new Product();
-			TryUpdateModel<Product>(Product, new string[]{nameof(Product.Name), nameof(Product.Category), nameof(Product.Description), nameof(Product.Price)});
-			_uow.ProductRepository.Add(Product);
-			_uow.Complete();
-		
-			return View("~/Views/Admin/AdminHomePage.cshtml");
-		}
-
-		[ValidateAntiForgeryToken]
-		[HttpPost]
-		public ActionResult EditProduct(int ProductId){
+		public ActionResult Click_EditProduct(int ProductId){
 			Product Product = _uow.ProductRepository.Get(m => (m.ProductId == ProductId));
-			TryUpdateModel<Product>(Product, new string[]{nameof(Product.Name), nameof(Product.Category), nameof(Product.Description), nameof(Product.Price)});
+			ProductViewModel ProductViewModel = new ProductViewModel();
+			ProductViewModel.ProductId = Product.ProductId;
+			
+			
+			ProductViewModel.Name = Product.Name;
+			
+			ProductViewModel.Category = Product.Category;
+			
+			ProductViewModel.Description = Product.Description;
+			
+			ProductViewModel.Price = Product.Price;
+			
+			ProductViewModel.CartLines_CartLineId = Product.CartLines.Select(m => m.CartLineId).ToList();
+			
+			
+			
+			
+			ProductViewModel.CartLines = new MultiSelectList(_uow.CartLineRepository.GetAll(), "CartLineId", "CartLineId", ProductViewModel.CartLines_CartLineId);
+			
+		
+			return View("~/Views/Admin/EditProductPage.cshtml", ProductViewModel
+			);
+		}
+
+		
+		[HttpGet]
+		public ActionResult Click_DeleteProduct(int ProductId){
+			Product Product = _uow.ProductRepository.Get(m => (m.ProductId == ProductId));
+		
+			return View("~/Views/Admin/DeleteProductPage.cshtml", Product
+			);
+		}
+
+		[ValidateAntiForgeryToken]
+		[HttpPost]
+		public ActionResult CreateProduct([Bind(Include = "Name,Category,Description,Price")]ProductViewModel ProductViewModel){
+			Product Product = new Product();
+			
+			
+			Product.Name = ProductViewModel.Name;
+			
+			Product.Category = ProductViewModel.Category;
+			
+			Product.Description = ProductViewModel.Description;
+			
+			Product.Price = ProductViewModel.Price;
+			
+			Product.CartLines = _uow.CartLineRepository.GetAll(m => ProductViewModel.CartLines_CartLineId.Contains(m.CartLineId)).ToList();
+			
+			
+			
+			
 			_uow.ProductRepository.Add(Product);
 			_uow.Complete();
 		
-			return View("~/Views/Admin/AdminHomePage.cshtml");
+			return View("~/Views/Admin/AdminHomePage.cshtml", _uow.ProductRepository.GetAll()
+			);
+		}
+
+		[ValidateAntiForgeryToken]
+		[HttpPost]
+		public ActionResult EditProduct([Bind(Include = "Name,Category,Description,Price")]ProductViewModel ProductViewModel, int ProductId){
+			Product Product = _uow.ProductRepository.Get(m => (m.ProductId == ProductId));
+			
+			
+			Product.Name = ProductViewModel.Name;
+			
+			Product.Category = ProductViewModel.Category;
+			
+			Product.Description = ProductViewModel.Description;
+			
+			Product.Price = ProductViewModel.Price;
+			
+			Product.CartLines = _uow.CartLineRepository.GetAll(m => ProductViewModel.CartLines_CartLineId.Contains(m.CartLineId)).ToList();
+			
+			
+			
+			
+			_uow.ProductRepository.Add(Product);
+			_uow.Complete();
+		
+			return View("~/Views/Admin/AdminHomePage.cshtml", _uow.ProductRepository.GetAll(m => (m.ProductId == ProductId))
+			);
 		}
 
 		[ValidateAntiForgeryToken]
@@ -71,30 +123,17 @@ namespace SportStore.Controllers{
 			_uow.ProductRepository.Remove(Product);
 			_uow.Complete();
 		
-			return View("~/Views/Admin/AdminHomePage.cshtml");
+			return View("~/Views/Admin/AdminHomePage.cshtml", _uow.ProductRepository.GetAll(m => (m.ProductId == ProductId))
+			);
 		}
 
 		
 		[HttpGet]
 		public ActionResult GetAdminHomePage(){
+			List<Product> Product = _uow.ProductRepository.GetAll().ToList();
 		
-			return View("~/Views/Admin/AdminHomePage.cshtml");
-		}
-
-		
-		[HttpGet]
-		public ActionResult GetEditProductForm(int ProductId){
-			Product Product = _uow.ProductRepository.Get(m => (m.ProductId == ProductId));
-		
-			return PartialView("~/Views/Admin/EditProductFormPage.cshtml", Product);
-		}
-
-		
-		[HttpGet]
-		public ActionResult GetDeleteProductForm(int ProductId){
-			Product Product = _uow.ProductRepository.Get(m => (m.ProductId == ProductId));
-		
-			return PartialView("~/Views/Admin/DeleteProductFormPage.cshtml", Product);
+			return View("~/Views/Admin/AdminHomePage.cshtml", Product
+			);
 		}
 	}
 }

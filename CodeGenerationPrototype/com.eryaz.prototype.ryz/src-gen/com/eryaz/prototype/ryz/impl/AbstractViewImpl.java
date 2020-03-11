@@ -3,9 +3,8 @@
 package com.eryaz.prototype.ryz.impl;
 
 import com.eryaz.prototype.ryz.AbstractView;
-import com.eryaz.prototype.ryz.HelperForSendingRequest;
+import com.eryaz.prototype.ryz.HtmlElement;
 import com.eryaz.prototype.ryz.Partial;
-import com.eryaz.prototype.ryz.PresentationElement;
 import com.eryaz.prototype.ryz.RyzPackage;
 
 import java.util.Collection;
@@ -31,7 +30,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link com.eryaz.prototype.ryz.impl.AbstractViewImpl#getRenders <em>Renders</em>}</li>
  *   <li>{@link com.eryaz.prototype.ryz.impl.AbstractViewImpl#getHtmlelements <em>Htmlelements</em>}</li>
- *   <li>{@link com.eryaz.prototype.ryz.impl.AbstractViewImpl#getPresentationelement <em>Presentationelement</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,17 +53,7 @@ public abstract class AbstractViewImpl extends MainComponentImpl implements Abst
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<HelperForSendingRequest> htmlelements;
-
-	/**
-	 * The cached value of the '{@link #getPresentationelement() <em>Presentationelement</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPresentationelement()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<PresentationElement> presentationelement;
+	protected EList<HtmlElement> htmlelements;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -91,7 +79,6 @@ public abstract class AbstractViewImpl extends MainComponentImpl implements Abst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EList<Partial> getRenders() {
 		if (renders == null) {
 			renders = new EObjectResolvingEList<Partial>(Partial.class, this, RyzPackage.ABSTRACT_VÝEW__RENDERS);
@@ -104,27 +91,12 @@ public abstract class AbstractViewImpl extends MainComponentImpl implements Abst
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EList<HelperForSendingRequest> getHtmlelements() {
+	public EList<HtmlElement> getHtmlelements() {
 		if (htmlelements == null) {
-			htmlelements = new EObjectContainmentEList<HelperForSendingRequest>(HelperForSendingRequest.class, this,
+			htmlelements = new EObjectContainmentEList<HtmlElement>(HtmlElement.class, this,
 					RyzPackage.ABSTRACT_VÝEW__HTMLELEMENTS);
 		}
 		return htmlelements;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EList<PresentationElement> getPresentationelement() {
-		if (presentationelement == null) {
-			presentationelement = new EObjectContainmentEList<PresentationElement>(PresentationElement.class, this,
-					RyzPackage.ABSTRACT_VÝEW__PRESENTATÝONELEMENT);
-		}
-		return presentationelement;
 	}
 
 	/**
@@ -137,8 +109,6 @@ public abstract class AbstractViewImpl extends MainComponentImpl implements Abst
 		switch (featureID) {
 		case RyzPackage.ABSTRACT_VÝEW__HTMLELEMENTS:
 			return ((InternalEList<?>) getHtmlelements()).basicRemove(otherEnd, msgs);
-		case RyzPackage.ABSTRACT_VÝEW__PRESENTATÝONELEMENT:
-			return ((InternalEList<?>) getPresentationelement()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -155,8 +125,6 @@ public abstract class AbstractViewImpl extends MainComponentImpl implements Abst
 			return getRenders();
 		case RyzPackage.ABSTRACT_VÝEW__HTMLELEMENTS:
 			return getHtmlelements();
-		case RyzPackage.ABSTRACT_VÝEW__PRESENTATÝONELEMENT:
-			return getPresentationelement();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -176,11 +144,7 @@ public abstract class AbstractViewImpl extends MainComponentImpl implements Abst
 			return;
 		case RyzPackage.ABSTRACT_VÝEW__HTMLELEMENTS:
 			getHtmlelements().clear();
-			getHtmlelements().addAll((Collection<? extends HelperForSendingRequest>) newValue);
-			return;
-		case RyzPackage.ABSTRACT_VÝEW__PRESENTATÝONELEMENT:
-			getPresentationelement().clear();
-			getPresentationelement().addAll((Collection<? extends PresentationElement>) newValue);
+			getHtmlelements().addAll((Collection<? extends HtmlElement>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -200,9 +164,6 @@ public abstract class AbstractViewImpl extends MainComponentImpl implements Abst
 		case RyzPackage.ABSTRACT_VÝEW__HTMLELEMENTS:
 			getHtmlelements().clear();
 			return;
-		case RyzPackage.ABSTRACT_VÝEW__PRESENTATÝONELEMENT:
-			getPresentationelement().clear();
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -219,8 +180,6 @@ public abstract class AbstractViewImpl extends MainComponentImpl implements Abst
 			return renders != null && !renders.isEmpty();
 		case RyzPackage.ABSTRACT_VÝEW__HTMLELEMENTS:
 			return htmlelements != null && !htmlelements.isEmpty();
-		case RyzPackage.ABSTRACT_VÝEW__PRESENTATÝONELEMENT:
-			return presentationelement != null && !presentationelement.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

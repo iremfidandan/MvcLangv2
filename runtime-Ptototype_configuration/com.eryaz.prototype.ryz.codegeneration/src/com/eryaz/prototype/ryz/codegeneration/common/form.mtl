@@ -1,0 +1,48 @@
+[comment encoding = UTF-8 /]
+[module form('http://www.eryaz.com/prototype/ryz')]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::mvcRelations /]
+[import com::eryaz::prototype::ryz::codegeneration::common::formHeader /]
+[import com::eryaz::prototype::ryz::codegeneration::common::formEditors /]
+
+[template public generateForm(aForm : Form) ? (getControllerToModelRelation(aForm).modelCardinality = ModelCardinality::ONE)]
+[generateFormHeader(aForm, aForm.getActionMethod())/]
+{
+	@Html.AntiForgeryToken()
+	[if ((getControllerToModelRelation(aForm).modelOperation = ModelOperation::UPDATE)._or(getControllerToModelRelation(aForm).modelOperation = ModelOperation::DELETE))]
+	@Html.HiddenFor(m => m.[getControllerToModelRelation(aForm).model.name/]Id)
+	[/if]
+	[if ((getControllerToModelRelation(aForm).modelOperation = ModelOperation::CREATE)._or(getControllerToModelRelation(aForm).modelOperation = ModelOperation::UPDATE))]
+	[generateFormEditors(aForm, getModel(aForm))/]
+	[/if]
+	<input type="submit" name="[aForm.text.replaceAll(' ', '')/]" value="[aForm.text/]">
+}
+[/template]
+
+[template public generateForm(aForm : Form) ? (getControllerToModelRelation(aForm).modelCardinality = ModelCardinality::ALL)]
+[generateFormHeader(aForm, aForm.getActionMethod())/]
+{
+	@Html.AntiForgeryToken()
+	[if ((getControllerToModelRelation(aForm).modelOperation = ModelOperation::UPDATE)._or(getControllerToModelRelation(aForm).modelOperation = ModelOperation::DELETE))]
+    for(int i = 0; i < Model.Count(); i++){
+		@Html.HiddenFor(m => m.ElementAt(i).[getControllerToModelRelation(aForm).model.name/]Id)
+    }
+	[/if]
+	[if ((getControllerToModelRelation(aForm).modelOperation = ModelOperation::CREATE)._or(getControllerToModelRelation(aForm).modelOperation = ModelOperation::UPDATE))]
+	[generateFormEditors(aForm, getModel(aForm))/]
+	[/if]
+	<input type="submit" name="[aForm.text.replaceAll(' ', '')/]" value="[aForm.text/]">
+}
+[/template]
+
+[query private getActionMethod(aForm : Form) : ActionMethod = 
+aForm.eContainer(Project).getViewToControllerRelationsInProject()->any(r | r.helperforsendingrequest = aForm).actionmethod
+/]
+
+[query private getControllerToModelRelation(aForm : Form) : ControllerToModelRelation = 
+aForm.eContainer(Project).getControllerToModelRelationsInProject()->any(r | r.actionmethod = getActionMethod(aForm))
+/]
+
+[query private getModel(aForm : Form) : Model = 
+getControllerToModelRelation(aForm).model
+/]

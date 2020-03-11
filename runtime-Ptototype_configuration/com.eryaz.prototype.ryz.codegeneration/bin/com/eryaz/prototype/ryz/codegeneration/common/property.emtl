@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
-  <mtl:Module name="property" nsURI="com::eryaz::prototype::ryz::codegeneration::common::property" startHeaderPosition="29" endHeaderPosition="175">
+  <mtl:Module name="property" nsURI="com::eryaz::prototype::ryz::codegeneration::common::property" startHeaderPosition="29" endHeaderPosition="164">
     <input>
       <takesTypesFrom href="http://www.eryaz.com/prototype/ryz#/"/>
     </input>
-    <imports href="enumtypes/modelPropertyType.emtl#/0"/>
+    <imports href="modelPropertyType.emtl#/0"/>
     <ownedModuleElement xsi:type="mtl:Template" name="generateProperty" visibility="Public">
       <body xsi:type="mtl:IfBlock">
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
@@ -26,7 +26,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="public "/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="enumtypes/modelPropertyType.emtl#/0/generateModelPropertyType"/>
+        <definition href="modelPropertyType.emtl#/0/generateModelPropertyType"/>
         <argument xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//ModelPropertyType"/>
           <source xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/generateProperty/aProperty">
@@ -64,59 +64,27 @@
       </guard>
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Template" name="generateProperty" visibility="Public">
-      <body xsi:type="mtl:IfBlock">
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="public "/>
-        <body xsi:type="mtl:TemplateInvocation">
-          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-          <definition href="enumtypes/modelPropertyType.emtl#/0/generateModelPropertyType"/>
-          <argument xsi:type="ocl.ecore:PropertyCallExp">
-            <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//ModelPropertyType"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/generateProperty.1/aProperty">
-              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Property"/>
-            </source>
-            <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//Property/type"/>
-          </argument>
-        </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
-        <body xsi:type="ocl.ecore:PropertyCallExp">
-          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="public "/>
+      <body xsi:type="mtl:TemplateInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="modelPropertyType.emtl#/0/generateModelPropertyType"/>
+        <argument xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//ModelPropertyType"/>
           <source xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/generateProperty.1/aProperty">
             <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Property"/>
           </source>
-          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
-        </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" {get; set;}&#xA;"/>
-        <ifExpr xsi:type="ocl.ecore:PropertyCallExp">
-          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
-          <source xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/generateProperty.1/aProperty">
-            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Property"/>
-          </source>
-          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//Property/isRequired"/>
-        </ifExpr>
-        <else>
-          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="public Nullable&lt;"/>
-          <body xsi:type="mtl:TemplateInvocation">
-            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <definition href="enumtypes/modelPropertyType.emtl#/0/generateModelPropertyType"/>
-            <argument xsi:type="ocl.ecore:PropertyCallExp">
-              <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//ModelPropertyType"/>
-              <source xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/generateProperty.1/aProperty">
-                <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Property"/>
-              </source>
-              <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//Property/type"/>
-            </argument>
-          </body>
-          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="> "/>
-          <body xsi:type="ocl.ecore:PropertyCallExp">
-            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/generateProperty.1/aProperty">
-              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Property"/>
-            </source>
-            <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
-          </body>
-          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" {get; set;}&#xA;"/>
-        </else>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//Property/type"/>
+        </argument>
       </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/generateProperty.1/aProperty">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Property"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" {get; set;}"/>
       <parameter name="aProperty">
         <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Property"/>
       </parameter>
@@ -124,20 +92,91 @@
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
         <source xsi:type="ocl.ecore:OperationCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//ModelPropertyType"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/generateProperty.1/aProperty">
+                <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Property"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//Property/type"/>
+            </source>
+            <argument xsi:type="ocl.ecore:EnumLiteralExp">
+              <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//ModelPropertyType"/>
+              <referredEnumLiteral xsi:type="ecore:EEnumLiteral" href="http://www.eryaz.com/prototype/ryz#//ModelPropertyType/STRING"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/not"/>
+        </source>
+        <argument xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/generateProperty.1/aProperty">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Property"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//Property/isRequired"/>
+        </argument>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/and"/>
+      </guard>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateProperty" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="public Nullable&lt;"/>
+      <body xsi:type="mtl:TemplateInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="modelPropertyType.emtl#/0/generateModelPropertyType"/>
+        <argument xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//ModelPropertyType"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/generateProperty.2/aProperty">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Property"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//Property/type"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="> "/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/generateProperty.2/aProperty">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Property"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" {get; set;}"/>
+      <parameter name="aProperty">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Property"/>
+      </parameter>
+      <guard xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <source xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//ModelPropertyType"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/generateProperty.2/aProperty">
+                <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Property"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//Property/type"/>
+            </source>
+            <argument xsi:type="ocl.ecore:EnumLiteralExp">
+              <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//ModelPropertyType"/>
+              <referredEnumLiteral xsi:type="ecore:EEnumLiteral" href="http://www.eryaz.com/prototype/ryz#//ModelPropertyType/STRING"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/not"/>
+        </source>
+        <argument xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
           <source xsi:type="ocl.ecore:PropertyCallExp">
-            <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//ModelPropertyType"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/generateProperty.1/aProperty">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aProperty" referredVariable="/0/generateProperty.2/aProperty">
               <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Property"/>
             </source>
-            <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//Property/type"/>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//Property/isRequired"/>
           </source>
-          <argument xsi:type="ocl.ecore:EnumLiteralExp">
-            <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//ModelPropertyType"/>
-            <referredEnumLiteral xsi:type="ecore:EEnumLiteral" href="http://www.eryaz.com/prototype/ryz#//ModelPropertyType/STRING"/>
-          </argument>
-          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
-        </source>
-        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/not"/>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/not"/>
+        </argument>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/and"/>
       </guard>
     </ownedModuleElement>
   </mtl:Module>
@@ -176,7 +215,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="enumtypes/modelPropertyType.emtl#/0/generateModelPropertyType"/>
+          <references href="modelPropertyType.emtl#/0/generateModelPropertyType"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="aModelPropertyType">
@@ -267,6 +306,18 @@
     <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Property"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Property"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Property"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Property"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
@@ -280,243 +331,293 @@
   </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/generateProperty">
-      <details key="start" value="179"/>
-      <details key="end" value="436"/>
+      <details key="start" value="168"/>
+      <details key="end" value="424"/>
       <details key="line" value="6"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/generateProperty/%">
-      <details key="start" value="283"/>
-      <details key="end" value="341"/>
+      <details key="start" value="272"/>
+      <details key="end" value="330"/>
       <details key="line" value="7"/>
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/generateProperty/%/%">
-      <details key="start" value="313"/>
-      <details key="end" value="316"/>
+      <details key="start" value="302"/>
+      <details key="end" value="305"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.3" references="/0/generateProperty/%/%.1">
-      <details key="start" value="319"/>
-      <details key="end" value="327"/>
+      <details key="start" value="308"/>
+      <details key="end" value="316"/>
       <details key="line" value="8"/>
     </eAnnotations>
     <eAnnotations source="positions.4" references="/0/generateProperty/%/%.2">
-      <details key="start" value="329"/>
-      <details key="end" value="332"/>
+      <details key="start" value="318"/>
+      <details key="end" value="321"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.5" references="/0/generateProperty/%/%.3">
-      <details key="start" value="335"/>
-      <details key="end" value="336"/>
+      <details key="start" value="324"/>
+      <details key="end" value="325"/>
       <details key="line" value="9"/>
     </eAnnotations>
     <eAnnotations source="positions.6" references="/0/generateProperty/%/%.4">
-      <details key="start" value="287"/>
-      <details key="end" value="309"/>
+      <details key="start" value="276"/>
+      <details key="end" value="298"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.7" references="/0/generateProperty/%/%.4/aProperty">
-      <details key="start" value="288"/>
-      <details key="end" value="297"/>
+      <details key="start" value="277"/>
+      <details key="end" value="286"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.8" references="/0/generateProperty/%.1">
-      <details key="start" value="342"/>
-      <details key="end" value="349"/>
+      <details key="start" value="331"/>
+      <details key="end" value="338"/>
       <details key="line" value="10"/>
     </eAnnotations>
     <eAnnotations source="positions.9" references="/0/generateProperty/%.2">
-      <details key="start" value="350"/>
-      <details key="end" value="392"/>
+      <details key="start" value="339"/>
+      <details key="end" value="380"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.10" references="/0/generateProperty/%.2/%">
-      <details key="start" value="350"/>
-      <details key="end" value="364"/>
+      <details key="start" value="365"/>
+      <details key="end" value="379"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.11" references="/0/generateProperty/%.2/%/aProperty">
-      <details key="start" value="350"/>
-      <details key="end" value="359"/>
+      <details key="start" value="365"/>
+      <details key="end" value="374"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.12" references="/0/generateProperty/%.3">
-      <details key="start" value="394"/>
-      <details key="end" value="395"/>
+      <details key="start" value="382"/>
+      <details key="end" value="383"/>
       <details key="line" value="10"/>
     </eAnnotations>
     <eAnnotations source="positions.13" references="/0/generateProperty/%.4">
-      <details key="start" value="396"/>
-      <details key="end" value="410"/>
+      <details key="start" value="384"/>
+      <details key="end" value="398"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.14" references="/0/generateProperty/%.4/aProperty">
-      <details key="start" value="396"/>
-      <details key="end" value="405"/>
+      <details key="start" value="384"/>
+      <details key="end" value="393"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.15" references="/0/generateProperty/%.5">
-      <details key="start" value="412"/>
-      <details key="end" value="424"/>
+      <details key="start" value="400"/>
+      <details key="end" value="412"/>
       <details key="line" value="10"/>
     </eAnnotations>
     <eAnnotations source="positions.16" references="/0/generateProperty/aProperty">
-      <details key="start" value="213"/>
-      <details key="end" value="233"/>
+      <details key="start" value="202"/>
+      <details key="end" value="222"/>
       <details key="line" value="6"/>
     </eAnnotations>
     <eAnnotations source="positions.17" references="/0/generateProperty/%.6">
-      <details key="start" value="238"/>
-      <details key="end" value="280"/>
+      <details key="start" value="227"/>
+      <details key="end" value="269"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.18" references="/0/generateProperty/%.6/%">
-      <details key="start" value="238"/>
-      <details key="end" value="252"/>
+      <details key="start" value="227"/>
+      <details key="end" value="241"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.19" references="/0/generateProperty/%.6/%/aProperty">
-      <details key="start" value="238"/>
-      <details key="end" value="247"/>
+      <details key="start" value="227"/>
+      <details key="end" value="236"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.20" references="/0/generateProperty/%.6/%.1">
-      <details key="start" value="255"/>
-      <details key="end" value="280"/>
+      <details key="start" value="244"/>
+      <details key="end" value="269"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.21" references="/0/generateProperty.1">
-      <details key="start" value="439"/>
-      <details key="end" value="780"/>
-      <details key="line" value="14"/>
+      <details key="start" value="426"/>
+      <details key="end" value="659"/>
+      <details key="line" value="13"/>
     </eAnnotations>
     <eAnnotations source="positions.22" references="/0/generateProperty.1/%">
-      <details key="start" value="552"/>
-      <details key="end" value="768"/>
-      <details key="line" value="15"/>
-    </eAnnotations>
-    <eAnnotations source="positions.23" references="/0/generateProperty.1/%/%">
-      <details key="start" value="580"/>
-      <details key="end" value="587"/>
-      <details key="line" value="16"/>
-    </eAnnotations>
-    <eAnnotations source="positions.24" references="/0/generateProperty.1/%/%.1">
-      <details key="start" value="588"/>
-      <details key="end" value="630"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.25" references="/0/generateProperty.1/%/%.1/%">
-      <details key="start" value="588"/>
-      <details key="end" value="602"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.26" references="/0/generateProperty.1/%/%.1/%/aProperty">
-      <details key="start" value="588"/>
-      <details key="end" value="597"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.27" references="/0/generateProperty.1/%/%.2">
-      <details key="start" value="632"/>
-      <details key="end" value="633"/>
-      <details key="line" value="16"/>
-    </eAnnotations>
-    <eAnnotations source="positions.28" references="/0/generateProperty.1/%/%.3">
-      <details key="start" value="634"/>
-      <details key="end" value="648"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.29" references="/0/generateProperty.1/%/%.3/aProperty">
-      <details key="start" value="634"/>
-      <details key="end" value="643"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.30" references="/0/generateProperty.1/%/%.4">
-      <details key="start" value="650"/>
-      <details key="end" value="663"/>
-      <details key="line" value="16"/>
-    </eAnnotations>
-    <eAnnotations source="positions.31" references="/0/generateProperty.1/%/%.5">
-      <details key="start" value="556"/>
-      <details key="end" value="578"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.32" references="/0/generateProperty.1/%/%.5/aProperty">
-      <details key="start" value="557"/>
-      <details key="end" value="566"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.33" references="/0/generateProperty.1/%/%.6">
-      <details key="start" value="663"/>
-      <details key="end" value="763"/>
-      <details key="line" value="17"/>
-    </eAnnotations>
-    <eAnnotations source="positions.34" references="/0/generateProperty.1/%/%.6/%">
-      <details key="start" value="670"/>
-      <details key="end" value="686"/>
-      <details key="line" value="18"/>
-    </eAnnotations>
-    <eAnnotations source="positions.35" references="/0/generateProperty.1/%/%.6/%.1">
-      <details key="start" value="687"/>
-      <details key="end" value="729"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.36" references="/0/generateProperty.1/%/%.6/%.1/%">
-      <details key="start" value="687"/>
-      <details key="end" value="701"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.37" references="/0/generateProperty.1/%/%.6/%.1/%/aProperty">
-      <details key="start" value="687"/>
-      <details key="end" value="696"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.38" references="/0/generateProperty.1/%/%.6/%.2">
-      <details key="start" value="731"/>
-      <details key="end" value="733"/>
-      <details key="line" value="18"/>
-    </eAnnotations>
-    <eAnnotations source="positions.39" references="/0/generateProperty.1/%/%.6/%.3">
-      <details key="start" value="734"/>
-      <details key="end" value="748"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.40" references="/0/generateProperty.1/%/%.6/%.3/aProperty">
-      <details key="start" value="734"/>
-      <details key="end" value="743"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.41" references="/0/generateProperty.1/%/%.6/%.4">
-      <details key="start" value="750"/>
-      <details key="end" value="763"/>
-      <details key="line" value="18"/>
-    </eAnnotations>
-    <eAnnotations source="positions.42" references="/0/generateProperty.1/aProperty">
-      <details key="start" value="473"/>
-      <details key="end" value="493"/>
+      <details key="start" value="566"/>
+      <details key="end" value="573"/>
       <details key="line" value="14"/>
     </eAnnotations>
-    <eAnnotations source="positions.43" references="/0/generateProperty.1/%.1">
-      <details key="start" value="498"/>
-      <details key="end" value="549"/>
+    <eAnnotations source="positions.23" references="/0/generateProperty.1/%.1">
+      <details key="start" value="574"/>
+      <details key="end" value="615"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.44" references="/0/generateProperty.1/%.1/%">
-      <details key="start" value="498"/>
-      <details key="end" value="542"/>
+    <eAnnotations source="positions.24" references="/0/generateProperty.1/%.1/%">
+      <details key="start" value="600"/>
+      <details key="end" value="614"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.45" references="/0/generateProperty.1/%.1/%/%">
-      <details key="start" value="499"/>
-      <details key="end" value="513"/>
+    <eAnnotations source="positions.25" references="/0/generateProperty.1/%.1/%/aProperty">
+      <details key="start" value="600"/>
+      <details key="end" value="609"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.46" references="/0/generateProperty.1/%.1/%/%/aProperty">
-      <details key="start" value="499"/>
-      <details key="end" value="508"/>
+    <eAnnotations source="positions.26" references="/0/generateProperty.1/%.2">
+      <details key="start" value="617"/>
+      <details key="end" value="618"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/generateProperty.1/%.3">
+      <details key="start" value="619"/>
+      <details key="end" value="633"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.47" references="/0/generateProperty.1/%.1/%/%.1">
-      <details key="start" value="516"/>
-      <details key="end" value="541"/>
+    <eAnnotations source="positions.28" references="/0/generateProperty.1/%.3/aProperty">
+      <details key="start" value="619"/>
+      <details key="end" value="628"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/generateProperty.1/%.4">
+      <details key="start" value="635"/>
+      <details key="end" value="647"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/generateProperty.1/aProperty">
+      <details key="start" value="460"/>
+      <details key="end" value="480"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/generateProperty.1/%.5">
+      <details key="start" value="485"/>
+      <details key="end" value="563"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/generateProperty.1/%.5/%">
+      <details key="start" value="485"/>
+      <details key="end" value="536"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/generateProperty.1/%.5/%/%">
+      <details key="start" value="485"/>
+      <details key="end" value="529"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/generateProperty.1/%.5/%/%/%">
+      <details key="start" value="486"/>
+      <details key="end" value="500"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/generateProperty.1/%.5/%/%/%/aProperty">
+      <details key="start" value="486"/>
+      <details key="end" value="495"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/generateProperty.1/%.5/%/%/%.1">
+      <details key="start" value="503"/>
+      <details key="end" value="528"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/generateProperty.1/%.5/%.1">
+      <details key="start" value="542"/>
+      <details key="end" value="562"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/generateProperty.1/%.5/%.1/aProperty">
+      <details key="start" value="542"/>
+      <details key="end" value="551"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/generateProperty.2">
+      <details key="start" value="661"/>
+      <details key="end" value="911"/>
+      <details key="line" value="17"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/generateProperty.2/%">
+      <details key="start" value="808"/>
+      <details key="end" value="824"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/generateProperty.2/%.1">
+      <details key="start" value="825"/>
+      <details key="end" value="866"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/generateProperty.2/%.1/%">
+      <details key="start" value="851"/>
+      <details key="end" value="865"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/generateProperty.2/%.1/%/aProperty">
+      <details key="start" value="851"/>
+      <details key="end" value="860"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/generateProperty.2/%.2">
+      <details key="start" value="868"/>
+      <details key="end" value="870"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/generateProperty.2/%.3">
+      <details key="start" value="871"/>
+      <details key="end" value="885"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/generateProperty.2/%.3/aProperty">
+      <details key="start" value="871"/>
+      <details key="end" value="880"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/generateProperty.2/%.4">
+      <details key="start" value="887"/>
+      <details key="end" value="899"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/generateProperty.2/aProperty">
+      <details key="start" value="695"/>
+      <details key="end" value="715"/>
+      <details key="line" value="17"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/generateProperty.2/%.5">
+      <details key="start" value="720"/>
+      <details key="end" value="805"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/generateProperty.2/%.5/%">
+      <details key="start" value="720"/>
+      <details key="end" value="771"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/generateProperty.2/%.5/%/%">
+      <details key="start" value="720"/>
+      <details key="end" value="764"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/generateProperty.2/%.5/%/%/%">
+      <details key="start" value="721"/>
+      <details key="end" value="735"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/generateProperty.2/%.5/%/%/%/aProperty">
+      <details key="start" value="721"/>
+      <details key="end" value="730"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/generateProperty.2/%.5/%/%/%.1">
+      <details key="start" value="738"/>
+      <details key="end" value="763"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/generateProperty.2/%.5/%.1">
+      <details key="start" value="777"/>
+      <details key="end" value="804"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/generateProperty.2/%.5/%.1/%">
+      <details key="start" value="777"/>
+      <details key="end" value="797"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/generateProperty.2/%.5/%.1/%/aProperty">
+      <details key="start" value="777"/>
+      <details key="end" value="786"/>
       <details key="line" value="0"/>
     </eAnnotations>
   </ecore:EAnnotation>

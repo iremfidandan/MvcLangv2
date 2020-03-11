@@ -51,6 +51,10 @@ public enum Cardinality implements Enumerator {
 	/**
 	 * The '<em><b>MANY TO MANY</b></em>' literal value.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>MANY TO MANY</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MANY_TO_MANY
 	 * @model
@@ -62,6 +66,10 @@ public enum Cardinality implements Enumerator {
 	/**
 	 * The '<em><b>ONE TO MANY</b></em>' literal value.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>ONE TO MANY</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #ONE_TO_MANY
 	 * @model
@@ -73,6 +81,10 @@ public enum Cardinality implements Enumerator {
 	/**
 	 * The '<em><b>ONE TO ONE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>ONE TO ONE</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #ONE_TO_ONE
 	 * @model
@@ -191,7 +203,6 @@ public enum Cardinality implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public int getValue() {
 		return value;
 	}
@@ -201,7 +212,6 @@ public enum Cardinality implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getName() {
 		return name;
 	}
@@ -211,7 +221,6 @@ public enum Cardinality implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getLiteral() {
 		return literal;
 	}

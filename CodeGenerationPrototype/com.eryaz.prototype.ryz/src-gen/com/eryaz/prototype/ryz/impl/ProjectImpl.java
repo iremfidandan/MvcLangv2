@@ -65,7 +65,6 @@ public class ProjectImpl extends NamedElementImpl implements Project {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EList<com.eryaz.prototype.ryz.Package> getPackages() {
 		if (packages == null) {
 			packages = new EObjectContainmentEList<com.eryaz.prototype.ryz.Package>(

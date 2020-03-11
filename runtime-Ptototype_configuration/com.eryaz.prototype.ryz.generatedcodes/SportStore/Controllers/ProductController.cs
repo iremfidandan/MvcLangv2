@@ -20,14 +20,16 @@ namespace SportStore.Controllers{
 		[HttpGet]
 		public ActionResult GetProductList(string Category){
 		
-			return PartialView("~/Views/Shared/ProductListPage.cshtml", _uow.ProductRepository.GetAll(m => (m.Category == Category)));
+			return PartialView("~/Views/Shared/ProductListPage.cshtml", _uow.ProductRepository.GetAll(m => (m.Category == Category))
+			);
 		}
 
 		
 		[HttpGet]
 		public ActionResult GetProductCategoryList(){
 		
-			return View("~/Views/Product/ProductCategoryListPage.cshtml", _uow.ProductRepository.GetAll());
+			return View("~/Views/Product/ProductCategoryListPage.cshtml", _uow.ProductRepository.GetAll()
+			);
 		}
 	}
 }

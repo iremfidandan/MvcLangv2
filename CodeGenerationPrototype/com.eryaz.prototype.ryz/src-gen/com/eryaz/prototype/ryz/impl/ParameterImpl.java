@@ -112,7 +112,6 @@ public class ParameterImpl extends NamedElementImpl implements Parameter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public ActionMethodParameterType getType() {
 		return type;
 	}
@@ -122,7 +121,6 @@ public class ParameterImpl extends NamedElementImpl implements Parameter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setType(ActionMethodParameterType newType) {
 		ActionMethodParameterType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;
@@ -135,7 +133,6 @@ public class ParameterImpl extends NamedElementImpl implements Parameter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public boolean is›sNullable() {
 		return isNullable;
 	}
@@ -145,7 +142,6 @@ public class ParameterImpl extends NamedElementImpl implements Parameter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void set›sNullable(boolean new›sNullable) {
 		boolean old›sNullable = isNullable;
 		isNullable = new›sNullable;
@@ -159,7 +155,6 @@ public class ParameterImpl extends NamedElementImpl implements Parameter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public boolean is›sList() {
 		return isList;
 	}
@@ -169,7 +164,6 @@ public class ParameterImpl extends NamedElementImpl implements Parameter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void set›sList(boolean new›sList) {
 		boolean old›sList = isList;
 		isList = new›sList;

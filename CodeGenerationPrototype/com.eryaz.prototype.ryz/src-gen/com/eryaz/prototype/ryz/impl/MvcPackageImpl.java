@@ -79,7 +79,6 @@ public class MvcPackageImpl extends PackageImpl implements MvcPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EList<MainComponent> getMaincomponents() {
 		if (maincomponents == null) {
 			maincomponents = new EObjectResolvingEList<MainComponent>(MainComponent.class, this,
@@ -93,7 +92,6 @@ public class MvcPackageImpl extends PackageImpl implements MvcPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EList<MainComponentRelation> getMaincomponentrelations() {
 		if (maincomponentrelations == null) {
 			maincomponentrelations = new EObjectContainmentEList<MainComponentRelation>(MainComponentRelation.class,

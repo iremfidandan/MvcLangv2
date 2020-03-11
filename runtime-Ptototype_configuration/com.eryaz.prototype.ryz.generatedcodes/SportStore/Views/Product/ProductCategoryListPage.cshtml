@@ -9,13 +9,32 @@
 
 @Html.Action("GetProductList", "Product", new{Category = Model.Select(m => m.Category).FirstOrDefault()})
 
-<div id="update-ChooseProductCategory">
-</div>
 @Ajax.ActionLink("Choose Product Category", "GetProductList", "Product", new{Category = Model.Select(m => m.Category).FirstOrDefault()}, new AjaxOptions
 	{
-		UpdateTargetId = "update-ChooseProductCategory",
+		UpdateTargetId = "",
 		InsertionMode = InsertionMode.Replace,
-		HttpMethod = "GET"
+		HttpMethod = "GET",
+		OnSuccess = ""
 	})
 
 
+<table border="1">
+	<thead>
+		<tr>
+			<th>@Html.DisplayNameFor(model => model.Price)</th>
+			<th>@Html.DisplayNameFor(model => model.Category)</th>
+			<th>@Html.DisplayNameFor(model => model.Name)</th>
+			<th>@Html.DisplayNameFor(model => model.Description)</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(var item in Model){
+		<tr>
+			<td>@Html.DisplayFor(modelItem => item.Price)</td>
+			<td>@Html.DisplayFor(modelItem => item.Category)</td>
+			<td>@Html.DisplayFor(modelItem => item.Name)</td>
+			<td>@Html.DisplayFor(modelItem => item.Description)</td>
+		</tr>
+		}
+	</tbody>
+</table>

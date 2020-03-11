@@ -66,7 +66,6 @@ public class ControllerImpl extends MainComponentImpl implements Controller {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EList<ActionMethod> getActionmethods() {
 		if (actionmethods == null) {
 			actionmethods = new EObjectContainmentEList<ActionMethod>(ActionMethod.class, this,

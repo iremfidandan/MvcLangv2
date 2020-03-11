@@ -3,32 +3,16 @@
 	Layout = null;
 }
 
-@model IEnumerable<SportStore.Models.Product>
+@model SportStore.Models.Product
 
 
 
-@Html.Action("GetDeleteProductForm", "Admin", new{ProductId = Model.Select(m => m.ProductId).FirstOrDefault()})
 
-<div id="update-SelectDeletedProduct">
-</div>
-@using(@Ajax.BeginForm("GetDeleteProductForm", "Admin", new{ProductId = Model.Select(m => m.ProductId).FirstOrDefault()}, new AjaxOptions
-	{
-		UpdateTargetId = "update-SelectDeletedProduct",
-		InsertionMode = InsertionMode.Replace,
-		HttpMethod = "GET"
-	}
-))
+
+@using(@Html.BeginForm("DeleteProduct", "Admin", new{}, FormMethod.Post))
 {
 	@Html.AntiForgeryToken()
-	<label for="Deleted Product">Deleted Product</label>
-	<select id="Deleted Product" name="Deleted Product">
-		@foreach(var item in Model)
-	    {
-			<option value="@item.ProductId">@item.ProductId</option>
-	    }
-	</select>
-
-	<input type="submit" name="Select Product" value="Select Product"><br>
+	@Html.HiddenFor(m => m.ProductId)
+	<input type="submit" name="DeleteaProduct" value="Delete a Product">
 }
-
 

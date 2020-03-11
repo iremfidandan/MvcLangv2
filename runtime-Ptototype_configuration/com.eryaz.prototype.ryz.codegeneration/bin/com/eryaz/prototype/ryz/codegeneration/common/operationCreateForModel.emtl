@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
-  <mtl:Module name="operationCreateForModel" nsURI="com::eryaz::prototype::ryz::codegeneration::common::operationCreateForModel" startHeaderPosition="29" endHeaderPosition="185">
+  <mtl:Module name="operationCreateForModel" nsURI="com::eryaz::prototype::ryz::codegeneration::common::operationCreateForModel" startHeaderPosition="29" endHeaderPosition="182">
     <input>
       <takesTypesFrom href="http://www.eryaz.com/prototype/ryz#/"/>
     </input>
-    <imports href="tryUpdateModelParameter.emtl#/0"/>
+    <imports href="viewModelSelectList.emtl#/0"/>
+    <imports href="modelFromViewModel.emtl#/0"/>
     <ownedModuleElement xsi:type="mtl:Comment">
-      <body startPosition="197" endPosition="212" value=" BEGIN FOR ONE "/>
+      <body startPosition="276" endPosition="291" value=" BEGIN FOR ONE "/>
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Template" name="generateOperationCreateForModel" visibility="Public">
       <body xsi:type="ocl.ecore:PropertyCallExp">
@@ -20,7 +21,7 @@
         </source>
         <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
       </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="ViewModel "/>
       <body xsi:type="ocl.ecore:PropertyCallExp">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <source xsi:type="ocl.ecore:PropertyCallExp">
@@ -32,7 +33,7 @@
         </source>
         <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
       </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" = new "/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="ViewModel = new "/>
       <body xsi:type="ocl.ecore:PropertyCallExp">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <source xsi:type="ocl.ecore:PropertyCallExp">
@@ -44,7 +45,14 @@
         </source>
         <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
       </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="();"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="ViewModel();&#xA;"/>
+      <body xsi:type="mtl:TemplateInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="viewModelSelectList.emtl#/0/generateViewModelSelectList"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="aControllerToModelRelation" referredVariable="/0/generateOperationCreateForModel/aControllerToModelRelation">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+        </argument>
+      </body>
       <parameter name="aControllerToModelRelation">
         <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
       </parameter>
@@ -123,39 +131,15 @@
         </source>
         <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
       </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="();&#xA;TryUpdateModel&lt;"/>
-      <body xsi:type="ocl.ecore:PropertyCallExp">
-        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <source xsi:type="ocl.ecore:PropertyCallExp">
-          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
-          <source xsi:type="ocl.ecore:VariableExp" name="aControllerToModelRelation" referredVariable="/0/generateOperationCreateForModel.1/aControllerToModelRelation">
-            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
-          </source>
-          <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation/model"/>
-        </source>
-        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
-      </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=">("/>
-      <body xsi:type="ocl.ecore:PropertyCallExp">
-        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <source xsi:type="ocl.ecore:PropertyCallExp">
-          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
-          <source xsi:type="ocl.ecore:VariableExp" name="aControllerToModelRelation" referredVariable="/0/generateOperationCreateForModel.1/aControllerToModelRelation">
-            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
-          </source>
-          <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation/model"/>
-        </source>
-        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
-      </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=", "/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="();&#xA;"/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="tryUpdateModelParameter.emtl#/0/generateTryUpdateModelParameter"/>
+        <definition href="modelFromViewModel.emtl#/0/generateModelFromViewModel"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="aControllerToModelRelation" referredVariable="/0/generateOperationCreateForModel.1/aControllerToModelRelation">
           <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
         </argument>
       </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=");&#xA;_uow."/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;_uow."/>
       <body xsi:type="ocl.ecore:PropertyCallExp">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <source xsi:type="ocl.ecore:PropertyCallExp">
@@ -223,13 +207,13 @@
       </guard>
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Comment">
-      <body startPosition="1311" endPosition="1324" value=" END FOR ONE "/>
+      <body startPosition="1371" endPosition="1384" value=" END FOR ONE "/>
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Comment">
-      <body startPosition="1339" endPosition="1355" value=" BEGIN FOR MANY "/>
+      <body startPosition="1399" endPosition="1415" value=" BEGIN FOR MANY "/>
     </ownedModuleElement>
     <ownedModuleElement xsi:type="mtl:Comment">
-      <body startPosition="1367" endPosition="1381" value=" END FOR MANY "/>
+      <body startPosition="1427" endPosition="1441" value=" END FOR MANY "/>
     </ownedModuleElement>
   </mtl:Module>
   <ecore:EPackage name="additions">
@@ -262,12 +246,24 @@
           <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
         </eParameters>
       </eOperations>
-      <eOperations name="generateTryUpdateModelParameter">
+      <eOperations name="generateViewModelSelectList">
         <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="tryUpdateModelParameter.emtl#/0/generateTryUpdateModelParameter"/>
+          <references href="viewModelSelectList.emtl#/0/generateViewModelSelectList"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aControllerToModelRelation">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateModelFromViewModel">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="modelFromViewModel.emtl#/0/generateModelFromViewModel"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="aControllerToModelRelation">
@@ -326,6 +322,9 @@
     <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
@@ -359,368 +358,332 @@
     <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
-    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
-  </ocl.ecore:Variable>
-  <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
   </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/%">
-      <details key="start" value="189"/>
-      <details key="end" value="214"/>
+      <details key="start" value="268"/>
+      <details key="end" value="293"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/generateOperationCreateForModel">
-      <details key="start" value="216"/>
-      <details key="end" value="614"/>
-      <details key="line" value="8"/>
+      <details key="start" value="295"/>
+      <details key="end" value="780"/>
+      <details key="line" value="10"/>
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/generateOperationCreateForModel/%">
-      <details key="start" value="472"/>
-      <details key="end" value="509"/>
+      <details key="start" value="551"/>
+      <details key="end" value="588"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.3" references="/0/generateOperationCreateForModel/%/%">
-      <details key="start" value="472"/>
-      <details key="end" value="504"/>
+      <details key="start" value="551"/>
+      <details key="end" value="583"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.4" references="/0/generateOperationCreateForModel/%/%/aControllerToModelRelation">
-      <details key="start" value="472"/>
-      <details key="end" value="498"/>
+      <details key="start" value="551"/>
+      <details key="end" value="577"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.5" references="/0/generateOperationCreateForModel/%.1">
-      <details key="start" value="511"/>
-      <details key="end" value="512"/>
-      <details key="line" value="9"/>
+      <details key="start" value="590"/>
+      <details key="end" value="600"/>
+      <details key="line" value="11"/>
     </eAnnotations>
     <eAnnotations source="positions.6" references="/0/generateOperationCreateForModel/%.2">
-      <details key="start" value="513"/>
-      <details key="end" value="550"/>
+      <details key="start" value="601"/>
+      <details key="end" value="638"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.7" references="/0/generateOperationCreateForModel/%.2/%">
-      <details key="start" value="513"/>
-      <details key="end" value="545"/>
+      <details key="start" value="601"/>
+      <details key="end" value="633"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.8" references="/0/generateOperationCreateForModel/%.2/%/aControllerToModelRelation">
-      <details key="start" value="513"/>
-      <details key="end" value="539"/>
+      <details key="start" value="601"/>
+      <details key="end" value="627"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.9" references="/0/generateOperationCreateForModel/%.3">
-      <details key="start" value="552"/>
-      <details key="end" value="559"/>
-      <details key="line" value="9"/>
+      <details key="start" value="640"/>
+      <details key="end" value="656"/>
+      <details key="line" value="11"/>
     </eAnnotations>
     <eAnnotations source="positions.10" references="/0/generateOperationCreateForModel/%.4">
-      <details key="start" value="560"/>
-      <details key="end" value="597"/>
+      <details key="start" value="657"/>
+      <details key="end" value="694"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.11" references="/0/generateOperationCreateForModel/%.4/%">
-      <details key="start" value="560"/>
-      <details key="end" value="592"/>
+      <details key="start" value="657"/>
+      <details key="end" value="689"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.12" references="/0/generateOperationCreateForModel/%.4/%/aControllerToModelRelation">
-      <details key="start" value="560"/>
-      <details key="end" value="586"/>
+      <details key="start" value="657"/>
+      <details key="end" value="683"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.13" references="/0/generateOperationCreateForModel/%.5">
-      <details key="start" value="599"/>
-      <details key="end" value="602"/>
-      <details key="line" value="9"/>
+      <details key="start" value="696"/>
+      <details key="end" value="709"/>
+      <details key="line" value="11"/>
     </eAnnotations>
-    <eAnnotations source="positions.14" references="/0/generateOperationCreateForModel/aControllerToModelRelation">
-      <details key="start" value="265"/>
-      <details key="end" value="319"/>
-      <details key="line" value="8"/>
-    </eAnnotations>
-    <eAnnotations source="positions.15" references="/0/generateOperationCreateForModel/%.6">
-      <details key="start" value="324"/>
-      <details key="end" value="468"/>
+    <eAnnotations source="positions.14" references="/0/generateOperationCreateForModel/%.6">
+      <details key="start" value="710"/>
+      <details key="end" value="766"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.16" references="/0/generateOperationCreateForModel/%.6/%">
-      <details key="start" value="324"/>
-      <details key="end" value="393"/>
+    <eAnnotations source="positions.15" references="/0/generateOperationCreateForModel/%.6/aControllerToModelRelation">
+      <details key="start" value="710"/>
+      <details key="end" value="736"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.17" references="/0/generateOperationCreateForModel/%.6/%/%">
-      <details key="start" value="325"/>
-      <details key="end" value="368"/>
+    <eAnnotations source="positions.16" references="/0/generateOperationCreateForModel/aControllerToModelRelation">
+      <details key="start" value="344"/>
+      <details key="end" value="398"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/generateOperationCreateForModel/%.7">
+      <details key="start" value="403"/>
+      <details key="end" value="547"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.18" references="/0/generateOperationCreateForModel/%.6/%/%/aControllerToModelRelation">
-      <details key="start" value="325"/>
-      <details key="end" value="351"/>
+    <eAnnotations source="positions.18" references="/0/generateOperationCreateForModel/%.7/%">
+      <details key="start" value="403"/>
+      <details key="end" value="472"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.19" references="/0/generateOperationCreateForModel/%.6/%/%.1">
-      <details key="start" value="371"/>
-      <details key="end" value="392"/>
+    <eAnnotations source="positions.19" references="/0/generateOperationCreateForModel/%.7/%/%">
+      <details key="start" value="404"/>
+      <details key="end" value="447"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.20" references="/0/generateOperationCreateForModel/%.6/%.1">
-      <details key="start" value="399"/>
-      <details key="end" value="467"/>
+    <eAnnotations source="positions.20" references="/0/generateOperationCreateForModel/%.7/%/%/aControllerToModelRelation">
+      <details key="start" value="404"/>
+      <details key="end" value="430"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.21" references="/0/generateOperationCreateForModel/%.6/%.1/%">
-      <details key="start" value="399"/>
-      <details key="end" value="449"/>
+    <eAnnotations source="positions.21" references="/0/generateOperationCreateForModel/%.7/%/%.1">
+      <details key="start" value="450"/>
+      <details key="end" value="471"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.22" references="/0/generateOperationCreateForModel/%.6/%.1/%/%">
-      <details key="start" value="399"/>
-      <details key="end" value="438"/>
+    <eAnnotations source="positions.22" references="/0/generateOperationCreateForModel/%.7/%.1">
+      <details key="start" value="478"/>
+      <details key="end" value="546"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.23" references="/0/generateOperationCreateForModel/%.6/%.1/%/%/aControllerToModelRelation">
-      <details key="start" value="399"/>
-      <details key="end" value="425"/>
+    <eAnnotations source="positions.23" references="/0/generateOperationCreateForModel/%.7/%.1/%">
+      <details key="start" value="478"/>
+      <details key="end" value="528"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.24" references="/0/generateOperationCreateForModel/%.6/%.1/%.1">
-      <details key="start" value="452"/>
-      <details key="end" value="467"/>
+    <eAnnotations source="positions.24" references="/0/generateOperationCreateForModel/%.7/%.1/%/%">
+      <details key="start" value="478"/>
+      <details key="end" value="517"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.25" references="/0/generateOperationCreateForModel.1">
-      <details key="start" value="617"/>
-      <details key="end" value="1301"/>
-      <details key="line" value="13"/>
-    </eAnnotations>
-    <eAnnotations source="positions.26" references="/0/generateOperationCreateForModel.1/%">
-      <details key="start" value="874"/>
-      <details key="end" value="911"/>
+    <eAnnotations source="positions.25" references="/0/generateOperationCreateForModel/%.7/%.1/%/%/aControllerToModelRelation">
+      <details key="start" value="478"/>
+      <details key="end" value="504"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.27" references="/0/generateOperationCreateForModel.1/%/%">
-      <details key="start" value="874"/>
-      <details key="end" value="906"/>
+    <eAnnotations source="positions.26" references="/0/generateOperationCreateForModel/%.7/%.1/%.1">
+      <details key="start" value="531"/>
+      <details key="end" value="546"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.28" references="/0/generateOperationCreateForModel.1/%/%/aControllerToModelRelation">
-      <details key="start" value="874"/>
-      <details key="end" value="900"/>
+    <eAnnotations source="positions.27" references="/0/generateOperationCreateForModel.1">
+      <details key="start" value="783"/>
+      <details key="end" value="1361"/>
+      <details key="line" value="16"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/generateOperationCreateForModel.1/%">
+      <details key="start" value="1040"/>
+      <details key="end" value="1077"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.29" references="/0/generateOperationCreateForModel.1/%.1">
-      <details key="start" value="913"/>
-      <details key="end" value="914"/>
-      <details key="line" value="14"/>
-    </eAnnotations>
-    <eAnnotations source="positions.30" references="/0/generateOperationCreateForModel.1/%.2">
-      <details key="start" value="915"/>
-      <details key="end" value="952"/>
+    <eAnnotations source="positions.29" references="/0/generateOperationCreateForModel.1/%/%">
+      <details key="start" value="1040"/>
+      <details key="end" value="1072"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.31" references="/0/generateOperationCreateForModel.1/%.2/%">
-      <details key="start" value="915"/>
-      <details key="end" value="947"/>
+    <eAnnotations source="positions.30" references="/0/generateOperationCreateForModel.1/%/%/aControllerToModelRelation">
+      <details key="start" value="1040"/>
+      <details key="end" value="1066"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.32" references="/0/generateOperationCreateForModel.1/%.2/%/aControllerToModelRelation">
-      <details key="start" value="915"/>
-      <details key="end" value="941"/>
+    <eAnnotations source="positions.31" references="/0/generateOperationCreateForModel.1/%.1">
+      <details key="start" value="1079"/>
+      <details key="end" value="1080"/>
+      <details key="line" value="17"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/generateOperationCreateForModel.1/%.2">
+      <details key="start" value="1081"/>
+      <details key="end" value="1118"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.33" references="/0/generateOperationCreateForModel.1/%.3">
-      <details key="start" value="954"/>
-      <details key="end" value="961"/>
-      <details key="line" value="14"/>
-    </eAnnotations>
-    <eAnnotations source="positions.34" references="/0/generateOperationCreateForModel.1/%.4">
-      <details key="start" value="962"/>
-      <details key="end" value="999"/>
+    <eAnnotations source="positions.33" references="/0/generateOperationCreateForModel.1/%.2/%">
+      <details key="start" value="1081"/>
+      <details key="end" value="1113"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.35" references="/0/generateOperationCreateForModel.1/%.4/%">
-      <details key="start" value="962"/>
-      <details key="end" value="994"/>
+    <eAnnotations source="positions.34" references="/0/generateOperationCreateForModel.1/%.2/%/aControllerToModelRelation">
+      <details key="start" value="1081"/>
+      <details key="end" value="1107"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.36" references="/0/generateOperationCreateForModel.1/%.4/%/aControllerToModelRelation">
-      <details key="start" value="962"/>
-      <details key="end" value="988"/>
-      <details key="line" value="0"/>
+    <eAnnotations source="positions.35" references="/0/generateOperationCreateForModel.1/%.3">
+      <details key="start" value="1120"/>
+      <details key="end" value="1127"/>
+      <details key="line" value="17"/>
     </eAnnotations>
-    <eAnnotations source="positions.37" references="/0/generateOperationCreateForModel.1/%.5">
-      <details key="start" value="1001"/>
-      <details key="end" value="1020"/>
-      <details key="line" value="14"/>
-    </eAnnotations>
-    <eAnnotations source="positions.38" references="/0/generateOperationCreateForModel.1/%.6">
-      <details key="start" value="1021"/>
-      <details key="end" value="1058"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.39" references="/0/generateOperationCreateForModel.1/%.6/%">
-      <details key="start" value="1021"/>
-      <details key="end" value="1053"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.40" references="/0/generateOperationCreateForModel.1/%.6/%/aControllerToModelRelation">
-      <details key="start" value="1021"/>
-      <details key="end" value="1047"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.41" references="/0/generateOperationCreateForModel.1/%.7">
-      <details key="start" value="1060"/>
-      <details key="end" value="1062"/>
-      <details key="line" value="15"/>
-    </eAnnotations>
-    <eAnnotations source="positions.42" references="/0/generateOperationCreateForModel.1/%.8">
-      <details key="start" value="1063"/>
-      <details key="end" value="1100"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.43" references="/0/generateOperationCreateForModel.1/%.8/%">
-      <details key="start" value="1063"/>
-      <details key="end" value="1095"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.44" references="/0/generateOperationCreateForModel.1/%.8/%/aControllerToModelRelation">
-      <details key="start" value="1063"/>
-      <details key="end" value="1089"/>
-      <details key="line" value="0"/>
-    </eAnnotations>
-    <eAnnotations source="positions.45" references="/0/generateOperationCreateForModel.1/%.9">
-      <details key="start" value="1102"/>
-      <details key="end" value="1104"/>
-      <details key="line" value="15"/>
-    </eAnnotations>
-    <eAnnotations source="positions.46" references="/0/generateOperationCreateForModel.1/%.10">
-      <details key="start" value="1105"/>
+    <eAnnotations source="positions.36" references="/0/generateOperationCreateForModel.1/%.4">
+      <details key="start" value="1128"/>
       <details key="end" value="1165"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.47" references="/0/generateOperationCreateForModel.1/%.10/aControllerToModelRelation">
-      <details key="start" value="1105"/>
-      <details key="end" value="1131"/>
+    <eAnnotations source="positions.37" references="/0/generateOperationCreateForModel.1/%.4/%">
+      <details key="start" value="1128"/>
+      <details key="end" value="1160"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.48" references="/0/generateOperationCreateForModel.1/%.11">
+    <eAnnotations source="positions.38" references="/0/generateOperationCreateForModel.1/%.4/%/aControllerToModelRelation">
+      <details key="start" value="1128"/>
+      <details key="end" value="1154"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/generateOperationCreateForModel.1/%.5">
       <details key="start" value="1167"/>
-      <details key="end" value="1175"/>
-      <details key="line" value="15"/>
+      <details key="end" value="1171"/>
+      <details key="line" value="17"/>
     </eAnnotations>
-    <eAnnotations source="positions.49" references="/0/generateOperationCreateForModel.1/%.12">
-      <details key="start" value="1176"/>
-      <details key="end" value="1213"/>
+    <eAnnotations source="positions.40" references="/0/generateOperationCreateForModel.1/%.6">
+      <details key="start" value="1172"/>
+      <details key="end" value="1227"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.50" references="/0/generateOperationCreateForModel.1/%.12/%">
-      <details key="start" value="1176"/>
-      <details key="end" value="1208"/>
+    <eAnnotations source="positions.41" references="/0/generateOperationCreateForModel.1/%.6/aControllerToModelRelation">
+      <details key="start" value="1172"/>
+      <details key="end" value="1198"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.51" references="/0/generateOperationCreateForModel.1/%.12/%/aControllerToModelRelation">
-      <details key="start" value="1176"/>
-      <details key="end" value="1202"/>
+    <eAnnotations source="positions.42" references="/0/generateOperationCreateForModel.1/%.7">
+      <details key="start" value="1229"/>
+      <details key="end" value="1235"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/generateOperationCreateForModel.1/%.8">
+      <details key="start" value="1236"/>
+      <details key="end" value="1273"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.52" references="/0/generateOperationCreateForModel.1/%.13">
-      <details key="start" value="1215"/>
-      <details key="end" value="1230"/>
-      <details key="line" value="16"/>
-    </eAnnotations>
-    <eAnnotations source="positions.53" references="/0/generateOperationCreateForModel.1/%.14">
-      <details key="start" value="1231"/>
+    <eAnnotations source="positions.44" references="/0/generateOperationCreateForModel.1/%.8/%">
+      <details key="start" value="1236"/>
       <details key="end" value="1268"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.54" references="/0/generateOperationCreateForModel.1/%.14/%">
-      <details key="start" value="1231"/>
-      <details key="end" value="1263"/>
+    <eAnnotations source="positions.45" references="/0/generateOperationCreateForModel.1/%.8/%/aControllerToModelRelation">
+      <details key="start" value="1236"/>
+      <details key="end" value="1262"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.55" references="/0/generateOperationCreateForModel.1/%.14/%/aControllerToModelRelation">
-      <details key="start" value="1231"/>
-      <details key="end" value="1257"/>
+    <eAnnotations source="positions.46" references="/0/generateOperationCreateForModel.1/%.9">
+      <details key="start" value="1275"/>
+      <details key="end" value="1290"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/generateOperationCreateForModel.1/%.10">
+      <details key="start" value="1291"/>
+      <details key="end" value="1328"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.56" references="/0/generateOperationCreateForModel.1/%.15">
-      <details key="start" value="1270"/>
-      <details key="end" value="1289"/>
+    <eAnnotations source="positions.48" references="/0/generateOperationCreateForModel.1/%.10/%">
+      <details key="start" value="1291"/>
+      <details key="end" value="1323"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/generateOperationCreateForModel.1/%.10/%/aControllerToModelRelation">
+      <details key="start" value="1291"/>
+      <details key="end" value="1317"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/generateOperationCreateForModel.1/%.11">
+      <details key="start" value="1330"/>
+      <details key="end" value="1349"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/generateOperationCreateForModel.1/aControllerToModelRelation">
+      <details key="start" value="832"/>
+      <details key="end" value="886"/>
       <details key="line" value="16"/>
     </eAnnotations>
-    <eAnnotations source="positions.57" references="/0/generateOperationCreateForModel.1/aControllerToModelRelation">
-      <details key="start" value="666"/>
-      <details key="end" value="720"/>
-      <details key="line" value="13"/>
-    </eAnnotations>
-    <eAnnotations source="positions.58" references="/0/generateOperationCreateForModel.1/%.16">
-      <details key="start" value="725"/>
-      <details key="end" value="870"/>
+    <eAnnotations source="positions.52" references="/0/generateOperationCreateForModel.1/%.12">
+      <details key="start" value="891"/>
+      <details key="end" value="1036"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.59" references="/0/generateOperationCreateForModel.1/%.16/%">
-      <details key="start" value="725"/>
-      <details key="end" value="794"/>
+    <eAnnotations source="positions.53" references="/0/generateOperationCreateForModel.1/%.12/%">
+      <details key="start" value="891"/>
+      <details key="end" value="960"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.60" references="/0/generateOperationCreateForModel.1/%.16/%/%">
-      <details key="start" value="726"/>
-      <details key="end" value="769"/>
+    <eAnnotations source="positions.54" references="/0/generateOperationCreateForModel.1/%.12/%/%">
+      <details key="start" value="892"/>
+      <details key="end" value="935"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.61" references="/0/generateOperationCreateForModel.1/%.16/%/%/aControllerToModelRelation">
-      <details key="start" value="726"/>
-      <details key="end" value="752"/>
+    <eAnnotations source="positions.55" references="/0/generateOperationCreateForModel.1/%.12/%/%/aControllerToModelRelation">
+      <details key="start" value="892"/>
+      <details key="end" value="918"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.62" references="/0/generateOperationCreateForModel.1/%.16/%/%.1">
-      <details key="start" value="772"/>
-      <details key="end" value="793"/>
+    <eAnnotations source="positions.56" references="/0/generateOperationCreateForModel.1/%.12/%/%.1">
+      <details key="start" value="938"/>
+      <details key="end" value="959"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.63" references="/0/generateOperationCreateForModel.1/%.16/%.1">
-      <details key="start" value="800"/>
-      <details key="end" value="869"/>
+    <eAnnotations source="positions.57" references="/0/generateOperationCreateForModel.1/%.12/%.1">
+      <details key="start" value="966"/>
+      <details key="end" value="1035"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.64" references="/0/generateOperationCreateForModel.1/%.16/%.1/%">
-      <details key="start" value="800"/>
-      <details key="end" value="850"/>
+    <eAnnotations source="positions.58" references="/0/generateOperationCreateForModel.1/%.12/%.1/%">
+      <details key="start" value="966"/>
+      <details key="end" value="1016"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.65" references="/0/generateOperationCreateForModel.1/%.16/%.1/%/%">
-      <details key="start" value="800"/>
-      <details key="end" value="839"/>
+    <eAnnotations source="positions.59" references="/0/generateOperationCreateForModel.1/%.12/%.1/%/%">
+      <details key="start" value="966"/>
+      <details key="end" value="1005"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.66" references="/0/generateOperationCreateForModel.1/%.16/%.1/%/%/aControllerToModelRelation">
-      <details key="start" value="800"/>
-      <details key="end" value="826"/>
+    <eAnnotations source="positions.60" references="/0/generateOperationCreateForModel.1/%.12/%.1/%/%/aControllerToModelRelation">
+      <details key="start" value="966"/>
+      <details key="end" value="992"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.67" references="/0/generateOperationCreateForModel.1/%.16/%.1/%.1">
-      <details key="start" value="853"/>
-      <details key="end" value="869"/>
+    <eAnnotations source="positions.61" references="/0/generateOperationCreateForModel.1/%.12/%.1/%.1">
+      <details key="start" value="1019"/>
+      <details key="end" value="1035"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.68" references="/0/%.1">
-      <details key="start" value="1303"/>
-      <details key="end" value="1326"/>
+    <eAnnotations source="positions.62" references="/0/%.1">
+      <details key="start" value="1363"/>
+      <details key="end" value="1386"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.69" references="/0/%.2">
-      <details key="start" value="1331"/>
-      <details key="end" value="1357"/>
+    <eAnnotations source="positions.63" references="/0/%.2">
+      <details key="start" value="1391"/>
+      <details key="end" value="1417"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.70" references="/0/%.3">
-      <details key="start" value="1359"/>
-      <details key="end" value="1383"/>
+    <eAnnotations source="positions.64" references="/0/%.3">
+      <details key="start" value="1419"/>
+      <details key="end" value="1443"/>
       <details key="line" value="0"/>
     </eAnnotations>
   </ecore:EAnnotation>

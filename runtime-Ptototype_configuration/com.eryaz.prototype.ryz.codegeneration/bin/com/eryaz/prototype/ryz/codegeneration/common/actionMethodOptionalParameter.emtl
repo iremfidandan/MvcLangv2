@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
-  <mtl:Module name="actionMethodOptionalParameter" nsURI="com::eryaz::prototype::ryz::codegeneration::common::actionMethodOptionalParameter" startHeaderPosition="29" endHeaderPosition="204">
+  <mtl:Module name="actionMethodOptionalParameter" nsURI="com::eryaz::prototype::ryz::codegeneration::common::actionMethodOptionalParameter" startHeaderPosition="29" endHeaderPosition="193">
     <input>
       <takesTypesFrom href="http://www.eryaz.com/prototype/ryz#/"/>
     </input>
-    <imports href="enumtypes/actionMethodParameterType.emtl#/0"/>
+    <imports href="actionMethodParameterType.emtl#/0"/>
     <ownedModuleElement xsi:type="mtl:Template" name="generateActionMethodOptionalParameter" visibility="Public">
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="enumtypes/actionMethodParameterType.emtl#/0/generateActionMethodParameterType"/>
+        <definition href="actionMethodParameterType.emtl#/0/generateActionMethodParameterType"/>
         <argument xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//ActionMethodParameterType"/>
           <source xsi:type="ocl.ecore:VariableExp" name="aParameter" referredVariable="/0/generateActionMethodOptionalParameter/aParameter">
@@ -72,7 +72,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="enumtypes/actionMethodParameterType.emtl#/0/generateActionMethodParameterType"/>
+          <references href="actionMethodParameterType.emtl#/0/generateActionMethodParameterType"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="anActionMethodParameterType">
@@ -137,53 +137,53 @@
   </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/generateActionMethodOptionalParameter">
-      <details key="start" value="208"/>
-      <details key="end" value="400"/>
+      <details key="start" value="197"/>
+      <details key="end" value="389"/>
       <details key="line" value="6"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/generateActionMethodOptionalParameter/%">
-      <details key="start" value="315"/>
-      <details key="end" value="366"/>
+      <details key="start" value="304"/>
+      <details key="end" value="355"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/generateActionMethodOptionalParameter/%/%">
-      <details key="start" value="315"/>
-      <details key="end" value="330"/>
+      <details key="start" value="304"/>
+      <details key="end" value="319"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.3" references="/0/generateActionMethodOptionalParameter/%/%/aParameter">
-      <details key="start" value="315"/>
-      <details key="end" value="325"/>
+      <details key="start" value="304"/>
+      <details key="end" value="314"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.4" references="/0/generateActionMethodOptionalParameter/%.1">
-      <details key="start" value="368"/>
-      <details key="end" value="370"/>
+      <details key="start" value="357"/>
+      <details key="end" value="359"/>
       <details key="line" value="7"/>
     </eAnnotations>
     <eAnnotations source="positions.5" references="/0/generateActionMethodOptionalParameter/%.2">
-      <details key="start" value="371"/>
-      <details key="end" value="386"/>
+      <details key="start" value="360"/>
+      <details key="end" value="375"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.6" references="/0/generateActionMethodOptionalParameter/%.2/aParameter">
-      <details key="start" value="371"/>
-      <details key="end" value="381"/>
+      <details key="start" value="360"/>
+      <details key="end" value="370"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.7" references="/0/generateActionMethodOptionalParameter/aParameter">
-      <details key="start" value="263"/>
-      <details key="end" value="285"/>
+      <details key="start" value="252"/>
+      <details key="end" value="274"/>
       <details key="line" value="6"/>
     </eAnnotations>
     <eAnnotations source="positions.8" references="/0/generateActionMethodOptionalParameter/%.3">
-      <details key="start" value="290"/>
-      <details key="end" value="311"/>
+      <details key="start" value="279"/>
+      <details key="end" value="300"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.9" references="/0/generateActionMethodOptionalParameter/%.3/aParameter">
-      <details key="start" value="290"/>
-      <details key="end" value="300"/>
+      <details key="start" value="279"/>
+      <details key="end" value="289"/>
       <details key="line" value="0"/>
     </eAnnotations>
   </ecore:EAnnotation>

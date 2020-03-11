@@ -3,7 +3,8 @@
 	Layout = null;
 }
 
-@model SportStore.Models.Product
+@model SportStore.ViewModels.ProductViewModel
+
 
 
 
@@ -11,23 +12,25 @@
 @using(@Html.BeginForm("CreateProduct", "Admin", new{}, FormMethod.Post))
 {
 	@Html.AntiForgeryToken()
-	<label for="Name">Name</label>
-	<input type="text" id="Name" name="Name"><br>
+	@Html.DisplayNameFor(model => model.Name) <br />
+	@Html.EditorFor(model => model.Name)  <br />
+	@Html.ValidationMessageFor(model => model.Name) <br />
 	
-
-	<label for="Category">Category</label>
-	<input type="text" id="Category" name="Category"><br>
+	@Html.DisplayNameFor(model => model.Category) <br />
+	@Html.EditorFor(model => model.Category)  <br />
+	@Html.ValidationMessageFor(model => model.Category) <br />
 	
-
-	<label for="Description">Description</label>
-	<input type="text" id="Description" name="Description"><br>
+	@Html.DisplayNameFor(model => model.Description) <br />
+	@Html.EditorFor(model => model.Description)  <br />
+	@Html.ValidationMessageFor(model => model.Description) <br />
 	
-
-	<label for="Price">Price</label>
-	<input type="number" id="Price" name="Price"><br>
+	@Html.DisplayNameFor(model => model.Price) <br />
+	@Html.EditorFor(model => model.Price)  <br />
+	@Html.ValidationMessageFor(model => model.Price) <br />
+	@Html.DisplayNameFor(model => model.CartLines) <br />
+	@Html.ListBoxFor(model => model.CartLines_CartLineId, Model.CartLines)<br />
 	
-
-	<input type="submit" name="Create Product" value="Create Product"><br>
+	
+	<input type="submit" name="CreateaProduct" value="Create a Product">
 }
-
 

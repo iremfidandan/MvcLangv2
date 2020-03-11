@@ -3,7 +3,6 @@
 package com.eryaz.prototype.ryz.provider;
 
 import com.eryaz.prototype.ryz.HelperForSendingRequest;
-import com.eryaz.prototype.ryz.RequestType;
 import com.eryaz.prototype.ryz.RyzPackage;
 
 import java.util.Collection;
@@ -12,17 +11,9 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -31,8 +22,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class HelperForSendingRequestItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class HelperForSendingRequestItemProvider extends HtmlElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -57,8 +47,6 @@ public class HelperForSendingRequestItemProvider extends ItemProviderAdapter imp
 			addRequestTypePropertyDescriptor(object);
 			addHttpMethodPropertyDescriptor(object);
 			addTextPropertyDescriptor(object);
-			addUsecasePropertyDescriptor(object);
-			addPresentationelementPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -112,37 +100,6 @@ public class HelperForSendingRequestItemProvider extends ItemProviderAdapter imp
 	}
 
 	/**
-	 * This adds a property descriptor for the Usecase feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addUsecasePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_HelperForSendingRequest_usecase_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_HelperForSendingRequest_usecase_feature",
-								"_UI_HelperForSendingRequest_type"),
-						RyzPackage.Literals.HELPER_FOR_SENDÝNG_REQUEST__USECASE, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Presentationelement feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPresentationelementPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_HelperForSendingRequest_presentationelement_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_HelperForSendingRequest_presentationelement_feature", "_UI_HelperForSendingRequest_type"),
-				RyzPackage.Literals.HELPER_FOR_SENDÝNG_REQUEST__PRESENTATÝONELEMENT, true, false, true, null, null,
-				null));
-	}
-
-	/**
 	 * This returns HelperForSendingRequest.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -171,8 +128,7 @@ public class HelperForSendingRequestItemProvider extends ItemProviderAdapter imp
 	 */
 	@Override
 	public String getText(Object object) {
-		RequestType labelValue = ((HelperForSendingRequest) object).getRequestType();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((HelperForSendingRequest) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_HelperForSendingRequest_type")
 				: getString("_UI_HelperForSendingRequest_type") + " " + label;
 	}
@@ -208,17 +164,6 @@ public class HelperForSendingRequestItemProvider extends ItemProviderAdapter imp
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return RyzEditPlugin.INSTANCE;
 	}
 
 }

@@ -8,7 +8,6 @@ namespace SportStore.ViewModels{
 		public int CartId {get; set;}
 
 		public int TotalValue {get; set;}
-		
 
 		public List<int> CartLines_CartLineId {get; set;} = new List<int>();
 		public IEnumerable<SelectListItem> CartLines {get; set;}

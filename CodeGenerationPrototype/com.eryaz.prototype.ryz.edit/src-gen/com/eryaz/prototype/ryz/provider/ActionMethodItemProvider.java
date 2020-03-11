@@ -49,7 +49,6 @@ public class ActionMethodItemProvider extends NamedElementItemProvider {
 
 			addHttpMethodPropertyDescriptor(object);
 			addReturnsPropertyDescriptor(object);
-			addUsecasePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -84,21 +83,6 @@ public class ActionMethodItemProvider extends NamedElementItemProvider {
 								"_UI_ActionMethod_type"),
 						RyzPackage.Literals.ACTÝON_METHOD__RETURNS, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Usecase feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addUsecasePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_ActionMethod_usecase_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_ActionMethod_usecase_feature",
-								"_UI_ActionMethod_type"),
-						RyzPackage.Literals.ACTÝON_METHOD__USECASE, true, false, true, null, null, null));
 	}
 
 	/**

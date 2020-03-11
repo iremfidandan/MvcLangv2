@@ -1,43 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
-  <mtl:Module name="layoutDeclaration" nsURI="com::eryaz::prototype::ryz::codegeneration::common::layoutDeclaration" startHeaderPosition="29" endHeaderPosition="245">
+  <mtl:Module name="layoutDeclaration" nsURI="com::eryaz::prototype::ryz::codegeneration::common::layoutDeclaration" startHeaderPosition="29" endHeaderPosition="367">
     <input>
       <takesTypesFrom href="http://www.eryaz.com/prototype/ryz#/"/>
     </input>
     <ownedModuleElement xsi:type="mtl:Template" name="generateLayoutDeclaration" visibility="Public">
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="@{&#xA;"/>
-      <body xsi:type="mtl:LetBlock">
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;Layout = &quot;~/Views/Shared/"/>
-        <body xsi:type="ocl.ecore:PropertyCallExp">
-          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="@{&#xA;&#x9;Layout = null;&#xA;}"/>
+      <parameter name="aView">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//View"/>
+      </parameter>
+      <guard xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Layout"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aView" referredVariable="/0/generateLayoutDeclaration/aView">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//View"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//View/layout"/>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsUndefined"/>
+      </guard>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateLayoutDeclaration" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="@{&#xA;&#x9;Layout = &quot;~/Views/Shared/"/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Layout"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aView" referredVariable="/0/generateLayoutDeclaration.1/aView">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//View"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//View/layout"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".cshtml&quot;;&#xA;}"/>
+      <parameter name="aView">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//View"/>
+      </parameter>
+      <guard xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <source xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
           <source xsi:type="ocl.ecore:PropertyCallExp">
             <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Layout"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="aView" referredVariable="/0/generateLayoutDeclaration/aView">
+            <source xsi:type="ocl.ecore:VariableExp" name="aView" referredVariable="/0/generateLayoutDeclaration.1/aView">
               <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//View"/>
             </source>
             <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//View/layout"/>
           </source>
-          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
-        </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".cshtml&quot;;&#xA;"/>
-        <else>
-          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;Layout = null;&#xA;"/>
-        </else>
-        <letVariable name="layout">
-          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//AbstractView"/>
-          <initExpression xsi:type="ocl.ecore:PropertyCallExp">
-            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Layout"/>
-            <source xsi:type="ocl.ecore:VariableExp" name="aView" referredVariable="/0/generateLayoutDeclaration/aView">
-              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//View"/>
-            </source>
-            <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//View/layout"/>
-          </initExpression>
-        </letVariable>
-      </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="}"/>
-      <parameter name="aView">
-        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//View"/>
-      </parameter>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsUndefined"/>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/not"/>
+      </guard>
     </ownedModuleElement>
   </mtl:Module>
   <ecore:EPackage name="additions">
@@ -104,10 +119,25 @@
     <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//View"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//View"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
     <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//View"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//View"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//View"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
   </ocl.ecore:Variable>
   <ocl.ecore:Variable name="self">
     <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//View"/>
@@ -120,79 +150,89 @@
   </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/generateLayoutDeclaration">
-      <details key="start" value="96"/>
-      <details key="end" value="302"/>
-      <details key="line" value="5"/>
+      <details key="start" value="95"/>
+      <details key="end" value="219"/>
+      <details key="line" value="4"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/generateLayoutDeclaration/%">
-      <details key="start" value="154"/>
-      <details key="end" value="157"/>
-      <details key="line" value="6"/>
+      <details key="start" value="187"/>
+      <details key="end" value="207"/>
+      <details key="line" value="5"/>
     </eAnnotations>
-    <eAnnotations source="positions.2" references="/0/generateLayoutDeclaration/%.1">
-      <details key="start" value="158"/>
-      <details key="end" value="288"/>
-      <details key="line" value="7"/>
+    <eAnnotations source="positions.2" references="/0/generateLayoutDeclaration/aView">
+      <details key="start" value="138"/>
+      <details key="end" value="150"/>
+      <details key="line" value="4"/>
     </eAnnotations>
-    <eAnnotations source="positions.3" references="/0/generateLayoutDeclaration/%.1/%">
-      <details key="start" value="201"/>
-      <details key="end" value="227"/>
-      <details key="line" value="8"/>
-    </eAnnotations>
-    <eAnnotations source="positions.4" references="/0/generateLayoutDeclaration/%.1/%.1">
-      <details key="start" value="228"/>
-      <details key="end" value="245"/>
+    <eAnnotations source="positions.3" references="/0/generateLayoutDeclaration/%.1">
+      <details key="start" value="155"/>
+      <details key="end" value="184"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.5" references="/0/generateLayoutDeclaration/%.1/%.1/%">
-      <details key="start" value="228"/>
-      <details key="end" value="240"/>
+    <eAnnotations source="positions.4" references="/0/generateLayoutDeclaration/%.1/%">
+      <details key="start" value="155"/>
+      <details key="end" value="167"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.6" references="/0/generateLayoutDeclaration/%.1/%.1/%/aView">
-      <details key="start" value="228"/>
-      <details key="end" value="233"/>
+    <eAnnotations source="positions.5" references="/0/generateLayoutDeclaration/%.1/%/aView">
+      <details key="start" value="155"/>
+      <details key="end" value="160"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.7" references="/0/generateLayoutDeclaration/%.1/%.2">
-      <details key="start" value="247"/>
-      <details key="end" value="257"/>
-      <details key="line" value="8"/>
-    </eAnnotations>
-    <eAnnotations source="positions.8" references="/0/generateLayoutDeclaration/%.1/%.3">
-      <details key="start" value="258"/>
-      <details key="end" value="282"/>
-      <details key="line" value="9"/>
-    </eAnnotations>
-    <eAnnotations source="positions.9" references="/0/generateLayoutDeclaration/%.1/%.3/%">
-      <details key="start" value="265"/>
-      <details key="end" value="281"/>
+    <eAnnotations source="positions.6" references="/0/generateLayoutDeclaration.1">
+      <details key="start" value="221"/>
+      <details key="end" value="392"/>
       <details key="line" value="10"/>
     </eAnnotations>
-    <eAnnotations source="positions.10" references="/0/generateLayoutDeclaration/%.1/layout">
-      <details key="start" value="163"/>
-      <details key="end" value="199"/>
-      <details key="line" value="7"/>
+    <eAnnotations source="positions.7" references="/0/generateLayoutDeclaration.1/%">
+      <details key="start" value="320"/>
+      <details key="end" value="349"/>
+      <details key="line" value="11"/>
     </eAnnotations>
-    <eAnnotations source="positions.11" references="/0/generateLayoutDeclaration/%.1/layout/%">
-      <details key="start" value="188"/>
-      <details key="end" value="200"/>
+    <eAnnotations source="positions.8" references="/0/generateLayoutDeclaration.1/%.1">
+      <details key="start" value="350"/>
+      <details key="end" value="367"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.12" references="/0/generateLayoutDeclaration/%.1/layout/%/aView">
-      <details key="start" value="188"/>
-      <details key="end" value="193"/>
+    <eAnnotations source="positions.9" references="/0/generateLayoutDeclaration.1/%.1/%">
+      <details key="start" value="350"/>
+      <details key="end" value="362"/>
       <details key="line" value="0"/>
     </eAnnotations>
-    <eAnnotations source="positions.13" references="/0/generateLayoutDeclaration/%.2">
-      <details key="start" value="289"/>
-      <details key="end" value="290"/>
+    <eAnnotations source="positions.10" references="/0/generateLayoutDeclaration.1/%.1/%/aView">
+      <details key="start" value="350"/>
+      <details key="end" value="355"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateLayoutDeclaration.1/%.2">
+      <details key="start" value="369"/>
+      <details key="end" value="380"/>
       <details key="line" value="12"/>
     </eAnnotations>
-    <eAnnotations source="positions.14" references="/0/generateLayoutDeclaration/aView">
-      <details key="start" value="139"/>
-      <details key="end" value="151"/>
-      <details key="line" value="5"/>
+    <eAnnotations source="positions.12" references="/0/generateLayoutDeclaration.1/aView">
+      <details key="start" value="264"/>
+      <details key="end" value="276"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateLayoutDeclaration.1/%.3">
+      <details key="start" value="281"/>
+      <details key="end" value="317"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateLayoutDeclaration.1/%.3/%">
+      <details key="start" value="281"/>
+      <details key="end" value="310"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateLayoutDeclaration.1/%.3/%/%">
+      <details key="start" value="281"/>
+      <details key="end" value="293"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generateLayoutDeclaration.1/%.3/%/%/aView">
+      <details key="start" value="281"/>
+      <details key="end" value="286"/>
+      <details key="line" value="0"/>
     </eAnnotations>
   </ecore:EAnnotation>
 </xmi:XMI>

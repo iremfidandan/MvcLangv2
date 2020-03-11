@@ -564,22 +564,13 @@ public interface RyzPackage extends EPackage {
 	int ABSTRACT_V›EW__HTMLELEMENTS = MA›N_COMPONENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Presentationelement</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABSTRACT_V›EW__PRESENTAT›ONELEMENT = MA›N_COMPONENT_FEATURE_COUNT + 2;
-
-	/**
 	 * The number of structural features of the '<em>Abstract View</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABSTRACT_V›EW_FEATURE_COUNT = MA›N_COMPONENT_FEATURE_COUNT + 3;
+	int ABSTRACT_V›EW_FEATURE_COUNT = MA›N_COMPONENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Abstract View</em>' class.
@@ -820,15 +811,6 @@ public interface RyzPackage extends EPackage {
 	int PART›AL__HTMLELEMENTS = ABSTRACT_V›EW__HTMLELEMENTS;
 
 	/**
-	 * The feature id for the '<em><b>Presentationelement</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PART›AL__PRESENTAT›ONELEMENT = ABSTRACT_V›EW__PRESENTAT›ONELEMENT;
-
-	/**
 	 * The number of structural features of the '<em>Partial</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -893,22 +875,13 @@ public interface RyzPackage extends EPackage {
 	int ACT›ON_METHOD__RETURNS = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Usecase</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACT›ON_METHOD__USECASE = NAMED_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
 	 * The number of structural features of the '<em>Action Method</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACT›ON_METHOD_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int ACT›ON_METHOD_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Action Method</em>' class.
@@ -955,15 +928,6 @@ public interface RyzPackage extends EPackage {
 	 * @ordered
 	 */
 	int LAYOUT__HTMLELEMENTS = ABSTRACT_V›EW__HTMLELEMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Presentationelement</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYOUT__PRESENTAT›ONELEMENT = ABSTRACT_V›EW__PRESENTAT›ONELEMENT;
 
 	/**
 	 * The number of structural features of the '<em>Layout</em>' class.
@@ -1019,15 +983,6 @@ public interface RyzPackage extends EPackage {
 	 * @ordered
 	 */
 	int V›EW__HTMLELEMENTS = ABSTRACT_V›EW__HTMLELEMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Presentationelement</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int V›EW__PRESENTAT›ONELEMENT = ABSTRACT_V›EW__PRESENTAT›ONELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Layout</b></em>' reference.
@@ -1313,6 +1268,43 @@ public interface RyzPackage extends EPackage {
 	int CONTROLLER_TO_MODEL_RELAT›ON_OPERATION_COUNT = MA›N_COMPONENT_RELAT›ON_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link com.eryaz.prototype.ryz.impl.HtmlElementImpl <em>Html Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see com.eryaz.prototype.ryz.impl.HtmlElementImpl
+	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getHtmlElement()
+	 * @generated
+	 */
+	int HTML_ELEMENT = 22;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML_ELEMENT__NAME = NAMED_ELEMENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Html Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML_ELEMENT_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Html Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HTML_ELEMENT_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link com.eryaz.prototype.ryz.impl.HelperForSendingRequestImpl <em>Helper For Sending Request</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1320,7 +1312,16 @@ public interface RyzPackage extends EPackage {
 	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getHelperForSendingRequest()
 	 * @generated
 	 */
-	int HELPER_FOR_SEND›NG_REQUEST = 24;
+	int HELPER_FOR_SEND›NG_REQUEST = 25;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HELPER_FOR_SEND›NG_REQUEST__NAME = HTML_ELEMENT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Request Type</b></em>' attribute.
@@ -1329,7 +1330,7 @@ public interface RyzPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HELPER_FOR_SEND›NG_REQUEST__REQUEST_TYPE = 0;
+	int HELPER_FOR_SEND›NG_REQUEST__REQUEST_TYPE = HTML_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Http Method</b></em>' attribute.
@@ -1338,7 +1339,7 @@ public interface RyzPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HELPER_FOR_SEND›NG_REQUEST__HTTP_METHOD = 1;
+	int HELPER_FOR_SEND›NG_REQUEST__HTTP_METHOD = HTML_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -1347,25 +1348,7 @@ public interface RyzPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HELPER_FOR_SEND›NG_REQUEST__TEXT = 2;
-
-	/**
-	 * The feature id for the '<em><b>Usecase</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HELPER_FOR_SEND›NG_REQUEST__USECASE = 3;
-
-	/**
-	 * The feature id for the '<em><b>Presentationelement</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HELPER_FOR_SEND›NG_REQUEST__PRESENTAT›ONELEMENT = 4;
+	int HELPER_FOR_SEND›NG_REQUEST__TEXT = HTML_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Helper For Sending Request</em>' class.
@@ -1374,7 +1357,7 @@ public interface RyzPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HELPER_FOR_SEND›NG_REQUEST_FEATURE_COUNT = 5;
+	int HELPER_FOR_SEND›NG_REQUEST_FEATURE_COUNT = HTML_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Helper For Sending Request</em>' class.
@@ -1383,7 +1366,7 @@ public interface RyzPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HELPER_FOR_SEND›NG_REQUEST_OPERATION_COUNT = 0;
+	int HELPER_FOR_SEND›NG_REQUEST_OPERATION_COUNT = HTML_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link com.eryaz.prototype.ryz.impl.ActionLinkImpl <em>Action Link</em>}' class.
@@ -1393,7 +1376,16 @@ public interface RyzPackage extends EPackage {
 	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getActionLink()
 	 * @generated
 	 */
-	int ACT›ON_L›NK = 22;
+	int ACT›ON_L›NK = 23;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACT›ON_L›NK__NAME = HELPER_FOR_SEND›NG_REQUEST__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Request Type</b></em>' attribute.
@@ -1423,24 +1415,6 @@ public interface RyzPackage extends EPackage {
 	int ACT›ON_L›NK__TEXT = HELPER_FOR_SEND›NG_REQUEST__TEXT;
 
 	/**
-	 * The feature id for the '<em><b>Usecase</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACT›ON_L›NK__USECASE = HELPER_FOR_SEND›NG_REQUEST__USECASE;
-
-	/**
-	 * The feature id for the '<em><b>Presentationelement</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACT›ON_L›NK__PRESENTAT›ONELEMENT = HELPER_FOR_SEND›NG_REQUEST__PRESENTAT›ONELEMENT;
-
-	/**
 	 * The number of structural features of the '<em>Action Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1466,7 +1440,16 @@ public interface RyzPackage extends EPackage {
 	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getForm()
 	 * @generated
 	 */
-	int FORM = 23;
+	int FORM = 24;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORM__NAME = HELPER_FOR_SEND›NG_REQUEST__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Request Type</b></em>' attribute.
@@ -1496,24 +1479,6 @@ public interface RyzPackage extends EPackage {
 	int FORM__TEXT = HELPER_FOR_SEND›NG_REQUEST__TEXT;
 
 	/**
-	 * The feature id for the '<em><b>Usecase</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORM__USECASE = HELPER_FOR_SEND›NG_REQUEST__USECASE;
-
-	/**
-	 * The feature id for the '<em><b>Presentationelement</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORM__PRESENTAT›ONELEMENT = HELPER_FOR_SEND›NG_REQUEST__PRESENTAT›ONELEMENT;
-
-	/**
 	 * The number of structural features of the '<em>Form</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1539,7 +1504,7 @@ public interface RyzPackage extends EPackage {
 	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getControllerToViewRelation()
 	 * @generated
 	 */
-	int CONTROLLER_TO_V›EW_RELAT›ON = 25;
+	int CONTROLLER_TO_V›EW_RELAT›ON = 26;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1594,7 +1559,7 @@ public interface RyzPackage extends EPackage {
 	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getTableKey()
 	 * @generated
 	 */
-	int TABLE_KEY = 26;
+	int TABLE_KEY = 27;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1667,7 +1632,7 @@ public interface RyzPackage extends EPackage {
 	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getViewToModelRelation()
 	 * @generated
 	 */
-	int V›EW_TO_MODEL_RELAT›ON = 27;
+	int V›EW_TO_MODEL_RELAT›ON = 28;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1733,860 +1698,6 @@ public interface RyzPackage extends EPackage {
 	int V›EW_TO_MODEL_RELAT›ON_OPERATION_COUNT = MA›N_COMPONENT_RELAT›ON_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link com.eryaz.prototype.ryz.impl.UseCaseActorPackageImpl <em>Use Case Actor Package</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.eryaz.prototype.ryz.impl.UseCaseActorPackageImpl
-	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getUseCaseActorPackage()
-	 * @generated
-	 */
-	int USE_CASE_ACTOR_PACKAGE = 28;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USE_CASE_ACTOR_PACKAGE__NAME = PACKAGE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Actors</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USE_CASE_ACTOR_PACKAGE__ACTORS = PACKAGE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Usecasepackages</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USE_CASE_ACTOR_PACKAGE__USECASEPACKAGES = PACKAGE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Use Case Actor Package</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USE_CASE_ACTOR_PACKAGE_FEATURE_COUNT = PACKAGE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Use Case Actor Package</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USE_CASE_ACTOR_PACKAGE_OPERATION_COUNT = PACKAGE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.eryaz.prototype.ryz.impl.ActorImpl <em>Actor</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.eryaz.prototype.ryz.impl.ActorImpl
-	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getActor()
-	 * @generated
-	 */
-	int ACTOR = 29;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTOR__NAME = NAMED_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Usecase</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTOR__USECASE = NAMED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Actor</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTOR_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Actor</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACTOR_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.eryaz.prototype.ryz.impl.UseCaseImpl <em>Use Case</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.eryaz.prototype.ryz.impl.UseCaseImpl
-	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getUseCase()
-	 * @generated
-	 */
-	int USE_CASE = 30;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USE_CASE__NAME = NAMED_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Actor</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USE_CASE__ACTOR = NAMED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Helperforsendingrequest</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USE_CASE__HELPERFORSEND›NGREQUEST = NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Actionmethod</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USE_CASE__ACT›ONMETHOD = NAMED_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Use Case</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USE_CASE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Use Case</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USE_CASE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.eryaz.prototype.ryz.impl.UseCasePackageImpl <em>Use Case Package</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.eryaz.prototype.ryz.impl.UseCasePackageImpl
-	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getUseCasePackage()
-	 * @generated
-	 */
-	int USE_CASE_PACKAGE = 31;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USE_CASE_PACKAGE__NAME = NAMED_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Usecases</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USE_CASE_PACKAGE__USECASES = NAMED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Use Case Package</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USE_CASE_PACKAGE_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Use Case Package</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int USE_CASE_PACKAGE_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.eryaz.prototype.ryz.impl.PresentationElementImpl <em>Presentation Element</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.eryaz.prototype.ryz.impl.PresentationElementImpl
-	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getPresentationElement()
-	 * @generated
-	 */
-	int PRESENTAT›ON_ELEMENT = 32;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESENTAT›ON_ELEMENT__NAME = NAMED_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Helperforsendingrequest</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESENTAT›ON_ELEMENT__HELPERFORSEND›NGREQUEST = NAMED_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Presentation Element</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESENTAT›ON_ELEMENT_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Presentation Element</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESENTAT›ON_ELEMENT_OPERATION_COUNT = NAMED_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.eryaz.prototype.ryz.impl.PresentationFormImpl <em>Presentation Form</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.eryaz.prototype.ryz.impl.PresentationFormImpl
-	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getPresentationForm()
-	 * @generated
-	 */
-	int PRESENTAT›ON_FORM = 33;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESENTAT›ON_FORM__NAME = PRESENTAT›ON_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Helperforsendingrequest</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESENTAT›ON_FORM__HELPERFORSEND›NGREQUEST = PRESENTAT›ON_ELEMENT__HELPERFORSEND›NGREQUEST;
-
-	/**
-	 * The feature id for the '<em><b>Presentationformelement</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESENTAT›ON_FORM__PRESENTAT›ONFORMELEMENT = PRESENTAT›ON_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Presentation Form</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESENTAT›ON_FORM_FEATURE_COUNT = PRESENTAT›ON_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Presentation Form</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESENTAT›ON_FORM_OPERATION_COUNT = PRESENTAT›ON_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.eryaz.prototype.ryz.impl.PresentationFormElementImpl <em>Presentation Form Element</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.eryaz.prototype.ryz.impl.PresentationFormElementImpl
-	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getPresentationFormElement()
-	 * @generated
-	 */
-	int PRESENTAT›ON_FORM_ELEMENT = 37;
-
-	/**
-	 * The feature id for the '<em><b>Label Text</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESENTAT›ON_FORM_ELEMENT__LABEL_TEXT = 0;
-
-	/**
-	 * The number of structural features of the '<em>Presentation Form Element</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESENTAT›ON_FORM_ELEMENT_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Presentation Form Element</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESENTAT›ON_FORM_ELEMENT_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link com.eryaz.prototype.ryz.impl.MultipleChoiceImpl <em>Multiple Choice</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.eryaz.prototype.ryz.impl.MultipleChoiceImpl
-	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getMultipleChoice()
-	 * @generated
-	 */
-	int MULT›PLE_CHO›CE = 34;
-
-	/**
-	 * The feature id for the '<em><b>Label Text</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MULT›PLE_CHO›CE__LABEL_TEXT = PRESENTAT›ON_FORM_ELEMENT__LABEL_TEXT;
-
-	/**
-	 * The feature id for the '<em><b>Choice</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MULT›PLE_CHO›CE__CHO›CE = PRESENTAT›ON_FORM_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Multiple Choice Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MULT›PLE_CHO›CE__MULT›PLE_CHO›CE_TYPE = PRESENTAT›ON_FORM_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Multiple Selection</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MULT›PLE_CHO›CE__MULT›PLE_SELECT›ON = PRESENTAT›ON_FORM_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Multiple Choice</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MULT›PLE_CHO›CE_FEATURE_COUNT = PRESENTAT›ON_FORM_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Multiple Choice</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MULT›PLE_CHO›CE_OPERATION_COUNT = PRESENTAT›ON_FORM_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.eryaz.prototype.ryz.impl.ChoiceImpl <em>Choice</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.eryaz.prototype.ryz.impl.ChoiceImpl
-	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getChoice()
-	 * @generated
-	 */
-	int CHO›CE = 35;
-
-	/**
-	 * The feature id for the '<em><b>Text</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHO›CE__TEXT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHO›CE__VALUE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Selected</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHO›CE__SELECTED = 2;
-
-	/**
-	 * The number of structural features of the '<em>Choice</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHO›CE_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Choice</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CHO›CE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link com.eryaz.prototype.ryz.impl.ButtonImpl <em>Button</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.eryaz.prototype.ryz.impl.ButtonImpl
-	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getButton()
-	 * @generated
-	 */
-	int BUTTON = 36;
-
-	/**
-	 * The feature id for the '<em><b>Label Text</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BUTTON__LABEL_TEXT = PRESENTAT›ON_FORM_ELEMENT__LABEL_TEXT;
-
-	/**
-	 * The feature id for the '<em><b>Button Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BUTTON__BUTTON_TYPE = PRESENTAT›ON_FORM_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Button</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BUTTON_FEATURE_COUNT = PRESENTAT›ON_FORM_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Button</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BUTTON_OPERATION_COUNT = PRESENTAT›ON_FORM_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.eryaz.prototype.ryz.impl.InputImpl <em>Input</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.eryaz.prototype.ryz.impl.InputImpl
-	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getInput()
-	 * @generated
-	 */
-	int INPUT = 38;
-
-	/**
-	 * The feature id for the '<em><b>Label Text</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT__LABEL_TEXT = PRESENTAT›ON_FORM_ELEMENT__LABEL_TEXT;
-
-	/**
-	 * The feature id for the '<em><b>›nput Data Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT__›NPUT_DATA_TYPE = PRESENTAT›ON_FORM_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>›s Read Only</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT__›S_READ_ONLY = PRESENTAT›ON_FORM_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>›s Hidden</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT__›S_H›DDEN = PRESENTAT›ON_FORM_ELEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Input</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_FEATURE_COUNT = PRESENTAT›ON_FORM_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Input</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_OPERATION_COUNT = PRESENTAT›ON_FORM_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.eryaz.prototype.ryz.impl.LinkImpl <em>Link</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.eryaz.prototype.ryz.impl.LinkImpl
-	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getLink()
-	 * @generated
-	 */
-	int L›NK = 39;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int L›NK__NAME = PRESENTAT›ON_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Helperforsendingrequest</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int L›NK__HELPERFORSEND›NGREQUEST = PRESENTAT›ON_ELEMENT__HELPERFORSEND›NGREQUEST;
-
-	/**
-	 * The feature id for the '<em><b>Text</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int L›NK__TEXT = PRESENTAT›ON_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Link</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int L›NK_FEATURE_COUNT = PRESENTAT›ON_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Link</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int L›NK_OPERATION_COUNT = PRESENTAT›ON_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.eryaz.prototype.ryz.impl.TableImpl <em>Table</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.eryaz.prototype.ryz.impl.TableImpl
-	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getTable()
-	 * @generated
-	 */
-	int TABLE = 40;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE__NAME = PRESENTAT›ON_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Helperforsendingrequest</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE__HELPERFORSEND›NGREQUEST = PRESENTAT›ON_ELEMENT__HELPERFORSEND›NGREQUEST;
-
-	/**
-	 * The feature id for the '<em><b>Header</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE__HEADER = PRESENTAT›ON_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Table</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE_FEATURE_COUNT = PRESENTAT›ON_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Table</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE_OPERATION_COUNT = PRESENTAT›ON_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.eryaz.prototype.ryz.impl.HeaderImpl <em>Header</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.eryaz.prototype.ryz.impl.HeaderImpl
-	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getHeader()
-	 * @generated
-	 */
-	int HEADER = 41;
-
-	/**
-	 * The feature id for the '<em><b>Label Text</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HEADER__LABEL_TEXT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HEADER__NAME = 1;
-
-	/**
-	 * The number of structural features of the '<em>Header</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HEADER_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Header</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HEADER_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link com.eryaz.prototype.ryz.impl.FormElementToPropertyKeyRelationImpl <em>Form Element To Property Key Relation</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.eryaz.prototype.ryz.impl.FormElementToPropertyKeyRelationImpl
-	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getFormElementToPropertyKeyRelation()
-	 * @generated
-	 */
-	int FORM_ELEMENT_TO_PROPERTY_KEY_RELAT›ON = 42;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORM_ELEMENT_TO_PROPERTY_KEY_RELAT›ON__NAME = MA›N_COMPONENT_RELAT›ON__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Helperforsendingrequest</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORM_ELEMENT_TO_PROPERTY_KEY_RELAT›ON__HELPERFORSEND›NGREQUEST = MA›N_COMPONENT_RELAT›ON_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Model</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORM_ELEMENT_TO_PROPERTY_KEY_RELAT›ON__MODEL = MA›N_COMPONENT_RELAT›ON_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Presentationformelementtoproperty</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORM_ELEMENT_TO_PROPERTY_KEY_RELAT›ON__PRESENTAT›ONFORMELEMENTTOPROPERTY = MA›N_COMPONENT_RELAT›ON_FEATURE_COUNT
-			+ 2;
-
-	/**
-	 * The number of structural features of the '<em>Form Element To Property Key Relation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORM_ELEMENT_TO_PROPERTY_KEY_RELAT›ON_FEATURE_COUNT = MA›N_COMPONENT_RELAT›ON_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Form Element To Property Key Relation</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORM_ELEMENT_TO_PROPERTY_KEY_RELAT›ON_OPERATION_COUNT = MA›N_COMPONENT_RELAT›ON_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link com.eryaz.prototype.ryz.impl.PresentationFormElementToPropertyKeyImpl <em>Presentation Form Element To Property Key</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.eryaz.prototype.ryz.impl.PresentationFormElementToPropertyKeyImpl
-	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getPresentationFormElementToPropertyKey()
-	 * @generated
-	 */
-	int PRESENTAT›ON_FORM_ELEMENT_TO_PROPERTY_KEY = 43;
-
-	/**
-	 * The feature id for the '<em><b>Presentationformelement</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESENTAT›ON_FORM_ELEMENT_TO_PROPERTY_KEY__PRESENTAT›ONFORMELEMENT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Property</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESENTAT›ON_FORM_ELEMENT_TO_PROPERTY_KEY__PROPERTY = 1;
-
-	/**
-	 * The feature id for the '<em><b>Tablekey</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESENTAT›ON_FORM_ELEMENT_TO_PROPERTY_KEY__TABLEKEY = 2;
-
-	/**
-	 * The number of structural features of the '<em>Presentation Form Element To Property Key</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESENTAT›ON_FORM_ELEMENT_TO_PROPERTY_KEY_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Presentation Form Element To Property Key</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESENTAT›ON_FORM_ELEMENT_TO_PROPERTY_KEY_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link com.eryaz.prototype.ryz.ModelPropertyType <em>Model Property Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2594,7 +1705,7 @@ public interface RyzPackage extends EPackage {
 	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getModelPropertyType()
 	 * @generated
 	 */
-	int MODEL_PROPERTY_TYPE = 44;
+	int MODEL_PROPERTY_TYPE = 29;
 
 	/**
 	 * The meta object id for the '{@link com.eryaz.prototype.ryz.Cardinality <em>Cardinality</em>}' enum.
@@ -2604,7 +1715,7 @@ public interface RyzPackage extends EPackage {
 	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getCardinality()
 	 * @generated
 	 */
-	int CARD›NAL›TY = 45;
+	int CARD›NAL›TY = 30;
 
 	/**
 	 * The meta object id for the '{@link com.eryaz.prototype.ryz.ActionMethodParameterType <em>Action Method Parameter Type</em>}' enum.
@@ -2614,7 +1725,7 @@ public interface RyzPackage extends EPackage {
 	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getActionMethodParameterType()
 	 * @generated
 	 */
-	int ACT›ON_METHOD_PARAMETER_TYPE = 46;
+	int ACT›ON_METHOD_PARAMETER_TYPE = 31;
 
 	/**
 	 * The meta object id for the '{@link com.eryaz.prototype.ryz.RequestType <em>Request Type</em>}' enum.
@@ -2624,7 +1735,7 @@ public interface RyzPackage extends EPackage {
 	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getRequestType()
 	 * @generated
 	 */
-	int REQUEST_TYPE = 47;
+	int REQUEST_TYPE = 32;
 
 	/**
 	 * The meta object id for the '{@link com.eryaz.prototype.ryz.HttpMethod <em>Http Method</em>}' enum.
@@ -2634,7 +1745,7 @@ public interface RyzPackage extends EPackage {
 	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getHttpMethod()
 	 * @generated
 	 */
-	int HTTP_METHOD = 48;
+	int HTTP_METHOD = 33;
 
 	/**
 	 * The meta object id for the '{@link com.eryaz.prototype.ryz.ModelCardinality <em>Model Cardinality</em>}' enum.
@@ -2644,7 +1755,7 @@ public interface RyzPackage extends EPackage {
 	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getModelCardinality()
 	 * @generated
 	 */
-	int MODEL_CARD›NAL›TY = 49;
+	int MODEL_CARD›NAL›TY = 34;
 
 	/**
 	 * The meta object id for the '{@link com.eryaz.prototype.ryz.ModelOperation <em>Model Operation</em>}' enum.
@@ -2654,7 +1765,7 @@ public interface RyzPackage extends EPackage {
 	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getModelOperation()
 	 * @generated
 	 */
-	int MODEL_OPERAT›ON = 50;
+	int MODEL_OPERAT›ON = 35;
 
 	/**
 	 * The meta object id for the '{@link com.eryaz.prototype.ryz.ActionMethodReturnType <em>Action Method Return Type</em>}' enum.
@@ -2664,37 +1775,7 @@ public interface RyzPackage extends EPackage {
 	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getActionMethodReturnType()
 	 * @generated
 	 */
-	int ACT›ON_METHOD_RETURN_TYPE = 51;
-
-	/**
-	 * The meta object id for the '{@link com.eryaz.prototype.ryz.MultipleChoiceType <em>Multiple Choice Type</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.eryaz.prototype.ryz.MultipleChoiceType
-	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getMultipleChoiceType()
-	 * @generated
-	 */
-	int MULT›PLE_CHO›CE_TYPE = 52;
-
-	/**
-	 * The meta object id for the '{@link com.eryaz.prototype.ryz.ButtonType <em>Button Type</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.eryaz.prototype.ryz.ButtonType
-	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getButtonType()
-	 * @generated
-	 */
-	int BUTTON_TYPE = 53;
-
-	/**
-	 * The meta object id for the '{@link com.eryaz.prototype.ryz.InputDataType <em>Input Data Type</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see com.eryaz.prototype.ryz.InputDataType
-	 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getInputDataType()
-	 * @generated
-	 */
-	int INPUT_DATA_TYPE = 54;
+	int ACT›ON_METHOD_RETURN_TYPE = 36;
 
 	/**
 	 * Returns the meta object for class '{@link com.eryaz.prototype.ryz.Project <em>Project</em>}'.
@@ -2951,17 +2032,6 @@ public interface RyzPackage extends EPackage {
 	EReference getAbstractView_Htmlelements();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link com.eryaz.prototype.ryz.AbstractView#getPresentationelement <em>Presentationelement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Presentationelement</em>'.
-	 * @see com.eryaz.prototype.ryz.AbstractView#getPresentationelement()
-	 * @see #getAbstractView()
-	 * @generated
-	 */
-	EReference getAbstractView_Presentationelement();
-
-	/**
 	 * Returns the meta object for class '{@link com.eryaz.prototype.ryz.Controller <em>Controller</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3121,17 +2191,6 @@ public interface RyzPackage extends EPackage {
 	EClass getActionMethod();
 
 	/**
-	 * Returns the meta object for the attribute '{@link com.eryaz.prototype.ryz.ActionMethod#getHttpMethod <em>Http Method</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Http Method</em>'.
-	 * @see com.eryaz.prototype.ryz.ActionMethod#getHttpMethod()
-	 * @see #getActionMethod()
-	 * @generated
-	 */
-	EAttribute getActionMethod_HttpMethod();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link com.eryaz.prototype.ryz.ActionMethod#getParameters <em>Parameters</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3154,15 +2213,15 @@ public interface RyzPackage extends EPackage {
 	EAttribute getActionMethod_Returns();
 
 	/**
-	 * Returns the meta object for the reference list '{@link com.eryaz.prototype.ryz.ActionMethod#getUsecase <em>Usecase</em>}'.
+	 * Returns the meta object for the attribute '{@link com.eryaz.prototype.ryz.ActionMethod#getHttpMethod <em>Http Method</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Usecase</em>'.
-	 * @see com.eryaz.prototype.ryz.ActionMethod#getUsecase()
+	 * @return the meta object for the attribute '<em>Http Method</em>'.
+	 * @see com.eryaz.prototype.ryz.ActionMethod#getHttpMethod()
 	 * @see #getActionMethod()
 	 * @generated
 	 */
-	EReference getActionMethod_Usecase();
+	EAttribute getActionMethod_HttpMethod();
 
 	/**
 	 * Returns the meta object for class '{@link com.eryaz.prototype.ryz.Layout <em>Layout</em>}'.
@@ -3368,6 +2427,16 @@ public interface RyzPackage extends EPackage {
 	EAttribute getControllerToModelRelation_ModelOperation();
 
 	/**
+	 * Returns the meta object for class '{@link com.eryaz.prototype.ryz.HtmlElement <em>Html Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Html Element</em>'.
+	 * @see com.eryaz.prototype.ryz.HtmlElement
+	 * @generated
+	 */
+	EClass getHtmlElement();
+
+	/**
 	 * Returns the meta object for class '{@link com.eryaz.prototype.ryz.ActionLink <em>Action Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3429,28 +2498,6 @@ public interface RyzPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getHelperForSendingRequest_Text();
-
-	/**
-	 * Returns the meta object for the reference list '{@link com.eryaz.prototype.ryz.HelperForSendingRequest#getUsecase <em>Usecase</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Usecase</em>'.
-	 * @see com.eryaz.prototype.ryz.HelperForSendingRequest#getUsecase()
-	 * @see #getHelperForSendingRequest()
-	 * @generated
-	 */
-	EReference getHelperForSendingRequest_Usecase();
-
-	/**
-	 * Returns the meta object for the reference list '{@link com.eryaz.prototype.ryz.HelperForSendingRequest#getPresentationelement <em>Presentationelement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Presentationelement</em>'.
-	 * @see com.eryaz.prototype.ryz.HelperForSendingRequest#getPresentationelement()
-	 * @see #getHelperForSendingRequest()
-	 * @generated
-	 */
-	EReference getHelperForSendingRequest_Presentationelement();
 
 	/**
 	 * Returns the meta object for class '{@link com.eryaz.prototype.ryz.ControllerToViewRelation <em>Controller To View Relation</em>}'.
@@ -3593,496 +2640,6 @@ public interface RyzPackage extends EPackage {
 	EReference getViewToModelRelation_Properties();
 
 	/**
-	 * Returns the meta object for class '{@link com.eryaz.prototype.ryz.UseCaseActorPackage <em>Use Case Actor Package</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Use Case Actor Package</em>'.
-	 * @see com.eryaz.prototype.ryz.UseCaseActorPackage
-	 * @generated
-	 */
-	EClass getUseCaseActorPackage();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link com.eryaz.prototype.ryz.UseCaseActorPackage#getActors <em>Actors</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Actors</em>'.
-	 * @see com.eryaz.prototype.ryz.UseCaseActorPackage#getActors()
-	 * @see #getUseCaseActorPackage()
-	 * @generated
-	 */
-	EReference getUseCaseActorPackage_Actors();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link com.eryaz.prototype.ryz.UseCaseActorPackage#getUsecasepackages <em>Usecasepackages</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Usecasepackages</em>'.
-	 * @see com.eryaz.prototype.ryz.UseCaseActorPackage#getUsecasepackages()
-	 * @see #getUseCaseActorPackage()
-	 * @generated
-	 */
-	EReference getUseCaseActorPackage_Usecasepackages();
-
-	/**
-	 * Returns the meta object for class '{@link com.eryaz.prototype.ryz.Actor <em>Actor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Actor</em>'.
-	 * @see com.eryaz.prototype.ryz.Actor
-	 * @generated
-	 */
-	EClass getActor();
-
-	/**
-	 * Returns the meta object for the reference list '{@link com.eryaz.prototype.ryz.Actor#getUsecase <em>Usecase</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Usecase</em>'.
-	 * @see com.eryaz.prototype.ryz.Actor#getUsecase()
-	 * @see #getActor()
-	 * @generated
-	 */
-	EReference getActor_Usecase();
-
-	/**
-	 * Returns the meta object for class '{@link com.eryaz.prototype.ryz.UseCase <em>Use Case</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Use Case</em>'.
-	 * @see com.eryaz.prototype.ryz.UseCase
-	 * @generated
-	 */
-	EClass getUseCase();
-
-	/**
-	 * Returns the meta object for the reference list '{@link com.eryaz.prototype.ryz.UseCase#getActor <em>Actor</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Actor</em>'.
-	 * @see com.eryaz.prototype.ryz.UseCase#getActor()
-	 * @see #getUseCase()
-	 * @generated
-	 */
-	EReference getUseCase_Actor();
-
-	/**
-	 * Returns the meta object for the reference list '{@link com.eryaz.prototype.ryz.UseCase#getHelperforsendingrequest <em>Helperforsendingrequest</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Helperforsendingrequest</em>'.
-	 * @see com.eryaz.prototype.ryz.UseCase#getHelperforsendingrequest()
-	 * @see #getUseCase()
-	 * @generated
-	 */
-	EReference getUseCase_Helperforsendingrequest();
-
-	/**
-	 * Returns the meta object for the reference list '{@link com.eryaz.prototype.ryz.UseCase#getActionmethod <em>Actionmethod</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Actionmethod</em>'.
-	 * @see com.eryaz.prototype.ryz.UseCase#getActionmethod()
-	 * @see #getUseCase()
-	 * @generated
-	 */
-	EReference getUseCase_Actionmethod();
-
-	/**
-	 * Returns the meta object for class '{@link com.eryaz.prototype.ryz.UseCasePackage <em>Use Case Package</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Use Case Package</em>'.
-	 * @see com.eryaz.prototype.ryz.UseCasePackage
-	 * @generated
-	 */
-	EClass getUseCasePackage();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link com.eryaz.prototype.ryz.UseCasePackage#getUsecases <em>Usecases</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Usecases</em>'.
-	 * @see com.eryaz.prototype.ryz.UseCasePackage#getUsecases()
-	 * @see #getUseCasePackage()
-	 * @generated
-	 */
-	EReference getUseCasePackage_Usecases();
-
-	/**
-	 * Returns the meta object for class '{@link com.eryaz.prototype.ryz.PresentationElement <em>Presentation Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Presentation Element</em>'.
-	 * @see com.eryaz.prototype.ryz.PresentationElement
-	 * @generated
-	 */
-	EClass getPresentationElement();
-
-	/**
-	 * Returns the meta object for the reference list '{@link com.eryaz.prototype.ryz.PresentationElement#getHelperforsendingrequest <em>Helperforsendingrequest</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Helperforsendingrequest</em>'.
-	 * @see com.eryaz.prototype.ryz.PresentationElement#getHelperforsendingrequest()
-	 * @see #getPresentationElement()
-	 * @generated
-	 */
-	EReference getPresentationElement_Helperforsendingrequest();
-
-	/**
-	 * Returns the meta object for class '{@link com.eryaz.prototype.ryz.PresentationForm <em>Presentation Form</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Presentation Form</em>'.
-	 * @see com.eryaz.prototype.ryz.PresentationForm
-	 * @generated
-	 */
-	EClass getPresentationForm();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link com.eryaz.prototype.ryz.PresentationForm#getPresentationformelement <em>Presentationformelement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Presentationformelement</em>'.
-	 * @see com.eryaz.prototype.ryz.PresentationForm#getPresentationformelement()
-	 * @see #getPresentationForm()
-	 * @generated
-	 */
-	EReference getPresentationForm_Presentationformelement();
-
-	/**
-	 * Returns the meta object for class '{@link com.eryaz.prototype.ryz.MultipleChoice <em>Multiple Choice</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Multiple Choice</em>'.
-	 * @see com.eryaz.prototype.ryz.MultipleChoice
-	 * @generated
-	 */
-	EClass getMultipleChoice();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link com.eryaz.prototype.ryz.MultipleChoice#getChoice <em>Choice</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Choice</em>'.
-	 * @see com.eryaz.prototype.ryz.MultipleChoice#getChoice()
-	 * @see #getMultipleChoice()
-	 * @generated
-	 */
-	EReference getMultipleChoice_Choice();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.eryaz.prototype.ryz.MultipleChoice#getMultipleChoiceType <em>Multiple Choice Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Multiple Choice Type</em>'.
-	 * @see com.eryaz.prototype.ryz.MultipleChoice#getMultipleChoiceType()
-	 * @see #getMultipleChoice()
-	 * @generated
-	 */
-	EAttribute getMultipleChoice_MultipleChoiceType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.eryaz.prototype.ryz.MultipleChoice#isMultipleSelection <em>Multiple Selection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Multiple Selection</em>'.
-	 * @see com.eryaz.prototype.ryz.MultipleChoice#isMultipleSelection()
-	 * @see #getMultipleChoice()
-	 * @generated
-	 */
-	EAttribute getMultipleChoice_MultipleSelection();
-
-	/**
-	 * Returns the meta object for class '{@link com.eryaz.prototype.ryz.Choice <em>Choice</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Choice</em>'.
-	 * @see com.eryaz.prototype.ryz.Choice
-	 * @generated
-	 */
-	EClass getChoice();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.eryaz.prototype.ryz.Choice#getText <em>Text</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Text</em>'.
-	 * @see com.eryaz.prototype.ryz.Choice#getText()
-	 * @see #getChoice()
-	 * @generated
-	 */
-	EAttribute getChoice_Text();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.eryaz.prototype.ryz.Choice#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see com.eryaz.prototype.ryz.Choice#getValue()
-	 * @see #getChoice()
-	 * @generated
-	 */
-	EAttribute getChoice_Value();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.eryaz.prototype.ryz.Choice#isSelected <em>Selected</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Selected</em>'.
-	 * @see com.eryaz.prototype.ryz.Choice#isSelected()
-	 * @see #getChoice()
-	 * @generated
-	 */
-	EAttribute getChoice_Selected();
-
-	/**
-	 * Returns the meta object for class '{@link com.eryaz.prototype.ryz.Button <em>Button</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Button</em>'.
-	 * @see com.eryaz.prototype.ryz.Button
-	 * @generated
-	 */
-	EClass getButton();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.eryaz.prototype.ryz.Button#getButtonType <em>Button Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Button Type</em>'.
-	 * @see com.eryaz.prototype.ryz.Button#getButtonType()
-	 * @see #getButton()
-	 * @generated
-	 */
-	EAttribute getButton_ButtonType();
-
-	/**
-	 * Returns the meta object for class '{@link com.eryaz.prototype.ryz.PresentationFormElement <em>Presentation Form Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Presentation Form Element</em>'.
-	 * @see com.eryaz.prototype.ryz.PresentationFormElement
-	 * @generated
-	 */
-	EClass getPresentationFormElement();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.eryaz.prototype.ryz.PresentationFormElement#getLabelText <em>Label Text</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Label Text</em>'.
-	 * @see com.eryaz.prototype.ryz.PresentationFormElement#getLabelText()
-	 * @see #getPresentationFormElement()
-	 * @generated
-	 */
-	EAttribute getPresentationFormElement_LabelText();
-
-	/**
-	 * Returns the meta object for class '{@link com.eryaz.prototype.ryz.Input <em>Input</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Input</em>'.
-	 * @see com.eryaz.prototype.ryz.Input
-	 * @generated
-	 */
-	EClass getInput();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.eryaz.prototype.ryz.Input#get›nputDataType <em>›nput Data Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>›nput Data Type</em>'.
-	 * @see com.eryaz.prototype.ryz.Input#get›nputDataType()
-	 * @see #getInput()
-	 * @generated
-	 */
-	EAttribute getInput_›nputDataType();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.eryaz.prototype.ryz.Input#is›sReadOnly <em>›s Read Only</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>›s Read Only</em>'.
-	 * @see com.eryaz.prototype.ryz.Input#is›sReadOnly()
-	 * @see #getInput()
-	 * @generated
-	 */
-	EAttribute getInput_›sReadOnly();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.eryaz.prototype.ryz.Input#is›sHidden <em>›s Hidden</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>›s Hidden</em>'.
-	 * @see com.eryaz.prototype.ryz.Input#is›sHidden()
-	 * @see #getInput()
-	 * @generated
-	 */
-	EAttribute getInput_›sHidden();
-
-	/**
-	 * Returns the meta object for class '{@link com.eryaz.prototype.ryz.Link <em>Link</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Link</em>'.
-	 * @see com.eryaz.prototype.ryz.Link
-	 * @generated
-	 */
-	EClass getLink();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.eryaz.prototype.ryz.Link#getText <em>Text</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Text</em>'.
-	 * @see com.eryaz.prototype.ryz.Link#getText()
-	 * @see #getLink()
-	 * @generated
-	 */
-	EAttribute getLink_Text();
-
-	/**
-	 * Returns the meta object for class '{@link com.eryaz.prototype.ryz.Table <em>Table</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Table</em>'.
-	 * @see com.eryaz.prototype.ryz.Table
-	 * @generated
-	 */
-	EClass getTable();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link com.eryaz.prototype.ryz.Table#getHeader <em>Header</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Header</em>'.
-	 * @see com.eryaz.prototype.ryz.Table#getHeader()
-	 * @see #getTable()
-	 * @generated
-	 */
-	EReference getTable_Header();
-
-	/**
-	 * Returns the meta object for class '{@link com.eryaz.prototype.ryz.Header <em>Header</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Header</em>'.
-	 * @see com.eryaz.prototype.ryz.Header
-	 * @generated
-	 */
-	EClass getHeader();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.eryaz.prototype.ryz.Header#getLabelText <em>Label Text</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Label Text</em>'.
-	 * @see com.eryaz.prototype.ryz.Header#getLabelText()
-	 * @see #getHeader()
-	 * @generated
-	 */
-	EAttribute getHeader_LabelText();
-
-	/**
-	 * Returns the meta object for the attribute '{@link com.eryaz.prototype.ryz.Header#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see com.eryaz.prototype.ryz.Header#getName()
-	 * @see #getHeader()
-	 * @generated
-	 */
-	EAttribute getHeader_Name();
-
-	/**
-	 * Returns the meta object for class '{@link com.eryaz.prototype.ryz.FormElementToPropertyKeyRelation <em>Form Element To Property Key Relation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Form Element To Property Key Relation</em>'.
-	 * @see com.eryaz.prototype.ryz.FormElementToPropertyKeyRelation
-	 * @generated
-	 */
-	EClass getFormElementToPropertyKeyRelation();
-
-	/**
-	 * Returns the meta object for the reference '{@link com.eryaz.prototype.ryz.FormElementToPropertyKeyRelation#getHelperforsendingrequest <em>Helperforsendingrequest</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Helperforsendingrequest</em>'.
-	 * @see com.eryaz.prototype.ryz.FormElementToPropertyKeyRelation#getHelperforsendingrequest()
-	 * @see #getFormElementToPropertyKeyRelation()
-	 * @generated
-	 */
-	EReference getFormElementToPropertyKeyRelation_Helperforsendingrequest();
-
-	/**
-	 * Returns the meta object for the reference '{@link com.eryaz.prototype.ryz.FormElementToPropertyKeyRelation#getModel <em>Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Model</em>'.
-	 * @see com.eryaz.prototype.ryz.FormElementToPropertyKeyRelation#getModel()
-	 * @see #getFormElementToPropertyKeyRelation()
-	 * @generated
-	 */
-	EReference getFormElementToPropertyKeyRelation_Model();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link com.eryaz.prototype.ryz.FormElementToPropertyKeyRelation#getPresentationformelementtoproperty <em>Presentationformelementtoproperty</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Presentationformelementtoproperty</em>'.
-	 * @see com.eryaz.prototype.ryz.FormElementToPropertyKeyRelation#getPresentationformelementtoproperty()
-	 * @see #getFormElementToPropertyKeyRelation()
-	 * @generated
-	 */
-	EReference getFormElementToPropertyKeyRelation_Presentationformelementtoproperty();
-
-	/**
-	 * Returns the meta object for class '{@link com.eryaz.prototype.ryz.PresentationFormElementToPropertyKey <em>Presentation Form Element To Property Key</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Presentation Form Element To Property Key</em>'.
-	 * @see com.eryaz.prototype.ryz.PresentationFormElementToPropertyKey
-	 * @generated
-	 */
-	EClass getPresentationFormElementToPropertyKey();
-
-	/**
-	 * Returns the meta object for the reference '{@link com.eryaz.prototype.ryz.PresentationFormElementToPropertyKey#getPresentationformelement <em>Presentationformelement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Presentationformelement</em>'.
-	 * @see com.eryaz.prototype.ryz.PresentationFormElementToPropertyKey#getPresentationformelement()
-	 * @see #getPresentationFormElementToPropertyKey()
-	 * @generated
-	 */
-	EReference getPresentationFormElementToPropertyKey_Presentationformelement();
-
-	/**
-	 * Returns the meta object for the reference '{@link com.eryaz.prototype.ryz.PresentationFormElementToPropertyKey#getProperty <em>Property</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Property</em>'.
-	 * @see com.eryaz.prototype.ryz.PresentationFormElementToPropertyKey#getProperty()
-	 * @see #getPresentationFormElementToPropertyKey()
-	 * @generated
-	 */
-	EReference getPresentationFormElementToPropertyKey_Property();
-
-	/**
-	 * Returns the meta object for the reference '{@link com.eryaz.prototype.ryz.PresentationFormElementToPropertyKey#getTablekey <em>Tablekey</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Tablekey</em>'.
-	 * @see com.eryaz.prototype.ryz.PresentationFormElementToPropertyKey#getTablekey()
-	 * @see #getPresentationFormElementToPropertyKey()
-	 * @generated
-	 */
-	EReference getPresentationFormElementToPropertyKey_Tablekey();
-
-	/**
 	 * Returns the meta object for enum '{@link com.eryaz.prototype.ryz.ModelPropertyType <em>Model Property Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4161,36 +2718,6 @@ public interface RyzPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getActionMethodReturnType();
-
-	/**
-	 * Returns the meta object for enum '{@link com.eryaz.prototype.ryz.MultipleChoiceType <em>Multiple Choice Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Multiple Choice Type</em>'.
-	 * @see com.eryaz.prototype.ryz.MultipleChoiceType
-	 * @generated
-	 */
-	EEnum getMultipleChoiceType();
-
-	/**
-	 * Returns the meta object for enum '{@link com.eryaz.prototype.ryz.ButtonType <em>Button Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Button Type</em>'.
-	 * @see com.eryaz.prototype.ryz.ButtonType
-	 * @generated
-	 */
-	EEnum getButtonType();
-
-	/**
-	 * Returns the meta object for enum '{@link com.eryaz.prototype.ryz.InputDataType <em>Input Data Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Input Data Type</em>'.
-	 * @see com.eryaz.prototype.ryz.InputDataType
-	 * @generated
-	 */
-	EEnum getInputDataType();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -4428,14 +2955,6 @@ public interface RyzPackage extends EPackage {
 		EReference ABSTRACT_V›EW__HTMLELEMENTS = eINSTANCE.getAbstractView_Htmlelements();
 
 		/**
-		 * The meta object literal for the '<em><b>Presentationelement</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ABSTRACT_V›EW__PRESENTAT›ONELEMENT = eINSTANCE.getAbstractView_Presentationelement();
-
-		/**
 		 * The meta object literal for the '{@link com.eryaz.prototype.ryz.impl.ControllerImpl <em>Controller</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4568,14 +3087,6 @@ public interface RyzPackage extends EPackage {
 		EClass ACT›ON_METHOD = eINSTANCE.getActionMethod();
 
 		/**
-		 * The meta object literal for the '<em><b>Http Method</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ACT›ON_METHOD__HTTP_METHOD = eINSTANCE.getActionMethod_HttpMethod();
-
-		/**
 		 * The meta object literal for the '<em><b>Parameters</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4592,12 +3103,12 @@ public interface RyzPackage extends EPackage {
 		EAttribute ACT›ON_METHOD__RETURNS = eINSTANCE.getActionMethod_Returns();
 
 		/**
-		 * The meta object literal for the '<em><b>Usecase</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Http Method</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ACT›ON_METHOD__USECASE = eINSTANCE.getActionMethod_Usecase();
+		EAttribute ACT›ON_METHOD__HTTP_METHOD = eINSTANCE.getActionMethod_HttpMethod();
 
 		/**
 		 * The meta object literal for the '{@link com.eryaz.prototype.ryz.impl.LayoutImpl <em>Layout</em>}' class.
@@ -4768,6 +3279,16 @@ public interface RyzPackage extends EPackage {
 				.getControllerToModelRelation_ModelOperation();
 
 		/**
+		 * The meta object literal for the '{@link com.eryaz.prototype.ryz.impl.HtmlElementImpl <em>Html Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see com.eryaz.prototype.ryz.impl.HtmlElementImpl
+		 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getHtmlElement()
+		 * @generated
+		 */
+		EClass HTML_ELEMENT = eINSTANCE.getHtmlElement();
+
+		/**
 		 * The meta object literal for the '{@link com.eryaz.prototype.ryz.impl.ActionLinkImpl <em>Action Link</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4820,23 +3341,6 @@ public interface RyzPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute HELPER_FOR_SEND›NG_REQUEST__TEXT = eINSTANCE.getHelperForSendingRequest_Text();
-
-		/**
-		 * The meta object literal for the '<em><b>Usecase</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference HELPER_FOR_SEND›NG_REQUEST__USECASE = eINSTANCE.getHelperForSendingRequest_Usecase();
-
-		/**
-		 * The meta object literal for the '<em><b>Presentationelement</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference HELPER_FOR_SEND›NG_REQUEST__PRESENTAT›ONELEMENT = eINSTANCE
-				.getHelperForSendingRequest_Presentationelement();
 
 		/**
 		 * The meta object literal for the '{@link com.eryaz.prototype.ryz.impl.ControllerToViewRelationImpl <em>Controller To View Relation</em>}' class.
@@ -4949,412 +3453,6 @@ public interface RyzPackage extends EPackage {
 		EReference V›EW_TO_MODEL_RELAT›ON__PROPERT›ES = eINSTANCE.getViewToModelRelation_Properties();
 
 		/**
-		 * The meta object literal for the '{@link com.eryaz.prototype.ryz.impl.UseCaseActorPackageImpl <em>Use Case Actor Package</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.eryaz.prototype.ryz.impl.UseCaseActorPackageImpl
-		 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getUseCaseActorPackage()
-		 * @generated
-		 */
-		EClass USE_CASE_ACTOR_PACKAGE = eINSTANCE.getUseCaseActorPackage();
-
-		/**
-		 * The meta object literal for the '<em><b>Actors</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference USE_CASE_ACTOR_PACKAGE__ACTORS = eINSTANCE.getUseCaseActorPackage_Actors();
-
-		/**
-		 * The meta object literal for the '<em><b>Usecasepackages</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference USE_CASE_ACTOR_PACKAGE__USECASEPACKAGES = eINSTANCE.getUseCaseActorPackage_Usecasepackages();
-
-		/**
-		 * The meta object literal for the '{@link com.eryaz.prototype.ryz.impl.ActorImpl <em>Actor</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.eryaz.prototype.ryz.impl.ActorImpl
-		 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getActor()
-		 * @generated
-		 */
-		EClass ACTOR = eINSTANCE.getActor();
-
-		/**
-		 * The meta object literal for the '<em><b>Usecase</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ACTOR__USECASE = eINSTANCE.getActor_Usecase();
-
-		/**
-		 * The meta object literal for the '{@link com.eryaz.prototype.ryz.impl.UseCaseImpl <em>Use Case</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.eryaz.prototype.ryz.impl.UseCaseImpl
-		 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getUseCase()
-		 * @generated
-		 */
-		EClass USE_CASE = eINSTANCE.getUseCase();
-
-		/**
-		 * The meta object literal for the '<em><b>Actor</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference USE_CASE__ACTOR = eINSTANCE.getUseCase_Actor();
-
-		/**
-		 * The meta object literal for the '<em><b>Helperforsendingrequest</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference USE_CASE__HELPERFORSEND›NGREQUEST = eINSTANCE.getUseCase_Helperforsendingrequest();
-
-		/**
-		 * The meta object literal for the '<em><b>Actionmethod</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference USE_CASE__ACT›ONMETHOD = eINSTANCE.getUseCase_Actionmethod();
-
-		/**
-		 * The meta object literal for the '{@link com.eryaz.prototype.ryz.impl.UseCasePackageImpl <em>Use Case Package</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.eryaz.prototype.ryz.impl.UseCasePackageImpl
-		 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getUseCasePackage()
-		 * @generated
-		 */
-		EClass USE_CASE_PACKAGE = eINSTANCE.getUseCasePackage();
-
-		/**
-		 * The meta object literal for the '<em><b>Usecases</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference USE_CASE_PACKAGE__USECASES = eINSTANCE.getUseCasePackage_Usecases();
-
-		/**
-		 * The meta object literal for the '{@link com.eryaz.prototype.ryz.impl.PresentationElementImpl <em>Presentation Element</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.eryaz.prototype.ryz.impl.PresentationElementImpl
-		 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getPresentationElement()
-		 * @generated
-		 */
-		EClass PRESENTAT›ON_ELEMENT = eINSTANCE.getPresentationElement();
-
-		/**
-		 * The meta object literal for the '<em><b>Helperforsendingrequest</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PRESENTAT›ON_ELEMENT__HELPERFORSEND›NGREQUEST = eINSTANCE
-				.getPresentationElement_Helperforsendingrequest();
-
-		/**
-		 * The meta object literal for the '{@link com.eryaz.prototype.ryz.impl.PresentationFormImpl <em>Presentation Form</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.eryaz.prototype.ryz.impl.PresentationFormImpl
-		 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getPresentationForm()
-		 * @generated
-		 */
-		EClass PRESENTAT›ON_FORM = eINSTANCE.getPresentationForm();
-
-		/**
-		 * The meta object literal for the '<em><b>Presentationformelement</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PRESENTAT›ON_FORM__PRESENTAT›ONFORMELEMENT = eINSTANCE.getPresentationForm_Presentationformelement();
-
-		/**
-		 * The meta object literal for the '{@link com.eryaz.prototype.ryz.impl.MultipleChoiceImpl <em>Multiple Choice</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.eryaz.prototype.ryz.impl.MultipleChoiceImpl
-		 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getMultipleChoice()
-		 * @generated
-		 */
-		EClass MULT›PLE_CHO›CE = eINSTANCE.getMultipleChoice();
-
-		/**
-		 * The meta object literal for the '<em><b>Choice</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MULT›PLE_CHO›CE__CHO›CE = eINSTANCE.getMultipleChoice_Choice();
-
-		/**
-		 * The meta object literal for the '<em><b>Multiple Choice Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MULT›PLE_CHO›CE__MULT›PLE_CHO›CE_TYPE = eINSTANCE.getMultipleChoice_MultipleChoiceType();
-
-		/**
-		 * The meta object literal for the '<em><b>Multiple Selection</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MULT›PLE_CHO›CE__MULT›PLE_SELECT›ON = eINSTANCE.getMultipleChoice_MultipleSelection();
-
-		/**
-		 * The meta object literal for the '{@link com.eryaz.prototype.ryz.impl.ChoiceImpl <em>Choice</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.eryaz.prototype.ryz.impl.ChoiceImpl
-		 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getChoice()
-		 * @generated
-		 */
-		EClass CHO›CE = eINSTANCE.getChoice();
-
-		/**
-		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CHO›CE__TEXT = eINSTANCE.getChoice_Text();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CHO›CE__VALUE = eINSTANCE.getChoice_Value();
-
-		/**
-		 * The meta object literal for the '<em><b>Selected</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute CHO›CE__SELECTED = eINSTANCE.getChoice_Selected();
-
-		/**
-		 * The meta object literal for the '{@link com.eryaz.prototype.ryz.impl.ButtonImpl <em>Button</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.eryaz.prototype.ryz.impl.ButtonImpl
-		 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getButton()
-		 * @generated
-		 */
-		EClass BUTTON = eINSTANCE.getButton();
-
-		/**
-		 * The meta object literal for the '<em><b>Button Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BUTTON__BUTTON_TYPE = eINSTANCE.getButton_ButtonType();
-
-		/**
-		 * The meta object literal for the '{@link com.eryaz.prototype.ryz.impl.PresentationFormElementImpl <em>Presentation Form Element</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.eryaz.prototype.ryz.impl.PresentationFormElementImpl
-		 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getPresentationFormElement()
-		 * @generated
-		 */
-		EClass PRESENTAT›ON_FORM_ELEMENT = eINSTANCE.getPresentationFormElement();
-
-		/**
-		 * The meta object literal for the '<em><b>Label Text</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PRESENTAT›ON_FORM_ELEMENT__LABEL_TEXT = eINSTANCE.getPresentationFormElement_LabelText();
-
-		/**
-		 * The meta object literal for the '{@link com.eryaz.prototype.ryz.impl.InputImpl <em>Input</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.eryaz.prototype.ryz.impl.InputImpl
-		 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getInput()
-		 * @generated
-		 */
-		EClass INPUT = eINSTANCE.getInput();
-
-		/**
-		 * The meta object literal for the '<em><b>›nput Data Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INPUT__›NPUT_DATA_TYPE = eINSTANCE.getInput_›nputDataType();
-
-		/**
-		 * The meta object literal for the '<em><b>›s Read Only</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INPUT__›S_READ_ONLY = eINSTANCE.getInput_›sReadOnly();
-
-		/**
-		 * The meta object literal for the '<em><b>›s Hidden</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INPUT__›S_H›DDEN = eINSTANCE.getInput_›sHidden();
-
-		/**
-		 * The meta object literal for the '{@link com.eryaz.prototype.ryz.impl.LinkImpl <em>Link</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.eryaz.prototype.ryz.impl.LinkImpl
-		 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getLink()
-		 * @generated
-		 */
-		EClass L›NK = eINSTANCE.getLink();
-
-		/**
-		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute L›NK__TEXT = eINSTANCE.getLink_Text();
-
-		/**
-		 * The meta object literal for the '{@link com.eryaz.prototype.ryz.impl.TableImpl <em>Table</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.eryaz.prototype.ryz.impl.TableImpl
-		 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getTable()
-		 * @generated
-		 */
-		EClass TABLE = eINSTANCE.getTable();
-
-		/**
-		 * The meta object literal for the '<em><b>Header</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TABLE__HEADER = eINSTANCE.getTable_Header();
-
-		/**
-		 * The meta object literal for the '{@link com.eryaz.prototype.ryz.impl.HeaderImpl <em>Header</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.eryaz.prototype.ryz.impl.HeaderImpl
-		 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getHeader()
-		 * @generated
-		 */
-		EClass HEADER = eINSTANCE.getHeader();
-
-		/**
-		 * The meta object literal for the '<em><b>Label Text</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute HEADER__LABEL_TEXT = eINSTANCE.getHeader_LabelText();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute HEADER__NAME = eINSTANCE.getHeader_Name();
-
-		/**
-		 * The meta object literal for the '{@link com.eryaz.prototype.ryz.impl.FormElementToPropertyKeyRelationImpl <em>Form Element To Property Key Relation</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.eryaz.prototype.ryz.impl.FormElementToPropertyKeyRelationImpl
-		 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getFormElementToPropertyKeyRelation()
-		 * @generated
-		 */
-		EClass FORM_ELEMENT_TO_PROPERTY_KEY_RELAT›ON = eINSTANCE.getFormElementToPropertyKeyRelation();
-
-		/**
-		 * The meta object literal for the '<em><b>Helperforsendingrequest</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FORM_ELEMENT_TO_PROPERTY_KEY_RELAT›ON__HELPERFORSEND›NGREQUEST = eINSTANCE
-				.getFormElementToPropertyKeyRelation_Helperforsendingrequest();
-
-		/**
-		 * The meta object literal for the '<em><b>Model</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FORM_ELEMENT_TO_PROPERTY_KEY_RELAT›ON__MODEL = eINSTANCE.getFormElementToPropertyKeyRelation_Model();
-
-		/**
-		 * The meta object literal for the '<em><b>Presentationformelementtoproperty</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FORM_ELEMENT_TO_PROPERTY_KEY_RELAT›ON__PRESENTAT›ONFORMELEMENTTOPROPERTY = eINSTANCE
-				.getFormElementToPropertyKeyRelation_Presentationformelementtoproperty();
-
-		/**
-		 * The meta object literal for the '{@link com.eryaz.prototype.ryz.impl.PresentationFormElementToPropertyKeyImpl <em>Presentation Form Element To Property Key</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.eryaz.prototype.ryz.impl.PresentationFormElementToPropertyKeyImpl
-		 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getPresentationFormElementToPropertyKey()
-		 * @generated
-		 */
-		EClass PRESENTAT›ON_FORM_ELEMENT_TO_PROPERTY_KEY = eINSTANCE.getPresentationFormElementToPropertyKey();
-
-		/**
-		 * The meta object literal for the '<em><b>Presentationformelement</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PRESENTAT›ON_FORM_ELEMENT_TO_PROPERTY_KEY__PRESENTAT›ONFORMELEMENT = eINSTANCE
-				.getPresentationFormElementToPropertyKey_Presentationformelement();
-
-		/**
-		 * The meta object literal for the '<em><b>Property</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PRESENTAT›ON_FORM_ELEMENT_TO_PROPERTY_KEY__PROPERTY = eINSTANCE
-				.getPresentationFormElementToPropertyKey_Property();
-
-		/**
-		 * The meta object literal for the '<em><b>Tablekey</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PRESENTAT›ON_FORM_ELEMENT_TO_PROPERTY_KEY__TABLEKEY = eINSTANCE
-				.getPresentationFormElementToPropertyKey_Tablekey();
-
-		/**
 		 * The meta object literal for the '{@link com.eryaz.prototype.ryz.ModelPropertyType <em>Model Property Type</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5433,36 +3531,6 @@ public interface RyzPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum ACT›ON_METHOD_RETURN_TYPE = eINSTANCE.getActionMethodReturnType();
-
-		/**
-		 * The meta object literal for the '{@link com.eryaz.prototype.ryz.MultipleChoiceType <em>Multiple Choice Type</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.eryaz.prototype.ryz.MultipleChoiceType
-		 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getMultipleChoiceType()
-		 * @generated
-		 */
-		EEnum MULT›PLE_CHO›CE_TYPE = eINSTANCE.getMultipleChoiceType();
-
-		/**
-		 * The meta object literal for the '{@link com.eryaz.prototype.ryz.ButtonType <em>Button Type</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.eryaz.prototype.ryz.ButtonType
-		 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getButtonType()
-		 * @generated
-		 */
-		EEnum BUTTON_TYPE = eINSTANCE.getButtonType();
-
-		/**
-		 * The meta object literal for the '{@link com.eryaz.prototype.ryz.InputDataType <em>Input Data Type</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see com.eryaz.prototype.ryz.InputDataType
-		 * @see com.eryaz.prototype.ryz.impl.RyzPackageImpl#getInputDataType()
-		 * @generated
-		 */
-		EEnum INPUT_DATA_TYPE = eINSTANCE.getInputDataType();
 
 	}
 

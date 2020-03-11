@@ -133,7 +133,6 @@ public class TableKeyImpl extends NamedElementImpl implements TableKey {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public ModelPropertyType getType() {
 		return type;
 	}
@@ -143,7 +142,6 @@ public class TableKeyImpl extends NamedElementImpl implements TableKey {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setType(ModelPropertyType newType) {
 		ModelPropertyType oldType = type;
 		type = newType == null ? TYPE_EDEFAULT : newType;
@@ -156,7 +154,6 @@ public class TableKeyImpl extends NamedElementImpl implements TableKey {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public boolean is›sRequired() {
 		return isRequired;
 	}
@@ -166,7 +163,6 @@ public class TableKeyImpl extends NamedElementImpl implements TableKey {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void set›sRequired(boolean new›sRequired) {
 		boolean old›sRequired = isRequired;
 		isRequired = new›sRequired;
@@ -180,7 +176,6 @@ public class TableKeyImpl extends NamedElementImpl implements TableKey {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public boolean is›sPrimaryKey() {
 		return isPrimaryKey;
 	}
@@ -190,7 +185,6 @@ public class TableKeyImpl extends NamedElementImpl implements TableKey {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void set›sPrimaryKey(boolean new›sPrimaryKey) {
 		boolean old›sPrimaryKey = isPrimaryKey;
 		isPrimaryKey = new›sPrimaryKey;
@@ -204,7 +198,6 @@ public class TableKeyImpl extends NamedElementImpl implements TableKey {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public boolean is›sForeignKey() {
 		return isForeignKey;
 	}
@@ -214,7 +207,6 @@ public class TableKeyImpl extends NamedElementImpl implements TableKey {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void set›sForeignKey(boolean new›sForeignKey) {
 		boolean old›sForeignKey = isForeignKey;
 		isForeignKey = new›sForeignKey;

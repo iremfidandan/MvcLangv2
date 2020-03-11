@@ -5,7 +5,7 @@
       <takesTypesFrom href="http://www.eryaz.com/prototype/ryz#/"/>
     </input>
     <imports href="controllerNameWithoutControllerSuffix.emtl#/0"/>
-    <imports href="inferences/htmlActionRouteValueInference.emtl#/0"/>
+    <imports href="htmlActionRouteValueInference.emtl#/0"/>
     <ownedModuleElement xsi:type="mtl:Template" name="generateHtmlAction" visibility="Public">
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="@Html.Action(&quot;"/>
       <body xsi:type="ocl.ecore:PropertyCallExp">
@@ -60,7 +60,7 @@
       <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;, new{"/>
       <body xsi:type="mtl:TemplateInvocation">
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
-        <definition href="inferences/htmlActionRouteValueInference.emtl#/0/generateHtmlActionRouteValueInference"/>
+        <definition href="htmlActionRouteValueInference.emtl#/0/generateHtmlActionRouteValueInference"/>
         <argument xsi:type="ocl.ecore:VariableExp" name="anActionMethod" referredVariable="/0/generateHtmlAction.1/anActionMethod">
           <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
         </argument>
@@ -144,7 +144,7 @@
           <contents xsi:type="ocl.ecore:Constraint"/>
         </eAnnotations>
         <eAnnotations source="MTL">
-          <references href="inferences/htmlActionRouteValueInference.emtl#/0/generateHtmlActionRouteValueInference"/>
+          <references href="htmlActionRouteValueInference.emtl#/0/generateHtmlActionRouteValueInference"/>
         </eAnnotations>
         <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         <eParameters name="anActionMethod">
@@ -235,138 +235,138 @@
   </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/generateHtmlAction">
-      <details key="start" value="295"/>
-      <details key="end" value="504"/>
+      <details key="start" value="283"/>
+      <details key="end" value="492"/>
       <details key="line" value="7"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/generateHtmlAction/%">
-      <details key="start" value="363"/>
-      <details key="end" value="377"/>
+      <details key="start" value="351"/>
+      <details key="end" value="365"/>
       <details key="line" value="8"/>
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/generateHtmlAction/%.1">
-      <details key="start" value="378"/>
-      <details key="end" value="397"/>
+      <details key="start" value="366"/>
+      <details key="end" value="385"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.3" references="/0/generateHtmlAction/%.1/anActionMethod">
-      <details key="start" value="378"/>
-      <details key="end" value="392"/>
+      <details key="start" value="366"/>
+      <details key="end" value="380"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.4" references="/0/generateHtmlAction/%.2">
-      <details key="start" value="399"/>
-      <details key="end" value="403"/>
+      <details key="start" value="387"/>
+      <details key="end" value="391"/>
       <details key="line" value="8"/>
     </eAnnotations>
     <eAnnotations source="positions.5" references="/0/generateHtmlAction/%.3">
-      <details key="start" value="404"/>
-      <details key="end" value="488"/>
+      <details key="start" value="392"/>
+      <details key="end" value="476"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.6" references="/0/generateHtmlAction/%.3/%">
-      <details key="start" value="450"/>
-      <details key="end" value="487"/>
+      <details key="start" value="438"/>
+      <details key="end" value="475"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.7" references="/0/generateHtmlAction/%.3/%/anActionMethod">
-      <details key="start" value="450"/>
-      <details key="end" value="464"/>
+      <details key="start" value="438"/>
+      <details key="end" value="452"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.8" references="/0/generateHtmlAction/%.3/%/%">
-      <details key="start" value="476"/>
-      <details key="end" value="486"/>
+      <details key="start" value="464"/>
+      <details key="end" value="474"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.9" references="/0/generateHtmlAction/%.4">
-      <details key="start" value="490"/>
-      <details key="end" value="492"/>
+      <details key="start" value="478"/>
+      <details key="end" value="480"/>
       <details key="line" value="8"/>
     </eAnnotations>
     <eAnnotations source="positions.10" references="/0/generateHtmlAction/anActionMethod">
-      <details key="start" value="331"/>
-      <details key="end" value="360"/>
+      <details key="start" value="319"/>
+      <details key="end" value="348"/>
       <details key="line" value="7"/>
     </eAnnotations>
     <eAnnotations source="positions.11" references="/0/generateHtmlAction.1">
-      <details key="start" value="507"/>
-      <details key="end" value="845"/>
+      <details key="start" value="495"/>
+      <details key="end" value="833"/>
       <details key="line" value="12"/>
     </eAnnotations>
     <eAnnotations source="positions.12" references="/0/generateHtmlAction.1/%">
-      <details key="start" value="619"/>
-      <details key="end" value="633"/>
+      <details key="start" value="607"/>
+      <details key="end" value="621"/>
       <details key="line" value="13"/>
     </eAnnotations>
     <eAnnotations source="positions.13" references="/0/generateHtmlAction.1/%.1">
-      <details key="start" value="634"/>
-      <details key="end" value="653"/>
+      <details key="start" value="622"/>
+      <details key="end" value="641"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.14" references="/0/generateHtmlAction.1/%.1/anActionMethod">
-      <details key="start" value="634"/>
-      <details key="end" value="648"/>
+      <details key="start" value="622"/>
+      <details key="end" value="636"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.15" references="/0/generateHtmlAction.1/%.2">
-      <details key="start" value="655"/>
-      <details key="end" value="659"/>
+      <details key="start" value="643"/>
+      <details key="end" value="647"/>
       <details key="line" value="13"/>
     </eAnnotations>
     <eAnnotations source="positions.16" references="/0/generateHtmlAction.1/%.3">
-      <details key="start" value="660"/>
-      <details key="end" value="744"/>
+      <details key="start" value="648"/>
+      <details key="end" value="732"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.17" references="/0/generateHtmlAction.1/%.3/%">
-      <details key="start" value="706"/>
-      <details key="end" value="743"/>
+      <details key="start" value="694"/>
+      <details key="end" value="731"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.18" references="/0/generateHtmlAction.1/%.3/%/anActionMethod">
-      <details key="start" value="706"/>
-      <details key="end" value="720"/>
+      <details key="start" value="694"/>
+      <details key="end" value="708"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.19" references="/0/generateHtmlAction.1/%.3/%/%">
-      <details key="start" value="732"/>
-      <details key="end" value="742"/>
+      <details key="start" value="720"/>
+      <details key="end" value="730"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.20" references="/0/generateHtmlAction.1/%.4">
-      <details key="start" value="746"/>
-      <details key="end" value="753"/>
+      <details key="start" value="734"/>
+      <details key="end" value="741"/>
       <details key="line" value="13"/>
     </eAnnotations>
     <eAnnotations source="positions.21" references="/0/generateHtmlAction.1/%.5">
-      <details key="start" value="754"/>
-      <details key="end" value="829"/>
+      <details key="start" value="742"/>
+      <details key="end" value="817"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.22" references="/0/generateHtmlAction.1/%.5/anActionMethod">
-      <details key="start" value="792"/>
-      <details key="end" value="806"/>
+      <details key="start" value="780"/>
+      <details key="end" value="794"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.23" references="/0/generateHtmlAction.1/%.5/aViewToModelRelation">
-      <details key="start" value="808"/>
-      <details key="end" value="828"/>
+      <details key="start" value="796"/>
+      <details key="end" value="816"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.24" references="/0/generateHtmlAction.1/%.6">
-      <details key="start" value="831"/>
-      <details key="end" value="833"/>
+      <details key="start" value="819"/>
+      <details key="end" value="821"/>
       <details key="line" value="13"/>
     </eAnnotations>
     <eAnnotations source="positions.25" references="/0/generateHtmlAction.1/anActionMethod">
-      <details key="start" value="543"/>
-      <details key="end" value="572"/>
+      <details key="start" value="531"/>
+      <details key="end" value="560"/>
       <details key="line" value="12"/>
     </eAnnotations>
     <eAnnotations source="positions.26" references="/0/generateHtmlAction.1/aViewToModelRelation">
-      <details key="start" value="574"/>
-      <details key="end" value="616"/>
+      <details key="start" value="562"/>
+      <details key="end" value="604"/>
       <details key="line" value="12"/>
     </eAnnotations>
   </ecore:EAnnotation>

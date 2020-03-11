@@ -61,6 +61,10 @@ public enum ModelOperation implements Enumerator {
 	/**
 	 * The '<em><b>CREATE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>CREATE</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #CREATE
 	 * @model
@@ -72,6 +76,10 @@ public enum ModelOperation implements Enumerator {
 	/**
 	 * The '<em><b>READ</b></em>' literal value.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>READ</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #READ
 	 * @model
@@ -83,6 +91,10 @@ public enum ModelOperation implements Enumerator {
 	/**
 	 * The '<em><b>UPDATE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>UPDATE</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #UPDATE
 	 * @model
@@ -94,6 +106,10 @@ public enum ModelOperation implements Enumerator {
 	/**
 	 * The '<em><b>DELETE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>DELETE</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #DELETE
 	 * @model
@@ -214,7 +230,6 @@ public enum ModelOperation implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public int getValue() {
 		return value;
 	}
@@ -224,7 +239,6 @@ public enum ModelOperation implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getName() {
 		return name;
 	}
@@ -234,7 +248,6 @@ public enum ModelOperation implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getLiteral() {
 		return literal;
 	}

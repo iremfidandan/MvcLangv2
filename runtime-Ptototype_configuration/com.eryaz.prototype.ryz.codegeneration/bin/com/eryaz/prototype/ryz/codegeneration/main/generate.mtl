@@ -3,14 +3,13 @@
 
 [import com::eryaz::prototype::ryz::codegeneration::files::modelClassFile /]
 [import com::eryaz::prototype::ryz::codegeneration::files::dbContextClassFile /]
-[import com::eryaz::prototype::ryz::codegeneration::common::deprecated::viewModelClassFile /]
-[import com::eryaz::prototype::ryz::codegeneration::common::deprecated::oldViewFile /]
+[import com::eryaz::prototype::ryz::codegeneration::files::viewModelClassFile /]
+[import com::eryaz::prototype::ryz::codegeneration::files::viewFile /]
 [import com::eryaz::prototype::ryz::codegeneration::files::controllerClassFile /]
 [import com::eryaz::prototype::ryz::codegeneration::files::repositoryInterfaceFile /]
 [import com::eryaz::prototype::ryz::codegeneration::files::repositoryClassFile /]
 [import com::eryaz::prototype::ryz::codegeneration::files::unitOfWorkInterfaceFile /]
 [import com::eryaz::prototype::ryz::codegeneration::files::unitOfWorkClassFile /]
-[import com::eryaz::prototype::ryz::codegeneration::files::viewFile /]
 
 [template public generateElement(aProject : Project)]
 [comment @main/]
@@ -33,7 +32,6 @@
 [/for]
 
 [for (anAbstractView : AbstractView | aProject.packages->filter(ViewPackage).views)]
-[anAbstractView.generateNewViewFile()/]
+[generateViewFile(anAbstractView)/]
 [/for]
-
 [/template]

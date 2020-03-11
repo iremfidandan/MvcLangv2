@@ -61,7 +61,6 @@ public class ViewImpl extends AbstractViewImpl implements View {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Layout getLayout() {
 		if (layout != null && layout.eIsProxy()) {
 			InternalEObject oldLayout = (InternalEObject) layout;
@@ -89,7 +88,6 @@ public class ViewImpl extends AbstractViewImpl implements View {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setLayout(Layout newLayout) {
 		Layout oldLayout = layout;
 		layout = newLayout;

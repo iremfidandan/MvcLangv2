@@ -5,8 +5,8 @@ package com.eryaz.prototype.ryz.impl;
 import com.eryaz.prototype.ryz.Model;
 import com.eryaz.prototype.ryz.Property;
 import com.eryaz.prototype.ryz.RyzPackage;
-import com.eryaz.prototype.ryz.TableKey;
 
+import com.eryaz.prototype.ryz.TableKey;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -113,7 +113,6 @@ public class ModelImpl extends MainComponentImpl implements Model {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public boolean is›sAbstract() {
 		return isAbstract;
 	}
@@ -123,7 +122,6 @@ public class ModelImpl extends MainComponentImpl implements Model {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void set›sAbstract(boolean new›sAbstract) {
 		boolean old›sAbstract = isAbstract;
 		isAbstract = new›sAbstract;
@@ -137,7 +135,6 @@ public class ModelImpl extends MainComponentImpl implements Model {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EList<Property> getProperties() {
 		if (properties == null) {
 			properties = new EObjectContainmentEList<Property>(Property.class, this, RyzPackage.MODEL__PROPERT›ES);
@@ -150,7 +147,6 @@ public class ModelImpl extends MainComponentImpl implements Model {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Model get›nherits() {
 		if (inherits != null && inherits.eIsProxy()) {
 			InternalEObject old›nherits = (InternalEObject) inherits;
@@ -178,7 +174,6 @@ public class ModelImpl extends MainComponentImpl implements Model {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void set›nherits(Model new›nherits) {
 		Model old›nherits = inherits;
 		inherits = new›nherits;
@@ -191,7 +186,6 @@ public class ModelImpl extends MainComponentImpl implements Model {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EList<TableKey> getTablekeys() {
 		if (tablekeys == null) {
 			tablekeys = new EObjectContainmentEList<TableKey>(TableKey.class, this, RyzPackage.MODEL__TABLEKEYS);

@@ -3,7 +3,8 @@
 	Layout = null;
 }
 
-@model SportStore.Models.CartLine
+@model SportStore.ViewModels.CartLineViewModel
+
 
 
 
@@ -11,11 +12,16 @@
 @using(@Html.BeginForm("AddToCart", "Cart", new{}, FormMethod.Post))
 {
 	@Html.AntiForgeryToken()
-	<label for="Quantity">Quantity</label>
-	<input type="number" id="Quantity" name="Quantity"><br>
+	@Html.DisplayNameFor(model => model.Quantity) <br />
+	@Html.EditorFor(model => model.Quantity)  <br />
+	@Html.ValidationMessageFor(model => model.Quantity) <br />
+	@Html.DisplayNameFor(model => model.Cart) <br />
+	@Html.DropDownListFor(model => model.Cart_CartId, Model.Cart)<br />
 	
-
-	<input type="submit" name="Add To Cart" value="Add To Cart"><br>
+	@Html.DisplayNameFor(model => model.Product) <br />
+	@Html.DropDownListFor(model => model.Product_ProductId, Model.Product)<br />
+	
+	
+	<input type="submit" name="AddToCart" value="Add To Cart">
 }
-
 

@@ -19,22 +19,26 @@ namespace SportStore.Controllers{
 		
 		[HttpGet]
 		public ActionResult Click_AddToCart(int ProductId, int CartId){
-			CartLine CartLine = new CartLine();
-			Product Product = _uow.ProductRepository.Get(m => (m.ProductId == ProductId));
+			CartLineViewModel CartLineViewModel = new CartLineViewModel();
+			CartLineViewModel.Cart = new SelectList(_uow.CartRepository.GetAll(), "CartId", "CartId", CartLineViewModel.Cart_CartId);
 			
+			CartLineViewModel.Product = new SelectList(_uow.ProductRepository.GetAll(), "ProductId", "ProductId", CartLineViewModel.Product_ProductId);
+			
+			Product Product = _uow.ProductRepository.Get(m => (m.ProductId == ProductId));
 		
 			Cart Cart = _uow.CartRepository.Get(m => (m.CartId == CartId));
-			
 		
-			return View("~/Views/Cart/AddToCartPage.cshtml", CartLine);
+			return View("~/Views/Cart/AddToCartPage.cshtml", CartLineViewModel
+			);
 		}
 
 		
 		[HttpGet]
 		public ActionResult RemoveFromCart(int Product_ProductId, int Cart_CartId){
-			CartLine CartLine = _uow.CartLineRepository.Get(m => (m.Cart_CartId == Cart_CartId) && (m.Product_ProductId == Product_ProductId));
+			CartLine CartLine = _uow.CartLineRepository.Get(m => (m.Product_ProductId == Product_ProductId) && (m.Cart_CartId == Cart_CartId));
 		
-			return View("~/Views/Cart/RemoveFromCartPage.cshtml", CartLine);
+			return View("~/Views/Cart/RemoveFromCartPage.cshtml", CartLine
+			);
 		}
 
 		
@@ -42,14 +46,25 @@ namespace SportStore.Controllers{
 		public ActionResult Click_CheckOut(int Cart_CartId){
 			List<CartLine> CartLine = _uow.CartLineRepository.GetAll(m => (m.Cart_CartId == Cart_CartId)).ToList();
 		
-			return View("~/Views/Cart/CheckoutPage.cshtml", CartLine);
+			return View("~/Views/Cart/CheckoutPage.cshtml", CartLine
+			);
 		}
 
 		[ValidateAntiForgeryToken]
 		[HttpPost]
-		public ActionResult AddToCart(){
+		public ActionResult AddToCart([Bind(Include = "Quantity")]CartLineViewModel CartLineViewModel){
 			CartLine CartLine = new CartLine();
-			TryUpdateModel<CartLine>(CartLine, new string[]{nameof(CartLine.Quantity)});
+			
+			
+			CartLine.Quantity = CartLineViewModel.Quantity;
+			
+			
+			CartLine.Cart = _uow.CartRepository.Get(m => CartLineViewModel.Cart_CartId == m.CartId);
+			
+			CartLine.Product = _uow.ProductRepository.Get(m => CartLineViewModel.Product_ProductId == m.ProductId);
+			
+			
+			
 			_uow.CartLineRepository.Add(CartLine);
 			_uow.Complete();
 		

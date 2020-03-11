@@ -27,6 +27,10 @@ public interface ViewToControllerRelation extends MainComponentRelation {
 	/**
 	 * Returns the value of the '<em><b>Helperforsendingrequest</b></em>' reference.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Helperforsendingrequest</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Helperforsendingrequest</em>' reference.
 	 * @see #setHelperforsendingrequest(HelperForSendingRequest)
@@ -49,6 +53,10 @@ public interface ViewToControllerRelation extends MainComponentRelation {
 	/**
 	 * Returns the value of the '<em><b>Actionmethod</b></em>' reference.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Actionmethod</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Actionmethod</em>' reference.
 	 * @see #setActionmethod(ActionMethod)
@@ -71,6 +79,10 @@ public interface ViewToControllerRelation extends MainComponentRelation {
 	/**
 	 * Returns the value of the '<em><b>Model</b></em>' reference.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Model</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Model</em>' reference.
 	 * @see #setModel(Model)
@@ -94,6 +106,10 @@ public interface ViewToControllerRelation extends MainComponentRelation {
 	 * Returns the value of the '<em><b>Properties</b></em>' reference list.
 	 * The list contents are of type {@link com.eryaz.prototype.ryz.Property}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Properties</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Properties</em>' reference list.
 	 * @see com.eryaz.prototype.ryz.RyzPackage#getViewToControllerRelation_Properties()

@@ -43,9 +43,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="renders" upperBound="-1"
         eType="#//Partial"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="htmlelements" upperBound="-1"
-        eType="#//HelperForSendingRequest" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="presentationelement" upperBound="-1"
-        eType="#//PresentationElement" containment="true"/>
+        eType="#//HtmlElement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Controller" eSuperTypes="#//MainComponent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="actionmethods" upperBound="-1"
@@ -91,8 +89,6 @@
         eType="#//Parameter" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="returns" lowerBound="1"
         eType="#//ActionMethodReturnType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="usecase" upperBound="-1"
-        eType="#//UseCase" eOpposite="#//UseCase/actionmethod"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Layout" eSuperTypes="#//AbstractView"/>
   <eClassifiers xsi:type="ecore:EClass" name="View" eSuperTypes="#//AbstractView">
@@ -131,6 +127,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="modelOperation" lowerBound="1"
         eType="#//ModelOperation"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HtmlElement" abstract="true" eSuperTypes="#//NamedElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="ActionLink" eSuperTypes="#//HelperForSendingRequest"/>
   <eClassifiers xsi:type="ecore:EClass" name="Form" eSuperTypes="#//HelperForSendingRequest"/>
   <eClassifiers xsi:type="ecore:EEnum" name="RequestType">
@@ -141,16 +138,13 @@
     <eLiterals name="GET"/>
     <eLiterals name="POST" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="HelperForSendingRequest" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="HelperForSendingRequest" abstract="true"
+      eSuperTypes="#//HtmlElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="requestType" lowerBound="1"
         eType="#//RequestType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="httpMethod" lowerBound="1"
         eType="#//HttpMethod"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="usecase" upperBound="-1"
-        eType="#//UseCase" eOpposite="#//UseCase/helperforsendingrequest"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="presentationelement" upperBound="-1"
-        eType="#//PresentationElement" eOpposite="#//PresentationElement/helperforsendingrequest"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ModelCardinality">
     <eLiterals name="ONE"/>
@@ -192,111 +186,5 @@
         eType="#//ModelCardinality"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
         eType="#//Property"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UseCaseActorPackage" eSuperTypes="#//Package">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="actors" upperBound="-1"
-        eType="#//Actor" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="usecasepackages" upperBound="-1"
-        eType="#//UseCasePackage" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Actor" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="usecase" upperBound="-1"
-        eType="#//UseCase" eOpposite="#//UseCase/actor"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UseCase" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="actor" upperBound="-1"
-        eType="#//Actor" eOpposite="#//Actor/usecase"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="helperforsendingrequest"
-        upperBound="-1" eType="#//HelperForSendingRequest" eOpposite="#//HelperForSendingRequest/usecase"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="actionmethod" upperBound="-1"
-        eType="#//ActionMethod" eOpposite="#//ActionMethod/usecase"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UseCasePackage" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="usecases" upperBound="-1"
-        eType="#//UseCase" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PresentationElement" abstract="true"
-      eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="helperforsendingrequest"
-        upperBound="-1" eType="#//HelperForSendingRequest" eOpposite="#//HelperForSendingRequest/presentationelement"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PresentationForm" eSuperTypes="#//PresentationElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="presentationformelement"
-        upperBound="-1" eType="#//PresentationFormElement" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MultipleChoice" eSuperTypes="#//PresentationFormElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="choice" upperBound="-1"
-        eType="#//Choice" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="multipleChoiceType" lowerBound="1"
-        eType="#//MultipleChoiceType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="multipleSelection" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Choice">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="selected" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
-        defaultValueLiteral="false"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Button" eSuperTypes="#//PresentationFormElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="buttonType" lowerBound="1"
-        eType="#//ButtonType"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PresentationFormElement" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="labelText" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Input" eSuperTypes="#//PresentationFormElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputDataType" lowerBound="1"
-        eType="#//InputDataType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isReadOnly" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isHidden" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="MultipleChoiceType">
-    <eLiterals name="RADIO_BUTTON"/>
-    <eLiterals name="CHECKBOX_GROUP" value="1"/>
-    <eLiterals name="DROPDOWN_LIST" value="2"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="ButtonType">
-    <eLiterals name="SUBMIT"/>
-    <eLiterals name="RESET" value="1"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="InputDataType">
-    <eLiterals name="TEXT"/>
-    <eLiterals name="NUMBER" value="1"/>
-    <eLiterals name="PASSWORD" value="2"/>
-    <eLiterals name="EMAIL" value="3"/>
-    <eLiterals name="TEL" value="4"/>
-    <eLiterals name="DATE" value="5"/>
-    <eLiterals name="TIME" value="6"/>
-    <eLiterals name="FILE" value="7"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="#//PresentationElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Table" eSuperTypes="#//PresentationElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="header" upperBound="-1"
-        eType="#//Header" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Header">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="labelText" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FormElementToPropertyKeyRelation" eSuperTypes="#//MainComponentRelation">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="helperforsendingrequest"
-        lowerBound="1" eType="#//HelperForSendingRequest"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="model" lowerBound="1" eType="#//Model"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="presentationformelementtoproperty"
-        upperBound="-1" eType="#//PresentationFormElementToPropertyKey" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PresentationFormElementToPropertyKey">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="presentationformelement"
-        lowerBound="1" eType="#//PresentationFormElement"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="property" eType="#//Property"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tablekey" eType="#//TableKey"/>
   </eClassifiers>
 </ecore:EPackage>

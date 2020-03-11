@@ -41,6 +41,10 @@ public enum HttpMethod implements Enumerator {
 	/**
 	 * The '<em><b>GET</b></em>' literal value.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>GET</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #GET
 	 * @model
@@ -52,6 +56,10 @@ public enum HttpMethod implements Enumerator {
 	/**
 	 * The '<em><b>POST</b></em>' literal value.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>POST</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #POST
 	 * @model
@@ -168,7 +176,6 @@ public enum HttpMethod implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public int getValue() {
 		return value;
 	}
@@ -178,7 +185,6 @@ public enum HttpMethod implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getName() {
 		return name;
 	}
@@ -188,7 +194,6 @@ public enum HttpMethod implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public String getLiteral() {
 		return literal;
 	}

@@ -1,7 +1,7 @@
 [comment encoding = UTF-8 /]
 [module actionMethod('http://www.eryaz.com/prototype/ryz')]
 
-[import com::eryaz::prototype::ryz::codegeneration::common::enumtypes::httpMethodTypeForActionMethod/]
+[import com::eryaz::prototype::ryz::codegeneration::common::httpMethodTypeForActionMethod/]
 [import com::eryaz::prototype::ryz::codegeneration::common::mvcRelations /]
 [import com::eryaz::prototype::ryz::codegeneration::common::operationCreateForModel /]
 [import com::eryaz::prototype::ryz::codegeneration::common::operationReadForModel /]
@@ -9,7 +9,7 @@
 [import com::eryaz::prototype::ryz::codegeneration::common::operationDeleteForModel /]
 [import com::eryaz::prototype::ryz::codegeneration::common::returnStatement /]
 [import com::eryaz::prototype::ryz::codegeneration::common::actionMethodParameters /]
-
+[import com::eryaz::prototype::ryz::codegeneration::common::returnViewPartialViewLambdaInference /]
 
 [template public generateActionMethod(anActionMethod : ActionMethod)]
 [if (anActionMethod.httpMethod = HttpMethod::POST)][ '[' /]ValidateAntiForgeryToken[ ']' /][/if]

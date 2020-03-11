@@ -10,16 +10,13 @@ import com.eryaz.prototype.ryz.RyzPackage;
 import com.eryaz.prototype.ryz.ViewToControllerRelation;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -103,7 +100,6 @@ public class ViewToControllerRelationImpl extends MainComponentRelationImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public HelperForSendingRequest getHelperforsendingrequest() {
 		if (helperforsendingrequest != null && helperforsendingrequest.eIsProxy()) {
 			InternalEObject oldHelperforsendingrequest = (InternalEObject) helperforsendingrequest;
@@ -132,7 +128,6 @@ public class ViewToControllerRelationImpl extends MainComponentRelationImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setHelperforsendingrequest(HelperForSendingRequest newHelperforsendingrequest) {
 		HelperForSendingRequest oldHelperforsendingrequest = helperforsendingrequest;
 		helperforsendingrequest = newHelperforsendingrequest;
@@ -147,7 +142,6 @@ public class ViewToControllerRelationImpl extends MainComponentRelationImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public ActionMethod getActionmethod() {
 		if (actionmethod != null && actionmethod.eIsProxy()) {
 			InternalEObject oldActionmethod = (InternalEObject) actionmethod;
@@ -175,7 +169,6 @@ public class ViewToControllerRelationImpl extends MainComponentRelationImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setActionmethod(ActionMethod newActionmethod) {
 		ActionMethod oldActionmethod = actionmethod;
 		actionmethod = newActionmethod;
@@ -189,7 +182,6 @@ public class ViewToControllerRelationImpl extends MainComponentRelationImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public Model getModel() {
 		if (model != null && model.eIsProxy()) {
 			InternalEObject oldModel = (InternalEObject) model;
@@ -217,7 +209,6 @@ public class ViewToControllerRelationImpl extends MainComponentRelationImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public void setModel(Model newModel) {
 		Model oldModel = model;
 		model = newModel;
@@ -231,7 +222,6 @@ public class ViewToControllerRelationImpl extends MainComponentRelationImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	public EList<Property> getProperties() {
 		if (properties == null) {
 			properties = new EObjectResolvingEList<Property>(Property.class, this,

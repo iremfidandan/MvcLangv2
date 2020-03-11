@@ -3,16 +3,16 @@
 
 [import com::eryaz::prototype::ryz::codegeneration::common::mvcRelations /]
 [import com::eryaz::prototype::ryz::codegeneration::common::redirectToActionParameters /]
-[import com::eryaz::prototype::ryz::codegeneration::common::inferences::returnViewPartialViewInference /]
+[import com::eryaz::prototype::ryz::codegeneration::common::returnViewPartialViewInference /]
 
 
-[template public generateReturnStatement(anActionMethod : ActionMethod) ? (anActionMethod.returns = ActionMethodReturnType::View) { aControllerToViewRelation : ControllerToViewRelation = anActionMethod.getControllerToViewRelationForActionMethod(); }]
-return View("~/Views/[aControllerToViewRelation.returns.eContainer(ViewPackage).name/]/[aControllerToViewRelation.returns.name/].cshtml"[aControllerToViewRelation.generateReturnViewPartialViewInference()/]);
+[template public generateReturnStatement(anActionMethod : ActionMethod) ? (anActionMethod.returns = ActionMethodReturnType::View)]
+return View("~/Views/[anActionMethod.getControllerToViewRelationForActionMethod().returns.eContainer(ViewPackage).name/]/[anActionMethod.getControllerToViewRelationForActionMethod().returns.name/].cshtml"[generateReturnViewPartialViewInference(anActionMethod.getControllerToViewRelationForActionMethod())/]);
 [/template]
 
 
-[template public generateReturnStatement(anActionMethod : ActionMethod) ? (anActionMethod.returns = ActionMethodReturnType::PartialView) { aControllerToViewRelation : ControllerToViewRelation = anActionMethod.getControllerToViewRelationForActionMethod(); }]
-return PartialView("~/Views/[aControllerToViewRelation.returns.eContainer(ViewPackage).name/]/[aControllerToViewRelation.returns.name/].cshtml"[aControllerToViewRelation.generateReturnViewPartialViewInference()/]);
+[template public generateReturnStatement(anActionMethod : ActionMethod) ? (anActionMethod.returns = ActionMethodReturnType::PartialView)]
+return PartialView("~/Views/[anActionMethod.getControllerToViewRelationForActionMethod().returns.eContainer(ViewPackage).name/]/[anActionMethod.getControllerToViewRelationForActionMethod().returns.name/].cshtml"[generateReturnViewPartialViewInference(anActionMethod.getControllerToViewRelationForActionMethod())/]);
 [/template]
 
 

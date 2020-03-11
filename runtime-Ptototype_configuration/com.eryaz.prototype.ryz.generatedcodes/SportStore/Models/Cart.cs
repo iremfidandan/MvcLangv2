@@ -6,7 +6,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace SportStore.Models{
 	public class Cart{
 		public int TotalValue {get; set;}
-		
 
 		[Key]
 		public int CartId {get; set;}

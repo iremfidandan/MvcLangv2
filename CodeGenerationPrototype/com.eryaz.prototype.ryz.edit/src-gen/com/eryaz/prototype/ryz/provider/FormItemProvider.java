@@ -3,7 +3,6 @@
 package com.eryaz.prototype.ryz.provider;
 
 import com.eryaz.prototype.ryz.Form;
-import com.eryaz.prototype.ryz.RequestType;
 
 import java.util.Collection;
 import java.util.List;
@@ -74,8 +73,7 @@ public class FormItemProvider extends HelperForSendingRequestItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		RequestType labelValue = ((Form) object).getRequestType();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((Form) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_Form_type")
 				: getString("_UI_Form_type") + " " + label;
 	}

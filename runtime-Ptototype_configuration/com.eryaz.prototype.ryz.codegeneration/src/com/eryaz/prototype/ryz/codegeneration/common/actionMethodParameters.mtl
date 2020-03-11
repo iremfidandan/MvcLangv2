@@ -1,14 +1,31 @@
 [comment encoding = UTF-8 /]
 [module actionMethodParameters('http://www.eryaz.com/prototype/ryz')]
 
+[import com::eryaz::prototype::ryz::codegeneration::common::mvcRelations /]
+[import com::eryaz::prototype::ryz::codegeneration::common::actionMethodViewModelParameter /]
 [import com::eryaz::prototype::ryz::codegeneration::common::actionMethodRequiredParameter /]
 [import com::eryaz::prototype::ryz::codegeneration::common::actionMethodOptionalParameter /]
 
 
-[template public generateActionMethodParameters(anActionMethod : ActionMethod)]
+[template public generateActionMethodParameters(anActionMethod : ActionMethod) ? (httpMethod = HttpMethod::GET)]
 [for (reqParamSeq(anActionMethod)->addAll(optParamSeq(anActionMethod))) separator (', ')][self/][/for]
 [/template]
 
+[template public generateActionMethodParameters(anActionMethod : ActionMethod) ? (httpMethod = HttpMethod::POST)]
+[for (viewModelParamSeq(anActionMethod)->addAll(reqParamSeq(anActionMethod)->addAll(optParamSeq(anActionMethod)))) separator (', ')][self/][/for]
+[/template]
+
+[query private getControllerToModelRelations(anActionMethod : ActionMethod) : Set(ControllerToModelRelation) = 
+getControllerToModelRelationsInProject(anActionMethod.eContainer(Project))->select(r | r.actionmethod = anActionMethod)
+/]
+
+[query private getCreateOrUpdateModels(anActionMethod : ActionMethod) : Set(ControllerToModelRelation) = 
+getControllerToModelRelations(anActionMethod)->select(r | (r.modelOperation = ModelOperation::CREATE)._or(r.modelOperation = ModelOperation::UPDATE))
+/]
+
+[query private viewModelParamSeq(anActionMethod : ActionMethod) : Sequence(String) = 
+getCreateOrUpdateModels(anActionMethod)->collect(r | generateActionMethodViewModelParameter(r))->asSequence()
+/]
 
 [query private reqParamSeq(anActionMethod : ActionMethod) : Sequence(String) = 
 anActionMethod.parameters->select(p | (p.isNullable)._not())->collect(p | generateActionMethodRequiredParameter(p))

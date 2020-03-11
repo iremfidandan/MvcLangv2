@@ -1,7 +1,7 @@
 [comment encoding = UTF-8 /]
 [module operationDeleteForModel('http://www.eryaz.com/prototype/ryz')]
 
-[import com::eryaz::prototype::ryz::codegeneration::common::inferences::actionMethodLambdaExpInference/]
+[import com::eryaz::prototype::ryz::codegeneration::common::actionMethodLambdaExpInference/]
 
 [comment BEGIN FOR ONE /]
 

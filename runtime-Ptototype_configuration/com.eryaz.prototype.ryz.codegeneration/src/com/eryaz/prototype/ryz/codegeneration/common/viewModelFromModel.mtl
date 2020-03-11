@@ -1,0 +1,26 @@
+[comment encoding = UTF-8 /]
+[module viewModelFromModel('http://www.eryaz.com/prototype/ryz')]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::modelAssociations /]
+[import com::eryaz::prototype::ryz::codegeneration::common::viewModelFromModelAssignment /]
+
+
+[template public generateViewModelFromModel(aControllerToModelRelation : ControllerToModelRelation)]
+
+[for (aModel : Model | aControllerToModelRelation.model->closure(inherits)->including(aControllerToModelRelation.model))]
+
+[for (aProperty : Property | aModel.properties) separator ('\n')]
+[aControllerToModelRelation.model.name/]ViewModel.[aProperty.name/] = [aControllerToModelRelation.model.name/].[aProperty.name/];
+[/for]
+
+[for (aModelAssociation : ModelAssociation | aModel.getModelAssociationsThatModelAsPrincipalEntity()) separator ('\n')]
+[aControllerToModelRelation.model.name/]ViewModel.[aModelAssociation.dependentRoleName/]_[aModelAssociation.dependent.name/]Id = [aModelAssociation.generateViewModelFromModelAssignmentForPrincipalEntity(aControllerToModelRelation.model)/]
+[/for]
+
+[for (aModelAssociation : ModelAssociation | aModel.getModelAssociationsThatModelAsDependentEntity()) separator ('\n')]
+[aControllerToModelRelation.model.name/]ViewModel.[aModelAssociation.principalRoleName/]_[aModelAssociation.principal.name/]Id = [aModelAssociation.generateViewModelFromModelAssignmentForDependentEntity(aControllerToModelRelation.model)/]
+[/for]
+
+[/for]
+
+[/template]
