@@ -1,0 +1,14 @@
+
+
+@model SportStore.Models.Product
+
+
+
+
+@using(@Html.BeginForm("DeleteProduct", "Admin", new{ProductId = Model.ProductId}, FormMethod.Post))
+{
+	@Html.AntiForgeryToken()
+	<input type="submit" name="Delete Product" value="Delete Product"><br>
+}
+
+

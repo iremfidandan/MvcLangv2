@@ -1,0 +1,94 @@
+[comment encoding = UTF-8 /]
+[module oldViewFile('http://www.eryaz.com/prototype/ryz')]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::layoutDeclaration /]
+[import com::eryaz::prototype::ryz::codegeneration::common::mvcRelations /]
+[import com::eryaz::prototype::ryz::codegeneration::common::modelDeclaration /]
+[import com::eryaz::prototype::ryz::codegeneration::common::deprecated::viewModelDeclaration /]
+[import com::eryaz::prototype::ryz::codegeneration::common::deprecated::oldActionLink /]
+[import com::eryaz::prototype::ryz::codegeneration::common::modelDisplay /]
+[import com::eryaz::prototype::ryz::codegeneration::common::deprecated::form /]
+[import com::eryaz::prototype::ryz::codegeneration::common::htmlPartial /]
+[import com::eryaz::prototype::ryz::codegeneration::common::htmlAction /]
+
+[template public generateOldViewFile(anAbstractView : AbstractView)]
+
+[file (anAbstractView.eContainer(Project).name + '/OldViews/' + anAbstractView.eContainer(ViewPackage).name + '/' + anAbstractView.name + '.cshtml', false, 'UTF-8')]
+
+[if (anAbstractView.oclIsTypeOf(View))]
+[anAbstractView.oclAsType(View).generateLayoutDeclaration()/]
+[/if]
+
+[if (anAbstractView.getViewToModelRelationForAbstractView().oclIsUndefined()._not())]
+[if (isViewModel(anAbstractView))]
+[generateViewModelDeclaration(anAbstractView.getViewToModelRelationForAbstractView())/]
+[else]
+[generateModelDeclaration(anAbstractView.getViewToModelRelationForAbstractView())/]
+[/if]
+[/if]
+
+[if (anAbstractView.oclIsTypeOf(Layout))]
+@RenderBody()
+[/if]
+
+[for (aPartial : Partial | getStaticPartials(anAbstractView)) separator ('\n')]
+[generateHtmlPartial(aPartial)/]
+[/for]
+
+[for (aPartial : Partial | getDynamicPartials(anAbstractView)) separator ('\n')]
+[for (anActionMethod : ActionMethod | getPartialActionMethods(aPartial)) separator ('\n')]
+[if (anAbstractView.getViewToModelRelationForAbstractView().oclIsUndefined())]
+[anActionMethod.generateHtmlAction()/]
+[else]
+[anActionMethod.generateHtmlAction(anAbstractView.getViewToModelRelationForAbstractView())/]
+[/if]
+[/for]
+[/for]
+
+[comment bu dongu Runtime hatasý veriyor. /]
+[for (anActionLink : ActionLink | anAbstractView.htmlelements->filter(ActionLink)) separator ('\n')]
+[anActionLink.generateOldActionLink()/]
+[/for]
+
+[for (aForm : Form | anAbstractView.htmlelements->filter(Form)) separator ('\n')]
+[aForm.generateForm()/]
+[/for]
+
+[if (anAbstractView.getViewToModelRelationForAbstractView().oclIsUndefined()._not())]
+[if (anAbstractView.htmlelements->filter(Form)->isEmpty())]
+[anAbstractView.getViewToModelRelationForAbstractView().generateModelDisplay()/]
+[/if]
+[/if]
+[/file]
+[/template]
+
+
+
+
+[query private getViewToModelRelationForAbstractView(anAbstractView : AbstractView) : ViewToModelRelation = 
+anAbstractView.eContainer(Project).getViewToModelRelationsInProject()->any(r | r.abstractview = anAbstractView)
+/]
+
+[query private getViewToControllerRelationForAbstractView(anAbstractView : AbstractView) : ViewToControllerRelation = 
+anAbstractView.eContainer(Project).getViewToControllerRelationsInProject()->any(r | anAbstractView.htmlelements->filter(Form)->includes(r.helperforsendingrequest))
+/]
+
+[query private getControllerToModelOperation(anAbstractView : AbstractView) : ControllerToModelRelation = 
+anAbstractView.eContainer(Project).getControllerToModelRelationsInProject()->any(r | r.actionmethod = getViewToControllerRelationForAbstractView(anAbstractView).actionmethod) 
+/]
+
+[query private isViewModel(anAbstractView : AbstractView) : Boolean = 
+(getControllerToModelOperation(anAbstractView).modelOperation = ModelOperation::CREATE)._or(getControllerToModelOperation(anAbstractView).modelOperation = ModelOperation::UPDATE)
+/]
+
+[query private getPartialActionMethods(aPartial : Partial) : Bag(ActionMethod) = 
+aPartial.eContainer(Project).getControllerToViewRelationsInProject()->select(r | r.returns = aPartial).actionmethod
+/]
+
+[query private getStaticPartials(anAbstractView : AbstractView) : Set(Partial) = 
+anAbstractView.renders->select(e | e.getPartialActionMethods()->isEmpty())
+/]
+
+[query private getDynamicPartials(anAbstractView : AbstractView) : Set(Partial) = 
+anAbstractView.renders->select(e | e.getPartialActionMethods()->isEmpty()._not())
+/]

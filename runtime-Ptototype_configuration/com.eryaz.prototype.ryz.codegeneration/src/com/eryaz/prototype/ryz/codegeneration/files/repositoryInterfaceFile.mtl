@@ -1,0 +1,32 @@
+[comment encoding = UTF-8 /]
+[module repositoryInterfaceFile('http://www.eryaz.com/prototype/ryz')]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::using /]
+
+
+[comment https://stackoverflow.com/questions/38853944/minimal-repository-implementation-using-entity-framework /]
+
+[template public generateRepositoryInterfaceFile(aProject : Project)]
+[file (aProject.name + '/DAL/IRepository.cs', false, 'UTF-8')]
+[for (Sequence{'System', 'System.Collections.Generic', 'System.Linq.Expressions'})]
+[self.generateUsing()/]
+[/for]
+
+//https://stackoverflow.com/questions/38853944/minimal-repository-implementation-using-entity-framework
+
+namespace [aProject.name/].DAL{
+	public interface IRepository<TEntity> where TEntity : class
+	{
+    	TEntity Get(Expression<Func<TEntity, bool>> predicate);
+    	IEnumerable<TEntity> GetAll();
+    	IEnumerable<TEntity> GetAll(Expression<Func<TEntity, bool>> predicate);
+
+    	void Add(TEntity entity);
+   	 	void AddAll(IEnumerable<TEntity> entities);
+
+    	void Remove(TEntity entity);
+    	void RemoveAll(IEnumerable<TEntity> entities);
+	}
+}
+[/file]
+[/template]

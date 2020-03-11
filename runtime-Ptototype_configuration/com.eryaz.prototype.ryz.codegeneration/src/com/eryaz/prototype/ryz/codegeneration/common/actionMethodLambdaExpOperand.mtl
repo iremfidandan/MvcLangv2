@@ -1,0 +1,12 @@
+[comment encoding = UTF-8 /]
+[module actionMethodLambdaExpOperand('http://www.eryaz.com/prototype/ryz')]
+
+
+[template public generateActionMethodLambdaExpOperand(aParameter : Parameter) ? (aParameter.isList._not())]
+(m.[aParameter.name/] == [aParameter.name/])
+[/template]
+
+
+[template public generateActionMethodLambdaExpOperand(aParameter : Parameter) ? (aParameter.isList)]
+([aParameter.name/].Contains(m.[aParameter.name/]))
+[/template]

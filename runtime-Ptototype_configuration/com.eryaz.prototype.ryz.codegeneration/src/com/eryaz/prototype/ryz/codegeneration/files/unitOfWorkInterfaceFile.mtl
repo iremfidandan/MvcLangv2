@@ -1,0 +1,26 @@
+[comment encoding = UTF-8 /]
+[module unitOfWorkInterfaceFile('http://www.eryaz.com/prototype/ryz')]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::using /]
+
+[template public generateUnitOfWorkInterfaceFile(aProject : Project)]
+[file (aProject.name + '/DAL/IUnitOfWork.cs', false, 'UTF-8')]
+
+[for (Sequence{aProject.name + '.Models', 'System'})]
+[self.generateUsing()/]
+[/for]
+
+//https://stackoverflow.com/questions/38853944/minimal-repository-implementation-using-entity-framework
+
+namespace [aProject.name/].DAL{
+	public interface IUnitOfWork : IDisposable
+	{
+		[for (aModel : Model | aProject.packages->filter(ModelPackage).models)]
+		IRepository<[aModel.name/]> [aModel.name/]Repository {get;}
+		[/for]
+
+		void Complete();
+	}
+}
+[/file]
+[/template]

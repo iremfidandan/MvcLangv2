@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="modelAssociations" nsURI="com::eryaz::prototype::ryz::codegeneration::common::modelAssociations" startHeaderPosition="29" endHeaderPosition="312">
+    <input>
+      <takesTypesFrom href="http://www.eryaz.com/prototype/ryz#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Query" name="getModelAssociationsThatModelAsDependentEntity" visibility="Public" type="/3/Set(ModelAssociation)">
+      <parameter name="aModel">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:OperationCallExp" eType="/3/Set(ModelAssociation)">
+        <source xsi:type="ocl.ecore:IteratorExp" name="select" eType="/3/Sequence(ModelAssociation)">
+          <source xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/3/Sequence(ModelAssociation)">
+            <source xsi:type="ocl.ecore:OperationCallExp" eType="/3/OrderedSet(ModelPackage)" referredOperation="/1/oclstdlib_Collection(T)_Class/filter">
+              <source xsi:type="ocl.ecore:PropertyCallExp" eType="/3/OrderedSet(Package)">
+                <source xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/ecore_EObject_Class/eContainer">
+                  <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="aModel" referredVariable="/0/getModelAssociationsThatModelAsDependentEntity/aModel">
+                    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+                  </source>
+                  <argument xsi:type="ocl.ecore:TypeExp" eType="/5/Project">
+                    <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+                  </argument>
+                </source>
+                <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//Project/packages"/>
+              </source>
+              <argument xsi:type="ocl.ecore:TypeExp" eType="/5/ModelPackage">
+                <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ModelPackage"/>
+              </argument>
+            </source>
+            <body xsi:type="ocl.ecore:PropertyCallExp" eType="/3/OrderedSet(ModelAssociation)">
+              <source xsi:type="ocl.ecore:VariableExp" name="temp1" referredVariable="/0/getModelAssociationsThatModelAsDependentEntity/%/select/collect/temp1">
+                <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ModelPackage"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ModelPackage/modelassociations"/>
+            </body>
+            <iterator xsi:type="ocl.ecore:Variable" name="temp1">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ModelPackage"/>
+            </iterator>
+          </source>
+          <body xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="temp2" referredVariable="/0/getModelAssociationsThatModelAsDependentEntity/%/select/temp2">
+                <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ModelAssociation"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ModelAssociation/dependent"/>
+            </source>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aModel" referredVariable="/0/getModelAssociationsThatModelAsDependentEntity/aModel">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+          </body>
+          <iterator xsi:type="ocl.ecore:Variable" name="temp2">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ModelAssociation"/>
+          </iterator>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/asSet"/>
+      </expression>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="getModelAssociationsThatModelAsPrincipalEntity" visibility="Public" type="/3/Set(ModelAssociation)">
+      <parameter name="aModel">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:OperationCallExp" eType="/3/Set(ModelAssociation)">
+        <source xsi:type="ocl.ecore:IteratorExp" name="select" eType="/3/Sequence(ModelAssociation)">
+          <source xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/3/Sequence(ModelAssociation)">
+            <source xsi:type="ocl.ecore:OperationCallExp" eType="/3/OrderedSet(ModelPackage)" referredOperation="/1/oclstdlib_Collection(T)_Class/filter">
+              <source xsi:type="ocl.ecore:PropertyCallExp" eType="/3/OrderedSet(Package)">
+                <source xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/ecore_EObject_Class/eContainer">
+                  <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+                  <source xsi:type="ocl.ecore:VariableExp" name="aModel" referredVariable="/0/getModelAssociationsThatModelAsPrincipalEntity/aModel">
+                    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+                  </source>
+                  <argument xsi:type="ocl.ecore:TypeExp" eType="/5/Project">
+                    <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+                  </argument>
+                </source>
+                <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//Project/packages"/>
+              </source>
+              <argument xsi:type="ocl.ecore:TypeExp" eType="/5/ModelPackage">
+                <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ModelPackage"/>
+              </argument>
+            </source>
+            <body xsi:type="ocl.ecore:PropertyCallExp" eType="/3/OrderedSet(ModelAssociation)">
+              <source xsi:type="ocl.ecore:VariableExp" name="temp1" referredVariable="/0/getModelAssociationsThatModelAsPrincipalEntity/%/select/collect/temp3">
+                <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ModelPackage"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ModelPackage/modelassociations"/>
+            </body>
+            <iterator xsi:type="ocl.ecore:Variable" name="temp3">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ModelPackage"/>
+            </iterator>
+          </source>
+          <body xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="temp2" referredVariable="/0/getModelAssociationsThatModelAsPrincipalEntity/%/select/temp4">
+                <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ModelAssociation"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ModelAssociation/principal"/>
+            </source>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aModel" referredVariable="/0/getModelAssociationsThatModelAsPrincipalEntity/aModel">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+          </body>
+          <iterator xsi:type="ocl.ecore:Variable" name="temp4">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ModelAssociation"/>
+          </iterator>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/asSet"/>
+      </expression>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="eContainer">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/acceleo/mtl/3.0/mtlnonstdlib.ecore#//OclAny"/>
+        <eParameters name="filter">
+          <eType xsi:type="ocl.ecore:TypeType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclType"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="getModelAssociationsThatModelAsDependentEntity" eType="/3/Set(ModelAssociation)">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/getModelAssociationsThatModelAsDependentEntity"/>
+        <eParameters name="aModel">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="getModelAssociationsThatModelAsPrincipalEntity" eType="/3/Set(ModelAssociation)">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/getModelAssociationsThatModelAsPrincipalEntity"/>
+        <eParameters name="aModel">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+      <eOperations name="filter">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:CollectionType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+        <eParameters name="filter">
+          <eType xsi:type="ocl.ecore:TypeType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclType"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ryz_Model_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eryaz.com/prototype/ryz#//Model"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(ModelAssociation)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ModelAssociation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Package)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Package"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(ModelPackage)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ModelPackage"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(ModelAssociation)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ModelAssociation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(ModelAssociation)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ModelAssociation"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="types">
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="Project">
+      <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="ModelPackage">
+      <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ModelPackage"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/getModelAssociationsThatModelAsDependentEntity">
+      <details key="start" value="95"/>
+      <details key="end" value="314"/>
+      <details key="line" value="4"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/getModelAssociationsThatModelAsDependentEntity/aModel">
+      <details key="start" value="156"/>
+      <details key="end" value="170"/>
+      <details key="line" value="4"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/getModelAssociationsThatModelAsDependentEntity/%">
+      <details key="start" value="199"/>
+      <details key="end" value="311"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/getModelAssociationsThatModelAsDependentEntity/%/select">
+      <details key="start" value="199"/>
+      <details key="end" value="302"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/getModelAssociationsThatModelAsDependentEntity/%/select/collect">
+      <details key="start" value="199"/>
+      <details key="end" value="274"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/getModelAssociationsThatModelAsDependentEntity/%/select/collect/%">
+      <details key="start" value="199"/>
+      <details key="end" value="256"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/getModelAssociationsThatModelAsDependentEntity/%/select/collect/%/%">
+      <details key="start" value="199"/>
+      <details key="end" value="234"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/getModelAssociationsThatModelAsDependentEntity/%/select/collect/%/%/%">
+      <details key="start" value="199"/>
+      <details key="end" value="225"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/getModelAssociationsThatModelAsDependentEntity/%/select/collect/%/%/%/aModel">
+      <details key="start" value="199"/>
+      <details key="end" value="205"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/getModelAssociationsThatModelAsDependentEntity/%/select/collect/%/%/%/%">
+      <details key="start" value="217"/>
+      <details key="end" value="224"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/getModelAssociationsThatModelAsDependentEntity/%/select/collect/%/%.1">
+      <details key="start" value="243"/>
+      <details key="end" value="255"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/getModelAssociationsThatModelAsDependentEntity/%/select/collect/%.1">
+      <details key="start" value="257"/>
+      <details key="end" value="274"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/getModelAssociationsThatModelAsDependentEntity/%/select/collect/%.1/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/getModelAssociationsThatModelAsDependentEntity/%/select/collect/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/getModelAssociationsThatModelAsDependentEntity/%/select/%">
+      <details key="start" value="283"/>
+      <details key="end" value="301"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/getModelAssociationsThatModelAsDependentEntity/%/select/%/%">
+      <details key="start" value="283"/>
+      <details key="end" value="292"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/getModelAssociationsThatModelAsDependentEntity/%/select/%/%/temp2">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/getModelAssociationsThatModelAsDependentEntity/%/select/%/aModel">
+      <details key="start" value="295"/>
+      <details key="end" value="301"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/getModelAssociationsThatModelAsDependentEntity/%/select/temp2">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/getModelAssociationsThatModelAsPrincipalEntity">
+      <details key="start" value="316"/>
+      <details key="end" value="535"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/getModelAssociationsThatModelAsPrincipalEntity/aModel">
+      <details key="start" value="377"/>
+      <details key="end" value="391"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/getModelAssociationsThatModelAsPrincipalEntity/%">
+      <details key="start" value="420"/>
+      <details key="end" value="532"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/getModelAssociationsThatModelAsPrincipalEntity/%/select">
+      <details key="start" value="420"/>
+      <details key="end" value="523"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/getModelAssociationsThatModelAsPrincipalEntity/%/select/collect">
+      <details key="start" value="420"/>
+      <details key="end" value="495"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/getModelAssociationsThatModelAsPrincipalEntity/%/select/collect/%">
+      <details key="start" value="420"/>
+      <details key="end" value="477"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/getModelAssociationsThatModelAsPrincipalEntity/%/select/collect/%/%">
+      <details key="start" value="420"/>
+      <details key="end" value="455"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/getModelAssociationsThatModelAsPrincipalEntity/%/select/collect/%/%/%">
+      <details key="start" value="420"/>
+      <details key="end" value="446"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/getModelAssociationsThatModelAsPrincipalEntity/%/select/collect/%/%/%/aModel">
+      <details key="start" value="420"/>
+      <details key="end" value="426"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/getModelAssociationsThatModelAsPrincipalEntity/%/select/collect/%/%/%/%">
+      <details key="start" value="438"/>
+      <details key="end" value="445"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/getModelAssociationsThatModelAsPrincipalEntity/%/select/collect/%/%.1">
+      <details key="start" value="464"/>
+      <details key="end" value="476"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/getModelAssociationsThatModelAsPrincipalEntity/%/select/collect/%.1">
+      <details key="start" value="478"/>
+      <details key="end" value="495"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/getModelAssociationsThatModelAsPrincipalEntity/%/select/collect/%.1/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/getModelAssociationsThatModelAsPrincipalEntity/%/select/collect/temp3">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/getModelAssociationsThatModelAsPrincipalEntity/%/select/%">
+      <details key="start" value="504"/>
+      <details key="end" value="522"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/getModelAssociationsThatModelAsPrincipalEntity/%/select/%/%">
+      <details key="start" value="504"/>
+      <details key="end" value="513"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/getModelAssociationsThatModelAsPrincipalEntity/%/select/%/%/temp2">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/getModelAssociationsThatModelAsPrincipalEntity/%/select/%/aModel">
+      <details key="start" value="516"/>
+      <details key="end" value="522"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/getModelAssociationsThatModelAsPrincipalEntity/%/select/temp4">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

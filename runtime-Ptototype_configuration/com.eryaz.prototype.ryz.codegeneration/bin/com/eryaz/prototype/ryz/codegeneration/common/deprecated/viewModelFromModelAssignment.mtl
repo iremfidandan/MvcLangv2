@@ -1,0 +1,30 @@
+[comment encoding = UTF-8 /]
+[module viewModelFromModelAssignment('http://www.eryaz.com/prototype/ryz')]
+
+
+[comment Begin Model Associations for MANY_TO_MANY Relations /]
+
+[template public generateViewModelFromModelAssignmentForPrincipalEntity(aModelAssociation : ModelAssociation, aModel : Model) ? (aModelAssociation.cardinality = Cardinality::MANY_TO_MANY)]
+[aModel.name/].[aModelAssociation.dependentRoleName/].Select(m => m.[aModelAssociation.dependent.name/]Id).ToList();
+[/template]
+
+[template public generateViewModelFromModelAssignmentForDependentEntity(aModelAssociation : ModelAssociation, aModel : Model) ? (aModelAssociation.cardinality = Cardinality::MANY_TO_MANY)]
+[aModel.name/].[aModelAssociation.principalRoleName/].Select(m => m.[aModelAssociation.principal.name/]Id).ToList();
+[/template]
+
+[comment End Model Associations for MANY_TO_MANY Relations /]
+
+
+
+
+[comment Begin Model Associations for ONE_TO_MANY Relations /]
+
+[template public generateViewModelFromModelAssignmentForPrincipalEntity(aModelAssociation : ModelAssociation, aModel : Model) ? (aModelAssociation.cardinality = Cardinality::ONE_TO_MANY)]
+[aModel.name/].[aModelAssociation.dependentRoleName/].Select(m => m.[aModelAssociation.dependent.name/]Id).ToList();
+[/template]
+
+[template public generateViewModelFromModelAssignmentForDependentEntity(aModelAssociation : ModelAssociation, aModel : Model) ? (aModelAssociation.cardinality = Cardinality::ONE_TO_MANY)]
+[aModel.name/].[aModelAssociation.principalRoleName/]_[aModelAssociation.principal.name/]Id;
+[/template]
+
+[comment End Model Associations for ONE_TO_MANY Relations /]

@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="inputDataType" nsURI="com::eryaz::prototype::ryz::codegeneration::common::enumtypes::inputDataType" startHeaderPosition="29" endHeaderPosition="-1">
+    <input>
+      <takesTypesFrom href="http://www.eryaz.com/prototype/ryz#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateInputDataType" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="date"/>
+      <parameter name="anInputDataType">
+        <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+      </parameter>
+      <guard xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="anInputDataType" referredVariable="/0/generateInputDataType/anInputDataType">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+        </source>
+        <argument xsi:type="ocl.ecore:EnumLiteralExp">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+          <referredEnumLiteral xsi:type="ecore:EEnumLiteral" href="http://www.eryaz.com/prototype/ryz#//InputDataType/DATE"/>
+        </argument>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+      </guard>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateInputDataType" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="email"/>
+      <parameter name="anInputDataType">
+        <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+      </parameter>
+      <guard xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="anInputDataType" referredVariable="/0/generateInputDataType.1/anInputDataType">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+        </source>
+        <argument xsi:type="ocl.ecore:EnumLiteralExp">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+          <referredEnumLiteral xsi:type="ecore:EEnumLiteral" href="http://www.eryaz.com/prototype/ryz#//InputDataType/EMAIL"/>
+        </argument>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+      </guard>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateInputDataType" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="file"/>
+      <parameter name="anInputDataType">
+        <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+      </parameter>
+      <guard xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="anInputDataType" referredVariable="/0/generateInputDataType.2/anInputDataType">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+        </source>
+        <argument xsi:type="ocl.ecore:EnumLiteralExp">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+          <referredEnumLiteral xsi:type="ecore:EEnumLiteral" href="http://www.eryaz.com/prototype/ryz#//InputDataType/FILE"/>
+        </argument>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+      </guard>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateInputDataType" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="number"/>
+      <parameter name="anInputDataType">
+        <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+      </parameter>
+      <guard xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="anInputDataType" referredVariable="/0/generateInputDataType.3/anInputDataType">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+        </source>
+        <argument xsi:type="ocl.ecore:EnumLiteralExp">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+          <referredEnumLiteral xsi:type="ecore:EEnumLiteral" href="http://www.eryaz.com/prototype/ryz#//InputDataType/NUMBER"/>
+        </argument>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+      </guard>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateInputDataType" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="password"/>
+      <parameter name="anInputDataType">
+        <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+      </parameter>
+      <guard xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="anInputDataType" referredVariable="/0/generateInputDataType.4/anInputDataType">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+        </source>
+        <argument xsi:type="ocl.ecore:EnumLiteralExp">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+          <referredEnumLiteral xsi:type="ecore:EEnumLiteral" href="http://www.eryaz.com/prototype/ryz#//InputDataType/PASSWORD"/>
+        </argument>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+      </guard>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateInputDataType" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="tel"/>
+      <parameter name="anInputDataType">
+        <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+      </parameter>
+      <guard xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="anInputDataType" referredVariable="/0/generateInputDataType.5/anInputDataType">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+        </source>
+        <argument xsi:type="ocl.ecore:EnumLiteralExp">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+          <referredEnumLiteral xsi:type="ecore:EEnumLiteral" href="http://www.eryaz.com/prototype/ryz#//InputDataType/TEL"/>
+        </argument>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+      </guard>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateInputDataType" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="text"/>
+      <parameter name="anInputDataType">
+        <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+      </parameter>
+      <guard xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="anInputDataType" referredVariable="/0/generateInputDataType.6/anInputDataType">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+        </source>
+        <argument xsi:type="ocl.ecore:EnumLiteralExp">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+          <referredEnumLiteral xsi:type="ecore:EEnumLiteral" href="http://www.eryaz.com/prototype/ryz#//InputDataType/TEXT"/>
+        </argument>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+      </guard>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateInputDataType" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="time"/>
+      <parameter name="anInputDataType">
+        <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+      </parameter>
+      <guard xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="anInputDataType" referredVariable="/0/generateInputDataType.7/anInputDataType">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+        </source>
+        <argument xsi:type="ocl.ecore:EnumLiteralExp">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+          <referredEnumLiteral xsi:type="ecore:EEnumLiteral" href="http://www.eryaz.com/prototype/ryz#//InputDataType/TIME"/>
+        </argument>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+      </guard>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="generateInputDataType">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateInputDataType"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="anInputDataType">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ryz_InputDataType_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//InputDataType"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/generateInputDataType">
+      <details key="start" value="92"/>
+      <details key="end" value="223"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateInputDataType/%">
+      <details key="start" value="207"/>
+      <details key="end" value="211"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateInputDataType/anInputDataType">
+      <details key="start" value="131"/>
+      <details key="end" value="162"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateInputDataType/%.1">
+      <details key="start" value="167"/>
+      <details key="end" value="204"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateInputDataType/%.1/anInputDataType">
+      <details key="start" value="167"/>
+      <details key="end" value="182"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateInputDataType/%.1/%">
+      <details key="start" value="185"/>
+      <details key="end" value="204"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateInputDataType.1">
+      <details key="start" value="225"/>
+      <details key="end" value="358"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateInputDataType.1/%">
+      <details key="start" value="341"/>
+      <details key="end" value="346"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateInputDataType.1/anInputDataType">
+      <details key="start" value="264"/>
+      <details key="end" value="295"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateInputDataType.1/%.1">
+      <details key="start" value="300"/>
+      <details key="end" value="338"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateInputDataType.1/%.1/anInputDataType">
+      <details key="start" value="300"/>
+      <details key="end" value="315"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateInputDataType.1/%.1/%">
+      <details key="start" value="318"/>
+      <details key="end" value="338"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateInputDataType.2">
+      <details key="start" value="360"/>
+      <details key="end" value="491"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateInputDataType.2/%">
+      <details key="start" value="475"/>
+      <details key="end" value="479"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateInputDataType.2/anInputDataType">
+      <details key="start" value="399"/>
+      <details key="end" value="430"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateInputDataType.2/%.1">
+      <details key="start" value="435"/>
+      <details key="end" value="472"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generateInputDataType.2/%.1/anInputDataType">
+      <details key="start" value="435"/>
+      <details key="end" value="450"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/generateInputDataType.2/%.1/%">
+      <details key="start" value="453"/>
+      <details key="end" value="472"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/generateInputDataType.3">
+      <details key="start" value="493"/>
+      <details key="end" value="628"/>
+      <details key="line" value="17"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/generateInputDataType.3/%">
+      <details key="start" value="610"/>
+      <details key="end" value="616"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/generateInputDataType.3/anInputDataType">
+      <details key="start" value="532"/>
+      <details key="end" value="563"/>
+      <details key="line" value="17"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/generateInputDataType.3/%.1">
+      <details key="start" value="568"/>
+      <details key="end" value="607"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/generateInputDataType.3/%.1/anInputDataType">
+      <details key="start" value="568"/>
+      <details key="end" value="583"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/generateInputDataType.3/%.1/%">
+      <details key="start" value="586"/>
+      <details key="end" value="607"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/generateInputDataType.4">
+      <details key="start" value="630"/>
+      <details key="end" value="769"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/generateInputDataType.4/%">
+      <details key="start" value="749"/>
+      <details key="end" value="757"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/generateInputDataType.4/anInputDataType">
+      <details key="start" value="669"/>
+      <details key="end" value="700"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/generateInputDataType.4/%.1">
+      <details key="start" value="705"/>
+      <details key="end" value="746"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/generateInputDataType.4/%.1/anInputDataType">
+      <details key="start" value="705"/>
+      <details key="end" value="720"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/generateInputDataType.4/%.1/%">
+      <details key="start" value="723"/>
+      <details key="end" value="746"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/generateInputDataType.5">
+      <details key="start" value="771"/>
+      <details key="end" value="900"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/generateInputDataType.5/%">
+      <details key="start" value="885"/>
+      <details key="end" value="888"/>
+      <details key="line" value="26"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/generateInputDataType.5/anInputDataType">
+      <details key="start" value="810"/>
+      <details key="end" value="841"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/generateInputDataType.5/%.1">
+      <details key="start" value="846"/>
+      <details key="end" value="882"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/generateInputDataType.5/%.1/anInputDataType">
+      <details key="start" value="846"/>
+      <details key="end" value="861"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/generateInputDataType.5/%.1/%">
+      <details key="start" value="864"/>
+      <details key="end" value="882"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/generateInputDataType.6">
+      <details key="start" value="902"/>
+      <details key="end" value="1033"/>
+      <details key="line" value="29"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/generateInputDataType.6/%">
+      <details key="start" value="1017"/>
+      <details key="end" value="1021"/>
+      <details key="line" value="30"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/generateInputDataType.6/anInputDataType">
+      <details key="start" value="941"/>
+      <details key="end" value="972"/>
+      <details key="line" value="29"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/generateInputDataType.6/%.1">
+      <details key="start" value="977"/>
+      <details key="end" value="1014"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/generateInputDataType.6/%.1/anInputDataType">
+      <details key="start" value="977"/>
+      <details key="end" value="992"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/generateInputDataType.6/%.1/%">
+      <details key="start" value="995"/>
+      <details key="end" value="1014"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/generateInputDataType.7">
+      <details key="start" value="1035"/>
+      <details key="end" value="1166"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/generateInputDataType.7/%">
+      <details key="start" value="1150"/>
+      <details key="end" value="1154"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/generateInputDataType.7/anInputDataType">
+      <details key="start" value="1074"/>
+      <details key="end" value="1105"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/generateInputDataType.7/%.1">
+      <details key="start" value="1110"/>
+      <details key="end" value="1147"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/generateInputDataType.7/%.1/anInputDataType">
+      <details key="start" value="1110"/>
+      <details key="end" value="1125"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/generateInputDataType.7/%.1/%">
+      <details key="start" value="1128"/>
+      <details key="end" value="1147"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

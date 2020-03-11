@@ -1,0 +1,9 @@
+[comment encoding = UTF-8 /]
+[module viewModelClass('http://www.eryaz.com/prototype/ryz')]
+
+
+[template public generateViewModelClass(aModel : Model)]
+public [if (aModel.isAbstract)]abstract [/if]class [aModel.name/]ViewModel [if (aModel.inherits.oclIsUndefined()._not())]
+ : [aModel.inherits.name/]ViewModel
+[/if]
+[/template]

@@ -1,0 +1,23 @@
+[comment encoding = UTF-8 /]
+[module tableKey('http://www.eryaz.com/prototype/ryz')]
+[import com::eryaz::prototype::ryz::codegeneration::common::enumtypes::modelPropertyType /]
+
+[template public generateTableKey(aTableKey : TableKey) ? (aTableKey.isRequired)]
+[if (aTableKey.isPrimaryKey)]
+[ '[' /]Key[ ']' /]
+[/if]
+[if (aTableKey.isForeignKey)]
+[ '[' /]ForeignKey("[aTableKey.name.first(aTableKey.name.lastIndexOf('_') - 1)/]")[ ']' /]
+[/if]
+public [generateModelPropertyType(aTableKey.type)/] [aTableKey.name/] {get; set;}
+[/template]
+
+[template public generateTableKey(aTableKey : TableKey) ? (aTableKey.isRequired._not())]
+[if (aTableKey.isPrimaryKey)]
+[ '[' /]Key[ ']' /]
+[/if]
+[if (aTableKey.isForeignKey)]
+[ '[' /]ForeignKey("[aTableKey.name.first(aTableKey.name.lastIndexOf('_') - 1)/]")[ ']' /]
+[/if]
+public Nullable<[generateModelPropertyType(aTableKey.type)/]> [aTableKey.name/] {get; set;}
+[/template]

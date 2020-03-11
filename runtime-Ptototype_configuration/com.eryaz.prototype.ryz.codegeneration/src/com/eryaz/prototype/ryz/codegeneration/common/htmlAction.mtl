@@ -1,0 +1,14 @@
+[comment encoding = UTF-8 /]
+[module htmlAction('http://www.eryaz.com/prototype/ryz')]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::controllerNameWithoutControllerSuffix /]
+[import com::eryaz::prototype::ryz::codegeneration::common::inferences::htmlActionRouteValueInference /]
+
+[template public generateHtmlAction(anActionMethod : ActionMethod)]
+@Html.Action("[anActionMethod.name/]", "[generateControllerNameWithoutControllerSuffix(anActionMethod.eContainer(Controller))/]")
+[/template]
+
+
+[template public generateHtmlAction(anActionMethod : ActionMethod, aViewToModelRelation : ViewToModelRelation)]
+@Html.Action("[anActionMethod.name/]", "[generateControllerNameWithoutControllerSuffix(anActionMethod.eContainer(Controller))/]", new{[generateHtmlActionRouteValueInference(anActionMethod, aViewToModelRelation)/]})
+[/template]

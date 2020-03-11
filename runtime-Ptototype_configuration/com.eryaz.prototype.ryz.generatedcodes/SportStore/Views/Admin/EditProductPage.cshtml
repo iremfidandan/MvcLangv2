@@ -1,0 +1,34 @@
+
+@{
+	Layout = null;
+}
+
+@model IEnumerable<SportStore.Models.Product>
+
+
+
+@Html.Action("GetEditProductForm", "Admin", new{ProductId = Model.Select(m => m.ProductId).FirstOrDefault()})
+
+<div id="update-SelectEditedProduct">
+</div>
+@using(@Ajax.BeginForm("GetEditProductForm", "Admin", new{ProductId = Model.Select(m => m.ProductId).FirstOrDefault()}, new AjaxOptions
+	{
+		UpdateTargetId = "update-SelectEditedProduct",
+		InsertionMode = InsertionMode.Replace,
+		HttpMethod = "GET"
+	}
+))
+{
+	@Html.AntiForgeryToken()
+	<label for="Edited Product">Edited Product</label>
+	<select id="Edited Product" name="Edited Product">
+		@foreach(var item in Model)
+	    {
+			<option value="@item.ProductId">@item.ProductId</option>
+	    }
+	</select>
+
+	<input type="submit" name="Select Product" value="Select Product"><br>
+}
+
+

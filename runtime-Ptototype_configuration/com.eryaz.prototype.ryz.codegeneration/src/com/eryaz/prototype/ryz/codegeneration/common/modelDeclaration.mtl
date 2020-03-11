@@ -1,0 +1,11 @@
+[comment encoding = UTF-8 /]
+[module modelDeclaration('http://www.eryaz.com/prototype/ryz')]
+
+
+[template public generateModelDeclaration(aViewToModelRelation : ViewToModelRelation) ? (aViewToModelRelation.modelcardinality = ModelCardinality::ONE)]
+@model [aViewToModelRelation.eContainer(Project).name/].Models.[aViewToModelRelation.model.name/]
+[/template]
+
+[template public generateModelDeclaration(aViewToModelRelation : ViewToModelRelation) ? (aViewToModelRelation.modelcardinality = ModelCardinality::ALL)]
+@model IEnumerable<[aViewToModelRelation.eContainer(Project).name/].Models.[aViewToModelRelation.model.name/]>
+[/template]

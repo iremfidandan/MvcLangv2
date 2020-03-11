@@ -1,0 +1,6 @@
+[comment encoding = UTF-8 /]
+[module using('http://www.eclipse.org/ocl/1.1.0/Ecore')]
+
+[template public generateUsing(anOclAny : OclAny)]
+using [anOclAny/];
+[/template]

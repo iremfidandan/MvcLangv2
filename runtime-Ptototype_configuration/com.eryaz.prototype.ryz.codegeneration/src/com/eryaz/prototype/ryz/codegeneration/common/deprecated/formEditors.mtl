@@ -1,0 +1,21 @@
+[comment encoding = UTF-8 /]
+[module formEditors('http://www.eryaz.com/prototype/ryz')]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::deprecated::editorForModelProperty/]
+[import com::eryaz::prototype::ryz::codegeneration::common::modelAssociations /]
+[import com::eryaz::prototype::ryz::codegeneration::common::deprecated::editorForNavigationProperty /]
+
+
+[template public generateFormEditors(aForm : Form, aModel : Model)]
+[for (myModel : Model | aModel->closure(inherits)->including(aModel)) separator ('\n')]
+[for (aProperty : Property | myModel.properties) separator ('\n')]
+[aProperty.generateEditorForModelProperty()/]
+[/for]
+[for (aModelAssociation : ModelAssociation | myModel.getModelAssociationsThatModelAsPrincipalEntity()) separator ('\n')]
+[aModelAssociation.generateEditorForNavigationPropertyForPrincipalEntity()/]
+[/for]
+[for (aModelAssociation : ModelAssociation | myModel.getModelAssociationsThatModelAsDependentEntity()) separator ('\n')]
+[aModelAssociation.generateEditorForNavigationPropertyForDependentEntity()/]
+[/for]
+[/for]
+[/template]

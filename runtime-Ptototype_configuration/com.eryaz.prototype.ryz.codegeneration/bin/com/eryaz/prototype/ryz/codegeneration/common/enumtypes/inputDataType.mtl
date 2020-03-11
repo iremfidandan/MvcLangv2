@@ -1,0 +1,35 @@
+[comment encoding = UTF-8 /]
+[module inputDataType('http://www.eryaz.com/prototype/ryz')]
+
+
+[template public generateInputDataType(anInputDataType : InputDataType) ? (anInputDataType = InputDataType::DATE)]
+date
+[/template]
+
+[template public generateInputDataType(anInputDataType : InputDataType) ? (anInputDataType = InputDataType::EMAIL)]
+email
+[/template]
+
+[template public generateInputDataType(anInputDataType : InputDataType) ? (anInputDataType = InputDataType::FILE)]
+file
+[/template]
+
+[template public generateInputDataType(anInputDataType : InputDataType) ? (anInputDataType = InputDataType::NUMBER)]
+number
+[/template]
+
+[template public generateInputDataType(anInputDataType : InputDataType) ? (anInputDataType = InputDataType::PASSWORD)]
+password
+[/template]
+
+[template public generateInputDataType(anInputDataType : InputDataType) ? (anInputDataType = InputDataType::TEL)]
+tel
+[/template]
+
+[template public generateInputDataType(anInputDataType : InputDataType) ? (anInputDataType = InputDataType::TEXT)]
+text
+[/template]
+
+[template public generateInputDataType(anInputDataType : InputDataType) ? (anInputDataType = InputDataType::TIME)]
+time
+[/template]

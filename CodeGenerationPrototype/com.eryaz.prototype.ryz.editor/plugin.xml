@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated ryz -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.eryaz.prototype.ryz.presentation.RyzModelWizardID"
+            name="%_UI_RyzModelWizard_label"
+            class="com.eryaz.prototype.ryz.presentation.RyzModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/RyzModelFile.gif">
+         <description>%_UI_RyzModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated ryz -->
+      <editor
+            id="com.eryaz.prototype.ryz.presentation.RyzEditorID"
+            name="%_UI_RyzEditor_label"
+            icon="icons/full/obj16/RyzModelFile.gif"
+            extensions="ryz"
+            class="com.eryaz.prototype.ryz.presentation.RyzEditor"
+            contributorClass="com.eryaz.prototype.ryz.presentation.RyzActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

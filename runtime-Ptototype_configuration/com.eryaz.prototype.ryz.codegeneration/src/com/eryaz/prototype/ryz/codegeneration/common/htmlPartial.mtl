@@ -1,0 +1,19 @@
+[comment encoding = UTF-8 /]
+[module htmlPartial('http://www.eryaz.com/prototype/ryz')]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::mvcRelations /]
+
+
+[template public generateHtmlPartial(aPartial : Partial)]
+[if (aPartial.getModelForPartial().oclIsUndefined())]
+@Html.Partial("[aPartial.name/]")
+[else]
+@Html.Partial("[aPartial.name/]", Model)	
+[/if]
+[/template]
+
+
+
+[query private getModelForPartial(aPartial : Partial) : Model = 
+aPartial.eContainer(Project).getViewToModelRelationsInProject()->any(e | e.abstractview = aPartial).model
+/]

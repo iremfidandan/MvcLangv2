@@ -1,0 +1,11 @@
+[comment encoding = UTF-8 /]
+[module modelClass('http://www.eryaz.com/prototype/ryz')]
+
+[template public generateModelClass(aModel : Model)]
+[if (aModel.inherits.oclIsUndefined()._not())]
+[ '[' /]Table("[aModel.name/]")[ ']' /]
+[/if]
+public [if (aModel.isAbstract)]abstract [/if]class [aModel.name/] [if (aModel.inherits.oclIsUndefined()._not())]
+ : [aModel.inherits.name/]
+[/if]
+[/template]

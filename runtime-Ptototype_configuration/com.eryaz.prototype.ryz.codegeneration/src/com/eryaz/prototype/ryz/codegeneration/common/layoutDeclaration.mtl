@@ -1,0 +1,13 @@
+[comment encoding = UTF-8 /]
+[module layoutDeclaration('http://www.eryaz.com/prototype/ryz')]
+
+
+[template public generateLayoutDeclaration(aView : View)]
+@{
+	[let layout : AbstractView = aView.layout]
+	Layout = "~/Views/Shared/[aView.layout.name/].cshtml";
+	[else]
+	Layout = null;
+	[/let]
+}
+[/template]

@@ -1,0 +1,17 @@
+
+@{
+	Layout = null;
+}
+
+@model IEnumerable<SportStore.Models.CartLine>
+
+
+
+
+@using(@Html.BeginForm("Checkout", "Cart", new{CartLineId = Model.Select(m => m.CartLineId)}, FormMethod.Post))
+{
+	@Html.AntiForgeryToken()
+	<input type="submit" name="Checkout" value="Checkout"><br>
+}
+
+

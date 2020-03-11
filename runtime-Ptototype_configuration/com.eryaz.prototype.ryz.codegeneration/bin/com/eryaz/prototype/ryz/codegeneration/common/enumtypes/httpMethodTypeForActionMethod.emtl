@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="httpMethodTypeForActionMethod" nsURI="com::eryaz::prototype::ryz::codegeneration::common::enumtypes::httpMethodTypeForActionMethod" startHeaderPosition="29" endHeaderPosition="229">
+    <input>
+      <takesTypesFrom href="http://www.eryaz.com/prototype/ryz#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateHttpMethodTypeForActionMethod" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="HttpGet"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </body>
+      <parameter name="aHttpMethod">
+        <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//HttpMethod"/>
+      </parameter>
+      <guard xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="aHttpMethod" referredVariable="/0/generateHttpMethodTypeForActionMethod/aHttpMethod">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//HttpMethod"/>
+        </source>
+        <argument xsi:type="ocl.ecore:EnumLiteralExp">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//HttpMethod"/>
+          <referredEnumLiteral xsi:type="ecore:EEnumLiteral" href="http://www.eryaz.com/prototype/ryz#//HttpMethod/GET"/>
+        </argument>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+      </guard>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateHttpMethodTypeForActionMethod" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="HttpPost"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </body>
+      <parameter name="aHttpMethod">
+        <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//HttpMethod"/>
+      </parameter>
+      <guard xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="aHttpMethod" referredVariable="/0/generateHttpMethodTypeForActionMethod.1/aHttpMethod">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//HttpMethod"/>
+        </source>
+        <argument xsi:type="ocl.ecore:EnumLiteralExp">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//HttpMethod"/>
+          <referredEnumLiteral xsi:type="ecore:EEnumLiteral" href="http://www.eryaz.com/prototype/ryz#//HttpMethod/POST"/>
+        </argument>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+      </guard>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="generateHttpMethodTypeForActionMethod">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateHttpMethodTypeForActionMethod"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aHttpMethod">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//HttpMethod"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ryz_HttpMethod_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eryaz.com/prototype/ryz#//HttpMethod"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//HttpMethod"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//HttpMethod"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//HttpMethod"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//HttpMethod"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//HttpMethod"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//HttpMethod"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//HttpMethod"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//HttpMethod"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//HttpMethod"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//HttpMethod"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/generateHttpMethodTypeForActionMethod">
+      <details key="start" value="107"/>
+      <details key="end" value="258"/>
+      <details key="line" value="4"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateHttpMethodTypeForActionMethod/%">
+      <details key="start" value="225"/>
+      <details key="end" value="228"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateHttpMethodTypeForActionMethod/%.1">
+      <details key="start" value="231"/>
+      <details key="end" value="238"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateHttpMethodTypeForActionMethod/%.2">
+      <details key="start" value="240"/>
+      <details key="end" value="243"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateHttpMethodTypeForActionMethod/aHttpMethod">
+      <details key="start" value="162"/>
+      <details key="end" value="186"/>
+      <details key="line" value="4"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateHttpMethodTypeForActionMethod/%.3">
+      <details key="start" value="191"/>
+      <details key="end" value="220"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateHttpMethodTypeForActionMethod/%.3/aHttpMethod">
+      <details key="start" value="191"/>
+      <details key="end" value="202"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateHttpMethodTypeForActionMethod/%.3/%">
+      <details key="start" value="205"/>
+      <details key="end" value="220"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateHttpMethodTypeForActionMethod.1">
+      <details key="start" value="260"/>
+      <details key="end" value="413"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateHttpMethodTypeForActionMethod.1/%">
+      <details key="start" value="379"/>
+      <details key="end" value="382"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateHttpMethodTypeForActionMethod.1/%.1">
+      <details key="start" value="385"/>
+      <details key="end" value="393"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateHttpMethodTypeForActionMethod.1/%.2">
+      <details key="start" value="395"/>
+      <details key="end" value="398"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateHttpMethodTypeForActionMethod.1/aHttpMethod">
+      <details key="start" value="315"/>
+      <details key="end" value="339"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateHttpMethodTypeForActionMethod.1/%.3">
+      <details key="start" value="344"/>
+      <details key="end" value="374"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateHttpMethodTypeForActionMethod.1/%.3/aHttpMethod">
+      <details key="start" value="344"/>
+      <details key="end" value="355"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateHttpMethodTypeForActionMethod.1/%.3/%">
+      <details key="start" value="358"/>
+      <details key="end" value="374"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

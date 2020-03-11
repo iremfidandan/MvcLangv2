@@ -1,0 +1,14 @@
+[comment encoding = UTF-8 /]
+[module redirectToActionParameters('http://www.eryaz.com/prototype/ryz')]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::mvcRelations /]
+[import com::eryaz::prototype::ryz::codegeneration::common::controllerNameWithoutControllerSuffix /]
+
+
+[template public generateRedirectToActionParameters(aControllerToViewRelation : ControllerToViewRelation) ? (aControllerToViewRelation.actionmethod.returns = ActionMethodReturnType::RedirectToAction)]
+"[aControllerToViewRelation.returns.getActionMethodThatReturnsTheView().name/]", "[aControllerToViewRelation.returns.getActionMethodThatReturnsTheView().eContainer(Controller).generateControllerNameWithoutControllerSuffix()/]", null
+[/template]
+
+[query public getActionMethodThatReturnsTheView(anAbstractView: AbstractView) : ActionMethod = 
+anAbstractView.eContainer(Project).getControllerToViewRelationsInProject()->any(r | r.returns = anAbstractView).actionmethod
+/]

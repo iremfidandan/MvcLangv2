@@ -1,0 +1,13 @@
+[comment encoding = UTF-8 /]
+[module operationReadForModel('http://www.eryaz.com/prototype/ryz')]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::enumtypes::httpMethodTypeForActionMethod /]
+[import com::eryaz::prototype::ryz::codegeneration::common::inferences::actionMethodLambdaExpInference /]
+
+[template public generateOperationReadForModel(aControllerToModelRelation : ControllerToModelRelation) { aModelName : String = aControllerToModelRelation.model.name; }]
+[if (aControllerToModelRelation.modelCardinality = ModelCardinality::ONE)]
+[aModelName/] [aModelName/] = _uow.[aModelName/]Repository.Get([aControllerToModelRelation.generateActionMethodLambdaExprInference()/]);
+[else]
+List<[aModelName/]> [aModelName/] = _uow.[aModelName/]Repository.GetAll([aControllerToModelRelation.generateActionMethodLambdaExprInference()/]).ToList();
+[/if]
+[/template]

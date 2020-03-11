@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="redirectToActionParameters" nsURI="com::eryaz::prototype::ryz::codegeneration::common::redirectToActionParameters" startHeaderPosition="29" endHeaderPosition="177">
+    <input>
+      <takesTypesFrom href="http://www.eryaz.com/prototype/ryz#/"/>
+    </input>
+    <imports href="mvcRelations.emtl#/0"/>
+    <imports href="controllerNameWithoutControllerSuffix.emtl#/0"/>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateRedirectToActionParameters" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;"/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="mtl:QueryInvocation" definition="/0/getActionMethodThatReturnsTheView">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+          <argument xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//AbstractView"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aControllerToViewRelation" referredVariable="/0/generateRedirectToActionParameters/aControllerToViewRelation">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToViewRelation"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ControllerToViewRelation/returns"/>
+          </argument>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;, &quot;"/>
+      <body xsi:type="mtl:TemplateInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="controllerNameWithoutControllerSuffix.emtl#/0/generateControllerNameWithoutControllerSuffix"/>
+        <argument xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/ecore_EObject_Class/eContainer">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Controller"/>
+          <source xsi:type="mtl:QueryInvocation" definition="/0/getActionMethodThatReturnsTheView">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+            <argument xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//AbstractView"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="aControllerToViewRelation" referredVariable="/0/generateRedirectToActionParameters/aControllerToViewRelation">
+                <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToViewRelation"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ControllerToViewRelation/returns"/>
+            </argument>
+          </source>
+          <argument xsi:type="ocl.ecore:TypeExp" eType="/8/Controller">
+            <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Controller"/>
+          </argument>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;, null"/>
+      <parameter name="aControllerToViewRelation">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToViewRelation"/>
+      </parameter>
+      <guard xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//ActionMethodReturnType"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aControllerToViewRelation" referredVariable="/0/generateRedirectToActionParameters/aControllerToViewRelation">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToViewRelation"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ControllerToViewRelation/actionmethod"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//ActionMethod/returns"/>
+        </source>
+        <argument xsi:type="ocl.ecore:EnumLiteralExp">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//ActionMethodReturnType"/>
+          <referredEnumLiteral xsi:type="ecore:EEnumLiteral" href="http://www.eryaz.com/prototype/ryz#//ActionMethodReturnType/RedirectToAction"/>
+        </argument>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+      </guard>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="getActionMethodThatReturnsTheView" visibility="Public">
+      <parameter name="anAbstractView">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//AbstractView"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+        <source xsi:type="ocl.ecore:IteratorExp" name="any">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToViewRelation"/>
+          <source xsi:type="mtl:QueryInvocation" eType="/12/Set(ControllerToViewRelation)">
+            <definition href="mvcRelations.emtl#/0/getControllerToViewRelationsInProject"/>
+            <argument xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/ecore_EObject_Class/eContainer">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="anAbstractView" referredVariable="/0/getActionMethodThatReturnsTheView/anAbstractView">
+                <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//AbstractView"/>
+              </source>
+              <argument xsi:type="ocl.ecore:TypeExp" eType="/8/Project">
+                <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+              </argument>
+            </argument>
+          </source>
+          <body xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//AbstractView"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="r" referredVariable="/0/getActionMethodThatReturnsTheView/%/any/r">
+                <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToViewRelation"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ControllerToViewRelation/returns"/>
+            </source>
+            <argument xsi:type="ocl.ecore:VariableExp" name="anAbstractView" referredVariable="/0/getActionMethodThatReturnsTheView/anAbstractView">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//AbstractView"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+          </body>
+          <iterator xsi:type="ocl.ecore:Variable" name="r">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToViewRelation"/>
+          </iterator>
+        </source>
+        <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ControllerToViewRelation/actionmethod"/>
+      </expression>
+      <type xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="eContainer">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/acceleo/mtl/3.0/mtlnonstdlib.ecore#//OclAny"/>
+        <eParameters name="filter">
+          <eType xsi:type="ocl.ecore:TypeType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclType"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateRedirectToActionParameters">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateRedirectToActionParameters"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aControllerToViewRelation">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToViewRelation"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="getActionMethodThatReturnsTheView">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/getActionMethodThatReturnsTheView"/>
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+        <eParameters name="anAbstractView">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//AbstractView"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="getControllerToViewRelationsInProject">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="mvcRelations.emtl#/0/getControllerToViewRelationsInProject"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:SetType" href="mvcRelations.emtl#/3/Set(ControllerToViewRelation)"/>
+        <eParameters name="aProject">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateControllerNameWithoutControllerSuffix">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="controllerNameWithoutControllerSuffix.emtl#/0/generateControllerNameWithoutControllerSuffix"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aController">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Controller"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ryz_ControllerToViewRelation_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eryaz.com/prototype/ryz#//ControllerToViewRelation"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ryz_AbstractView_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eryaz.com/prototype/ryz#//AbstractView"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ryz_Project_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eryaz.com/prototype/ryz#//Project"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ryz_Controller_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eryaz.com/prototype/ryz#//Controller"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToViewRelation"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToViewRelation"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToViewRelation"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToViewRelation"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="types">
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="Controller">
+      <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Controller"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="Project">
+      <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToViewRelation"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//AbstractView"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(ControllerToViewRelation)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToViewRelation"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//AbstractView"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/generateRedirectToActionParameters">
+      <details key="start" value="283"/>
+      <details key="end" value="728"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateRedirectToActionParameters/%">
+      <details key="start" value="484"/>
+      <details key="end" value="485"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateRedirectToActionParameters/%.1">
+      <details key="start" value="486"/>
+      <details key="end" value="560"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateRedirectToActionParameters/%.1/%">
+      <details key="start" value="486"/>
+      <details key="end" value="555"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateRedirectToActionParameters/%.1/%/%">
+      <details key="start" value="486"/>
+      <details key="end" value="519"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateRedirectToActionParameters/%.1/%/%/aControllerToViewRelation">
+      <details key="start" value="486"/>
+      <details key="end" value="511"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateRedirectToActionParameters/%.2">
+      <details key="start" value="562"/>
+      <details key="end" value="566"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateRedirectToActionParameters/%.3">
+      <details key="start" value="567"/>
+      <details key="end" value="707"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateRedirectToActionParameters/%.3/%">
+      <details key="start" value="567"/>
+      <details key="end" value="659"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateRedirectToActionParameters/%.3/%/%">
+      <details key="start" value="567"/>
+      <details key="end" value="636"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateRedirectToActionParameters/%.3/%/%/%">
+      <details key="start" value="567"/>
+      <details key="end" value="600"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateRedirectToActionParameters/%.3/%/%/%/aControllerToViewRelation">
+      <details key="start" value="567"/>
+      <details key="end" value="592"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateRedirectToActionParameters/%.3/%/%.1">
+      <details key="start" value="648"/>
+      <details key="end" value="658"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateRedirectToActionParameters/%.4">
+      <details key="start" value="709"/>
+      <details key="end" value="716"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateRedirectToActionParameters/aControllerToViewRelation">
+      <details key="start" value="335"/>
+      <details key="end" value="387"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateRedirectToActionParameters/%.5">
+      <details key="start" value="392"/>
+      <details key="end" value="481"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generateRedirectToActionParameters/%.5/%">
+      <details key="start" value="392"/>
+      <details key="end" value="438"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/generateRedirectToActionParameters/%.5/%/%">
+      <details key="start" value="392"/>
+      <details key="end" value="430"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/generateRedirectToActionParameters/%.5/%/%/aControllerToViewRelation">
+      <details key="start" value="392"/>
+      <details key="end" value="417"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/generateRedirectToActionParameters/%.5/%.1">
+      <details key="start" value="441"/>
+      <details key="end" value="481"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/getActionMethodThatReturnsTheView">
+      <details key="start" value="730"/>
+      <details key="end" value="953"/>
+      <details key="line" value="12"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/getActionMethodThatReturnsTheView/anAbstractView">
+      <details key="start" value="778"/>
+      <details key="end" value="806"/>
+      <details key="line" value="12"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/getActionMethodThatReturnsTheView/%">
+      <details key="start" value="826"/>
+      <details key="end" value="950"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/getActionMethodThatReturnsTheView/%/any">
+      <details key="start" value="826"/>
+      <details key="end" value="937"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/getActionMethodThatReturnsTheView/%/any/%">
+      <details key="start" value="826"/>
+      <details key="end" value="900"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/getActionMethodThatReturnsTheView/%/any/%/%">
+      <details key="start" value="826"/>
+      <details key="end" value="860"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/getActionMethodThatReturnsTheView/%/any/%/%/anAbstractView">
+      <details key="start" value="826"/>
+      <details key="end" value="840"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/getActionMethodThatReturnsTheView/%/any/%/%/%">
+      <details key="start" value="852"/>
+      <details key="end" value="859"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/getActionMethodThatReturnsTheView/%/any/%.1">
+      <details key="start" value="910"/>
+      <details key="end" value="936"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/getActionMethodThatReturnsTheView/%/any/%.1/%">
+      <details key="start" value="910"/>
+      <details key="end" value="919"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/getActionMethodThatReturnsTheView/%/any/%.1/%/r">
+      <details key="start" value="910"/>
+      <details key="end" value="911"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/getActionMethodThatReturnsTheView/%/any/%.1/anAbstractView">
+      <details key="start" value="922"/>
+      <details key="end" value="936"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/getActionMethodThatReturnsTheView/%/any/r">
+      <details key="start" value="906"/>
+      <details key="end" value="907"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

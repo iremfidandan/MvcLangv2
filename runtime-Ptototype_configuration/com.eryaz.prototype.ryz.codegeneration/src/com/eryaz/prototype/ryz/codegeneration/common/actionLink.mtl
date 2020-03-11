@@ -1,0 +1,31 @@
+[comment encoding = UTF-8 /]
+[module actionLink('http://www.eryaz.com/prototype/ryz')]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::helperForSendingRequest /]
+[import com::eryaz::prototype::ryz::codegeneration::common::enumtypes::httpMethodTypeForRegularHttp /]
+[import com::eryaz::prototype::ryz::codegeneration::common::enumtypes::httpMethodTypeForAjax /]
+[import com::eryaz::prototype::ryz::codegeneration::common::controllerNameWithoutControllerSuffix /]
+[import com::eryaz::prototype::ryz::codegeneration::common::inferences::helperForSendingRequestRouteValueInference /]
+[import com::eryaz::prototype::ryz::codegeneration::common::mvcRelations /]
+
+[template public generateActionLink(anActionLink : ActionLink) ? (anActionLink.requestType = RequestType::REGULAR_HTTP)]
+@Html.ActionLink("[anActionLink.text/]", "[anActionLink.getActionMethodThatSendsRequest().name/]", "[anActionLink.getActionMethodThatSendsRequest().eContainer(Controller).generateControllerNameWithoutControllerSuffix()/]", new{[anActionLink.getViewToControllerRelation().generateHelperForSendingRequestRouteValueInference()/]}, null)            
+[/template]
+
+[template public generateActionLink(anActionLink : ActionLink) ? (anActionLink.requestType = RequestType::AJAX)]
+<div id="update-[anActionLink.text.substituteAll(' ', '')/]">
+</div>
+@Ajax.ActionLink("[anActionLink.text/]", "[anActionLink.getActionMethodThatSendsRequest().name/]", "[anActionLink.getActionMethodThatSendsRequest().eContainer(Controller).generateControllerNameWithoutControllerSuffix()/]", new{[anActionLink.getViewToControllerRelation().generateHelperForSendingRequestRouteValueInference()/]}, new AjaxOptions
+	{
+		UpdateTargetId = "update-[anActionLink.text.substituteAll(' ', '')/]",
+		InsertionMode = InsertionMode.Replace,
+		HttpMethod = "[anActionLink.httpMethod.generateHttpMethodTypeForAjax()/]"
+	})
+[/template]
+
+
+
+[query private getViewToControllerRelation(anActionLink : ActionLink) : ViewToControllerRelation = 
+anActionLink.eContainer(Project).getViewToControllerRelationsInProject()->any(e | e.helperforsendingrequest = anActionLink)
+/]
+

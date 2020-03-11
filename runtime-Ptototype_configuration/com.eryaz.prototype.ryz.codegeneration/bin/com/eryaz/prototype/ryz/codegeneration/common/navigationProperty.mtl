@@ -1,0 +1,49 @@
+[comment encoding = UTF-8 /]
+[module navigationProperty('http://www.eryaz.com/prototype/ryz')]
+
+[comment Begin Model Associations for MANY_TO_MANY Relations /]
+
+[template public generateNavigationPropertyForPrincipalEntity(aModelAssociation : ModelAssociation) ? (aModelAssociation.cardinality = Cardinality::MANY_TO_MANY)]
+[ '[' /]InverseProperty("[aModelAssociation.principalRoleName/]")[ ']' /]
+public virtual ICollection<[aModelAssociation.dependent.name/]> [dependentRoleName/] {get; set;}
+[/template]
+
+[template public generateNavigationPropertyForDependentEntity(aModelAssociation : ModelAssociation) ? (aModelAssociation.cardinality = Cardinality::MANY_TO_MANY)]
+[ '[' /]InverseProperty("[aModelAssociation.dependentRoleName/]")[ ']' /]
+public virtual ICollection<[aModelAssociation.principal.name/]> [principalRoleName/] {get; set;}
+[/template]
+
+[comment End Model Associations for MANY_TO_MANY Relations /]
+
+
+
+
+[comment Begin Model Associations for ONE_TO_MANY Relations /]
+
+[template public generateNavigationPropertyForPrincipalEntity(aModelAssociation : ModelAssociation) ? (aModelAssociation.cardinality = Cardinality::ONE_TO_MANY)]
+[ '[' /]InverseProperty("[aModelAssociation.principalRoleName/]")[ ']' /]
+public virtual ICollection<[aModelAssociation.dependent.name/]> [dependentRoleName/] {get; set;}
+[/template]
+
+[template public generateNavigationPropertyForDependentEntity(aModelAssociation : ModelAssociation) ? (aModelAssociation.cardinality = Cardinality::ONE_TO_MANY)]
+public [aModelAssociation.principal.name/] [aModelAssociation.principalRoleName/] {get; set;}
+[/template]
+
+[comment End Model Associations for ONE_TO_MANY Relations /]
+
+
+
+[comment Begin Model Associations for ONE_TO_ONE Relations /]
+
+[template public generateNavigationPropertyForPrincipalEntity(aModelAssociation : ModelAssociation) ? (aModelAssociation.cardinality = Cardinality::ONE_TO_ONE)]
+[if (aModelAssociation.isRequired)]
+[ '[' /]Required[ ']' /]
+[/if]
+public [aModelAssociation.dependent.name/] [aModelAssociation.dependentRoleName/] {get; set;}
+[/template]
+
+[template public generateNavigationPropertyForDependentEntity(aModelAssociation : ModelAssociation) ? (aModelAssociation.cardinality = Cardinality::ONE_TO_ONE)]
+public [aModelAssociation.principal.name/] [aModelAssociation.principalRoleName/] {get; set;}
+[/template]
+
+[comment End Model Associations for ONE_TO_ONE Relations /]

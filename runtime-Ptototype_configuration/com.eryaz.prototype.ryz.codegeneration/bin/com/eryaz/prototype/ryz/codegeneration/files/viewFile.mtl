@@ -1,0 +1,69 @@
+[comment encoding = UTF-8 /]
+[module viewFile('http://www.eryaz.com/prototype/ryz')]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::layoutDeclaration /]
+[import com::eryaz::prototype::ryz::codegeneration::common::mvcRelations /]
+[import com::eryaz::prototype::ryz::codegeneration::common::modelDeclaration /]
+[import com::eryaz::prototype::ryz::codegeneration::common::htmlPartial /]
+[import com::eryaz::prototype::ryz::codegeneration::common::htmlAction /]
+[import com::eryaz::prototype::ryz::codegeneration::common::presentationElement /]
+[import com::eryaz::prototype::ryz::codegeneration::common::modelDisplay /]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::actionLink /]
+
+[template public generateNewViewFile(anAbstractView : AbstractView)]
+[file (anAbstractView.eContainer(Project).name + '/Views/' + anAbstractView.eContainer(ViewPackage).name + '/' + anAbstractView.name + '.cshtml', false, 'UTF-8')]
+
+[let aView : View = anAbstractView]
+[aView.generateLayoutDeclaration()/]
+[/let]
+
+[let aViewToModelRelation : ViewToModelRelation = anAbstractView.getViewToModelRelationForAbstractView()]
+[aViewToModelRelation.generateModelDeclaration()/]
+[/let]
+
+[if (anAbstractView.oclIsTypeOf(Layout))]
+@RenderBody()
+[/if]
+
+[for (aPartial : Partial | getStaticPartials(anAbstractView))]
+[generateHtmlPartial(aPartial)/]
+[/for]
+
+[for (aPartial : Partial | anAbstractView.getDynamicPartials())]
+[for (anActionMethod : ActionMethod | aPartial.getPartialActionMethods())]
+[let aViewToModelRelation : ViewToModelRelation = anAbstractView.getViewToModelRelationForAbstractView()]
+[anActionMethod.generateHtmlAction(aViewToModelRelation)/]
+[else]
+[anActionMethod.generateHtmlAction()/]
+[/let]
+[/for]
+[/for]
+
+[for (aPresentationElement : PresentationElement | anAbstractView.presentationelement)]
+[aPresentationElement.generatePresentationElement()/]
+[/for]
+
+[/file]
+[/template]
+
+
+
+
+[query private getViewToModelRelationForAbstractView(anAbstractView : AbstractView) : ViewToModelRelation = 
+anAbstractView.eContainer(Project).getViewToModelRelationsInProject()->any(r | r.abstractview = anAbstractView)
+/]
+
+
+
+[query private getPartialActionMethods(aPartial : Partial) : Bag(ActionMethod) = 
+aPartial.eContainer(Project).getControllerToViewRelationsInProject()->select(r | r.returns = aPartial).actionmethod
+/]
+
+[query private getStaticPartials(anAbstractView : AbstractView) : Set(Partial) = 
+anAbstractView.renders->select(e | e.getPartialActionMethods()->isEmpty())
+/]
+
+[query private getDynamicPartials(anAbstractView : AbstractView) : Set(Partial) = 
+anAbstractView.renders->select(e | e.getPartialActionMethods()->isEmpty()._not())
+/]

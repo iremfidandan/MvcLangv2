@@ -1,0 +1,12 @@
+
+
+@model SportStore.Models.Product
+
+
+
+
+@Html.ActionLink("Add To Cart", "Click_AddToCart", "Cart", new{ProductId = Model.ProductId}, null)            
+
+@Html.ActionLink("Remove From Cart", "RemoveFromCart", "Cart", new{}, null)            
+
+

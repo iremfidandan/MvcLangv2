@@ -1,0 +1,30 @@
+[comment encoding = UTF-8 /]
+[module viewModelSelectListInit('http://www.eryaz.com/prototype/ryz')]
+
+
+[comment Begin Model Associations for MANY_TO_MANY Relations /]
+
+[template public generateViewModelSelectListInitForPrincipalEntity(aModelAssociation : ModelAssociation, aModel: Model) ? (aModelAssociation.cardinality = Cardinality::MANY_TO_MANY)]
+new MultiSelectList(_uow.[aModelAssociation.dependent.name/]Repository.GetAll(), "[aModelAssociation.dependent.name/]Id", "[aModelAssociation.dependent.name/]Id", [aModel.name/]ViewModel.[aModelAssociation.dependentRoleName/]_[aModelAssociation.dependent.name/]Id);
+[/template]
+
+[template public generateViewModelSelectListInitForDependentEntity(aModelAssociation : ModelAssociation, aModel: Model) ? (aModelAssociation.cardinality = Cardinality::MANY_TO_MANY)]
+new MultiSelectList(_uow.[aModelAssociation.principal.name/]Repository.GetAll(), "[aModelAssociation.principal.name/]Id", "[aModelAssociation.principal.name/]Id", [aModel.name/]ViewModel.[aModelAssociation.principalRoleName/]_[aModelAssociation.principal.name/]Id);
+[/template]
+
+[comment End Model Associations for MANY_TO_MANY Relations /]
+
+
+
+
+[comment Begin Model Associations for ONE_TO_MANY Relations /]
+
+[template public generateViewModelSelectListInitForPrincipalEntity(aModelAssociation : ModelAssociation, aModel: Model) ? (aModelAssociation.cardinality = Cardinality::ONE_TO_MANY)]
+new MultiSelectList(_uow.[aModelAssociation.dependent.name/]Repository.GetAll(), "[aModelAssociation.dependent.name/]Id", "[aModelAssociation.dependent.name/]Id", [aModel.name/]ViewModel.[aModelAssociation.dependentRoleName/]_[aModelAssociation.dependent.name/]Id);
+[/template]
+
+[template public generateViewModelSelectListInitForDependentEntity(aModelAssociation : ModelAssociation, aModel: Model) ? (aModelAssociation.cardinality = Cardinality::ONE_TO_MANY)]
+new SelectList(_uow.[aModelAssociation.principal.name/]Repository.GetAll(), "[aModelAssociation.principal.name/]Id", "[aModelAssociation.principal.name/]Id", [aModel.name/]ViewModel.[aModelAssociation.principalRoleName/]_[aModelAssociation.principal.name/]Id);
+[/template]
+
+[comment End Model Associations for ONE_TO_MANY Relations /]

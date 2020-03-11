@@ -1,0 +1,34 @@
+[comment encoding = UTF-8 /]
+[module viewModelProperty('http://www.eryaz.com/prototype/ryz')]
+
+
+[comment Begin Model Associations for MANY_TO_MANY Relations /]
+
+[template public generateViewModelPropertyForPrincipalEntity(aModelAssociation : ModelAssociation) ? (aModelAssociation.cardinality = Cardinality::MANY_TO_MANY)]
+public List<int> [aModelAssociation.dependentRoleName/]_[aModelAssociation.dependent.name/]Id {get; set;} = new List<int>();
+public IEnumerable<SelectListItem> [aModelAssociation.dependentRoleName/] {get; set;}
+[/template]
+
+[template public generateViewModelPropertyForDependentEntity(aModelAssociation : ModelAssociation) ? (aModelAssociation.cardinality = Cardinality::MANY_TO_MANY)]
+public List<int> [aModelAssociation.principalRoleName/]_[aModelAssociation.principal.name/]Id {get; set;} = new List<int>();
+public IEnumerable<SelectListItem> [aModelAssociation.principalRoleName/] {get; set;}
+[/template]
+
+[comment End Model Associations for MANY_TO_MANY Relations /]
+
+
+
+
+[comment Begin Model Associations for ONE_TO_MANY Relations /]
+
+[template public generateViewModelPropertyForPrincipalEntity(aModelAssociation : ModelAssociation) ? (aModelAssociation.cardinality = Cardinality::ONE_TO_MANY)]
+public List<int> [aModelAssociation.dependentRoleName/]_[aModelAssociation.dependent.name/]Id {get; set;} = new List<int>();
+public IEnumerable<SelectListItem> [aModelAssociation.dependentRoleName/] {get; set;}
+[/template]
+
+[template public generateViewModelPropertyForDependentEntity(aModelAssociation : ModelAssociation) ? (aModelAssociation.cardinality = Cardinality::ONE_TO_MANY)]
+public int [aModelAssociation.principalRoleName/]_[aModelAssociation.principal.name/]Id {get; set;}
+public IEnumerable<SelectListItem> [aModelAssociation.principalRoleName/] {get; set;}
+[/template]
+
+[comment End Model Associations for ONE_TO_MANY Relations /]

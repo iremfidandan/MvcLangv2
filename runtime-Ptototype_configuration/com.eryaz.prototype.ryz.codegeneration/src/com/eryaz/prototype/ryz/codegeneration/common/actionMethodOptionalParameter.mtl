@@ -1,0 +1,8 @@
+[comment encoding = UTF-8 /]
+[module actionMethodOptionalParameter('http://www.eryaz.com/prototype/ryz')]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::enumtypes::actionMethodParameterType /]
+
+[template public generateActionMethodOptionalParameter(aParameter : Parameter) ? (aParameter.isNullable)]
+[aParameter.type.generateActionMethodParameterType()/] ?[aParameter.name/]
+[/template]

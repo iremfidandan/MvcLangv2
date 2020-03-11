@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="htmlPartial" nsURI="com::eryaz::prototype::ryz::codegeneration::common::htmlPartial" startHeaderPosition="29" endHeaderPosition="162">
+    <input>
+      <takesTypesFrom href="http://www.eryaz.com/prototype/ryz#/"/>
+    </input>
+    <imports href="mvcRelations.emtl#/0"/>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateHtmlPartial" visibility="Public">
+      <body xsi:type="mtl:IfBlock">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="@Html.Partial(&quot;"/>
+        <body xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aPartial" referredVariable="/0/generateHtmlPartial/aPartial">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;)&#xA;"/>
+        <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="mtl:QueryInvocation" definition="/0/getModelForPartial">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aPartial" referredVariable="/0/generateHtmlPartial/aPartial">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
+            </argument>
+          </source>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsUndefined"/>
+        </ifExpr>
+        <else>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="@Html.Partial(&quot;"/>
+          <body xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aPartial" referredVariable="/0/generateHtmlPartial/aPartial">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&quot;, Model)&#x9;&#xA;"/>
+        </else>
+      </body>
+      <parameter name="aPartial">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="getModelForPartial">
+      <parameter name="aPartial">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+        <source xsi:type="ocl.ecore:IteratorExp" name="any">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ViewToModelRelation"/>
+          <source xsi:type="mtl:QueryInvocation" eType="/12/Set(ViewToModelRelation)">
+            <definition href="mvcRelations.emtl#/0/getViewToModelRelationsInProject"/>
+            <argument xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/ecore_EObject_Class/eContainer">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="aPartial" referredVariable="/0/getModelForPartial/aPartial">
+                <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
+              </source>
+              <argument xsi:type="ocl.ecore:TypeExp" eType="/11/Project">
+                <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+              </argument>
+            </argument>
+          </source>
+          <body xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//AbstractView"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="e" referredVariable="/0/getModelForPartial/%/any/e">
+                <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ViewToModelRelation"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ViewToModelRelation/abstractview"/>
+            </source>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aPartial" referredVariable="/0/getModelForPartial/aPartial">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+          </body>
+          <iterator xsi:type="ocl.ecore:Variable" name="e">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ViewToModelRelation"/>
+          </iterator>
+        </source>
+        <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ViewToModelRelation/model"/>
+      </expression>
+      <type xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="eContainer">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/acceleo/mtl/3.0/mtlnonstdlib.ecore#//OclAny"/>
+        <eParameters name="filter">
+          <eType xsi:type="ocl.ecore:TypeType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclType"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateHtmlPartial">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateHtmlPartial"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aPartial">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="getModelForPartial">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/getModelForPartial"/>
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+        <eParameters name="aPartial">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="getViewToModelRelationsInProject">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="mvcRelations.emtl#/0/getViewToModelRelationsInProject"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:SetType" href="mvcRelations.emtl#/3/Set(ViewToModelRelation)"/>
+        <eParameters name="aProject">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ryz_Partial_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eryaz.com/prototype/ryz#//Partial"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ryz_Project_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eryaz.com/prototype/ryz#//Project"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="types">
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="Project">
+      <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(ViewToModelRelation)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ViewToModelRelation"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Partial"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/generateHtmlPartial">
+      <details key="start" value="167"/>
+      <details key="end" value="379"/>
+      <details key="line" value="7"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateHtmlPartial/%">
+      <details key="start" value="225"/>
+      <details key="end" value="367"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateHtmlPartial/%/%">
+      <details key="start" value="279"/>
+      <details key="end" value="294"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateHtmlPartial/%/%.1">
+      <details key="start" value="295"/>
+      <details key="end" value="308"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateHtmlPartial/%/%.1/aPartial">
+      <details key="start" value="295"/>
+      <details key="end" value="303"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateHtmlPartial/%/%.2">
+      <details key="start" value="310"/>
+      <details key="end" value="313"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateHtmlPartial/%/%.3">
+      <details key="start" value="229"/>
+      <details key="end" value="277"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateHtmlPartial/%/%.3/%">
+      <details key="start" value="230"/>
+      <details key="end" value="259"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateHtmlPartial/%/%.3/%/aPartial">
+      <details key="start" value="230"/>
+      <details key="end" value="238"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateHtmlPartial/%/%.4">
+      <details key="start" value="313"/>
+      <details key="end" value="362"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateHtmlPartial/%/%.4/%">
+      <details key="start" value="320"/>
+      <details key="end" value="335"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateHtmlPartial/%/%.4/%.1">
+      <details key="start" value="336"/>
+      <details key="end" value="349"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateHtmlPartial/%/%.4/%.1/aPartial">
+      <details key="start" value="336"/>
+      <details key="end" value="344"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateHtmlPartial/%/%.4/%.2">
+      <details key="start" value="351"/>
+      <details key="end" value="362"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateHtmlPartial/aPartial">
+      <details key="start" value="204"/>
+      <details key="end" value="222"/>
+      <details key="line" value="7"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/getModelForPartial">
+      <details key="start" value="383"/>
+      <details key="end" value="556"/>
+      <details key="line" value="17"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/getModelForPartial/aPartial">
+      <details key="start" value="417"/>
+      <details key="end" value="435"/>
+      <details key="line" value="17"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/getModelForPartial/%">
+      <details key="start" value="448"/>
+      <details key="end" value="553"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/getModelForPartial/%/any">
+      <details key="start" value="448"/>
+      <details key="end" value="547"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/getModelForPartial/%/any/%">
+      <details key="start" value="448"/>
+      <details key="end" value="511"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/getModelForPartial/%/any/%/%">
+      <details key="start" value="448"/>
+      <details key="end" value="476"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/getModelForPartial/%/any/%/%/aPartial">
+      <details key="start" value="448"/>
+      <details key="end" value="456"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/getModelForPartial/%/any/%/%/%">
+      <details key="start" value="468"/>
+      <details key="end" value="475"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/getModelForPartial/%/any/%.1">
+      <details key="start" value="521"/>
+      <details key="end" value="546"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/getModelForPartial/%/any/%.1/%">
+      <details key="start" value="521"/>
+      <details key="end" value="535"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/getModelForPartial/%/any/%.1/%/e">
+      <details key="start" value="521"/>
+      <details key="end" value="522"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/getModelForPartial/%/any/%.1/aPartial">
+      <details key="start" value="538"/>
+      <details key="end" value="546"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/getModelForPartial/%/any/e">
+      <details key="start" value="517"/>
+      <details key="end" value="518"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

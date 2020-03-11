@@ -1,0 +1,7 @@
+[comment encoding = UTF-8 /]
+[module controllerNameWithoutControllerSuffix('http://www.eryaz.com/prototype/ryz')]
+
+[comment 'Controller'.size() == 10 /]
+[template public generateControllerNameWithoutControllerSuffix(aController : Controller)]
+[aController.name.first(aController.name.size() - 10)/]
+[/template]

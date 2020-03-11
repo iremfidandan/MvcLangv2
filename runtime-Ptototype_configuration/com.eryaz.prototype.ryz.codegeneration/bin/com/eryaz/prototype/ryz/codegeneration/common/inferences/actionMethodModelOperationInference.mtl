@@ -1,0 +1,18 @@
+[comment encoding = UTF-8 /]
+[module actionMethodModelOperationInference('http://www.eryaz.com/prototype/ryz')]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::mvcRelations /]
+
+
+[template public generateActionMethodModelOperationInference(anActionMethod : ActionMethod)]
+
+[/template]
+
+
+[query private getControllerToViewRelation(anActionMethod : ActionMethod) : ControllerToViewRelation = 
+anActionMethod.eContainer(Project).getControllerToViewRelationsInProject()->any(r | r.actionmethod = anActionMethod) 
+/]
+
+[query private getViewToModelRelation(anActionMethod : ActionMethod) : ViewToModelRelation = 
+anActionMethod.eContainer(Project).getViewToModelRelationsInProject()->any(r | r.abstractview = getControllerToViewRelation(anActionMethod).returns)
+/]

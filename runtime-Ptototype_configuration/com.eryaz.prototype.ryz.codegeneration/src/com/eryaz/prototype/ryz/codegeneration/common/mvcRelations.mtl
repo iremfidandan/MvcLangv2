@@ -1,0 +1,27 @@
+[comment encoding = UTF-8 /]
+[module mvcRelations('http://www.eryaz.com/prototype/ryz')]
+
+
+[query public getMainComponentRelationsInProject(aProject: Project) : Set(MainComponentRelation) = 
+aProject.packages->filter(MvcPackage).maincomponentrelations->asSet()
+/]
+
+[query public getViewToControllerRelationsInProject(aProject: Project) : Set(ViewToControllerRelation) = 
+aProject.getMainComponentRelationsInProject()->filter(ViewToControllerRelation) 
+/]
+
+[query public getControllerToModelRelationsInProject(aProject: Project) : Set(ControllerToModelRelation) = 
+aProject.getMainComponentRelationsInProject()->filter(ControllerToModelRelation) 
+/]
+
+[query public getControllerToViewRelationsInProject(aProject: Project) : Set(ControllerToViewRelation) = 
+aProject.getMainComponentRelationsInProject()->filter(ControllerToViewRelation) 
+/]
+
+[query public getViewToModelRelationsInProject(aProject: Project) : Set(ViewToModelRelation) = 
+aProject.getMainComponentRelationsInProject()->filter(ViewToModelRelation) 
+/]
+
+[query public getFormElementToPropertyKeyRelationsInProject(aProject: Project) : Set(FormElementToPropertyKeyRelation) = 
+aProject.getMainComponentRelationsInProject()->filter(FormElementToPropertyKeyRelation)
+/]

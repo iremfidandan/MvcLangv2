@@ -1,0 +1,13 @@
+[comment encoding = UTF-8 /]
+[module helperForSendingRequest('http://www.eryaz.com/prototype/ryz')]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::mvcRelations /]
+
+
+[query public getActionMethodThatSendsRequest(aHelperForSendingRequest : HelperForSendingRequest) : ActionMethod =
+aHelperForSendingRequest.eContainer(Project).getViewToControllerRelationsInProject()->any(x | x.helperforsendingrequest = aHelperForSendingRequest).actionmethod
+/]
+
+[query public getActionMethodsControllerName(anActionMethod: ActionMethod) : String = 
+anActionMethod.eContainer(Controller).name
+/]

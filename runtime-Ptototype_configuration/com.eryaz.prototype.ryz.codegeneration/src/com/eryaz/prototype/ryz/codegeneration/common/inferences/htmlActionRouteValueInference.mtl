@@ -1,0 +1,59 @@
+[comment encoding = UTF-8 /]
+[module htmlActionRouteValueInference('http://www.eryaz.com/prototype/ryz')]
+
+
+[template public generateHtmlActionRouteValueInference(anActionMethod : ActionMethod, aViewToModelRelation : ViewToModelRelation) ? (aViewToModelRelation.modelcardinality = ModelCardinality::ONE)]
+[for (aString : String | getOperands(anActionMethod, aViewToModelRelation)) separator (', ')][aString/] = Model.[aString/][/for]
+[/template]
+
+
+[template public generateHtmlActionRouteValueInference(anActionMethod : ActionMethod, aViewToModelRelation : ViewToModelRelation) ? (aViewToModelRelation.modelcardinality = ModelCardinality::ALL)]
+[for (aString : String | getOperands(anActionMethod, aViewToModelRelation)) separator (', ')][aString/] = Model.Select(m => m.[aString/]).FirstOrDefault()[/for]
+[/template]
+
+
+
+
+[query private getActionMethodParameters(anActionMethod : ActionMethod) : OrderedSet(Parameter) = 
+anActionMethod.parameters 
+/]
+
+[query private getModel(aViewToModelRelation : ViewToModelRelation) : Model = 
+aViewToModelRelation.model 
+/]
+
+
+
+[query private getAllModelProperties(aViewToModelRelation : ViewToModelRelation) : OrderedSet(Property) = 
+aViewToModelRelation.getModel()->closure(inherits)->including(aViewToModelRelation.getModel()).properties->asOrderedSet()
+/]
+
+[query private parameterPropertyEquality(aParameter : Parameter, aProperty : Property) : Boolean = 
+(aParameter.name = aProperty.name)._and(aParameter.type.toString() = aProperty.type.toString()) 
+/]
+
+[query private getRelatedProperties(anActionMethod : ActionMethod, aViewToModelRelation : ViewToModelRelation) : OrderedSet(String) = 
+anActionMethod.getActionMethodParameters()->product(aViewToModelRelation.getAllModelProperties())->select(e | parameterPropertyEquality(e.first, e.second))->collect(e | e.first.name)->asOrderedSet()
+/]
+
+
+
+
+[query private getAllKeys(aViewToModelRelation : ViewToModelRelation) : Bag(TableKey) = 
+aViewToModelRelation.getModel()->closure(inherits)->including(aViewToModelRelation.getModel()).tablekeys
+/]
+
+[query private parameterKeyEquality(aParameter : Parameter, aTableKey : TableKey) : Boolean = 
+(aParameter.name = aTableKey.name)._and(aParameter.type.toString() = aTableKey.type.toString()) 
+/]
+
+[query private getRelatedKeys(anActionMethod : ActionMethod, aViewToModelRelation : ViewToModelRelation) : Bag(String) = 
+anActionMethod.getActionMethodParameters()->product(aViewToModelRelation.getAllKeys())->select(e | parameterKeyEquality(e.first, e.second))->collect(e | e.first.name)
+/]
+
+
+
+
+[query private getOperands(anActionMethod : ActionMethod, aViewToModelRelation : ViewToModelRelation) : Bag(String) = 
+getRelatedKeys(anActionMethod, aViewToModelRelation)->union(getRelatedProperties(anActionMethod, aViewToModelRelation)) 
+/]

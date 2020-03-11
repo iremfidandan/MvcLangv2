@@ -1,0 +1,10 @@
+[comment encoding = UTF-8 /]
+[module modelAssociations('http://www.eryaz.com/prototype/ryz')]
+
+[query public getModelAssociationsThatModelAsDependentEntity(aModel : Model) : Set(ModelAssociation) = 
+aModel.eContainer(Project).packages->filter(ModelPackage).modelassociations->select(dependent = aModel)->asSet()
+/]
+
+[query public getModelAssociationsThatModelAsPrincipalEntity(aModel : Model) : Set(ModelAssociation) = 
+aModel.eContainer(Project).packages->filter(ModelPackage).modelassociations->select(principal = aModel)->asSet()
+/]

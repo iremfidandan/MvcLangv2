@@ -1,0 +1,27 @@
+[comment encoding = UTF-8 /]
+[module operationUpdateForModel('http://www.eryaz.com/prototype/ryz')]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::deprecated::viewModelSelectList /]
+[import com::eryaz::prototype::ryz::codegeneration::common::deprecated::modelFromViewModel /]
+[import com::eryaz::prototype::ryz::codegeneration::common::deprecated::viewModelFromModel /]
+[import com::eryaz::prototype::ryz::codegeneration::common::inferences::actionMethodLambdaExpInference /]
+
+[comment BEGIN FOR ONE /]
+
+[template public generateOperationUpdateForModel(aControllerToModelRelation : ControllerToModelRelation) ? ((aControllerToModelRelation.modelCardinality = ModelCardinality::ONE)._and(aControllerToModelRelation.actionmethod.httpMethod = HttpMethod::GET))]
+[aControllerToModelRelation.model.name/] [aControllerToModelRelation.model.name/] = _uow.[aControllerToModelRelation.model.name/]Repository.Get([generateActionMethodLambdaExprInference(aControllerToModelRelation)/]);
+[aControllerToModelRelation.model.name/]ViewModel [aControllerToModelRelation.model.name/]ViewModel = new [aControllerToModelRelation.model.name/]ViewModel();
+[aControllerToModelRelation.model.name/]ViewModel.[aControllerToModelRelation.model.name/]Id = [aControllerToModelRelation.model.name/].[aControllerToModelRelation.model.name/]Id;
+[aControllerToModelRelation.generateViewModelFromModel()/]
+[aControllerToModelRelation.generateViewModelSelectList()/]
+[/template]
+
+
+[template public generateOperationUpdateForModel(aControllerToModelRelation : ControllerToModelRelation) ? ((aControllerToModelRelation.modelCardinality = ModelCardinality::ONE)._and(aControllerToModelRelation.actionmethod.httpMethod = HttpMethod::POST))]
+[aControllerToModelRelation.model.name/] [aControllerToModelRelation.model.name/] = _uow.[aControllerToModelRelation.model.name/]Repository.Get([generateActionMethodLambdaExprInference(aControllerToModelRelation)/]);
+[aControllerToModelRelation.generateModelFromViewModel()/]
+_uow.[aControllerToModelRelation.model.name/]Repository.Add([aControllerToModelRelation.model.name/]);
+_uow.Complete();
+[/template]
+
+[comment END FOR ONE /]

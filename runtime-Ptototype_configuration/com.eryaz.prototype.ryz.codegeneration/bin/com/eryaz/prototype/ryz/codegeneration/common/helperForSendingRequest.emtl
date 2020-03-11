@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="helperForSendingRequest" nsURI="com::eryaz::prototype::ryz::codegeneration::common::helperForSendingRequest" startHeaderPosition="29" endHeaderPosition="174">
+    <input>
+      <takesTypesFrom href="http://www.eryaz.com/prototype/ryz#/"/>
+    </input>
+    <imports href="mvcRelations.emtl#/0"/>
+    <ownedModuleElement xsi:type="mtl:Query" name="getActionMethodThatSendsRequest" visibility="Public">
+      <parameter name="aHelperForSendingRequest">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//HelperForSendingRequest"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+        <source xsi:type="ocl.ecore:IteratorExp" name="any">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ViewToControllerRelation"/>
+          <source xsi:type="mtl:QueryInvocation" eType="/5/Set(ViewToControllerRelation)">
+            <definition href="mvcRelations.emtl#/0/getViewToControllerRelationsInProject"/>
+            <argument xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/ecore_EObject_Class/eContainer">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="aHelperForSendingRequest" referredVariable="/0/getActionMethodThatSendsRequest/aHelperForSendingRequest">
+                <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//HelperForSendingRequest"/>
+              </source>
+              <argument xsi:type="ocl.ecore:TypeExp" eType="/4/Project">
+                <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+              </argument>
+            </argument>
+          </source>
+          <body xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//HelperForSendingRequest"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="x" referredVariable="/0/getActionMethodThatSendsRequest/%/any/x">
+                <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ViewToControllerRelation"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ViewToControllerRelation/helperforsendingrequest"/>
+            </source>
+            <argument xsi:type="ocl.ecore:VariableExp" name="aHelperForSendingRequest" referredVariable="/0/getActionMethodThatSendsRequest/aHelperForSendingRequest">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//HelperForSendingRequest"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+          </body>
+          <iterator xsi:type="ocl.ecore:Variable" name="x">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ViewToControllerRelation"/>
+          </iterator>
+        </source>
+        <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ViewToControllerRelation/actionmethod"/>
+      </expression>
+      <type xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="getActionMethodsControllerName" visibility="Public">
+      <parameter name="anActionMethod">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/ecore_EObject_Class/eContainer">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Controller"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="anActionMethod" referredVariable="/0/getActionMethodsControllerName/anActionMethod">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+          </source>
+          <argument xsi:type="ocl.ecore:TypeExp" eType="/4/Controller">
+            <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Controller"/>
+          </argument>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
+      </expression>
+      <type xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="eContainer">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/acceleo/mtl/3.0/mtlnonstdlib.ecore#//OclAny"/>
+        <eParameters name="filter">
+          <eType xsi:type="ocl.ecore:TypeType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclType"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="getActionMethodThatSendsRequest">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/getActionMethodThatSendsRequest"/>
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+        <eParameters name="aHelperForSendingRequest">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//HelperForSendingRequest"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="getActionMethodsControllerName">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/getActionMethodsControllerName"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="anActionMethod">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="getViewToControllerRelationsInProject">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="mvcRelations.emtl#/0/getViewToControllerRelationsInProject"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:SetType" href="mvcRelations.emtl#/3/Set(ViewToControllerRelation)"/>
+        <eParameters name="aProject">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ryz_HelperForSendingRequest_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eryaz.com/prototype/ryz#//HelperForSendingRequest"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ryz_ActionMethod_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ryz_Project_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eryaz.com/prototype/ryz#//Project"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//HelperForSendingRequest"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="types">
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="Project">
+      <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="Controller">
+      <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Controller"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(ViewToControllerRelation)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ViewToControllerRelation"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//HelperForSendingRequest"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ActionMethod"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/getActionMethodThatSendsRequest">
+      <details key="start" value="179"/>
+      <details key="end" value="457"/>
+      <details key="line" value="7"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/getActionMethodThatSendsRequest/aHelperForSendingRequest">
+      <details key="start" value="225"/>
+      <details key="end" value="275"/>
+      <details key="line" value="7"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/getActionMethodThatSendsRequest/%">
+      <details key="start" value="294"/>
+      <details key="end" value="454"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/getActionMethodThatSendsRequest/%/any">
+      <details key="start" value="294"/>
+      <details key="end" value="441"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/getActionMethodThatSendsRequest/%/any/%">
+      <details key="start" value="294"/>
+      <details key="end" value="378"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/getActionMethodThatSendsRequest/%/any/%/%">
+      <details key="start" value="294"/>
+      <details key="end" value="338"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/getActionMethodThatSendsRequest/%/any/%/%/aHelperForSendingRequest">
+      <details key="start" value="294"/>
+      <details key="end" value="318"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/getActionMethodThatSendsRequest/%/any/%/%/%">
+      <details key="start" value="330"/>
+      <details key="end" value="337"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/getActionMethodThatSendsRequest/%/any/%.1">
+      <details key="start" value="388"/>
+      <details key="end" value="440"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/getActionMethodThatSendsRequest/%/any/%.1/%">
+      <details key="start" value="388"/>
+      <details key="end" value="413"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/getActionMethodThatSendsRequest/%/any/%.1/%/x">
+      <details key="start" value="388"/>
+      <details key="end" value="389"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/getActionMethodThatSendsRequest/%/any/%.1/aHelperForSendingRequest">
+      <details key="start" value="416"/>
+      <details key="end" value="440"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/getActionMethodThatSendsRequest/%/any/x">
+      <details key="start" value="384"/>
+      <details key="end" value="385"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/getActionMethodsControllerName">
+      <details key="start" value="459"/>
+      <details key="end" value="591"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/getActionMethodsControllerName/anActionMethod">
+      <details key="start" value="504"/>
+      <details key="end" value="532"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/getActionMethodsControllerName/%">
+      <details key="start" value="546"/>
+      <details key="end" value="588"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/getActionMethodsControllerName/%/%">
+      <details key="start" value="546"/>
+      <details key="end" value="583"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/getActionMethodsControllerName/%/%/anActionMethod">
+      <details key="start" value="546"/>
+      <details key="end" value="560"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/getActionMethodsControllerName/%/%/%">
+      <details key="start" value="572"/>
+      <details key="end" value="582"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

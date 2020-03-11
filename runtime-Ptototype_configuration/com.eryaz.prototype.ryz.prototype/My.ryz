@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ryz:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ryz="http://www.eryaz.com/prototype/ryz" name="SportsStore">
+  <packages xsi:type="ryz:ModelPackage" name="Models">
+    <models name="Product">
+      <properties name="Name" type="STRING" isRequired="true"/>
+      <properties name="Description" type="STRING" isRequired="true"/>
+      <properties name="Price" type="DOUBLE" isRequired="true"/>
+      <properties name="Category" type="STRING" isRequired="true"/>
+    </models>
+    <models name="CartLine">
+      <properties name="Quantity" isRequired="true"/>
+    </models>
+    <models name="ShippingDetails">
+      <properties name="Name" type="STRING" isRequired="true"/>
+      <properties name="Line1" type="STRING" isRequired="true"/>
+      <properties name="Line2" type="STRING"/>
+      <properties name="Line3" type="STRING"/>
+      <properties name="City" type="STRING" isRequired="true"/>
+      <properties name="State" type="STRING" isRequired="true"/>
+      <properties name="Country" type="STRING" isRequired="true"/>
+      <properties name="GiftWrap" type="BOOLEAN" isRequired="true"/>
+    </models>
+    <models name="Login">
+      <properties name="Username" type="STRING" isRequired="true"/>
+      <properties name="Password" type="STRING" isRequired="true"/>
+    </models>
+    <models name="Cart"/>
+    <modelassociations principal="//@packages.0/@models.0" dependent="//@packages.0/@models.1" cardinality="ONE_TO_MANY" isRequired="true" principalRoleName="Product" dependentRoleName="CartLines"/>
+    <modelassociations principal="//@packages.0/@models.2" dependent="//@packages.0/@models.1" cardinality="ONE_TO_MANY" isRequired="true" principalRoleName="ShippingDetails" dependentRoleName="CartLines"/>
+    <modelassociations principal="//@packages.0/@models.4" dependent="//@packages.0/@models.1" cardinality="ONE_TO_MANY" isRequired="true" principalRoleName="Cart" dependentRoleName="CartLines"/>
+  </packages>
+  <packages xsi:type="ryz:ControllerPackage" name="Controllers">
+    <controllers name="ProductController">
+      <actionmethods name="GetProductListPage">
+        <parameters name="category" type="STRING"/>
+        <parameters name="page"/>
+      </actionmethods>
+    </controllers>
+    <controllers name="CartController">
+      <actionmethods name="AddToCart" returns="RedirectToAction">
+        <parameters name="productId"/>
+      </actionmethods>
+      <actionmethods name="RemoveFromCart" returns="RedirectToAction">
+        <parameters name="productId"/>
+      </actionmethods>
+      <actionmethods name="GetCheckoutPage"/>
+    </controllers>
+    <controllers name="AdminController">
+      <actionmethods name="EditProduct">
+        <parameters name="productId"/>
+      </actionmethods>
+      <actionmethods name="CreateProduct"/>
+      <actionmethods name="DeleteProduct">
+        <parameters name="productId"/>
+      </actionmethods>
+    </controllers>
+    <controllers name="AccountController">
+      <actionmethods name="GetLoginPage"/>
+    </controllers>
+    <controllers name="NavController">
+      <actionmethods name="Menu" returns="PartialView"/>
+    </controllers>
+  </packages>
+  <packages xsi:type="ryz:ViewPackage" name="Shared">
+    <views xsi:type="ryz:Layout" name="_Layout"/>
+    <views xsi:type="ryz:Partial" name="CartOperationsPage">
+      <htmlelements xsi:type="ryz:ActionLink" name="Shared__ProductSummary_ActionLink1" text="Add to Cart"/>
+      <htmlelements xsi:type="ryz:ActionLink" name="Shared__ProductSummary_ActionLink2" text="Remove Product From Cart"/>
+    </views>
+    <views xsi:type="ryz:Layout" name="_AdminPageLayout"/>
+  </packages>
+  <packages xsi:type="ryz:ViewPackage" name="Product">
+    <views xsi:type="ryz:View" name="ProductListPage" renders="//@packages.2/@views.1 //@packages.11/@views.0"/>
+  </packages>
+  <packages xsi:type="ryz:ViewPackage" name="Cart">
+    <views xsi:type="ryz:View" name="CartHomePage" renders="//@packages.2/@views.1">
+      <htmlelements xsi:type="ryz:ActionLink" name="Cart_Index_ActionLink1" text="Continue Shopping"/>
+      <htmlelements xsi:type="ryz:ActionLink" name="Cart_Index_ActionLink2" text="Checkout Now"/>
+    </views>
+    <views xsi:type="ryz:View" name="CartCheckoutPage">
+      <htmlelements xsi:type="ryz:Form" name="Cart_Checkout_Form1" text="Checkout Now"/>
+    </views>
+    <views xsi:type="ryz:View" name="CartCompletedPage"/>
+  </packages>
+  <packages xsi:type="ryz:ViewPackage" name="Admin">
+    <views xsi:type="ryz:View" name="AdminHomePage" layout="//@packages.2/@views.2">
+      <htmlelements xsi:type="ryz:ActionLink" name="Admin_Index_ActionLink1" text="Create New Product"/>
+      <htmlelements xsi:type="ryz:ActionLink" name="Admin_Index_ActionLink2" text="Edit Product"/>
+      <htmlelements xsi:type="ryz:ActionLink" name="Admin_Index_ActionLink3" text="Delete Product"/>
+    </views>
+    <views xsi:type="ryz:View" name="ProductEditPage">
+      <htmlelements xsi:type="ryz:Form" name="Admin_ProductEditPage_Form1" text="Edit Product"/>
+    </views>
+  </packages>
+  <packages xsi:type="ryz:ViewPackage" name="Account"/>
+  <packages xsi:type="ryz:MvcPackage" name="Cart" maincomponents="//@packages.1/@controllers.1 //@packages.4/@views.0 //@packages.4/@views.1 //@packages.2/@views.1 //@packages.0/@models.4">
+    <maincomponentrelations xsi:type="ryz:ViewToControllerRelation" helperforsendingrequest="//@packages.2/@views.1/@htmlelements.0" actionmethod="//@packages.1/@controllers.1/@actionmethods.0"/>
+    <maincomponentrelations xsi:type="ryz:ViewToControllerRelation" helperforsendingrequest="//@packages.2/@views.1/@htmlelements.1" actionmethod="//@packages.1/@controllers.1/@actionmethods.1"/>
+    <maincomponentrelations xsi:type="ryz:ViewToControllerRelation" helperforsendingrequest="//@packages.4/@views.0/@htmlelements.1" actionmethod="//@packages.1/@controllers.1/@actionmethods.2"/>
+    <maincomponentrelations xsi:type="ryz:ControllerToViewRelation" actionmethod="//@packages.1/@controllers.1/@actionmethods.0" returns="//@packages.4/@views.0"/>
+    <maincomponentrelations xsi:type="ryz:ControllerToViewRelation" actionmethod="//@packages.1/@controllers.1/@actionmethods.1" returns="//@packages.4/@views.0"/>
+    <maincomponentrelations xsi:type="ryz:ControllerToViewRelation" actionmethod="//@packages.1/@controllers.1/@actionmethods.2" returns="//@packages.4/@views.1"/>
+    <maincomponentrelations xsi:type="ryz:ControllerToModelRelation" actionmethod="//@packages.1/@controllers.1/@actionmethods.0" model="//@packages.0/@models.4"/>
+    <maincomponentrelations xsi:type="ryz:ControllerToModelRelation" actionmethod="//@packages.1/@controllers.1/@actionmethods.1" model="//@packages.0/@models.4" modelOperation="DELETE"/>
+    <maincomponentrelations xsi:type="ryz:ViewToModelRelation" abstractview="//@packages.4/@views.1" model="//@packages.0/@models.4"/>
+    <maincomponentrelations xsi:type="ryz:ViewToModelRelation" abstractview="//@packages.4/@views.1" model="//@packages.0/@models.4"/>
+  </packages>
+  <packages xsi:type="ryz:MvcPackage" name="Product" maincomponents="//@packages.1/@controllers.0 //@packages.0/@models.0 //@packages.4/@views.0 //@packages.3/@views.0 //@packages.11/@views.0">
+    <maincomponentrelations xsi:type="ryz:ViewToControllerRelation" helperforsendingrequest="//@packages.4/@views.0/@htmlelements.0" actionmethod="//@packages.1/@controllers.0/@actionmethods.0"/>
+    <maincomponentrelations xsi:type="ryz:ControllerToViewRelation" actionmethod="//@packages.1/@controllers.0/@actionmethods.0" returns="//@packages.3/@views.0"/>
+    <maincomponentrelations xsi:type="ryz:ViewToControllerRelation" helperforsendingrequest="//@packages.11/@views.0/@htmlelements.0" actionmethod="//@packages.1/@controllers.0/@actionmethods.0"/>
+    <maincomponentrelations xsi:type="ryz:ViewToModelRelation" abstractview="//@packages.3/@views.0" model="//@packages.0/@models.0" modelcardinality="ALL"/>
+  </packages>
+  <packages xsi:type="ryz:MvcPackage" name="Admin" maincomponents="//@packages.5/@views.0 //@packages.0/@models.0 //@packages.1/@controllers.2 //@packages.5/@views.1">
+    <maincomponentrelations xsi:type="ryz:ViewToControllerRelation" helperforsendingrequest="//@packages.5/@views.0/@htmlelements.1" actionmethod="//@packages.1/@controllers.2/@actionmethods.0"/>
+    <maincomponentrelations xsi:type="ryz:ViewToControllerRelation" helperforsendingrequest="//@packages.5/@views.0/@htmlelements.0" actionmethod="//@packages.1/@controllers.2/@actionmethods.1"/>
+    <maincomponentrelations xsi:type="ryz:ViewToControllerRelation" helperforsendingrequest="//@packages.5/@views.0/@htmlelements.2" actionmethod="//@packages.1/@controllers.2/@actionmethods.2"/>
+    <maincomponentrelations xsi:type="ryz:ControllerToModelRelation" actionmethod="//@packages.1/@controllers.2/@actionmethods.2" model="//@packages.0/@models.0" modelproperties="//@packages.0/@models.0/@properties.0 //@packages.0/@models.0/@properties.1 //@packages.0/@models.0/@properties.2 //@packages.0/@models.0/@properties.3" modelOperation="DELETE"/>
+    <maincomponentrelations xsi:type="ryz:ControllerToViewRelation" actionmethod="//@packages.1/@controllers.2/@actionmethods.2" returns="//@packages.5/@views.0"/>
+    <maincomponentrelations xsi:type="ryz:ControllerToViewRelation" actionmethod="//@packages.1/@controllers.2/@actionmethods.1" returns="//@packages.5/@views.1"/>
+    <maincomponentrelations xsi:type="ryz:ControllerToViewRelation" actionmethod="//@packages.1/@controllers.2/@actionmethods.0" returns="//@packages.5/@views.1"/>
+    <maincomponentrelations xsi:type="ryz:ViewToModelRelation" abstractview="//@packages.5/@views.1" model="//@packages.0/@models.0"/>
+  </packages>
+  <packages xsi:type="ryz:MvcPackage" name="NavController" maincomponents="//@packages.1/@controllers.4 //@packages.0/@models.0 //@packages.11/@views.0">
+    <maincomponentrelations xsi:type="ryz:ControllerToModelRelation" actionmethod="//@packages.1/@controllers.4/@actionmethods.0" model="//@packages.0/@models.0" modelproperties="//@packages.0/@models.0/@properties.3" modelCardinality="ALL" modelOperation="READ"/>
+    <maincomponentrelations xsi:type="ryz:ControllerToViewRelation" actionmethod="//@packages.1/@controllers.4/@actionmethods.0" returns="//@packages.11/@views.0"/>
+  </packages>
+  <packages xsi:type="ryz:ViewPackage" name="Nav">
+    <views xsi:type="ryz:Partial" name="ProductCategoryMenuPage">
+      <htmlelements xsi:type="ryz:ActionLink" name="Nav_Menu_ActionLink1" text="Go To Products List Page"/>
+    </views>
+  </packages>
+</ryz:Project>

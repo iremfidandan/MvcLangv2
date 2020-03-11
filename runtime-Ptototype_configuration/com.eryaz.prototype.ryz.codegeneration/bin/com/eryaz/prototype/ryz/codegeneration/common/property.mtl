@@ -1,0 +1,20 @@
+[comment encoding = UTF-8 /]
+[module property('http://www.eryaz.com/prototype/ryz')]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::enumtypes::modelPropertyType /]
+
+[template public generateProperty(aProperty : Property) ? (aProperty.type = ModelPropertyType::STRING)]
+[if (aProperty.isRequired)]
+[ '[' /]Required[ ']' /]
+[/if]
+public [aProperty.type.generateModelPropertyType()/] [aProperty.name/] {get; set;}
+[/template]
+
+
+[template public generateProperty(aProperty : Property) ? ((aProperty.type = ModelPropertyType::STRING)._not())]
+[if (aProperty.isRequired)]
+public [aProperty.type.generateModelPropertyType()/] [aProperty.name/] {get; set;}
+[else]
+public Nullable<[aProperty.type.generateModelPropertyType()/]> [aProperty.name/] {get; set;}
+[/if]
+[/template]

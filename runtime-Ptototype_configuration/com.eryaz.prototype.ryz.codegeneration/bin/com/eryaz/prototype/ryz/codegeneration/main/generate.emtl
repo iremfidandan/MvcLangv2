@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="generate" nsURI="com::eryaz::prototype::ryz::codegeneration::main::generate" startHeaderPosition="29" endHeaderPosition="160">
+    <input>
+      <takesTypesFrom href="http://www.eryaz.com/prototype/ryz#/"/>
+    </input>
+    <imports href="../files/modelClassFile.emtl#/0"/>
+    <imports href="../files/dbContextClassFile.emtl#/0"/>
+    <imports href="../common/deprecated/viewModelClassFile.emtl#/0"/>
+    <imports href="../common/deprecated/oldViewFile.emtl#/0"/>
+    <imports href="../files/controllerClassFile.emtl#/0"/>
+    <imports href="../files/repositoryInterfaceFile.emtl#/0"/>
+    <imports href="../files/repositoryClassFile.emtl#/0"/>
+    <imports href="../files/unitOfWorkInterfaceFile.emtl#/0"/>
+    <imports href="../files/unitOfWorkClassFile.emtl#/0"/>
+    <imports href="../files/viewFile.emtl#/0"/>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateElement" visibility="Public" main="true">
+      <body xsi:type="mtl:TemplateInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="../files/dbContextClassFile.emtl#/0/generateDbContextFile"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="aProject" referredVariable="/0/generateElement/aProject">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:TemplateInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="../files/repositoryInterfaceFile.emtl#/0/generateRepositoryInterfaceFile"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="aProject" referredVariable="/0/generateElement/aProject">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:TemplateInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="../files/repositoryClassFile.emtl#/0/generateRepositoryClassFile"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="aProject" referredVariable="/0/generateElement/aProject">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:TemplateInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="../files/unitOfWorkInterfaceFile.emtl#/0/generateUnitOfWorkInterfaceFile"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="aProject" referredVariable="/0/generateElement/aProject">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:TemplateInvocation">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <definition href="../files/unitOfWorkClassFile.emtl#/0/generateUnitOfWorkClassFile"/>
+        <argument xsi:type="ocl.ecore:VariableExp" name="aProject" referredVariable="/0/generateElement/aProject">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+        </argument>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#xA;"/>
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="mtl:TemplateInvocation">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <definition href="../files/modelClassFile.emtl#/0/generateModelClassFile"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="aModel" referredVariable="/0/generateElement/%.10/aModel">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+          </argument>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+        <loopVariable name="aModel">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/11/Sequence(Model)">
+          <source xsi:type="ocl.ecore:OperationCallExp" eType="/11/OrderedSet(ModelPackage)" referredOperation="/1/oclstdlib_Collection(T)_Class/filter">
+            <source xsi:type="ocl.ecore:PropertyCallExp" eType="/11/OrderedSet(Package)">
+              <source xsi:type="ocl.ecore:VariableExp" name="aProject" referredVariable="/0/generateElement/aProject">
+                <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//Project/packages"/>
+            </source>
+            <argument xsi:type="ocl.ecore:TypeExp" eType="/12/ModelPackage">
+              <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ModelPackage"/>
+            </argument>
+          </source>
+          <body xsi:type="ocl.ecore:PropertyCallExp" eType="/11/OrderedSet(Model)">
+            <source xsi:type="ocl.ecore:VariableExp" name="temp1" referredVariable="/0/generateElement/%.10/collect/temp1">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ModelPackage"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ModelPackage/models"/>
+          </body>
+          <iterator xsi:type="ocl.ecore:Variable" name="temp1">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ModelPackage"/>
+          </iterator>
+        </iterSet>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="mtl:TemplateInvocation">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <definition href="../common/deprecated/viewModelClassFile.emtl#/0/generateViewModelClassFile"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="aModel" referredVariable="/0/generateElement/%.12/aModel">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+          </argument>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+        <loopVariable name="aModel">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/11/Sequence(Model)">
+          <source xsi:type="ocl.ecore:OperationCallExp" eType="/11/OrderedSet(ModelPackage)" referredOperation="/1/oclstdlib_Collection(T)_Class/filter">
+            <source xsi:type="ocl.ecore:PropertyCallExp" eType="/11/OrderedSet(Package)">
+              <source xsi:type="ocl.ecore:VariableExp" name="aProject" referredVariable="/0/generateElement/aProject">
+                <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//Project/packages"/>
+            </source>
+            <argument xsi:type="ocl.ecore:TypeExp" eType="/12/ModelPackage">
+              <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ModelPackage"/>
+            </argument>
+          </source>
+          <body xsi:type="ocl.ecore:PropertyCallExp" eType="/11/OrderedSet(Model)">
+            <source xsi:type="ocl.ecore:VariableExp" name="temp1" referredVariable="/0/generateElement/%.12/collect/temp2">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ModelPackage"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ModelPackage/models"/>
+          </body>
+          <iterator xsi:type="ocl.ecore:Variable" name="temp2">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ModelPackage"/>
+          </iterator>
+        </iterSet>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="mtl:TemplateInvocation">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <definition href="../files/controllerClassFile.emtl#/0/generateControllerClassFile"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="aController" referredVariable="/0/generateElement/%.14/aController">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Controller"/>
+          </argument>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+        <loopVariable name="aController">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Controller"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/11/Sequence(Controller)">
+          <source xsi:type="ocl.ecore:OperationCallExp" eType="/11/OrderedSet(ControllerPackage)" referredOperation="/1/oclstdlib_Collection(T)_Class/filter">
+            <source xsi:type="ocl.ecore:PropertyCallExp" eType="/11/OrderedSet(Package)">
+              <source xsi:type="ocl.ecore:VariableExp" name="aProject" referredVariable="/0/generateElement/aProject">
+                <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//Project/packages"/>
+            </source>
+            <argument xsi:type="ocl.ecore:TypeExp" eType="/12/ControllerPackage">
+              <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerPackage"/>
+            </argument>
+          </source>
+          <body xsi:type="ocl.ecore:PropertyCallExp" eType="/11/OrderedSet(Controller)">
+            <source xsi:type="ocl.ecore:VariableExp" name="temp1" referredVariable="/0/generateElement/%.14/collect/temp3">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerPackage"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ControllerPackage/controllers"/>
+          </body>
+          <iterator xsi:type="ocl.ecore:Variable" name="temp3">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerPackage"/>
+          </iterator>
+        </iterSet>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="mtl:ForBlock">
+        <body xsi:type="mtl:TemplateInvocation">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <definition href="../files/viewFile.emtl#/0/generateNewViewFile"/>
+          <argument xsi:type="ocl.ecore:VariableExp" name="anAbstractView" referredVariable="/0/generateElement/%.16/anAbstractView">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//AbstractView"/>
+          </argument>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+        <loopVariable name="anAbstractView">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//AbstractView"/>
+        </loopVariable>
+        <iterSet xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/11/Sequence(AbstractView)">
+          <source xsi:type="ocl.ecore:OperationCallExp" eType="/11/OrderedSet(ViewPackage)" referredOperation="/1/oclstdlib_Collection(T)_Class/filter">
+            <source xsi:type="ocl.ecore:PropertyCallExp" eType="/11/OrderedSet(Package)">
+              <source xsi:type="ocl.ecore:VariableExp" name="aProject" referredVariable="/0/generateElement/aProject">
+                <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//Project/packages"/>
+            </source>
+            <argument xsi:type="ocl.ecore:TypeExp" eType="/12/ViewPackage">
+              <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ViewPackage"/>
+            </argument>
+          </source>
+          <body xsi:type="ocl.ecore:PropertyCallExp" eType="/11/OrderedSet(AbstractView)">
+            <source xsi:type="ocl.ecore:VariableExp" name="temp1" referredVariable="/0/generateElement/%.16/collect/temp4">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ViewPackage"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ViewPackage/views"/>
+          </body>
+          <iterator xsi:type="ocl.ecore:Variable" name="temp4">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ViewPackage"/>
+          </iterator>
+        </iterSet>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <parameter name="aProject">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+      </parameter>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="generateElement">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateElement"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aProject">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateModelClassFile">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../files/modelClassFile.emtl#/0/generateModelClassFile"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aModel">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateDbContextFile">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../files/dbContextClassFile.emtl#/0/generateDbContextFile"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aProject">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateViewModelClassFile">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../common/deprecated/viewModelClassFile.emtl#/0/generateViewModelClassFile"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aModel">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateControllerClassFile">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../files/controllerClassFile.emtl#/0/generateControllerClassFile"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aController">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Controller"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateRepositoryInterfaceFile">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../files/repositoryInterfaceFile.emtl#/0/generateRepositoryInterfaceFile"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aProject">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateRepositoryClassFile">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../files/repositoryClassFile.emtl#/0/generateRepositoryClassFile"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aProject">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateUnitOfWorkInterfaceFile">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../files/unitOfWorkInterfaceFile.emtl#/0/generateUnitOfWorkInterfaceFile"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aProject">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateUnitOfWorkClassFile">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../files/unitOfWorkClassFile.emtl#/0/generateUnitOfWorkClassFile"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aProject">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="generateNewViewFile">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL">
+          <references href="../files/viewFile.emtl#/0/generateNewViewFile"/>
+        </eAnnotations>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="anAbstractView">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//AbstractView"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+      <eOperations name="filter">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:CollectionType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+        <eParameters name="filter">
+          <eType xsi:type="ocl.ecore:TypeType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclType"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ryz_Project_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eryaz.com/prototype/ryz#//Project"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ryz_Model_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eryaz.com/prototype/ryz#//Model"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ryz_AbstractView_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eryaz.com/prototype/ryz#//AbstractView"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ryz_Controller_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eryaz.com/prototype/ryz#//Controller"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Package)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Package"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(ModelPackage)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ModelPackage"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Model)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(Model)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(ControllerPackage)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerPackage"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Controller)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Controller"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(Controller)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Controller"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(ViewPackage)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ViewPackage"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(AbstractView)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//AbstractView"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(AbstractView)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//AbstractView"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ecore:EPackage name="types">
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="ModelPackage">
+      <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ModelPackage"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="ControllerPackage">
+      <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerPackage"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="ViewPackage">
+      <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ViewPackage"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Controller"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Controller"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//AbstractView"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//AbstractView"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/generateElement">
+      <details key="start" value="915"/>
+      <details key="end" value="1714"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateElement/%">
+      <details key="start" value="987"/>
+      <details key="end" value="1018"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateElement/%/aProject">
+      <details key="start" value="1009"/>
+      <details key="end" value="1017"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateElement/%.1">
+      <details key="start" value="1020"/>
+      <details key="end" value="1021"/>
+      <details key="line" value="18"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateElement/%.2">
+      <details key="start" value="1022"/>
+      <details key="end" value="1063"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateElement/%.2/aProject">
+      <details key="start" value="1054"/>
+      <details key="end" value="1062"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateElement/%.3">
+      <details key="start" value="1065"/>
+      <details key="end" value="1066"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateElement/%.4">
+      <details key="start" value="1067"/>
+      <details key="end" value="1104"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateElement/%.4/aProject">
+      <details key="start" value="1095"/>
+      <details key="end" value="1103"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateElement/%.5">
+      <details key="start" value="1106"/>
+      <details key="end" value="1107"/>
+      <details key="line" value="20"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateElement/%.6">
+      <details key="start" value="1108"/>
+      <details key="end" value="1149"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateElement/%.6/aProject">
+      <details key="start" value="1140"/>
+      <details key="end" value="1148"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateElement/%.7">
+      <details key="start" value="1151"/>
+      <details key="end" value="1152"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateElement/%.8">
+      <details key="start" value="1153"/>
+      <details key="end" value="1190"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateElement/%.8/aProject">
+      <details key="start" value="1181"/>
+      <details key="end" value="1189"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateElement/%.9">
+      <details key="start" value="1192"/>
+      <details key="end" value="1194"/>
+      <details key="line" value="22"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generateElement/%.10">
+      <details key="start" value="1194"/>
+      <details key="end" value="1306"/>
+      <details key="line" value="23"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/generateElement/%.10/%">
+      <details key="start" value="1267"/>
+      <details key="end" value="1297"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/generateElement/%.10/%/aModel">
+      <details key="start" value="1290"/>
+      <details key="end" value="1296"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/generateElement/%.10/%.1">
+      <details key="start" value="1299"/>
+      <details key="end" value="1300"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/generateElement/%.10/aModel">
+      <details key="start" value="1200"/>
+      <details key="end" value="1214"/>
+      <details key="line" value="23"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/generateElement/%.10/collect">
+      <details key="start" value="1217"/>
+      <details key="end" value="1263"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/generateElement/%.10/collect/%">
+      <details key="start" value="1217"/>
+      <details key="end" value="1256"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/generateElement/%.10/collect/%/%">
+      <details key="start" value="1217"/>
+      <details key="end" value="1234"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/generateElement/%.10/collect/%/%/aProject">
+      <details key="start" value="1217"/>
+      <details key="end" value="1225"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/generateElement/%.10/collect/%/%.1">
+      <details key="start" value="1243"/>
+      <details key="end" value="1255"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/generateElement/%.10/collect/%.1">
+      <details key="start" value="1257"/>
+      <details key="end" value="1263"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/generateElement/%.10/collect/%.1/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/generateElement/%.10/collect/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/generateElement/%.11">
+      <details key="start" value="1307"/>
+      <details key="end" value="1308"/>
+      <details key="line" value="26"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/generateElement/%.12">
+      <details key="start" value="1308"/>
+      <details key="end" value="1424"/>
+      <details key="line" value="27"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/generateElement/%.12/%">
+      <details key="start" value="1381"/>
+      <details key="end" value="1415"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/generateElement/%.12/%/aModel">
+      <details key="start" value="1408"/>
+      <details key="end" value="1414"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/generateElement/%.12/%.1">
+      <details key="start" value="1417"/>
+      <details key="end" value="1418"/>
+      <details key="line" value="29"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/generateElement/%.12/aModel">
+      <details key="start" value="1314"/>
+      <details key="end" value="1328"/>
+      <details key="line" value="27"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/generateElement/%.12/collect">
+      <details key="start" value="1331"/>
+      <details key="end" value="1377"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/generateElement/%.12/collect/%">
+      <details key="start" value="1331"/>
+      <details key="end" value="1370"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/generateElement/%.12/collect/%/%">
+      <details key="start" value="1331"/>
+      <details key="end" value="1348"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/generateElement/%.12/collect/%/%/aProject">
+      <details key="start" value="1331"/>
+      <details key="end" value="1339"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/generateElement/%.12/collect/%/%.1">
+      <details key="start" value="1357"/>
+      <details key="end" value="1369"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/generateElement/%.12/collect/%.1">
+      <details key="start" value="1371"/>
+      <details key="end" value="1377"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/generateElement/%.12/collect/%.1/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/generateElement/%.12/collect/temp2">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/generateElement/%.13">
+      <details key="start" value="1425"/>
+      <details key="end" value="1426"/>
+      <details key="line" value="30"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/generateElement/%.14">
+      <details key="start" value="1426"/>
+      <details key="end" value="1568"/>
+      <details key="line" value="31"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/generateElement/%.14/%">
+      <details key="start" value="1519"/>
+      <details key="end" value="1559"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/generateElement/%.14/%/aController">
+      <details key="start" value="1547"/>
+      <details key="end" value="1558"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/generateElement/%.14/%.1">
+      <details key="start" value="1561"/>
+      <details key="end" value="1562"/>
+      <details key="line" value="33"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/generateElement/%.14/aController">
+      <details key="start" value="1432"/>
+      <details key="end" value="1456"/>
+      <details key="line" value="31"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/generateElement/%.14/collect">
+      <details key="start" value="1459"/>
+      <details key="end" value="1515"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/generateElement/%.14/collect/%">
+      <details key="start" value="1459"/>
+      <details key="end" value="1503"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/generateElement/%.14/collect/%/%">
+      <details key="start" value="1459"/>
+      <details key="end" value="1476"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/generateElement/%.14/collect/%/%/aProject">
+      <details key="start" value="1459"/>
+      <details key="end" value="1467"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/generateElement/%.14/collect/%/%.1">
+      <details key="start" value="1485"/>
+      <details key="end" value="1502"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/generateElement/%.14/collect/%.1">
+      <details key="start" value="1504"/>
+      <details key="end" value="1515"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/generateElement/%.14/collect/%.1/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/generateElement/%.14/collect/temp3">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/generateElement/%.15">
+      <details key="start" value="1569"/>
+      <details key="end" value="1570"/>
+      <details key="line" value="34"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/generateElement/%.16">
+      <details key="start" value="1570"/>
+      <details key="end" value="1701"/>
+      <details key="line" value="35"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/generateElement/%.16/%">
+      <details key="start" value="1656"/>
+      <details key="end" value="1692"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/generateElement/%.16/%/anAbstractView">
+      <details key="start" value="1656"/>
+      <details key="end" value="1670"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/generateElement/%.16/%.1">
+      <details key="start" value="1694"/>
+      <details key="end" value="1695"/>
+      <details key="line" value="37"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/generateElement/%.16/anAbstractView">
+      <details key="start" value="1576"/>
+      <details key="end" value="1605"/>
+      <details key="line" value="35"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/generateElement/%.16/collect">
+      <details key="start" value="1608"/>
+      <details key="end" value="1652"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.64" references="/0/generateElement/%.16/collect/%">
+      <details key="start" value="1608"/>
+      <details key="end" value="1646"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.65" references="/0/generateElement/%.16/collect/%/%">
+      <details key="start" value="1608"/>
+      <details key="end" value="1625"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.66" references="/0/generateElement/%.16/collect/%/%/aProject">
+      <details key="start" value="1608"/>
+      <details key="end" value="1616"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/generateElement/%.16/collect/%/%.1">
+      <details key="start" value="1634"/>
+      <details key="end" value="1645"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/generateElement/%.16/collect/%.1">
+      <details key="start" value="1647"/>
+      <details key="end" value="1652"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.69" references="/0/generateElement/%.16/collect/%.1/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.70" references="/0/generateElement/%.16/collect/temp4">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.71" references="/0/generateElement/%.17">
+      <details key="start" value="1702"/>
+      <details key="end" value="1703"/>
+      <details key="line" value="38"/>
+    </eAnnotations>
+    <eAnnotations source="positions.72" references="/0/generateElement/aProject">
+      <details key="start" value="948"/>
+      <details key="end" value="966"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

@@ -1,0 +1,45 @@
+[comment encoding = UTF-8 /]
+[module returnStatement('http://www.eryaz.com/prototype/ryz')]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::mvcRelations /]
+[import com::eryaz::prototype::ryz::codegeneration::common::redirectToActionParameters /]
+[import com::eryaz::prototype::ryz::codegeneration::common::inferences::returnViewPartialViewInference /]
+
+
+[template public generateReturnStatement(anActionMethod : ActionMethod) ? (anActionMethod.returns = ActionMethodReturnType::View) { aControllerToViewRelation : ControllerToViewRelation = anActionMethod.getControllerToViewRelationForActionMethod(); }]
+return View("~/Views/[aControllerToViewRelation.returns.eContainer(ViewPackage).name/]/[aControllerToViewRelation.returns.name/].cshtml"[aControllerToViewRelation.generateReturnViewPartialViewInference()/]);
+[/template]
+
+
+[template public generateReturnStatement(anActionMethod : ActionMethod) ? (anActionMethod.returns = ActionMethodReturnType::PartialView) { aControllerToViewRelation : ControllerToViewRelation = anActionMethod.getControllerToViewRelationForActionMethod(); }]
+return PartialView("~/Views/[aControllerToViewRelation.returns.eContainer(ViewPackage).name/]/[aControllerToViewRelation.returns.name/].cshtml"[aControllerToViewRelation.generateReturnViewPartialViewInference()/]);
+[/template]
+
+
+
+
+[template public generateReturnStatement(anActionMethod : ActionMethod) ? (anActionMethod.returns = ActionMethodReturnType::RedirectToAction)]
+return RedirectToAction([anActionMethod.getControllerToViewRelationForActionMethod().generateRedirectToActionParameters()/]);
+[/template]
+
+
+
+
+[template public generateReturnStatement(anActionMethod : ActionMethod) ? (anActionMethod.returns = ActionMethodReturnType::Content)]
+return Content();
+[/template]
+
+
+
+
+
+[template public generateReturnStatement(anActionMethod : ActionMethod) ? (anActionMethod.returns = ActionMethodReturnType::Json)]
+return Json();
+[/template]
+
+
+
+[query private getControllerToViewRelationForActionMethod(anActionMethod : ActionMethod) : ControllerToViewRelation = 
+anActionMethod.eContainer(Project).getControllerToViewRelationsInProject()->any(r | r.actionmethod = anActionMethod)
+/]
+

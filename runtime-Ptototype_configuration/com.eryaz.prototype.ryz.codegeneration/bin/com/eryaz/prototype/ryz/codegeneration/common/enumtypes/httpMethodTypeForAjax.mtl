@@ -1,0 +1,10 @@
+[comment encoding = UTF-8 /]
+[module httpMethodTypeForAjax('http://www.eryaz.com/prototype/ryz')]
+
+[template public generateHttpMethodTypeForAjax(aHttpMethod : HttpMethod) ? (aHttpMethod = HttpMethod::GET)]
+GET
+[/template]
+
+[template public generateHttpMethodTypeForAjax(aHttpMethod : HttpMethod) ? (aHttpMethod = HttpMethod::POST)]
+POST
+[/template]

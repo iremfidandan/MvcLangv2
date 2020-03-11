@@ -1,0 +1,39 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.eryaz.com/prototype/ryz')]
+
+[import com::eryaz::prototype::ryz::codegeneration::files::modelClassFile /]
+[import com::eryaz::prototype::ryz::codegeneration::files::dbContextClassFile /]
+[import com::eryaz::prototype::ryz::codegeneration::common::deprecated::viewModelClassFile /]
+[import com::eryaz::prototype::ryz::codegeneration::common::deprecated::oldViewFile /]
+[import com::eryaz::prototype::ryz::codegeneration::files::controllerClassFile /]
+[import com::eryaz::prototype::ryz::codegeneration::files::repositoryInterfaceFile /]
+[import com::eryaz::prototype::ryz::codegeneration::files::repositoryClassFile /]
+[import com::eryaz::prototype::ryz::codegeneration::files::unitOfWorkInterfaceFile /]
+[import com::eryaz::prototype::ryz::codegeneration::files::unitOfWorkClassFile /]
+[import com::eryaz::prototype::ryz::codegeneration::files::viewFile /]
+
+[template public generateElement(aProject : Project)]
+[comment @main/]
+[generateDbContextFile(aProject)/]
+[generateRepositoryInterfaceFile(aProject)/]
+[generateRepositoryClassFile(aProject)/]
+[generateUnitOfWorkInterfaceFile(aProject)/]
+[generateUnitOfWorkClassFile(aProject)/]
+
+[for (aModel : Model | aProject.packages->filter(ModelPackage).models)]
+[generateModelClassFile(aModel)/]
+[/for]
+
+[for (aModel : Model | aProject.packages->filter(ModelPackage).models)]
+[generateViewModelClassFile(aModel)/]
+[/for]
+
+[for (aController : Controller | aProject.packages->filter(ControllerPackage).controllers)]
+[generateControllerClassFile(aController)/]
+[/for]
+
+[for (anAbstractView : AbstractView | aProject.packages->filter(ViewPackage).views)]
+[anAbstractView.generateNewViewFile()/]
+[/for]
+
+[/template]

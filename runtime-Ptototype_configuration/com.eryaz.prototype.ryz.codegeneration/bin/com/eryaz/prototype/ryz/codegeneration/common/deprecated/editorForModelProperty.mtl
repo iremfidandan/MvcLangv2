@@ -1,0 +1,9 @@
+[comment encoding = UTF-8 /]
+[module editorForModelProperty('http://www.eryaz.com/prototype/ryz')]
+
+
+[template public generateEditorForModelProperty(aProperty : Property)]
+@Html.DisplayNameFor(model => model.[aProperty.name/]) <br />
+@Html.EditorFor(model => model.[aProperty.name/])  <br />
+@Html.ValidationMessageFor(model => model.[aProperty.name/]) <br />
+[/template]

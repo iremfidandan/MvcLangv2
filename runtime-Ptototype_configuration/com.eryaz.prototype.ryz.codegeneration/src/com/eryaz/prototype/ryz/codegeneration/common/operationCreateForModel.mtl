@@ -1,0 +1,27 @@
+[comment encoding = UTF-8 /]
+[module operationCreateForModel('http://www.eryaz.com/prototype/ryz')]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::tryUpdateModelParameter /]
+
+[comment BEGIN FOR ONE /]
+
+[template public generateOperationCreateForModel(aControllerToModelRelation : ControllerToModelRelation) ? ((aControllerToModelRelation.modelCardinality = ModelCardinality::ONE)._and(aControllerToModelRelation.actionmethod.httpMethod = HttpMethod::GET))]
+[aControllerToModelRelation.model.name/] [aControllerToModelRelation.model.name/] = new [aControllerToModelRelation.model.name/]();
+[/template]
+
+
+[template public generateOperationCreateForModel(aControllerToModelRelation : ControllerToModelRelation) ? ((aControllerToModelRelation.modelCardinality = ModelCardinality::ONE)._and(aControllerToModelRelation.actionmethod.httpMethod = HttpMethod::POST))]
+[aControllerToModelRelation.model.name/] [aControllerToModelRelation.model.name/] = new [aControllerToModelRelation.model.name/]();
+TryUpdateModel<[aControllerToModelRelation.model.name/]>([aControllerToModelRelation.model.name/], [aControllerToModelRelation.generateTryUpdateModelParameter()/]);
+_uow.[aControllerToModelRelation.model.name/]Repository.Add([aControllerToModelRelation.model.name/]);
+_uow.Complete();
+[/template]
+
+[comment END FOR ONE /]
+
+
+
+
+[comment BEGIN FOR MANY /]
+
+[comment END FOR MANY /]

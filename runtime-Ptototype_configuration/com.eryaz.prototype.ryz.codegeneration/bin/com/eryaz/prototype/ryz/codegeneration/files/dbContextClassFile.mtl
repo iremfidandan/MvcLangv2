@@ -1,0 +1,29 @@
+[comment encoding = UTF-8 /]
+[module dbContextClassFile('http://www.eryaz.com/prototype/ryz')]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::using /]
+[import com::eryaz::prototype::ryz::codegeneration::common::dbSet /]
+
+[template public generateDbContextFile(aProject : Project)]
+[file (aProject.name + '/DAL/' + aProject.name + 'Context.cs', false, 'UTF-8')]
+[for (Sequence{aProject.name + '.Models', 'System.Data.Entity', 'System.Data.Entity.ModelConfiguration.Conventions'})]
+[self.generateUsing()/]
+[/for]
+
+namespace [aProject.name/].DAL{
+	public class [aProject.name/]Context : DbContext{
+		public [aProject.name/]Context(){}
+
+		[for (aModel : Model | aProject.packages->filter(ModelPackage).models)]
+		[generateDbSet(aModel)/]
+		[/for]
+
+		protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            base.OnModelCreating(modelBuilder);
+        }
+	}
+}
+[/file]
+[/template]

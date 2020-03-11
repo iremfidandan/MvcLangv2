@@ -1,0 +1,10 @@
+[comment encoding = UTF-8 /]
+[module actionMethodParameterType('http://www.eryaz.com/prototype/ryz')]
+
+[template public generateActionMethodParameterType(anActionMethodParameterType : ActionMethodParameterType) ? (anActionMethodParameterType = ActionMethodParameterType::INTEGER)]
+int
+[/template]
+
+[template public generateActionMethodParameterType(anActionMethodParameterType : ActionMethodParameterType) ? (anActionMethodParameterType = ActionMethodParameterType::STRING)]
+string
+[/template]

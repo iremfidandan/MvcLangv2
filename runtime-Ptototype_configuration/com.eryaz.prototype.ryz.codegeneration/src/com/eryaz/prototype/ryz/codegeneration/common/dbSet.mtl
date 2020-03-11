@@ -1,0 +1,6 @@
+[comment encoding = UTF-8 /]
+[module dbSet('http://www.eryaz.com/prototype/ryz')]
+
+[template public generateDbSet(aModel : Model)]
+public DbSet<[aModel.name/]> [aModel.name/] { get; set;}
+[/template]

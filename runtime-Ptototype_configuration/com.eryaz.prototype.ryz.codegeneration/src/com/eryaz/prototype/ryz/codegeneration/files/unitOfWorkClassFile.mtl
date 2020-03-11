@@ -1,0 +1,54 @@
+[comment encoding = UTF-8 /]
+[module unitOfWorkClassFile('http://www.eryaz.com/prototype/ryz')]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::using/]
+
+[template public generateUnitOfWorkClassFile(aProject : Project)]
+[file (aProject.name + '/DAL/UnitOfWork.cs', false, 'UTF-8')]
+[for (Sequence{'System', aProject.name + '.Models'})]
+[self.generateUsing()/]
+[/for]
+
+//https://stackoverflow.com/questions/38853944/minimal-repository-implementation-using-entity-framework
+
+namespace [aProject.name/].DAL{
+	public class UnitOfWork : IUnitOfWork
+	{
+    	private readonly [aProject.name/]Context _dbContext;
+
+		[for (aModel : Model | aProject.packages->filter(ModelPackage).models) separator ('\n')]
+		private IRepository<[aModel.name/]> _[aModel.name/]Repository;
+		[/for]
+
+    	public UnitOfWork([aProject.name/]Context dbContext)
+    	{
+        	_dbContext = dbContext;
+
+			[for (aModel : Model | aProject.packages->filter(ModelPackage).models) separator ('\n')]
+			_[aModel.name/]Repository = new BaseRepository<[aModel.name/]>(_dbContext);
+			[/for]
+    	}
+
+		[for (aModel : Model | aProject.packages->filter(ModelPackage).models) separator ('\n')]
+		public IRepository<[aModel.name/]> [aModel.name/]Repository
+		{
+			get
+			{
+				return _[aModel.name/]Repository;
+			}
+		}
+		[/for]
+		
+    	public void Complete()
+    	{
+        	_dbContext.SaveChanges();
+    	}
+
+    	public void Dispose()
+    	{
+        	_dbContext.Dispose();
+    	}
+	}
+}
+[/file]
+[/template]

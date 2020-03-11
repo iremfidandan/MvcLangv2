@@ -1,0 +1,10 @@
+[comment encoding = UTF-8 /]
+[module httpMethodTypeForActionMethod('http://www.eryaz.com/prototype/ryz')]
+
+[template public generateHttpMethodTypeForActionMethod(aHttpMethod : HttpMethod) ? (aHttpMethod = HttpMethod::GET)]
+[ '[' /]HttpGet[ ']' /]
+[/template]
+
+[template public generateHttpMethodTypeForActionMethod(aHttpMethod : HttpMethod) ? (aHttpMethod = HttpMethod::POST)]
+[ '[' /]HttpPost[ ']' /]
+[/template]

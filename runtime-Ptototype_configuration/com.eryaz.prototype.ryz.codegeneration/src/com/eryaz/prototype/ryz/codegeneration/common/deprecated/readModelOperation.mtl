@@ -1,0 +1,14 @@
+[comment encoding = UTF-8 /]
+[module readModelOperation('http://www.eryaz.com/prototype/ryz')]
+
+
+[template public generateReadModelOperation(aControllerToModelRelation : ControllerToModelRelation) ? (aControllerToModelRelation.modelCardinality = ModelCardinality::ALL)]
+List<[aControllerToModelRelation.model.name/]> [aControllerToModelRelation.model.name/] = _context.[aControllerToModelRelation.model.name/].ToList();
+[/template]
+
+
+
+
+[template public generateReadModelOperation(aControllerToModelRelation : ControllerToModelRelation) ? (aControllerToModelRelation.modelCardinality = ModelCardinality::ONE)]
+[aControllerToModelRelation.model.name/] [aControllerToModelRelation.model.name/] = _context.[aControllerToModelRelation.model.name/].Where().FirstOrDefault<[aControllerToModelRelation.model.name/]>();
+[/template]

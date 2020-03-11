@@ -1,0 +1,17 @@
+
+@{
+	Layout = null;
+}
+
+@model SportStore.Models.CartLine
+
+
+
+
+@using(@Html.BeginForm("RemoveFromCart", "Cart", new{CartLineId = Model.CartLineId}, FormMethod.Post))
+{
+	@Html.AntiForgeryToken()
+	<input type="submit" name="Remove From Cart" value="Remove From Cart"><br>
+}
+
+

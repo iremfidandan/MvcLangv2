@@ -1,0 +1,44 @@
+[comment encoding = UTF-8 /]
+[module modelClassFile('http://www.eryaz.com/prototype/ryz')]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::using /]
+[import com::eryaz::prototype::ryz::codegeneration::common::modelClass /]
+[import com::eryaz::prototype::ryz::codegeneration::common::property /]
+[import com::eryaz::prototype::ryz::codegeneration::common::navigationProperty /]
+[import com::eryaz::prototype::ryz::codegeneration::common::tableKey /]
+[import com::eryaz::prototype::ryz::codegeneration::common::modelAssociations /]
+
+[template public generateModelClassFile(aModel : Model)]
+
+[file (aModel.eContainer(Project).name + '/Models/' + aModel.name + '.cs', false, 'UTF-8')]
+[for (Sequence{'System', 'System.Collections.Generic', 'System.ComponentModel.DataAnnotations', 'System.ComponentModel.DataAnnotations.Schema'})]
+[self.generateUsing()/]
+[/for]
+
+namespace [aModel.eContainer(Project).name/].Models{
+	[aModel.generateModelClass()/]{
+		[for (aProperty : Property | aModel.properties) separator ('\n') after ('\n')]
+		[aProperty.generateProperty()/]
+		[/for]
+		[for (aTableKey : TableKey | aModel.tablekeys) separator ('\n') after ('\n')]
+		[aTableKey.generateTableKey()/]
+		[/for]
+		[for (aModelAssociation : ModelAssociation | aModel.getModelAssociationsThatModelAsPrincipalEntity()) separator ('\n') after ('\n')]
+		[aModelAssociation.generateNavigationPropertyForPrincipalEntity(aModelAssociation)/]
+		[/for]
+		[for (aModelAssociation : ModelAssociation | aModel.getModelAssociationsThatModelAsDependentEntity()) separator ('\n') after ('\n')]
+		[aModelAssociation.generateNavigationPropertyForDependentEntity(aModelAssociation)/]
+		[/for]
+		public [aModel.name/](){
+			[for (aModelAssociation : ModelAssociation | aModel.getModelAssociationsThatModelAsPrincipalEntity()->select(cardinality <> Cardinality::ONE_TO_ONE))]
+			[aModelAssociation.dependentRoleName/] = new HashSet<[aModelAssociation.dependent.name/]>();
+			[/for]
+			[for (aModelAssociation : ModelAssociation | aModel.getModelAssociationsThatModelAsDependentEntity()->select(cardinality = Cardinality::MANY_TO_MANY))]
+			[aModelAssociation.principalRoleName/] = new HashSet<[aModelAssociation.principal.name/]>();
+			[/for]
+		}
+	}
+}
+[/file]
+[/template]
+

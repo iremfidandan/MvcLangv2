@@ -1,0 +1,32 @@
+[comment encoding = UTF-8 /]
+[module modelDisplay('http://www.eryaz.com/prototype/ryz')]
+
+
+[template public generateModelDisplay(aViewToModelRelation: ViewToModelRelation) ? (aViewToModelRelation.modelcardinality = ModelCardinality::ONE)]
+[for (aProperty : Property | aViewToModelRelation.model->closure(inherits)->including(aViewToModelRelation.model).properties)]
+@Html.DisplayNameFor(model => model.[aProperty.name/])
+@Html.DisplayFor(model => model.[aProperty.name/])
+<br/>
+[/for]
+[/template]
+
+[template public generateModelDisplay(aViewToModelRelation: ViewToModelRelation) ? (aViewToModelRelation.modelcardinality = ModelCardinality::ALL)]
+<table border="1">
+	<thead>
+		<tr>
+			[for (aProperty : Property | aViewToModelRelation.model->closure(inherits)->including(aViewToModelRelation.model).properties)]
+			<th>@Html.DisplayNameFor(model => model.[aProperty.name/])</th>
+			[/for]
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(var item in Model){
+		<tr>
+			[for (aProperty : Property | aViewToModelRelation.model->closure(inherits)->including(aViewToModelRelation.model).properties)]
+			<td>@Html.DisplayFor(modelItem => item.[aProperty.name/])</td>
+			[/for]
+		</tr>
+		}
+	</tbody>
+</table>
+[/template]

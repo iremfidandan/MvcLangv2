@@ -1,0 +1,21 @@
+
+@{
+	Layout = null;
+}
+
+@model IEnumerable<SportStore.Models.Product>
+
+
+
+@Html.Action("GetProductList", "Product", new{Category = Model.Select(m => m.Category).FirstOrDefault()})
+
+<div id="update-ChooseProductCategory">
+</div>
+@Ajax.ActionLink("Choose Product Category", "GetProductList", "Product", new{Category = Model.Select(m => m.Category).FirstOrDefault()}, new AjaxOptions
+	{
+		UpdateTargetId = "update-ChooseProductCategory",
+		InsertionMode = InsertionMode.Replace,
+		HttpMethod = "GET"
+	})
+
+

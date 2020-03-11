@@ -1,0 +1,35 @@
+[comment encoding = UTF-8 /]
+[module editorForNavigationProperty('http://www.eryaz.com/prototype/ryz')]
+
+
+
+[comment Begin Model Associations for MANY_TO_MANY Relations /]
+
+[template public generateEditorForNavigationPropertyForPrincipalEntity(aModelAssociation : ModelAssociation) ? (aModelAssociation.cardinality = Cardinality::MANY_TO_MANY)]
+@Html.DisplayNameFor(model => model.[aModelAssociation.dependentRoleName/]) <br />
+@Html.ListBoxFor(model => model.[aModelAssociation.dependentRoleName/]_[aModelAssociation.dependent.name/]Id, Model.[aModelAssociation.dependentRoleName/][if (aModelAssociation.isRequired._not())], ""[/if])<br />
+[/template]
+
+[template public generateEditorForNavigationPropertyForDependentEntity(aModelAssociation : ModelAssociation) ? (aModelAssociation.cardinality = Cardinality::MANY_TO_MANY)]
+@Html.DisplayNameFor(model => model.[aModelAssociation.principalRoleName/]) <br />
+@Html.ListBoxFor(model => model.[aModelAssociation.principalRoleName/]_[aModelAssociation.principal.name/]Id, Model.[aModelAssociation.principalRoleName/][if (aModelAssociation.isRequired._not())], ""[/if])<br />
+[/template]
+
+[comment End Model Associations for MANY_TO_MANY Relations /]
+
+
+
+
+[comment Begin Model Associations for ONE_TO_MANY Relations /]
+
+[template public generateEditorForNavigationPropertyForPrincipalEntity(aModelAssociation : ModelAssociation) ? (aModelAssociation.cardinality = Cardinality::ONE_TO_MANY)]
+@Html.DisplayNameFor(model => model.[aModelAssociation.dependentRoleName/]) <br />
+@Html.ListBoxFor(model => model.[aModelAssociation.dependentRoleName/]_[aModelAssociation.dependent.name/]Id, Model.[aModelAssociation.dependentRoleName/][if (aModelAssociation.isRequired._not())], ""[/if])<br />
+[/template]
+
+[template public generateEditorForNavigationPropertyForDependentEntity(aModelAssociation : ModelAssociation) ? (aModelAssociation.cardinality = Cardinality::ONE_TO_MANY)]
+@Html.DisplayNameFor(model => model.[aModelAssociation.principalRoleName/]) <br />
+@Html.DropDownListFor(model => model.[aModelAssociation.principalRoleName/]_[aModelAssociation.principal.name/]Id, Model.[aModelAssociation.principalRoleName/][if (aModelAssociation.isRequired._not())], ""[/if])<br />
+[/template]
+
+[comment End Model Associations for ONE_TO_MANY Relations /]

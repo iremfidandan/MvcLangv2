@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="actionMethodLambdaExpOperand" nsURI="com::eryaz::prototype::ryz::codegeneration::common::actionMethodLambdaExpOperand" startHeaderPosition="29" endHeaderPosition="234">
+    <input>
+      <takesTypesFrom href="http://www.eryaz.com/prototype/ryz#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateActionMethodLambdaExpOperand" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="(m."/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="aParameter" referredVariable="/0/generateActionMethodLambdaExpOperand/aParameter">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Parameter"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" == "/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="aParameter" referredVariable="/0/generateActionMethodLambdaExpOperand/aParameter">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Parameter"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=")"/>
+      <parameter name="aParameter">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Parameter"/>
+      </parameter>
+      <guard xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aParameter" referredVariable="/0/generateActionMethodLambdaExpOperand/aParameter">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Parameter"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//Parameter/isList"/>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean_Class/not"/>
+      </guard>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateActionMethodLambdaExpOperand" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="("/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="aParameter" referredVariable="/0/generateActionMethodLambdaExpOperand.1/aParameter">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Parameter"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".Contains(m."/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="aParameter" referredVariable="/0/generateActionMethodLambdaExpOperand.1/aParameter">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Parameter"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="))"/>
+      <parameter name="aParameter">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Parameter"/>
+      </parameter>
+      <guard xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <source xsi:type="ocl.ecore:VariableExp" name="aParameter" referredVariable="/0/generateActionMethodLambdaExpOperand.1/aParameter">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Parameter"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//Parameter/isList"/>
+      </guard>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="generateActionMethodLambdaExpOperand">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateActionMethodLambdaExpOperand"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aParameter">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Parameter"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ryz_Parameter_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eryaz.com/prototype/ryz#//Parameter"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Parameter"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Parameter"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Parameter"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Parameter"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Parameter"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Parameter"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Parameter"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Parameter"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Parameter"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Parameter"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/generateActionMethodLambdaExpOperand">
+      <details key="start" value="107"/>
+      <details key="end" value="271"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateActionMethodLambdaExpOperand/%">
+      <details key="start" value="215"/>
+      <details key="end" value="218"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateActionMethodLambdaExpOperand/%.1">
+      <details key="start" value="219"/>
+      <details key="end" value="234"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateActionMethodLambdaExpOperand/%.1/aParameter">
+      <details key="start" value="219"/>
+      <details key="end" value="229"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateActionMethodLambdaExpOperand/%.2">
+      <details key="start" value="236"/>
+      <details key="end" value="240"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateActionMethodLambdaExpOperand/%.3">
+      <details key="start" value="241"/>
+      <details key="end" value="256"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateActionMethodLambdaExpOperand/%.3/aParameter">
+      <details key="start" value="241"/>
+      <details key="end" value="251"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateActionMethodLambdaExpOperand/%.4">
+      <details key="start" value="258"/>
+      <details key="end" value="259"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateActionMethodLambdaExpOperand/aParameter">
+      <details key="start" value="161"/>
+      <details key="end" value="183"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateActionMethodLambdaExpOperand/%.5">
+      <details key="start" value="188"/>
+      <details key="end" value="212"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateActionMethodLambdaExpOperand/%.5/%">
+      <details key="start" value="188"/>
+      <details key="end" value="205"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateActionMethodLambdaExpOperand/%.5/%/aParameter">
+      <details key="start" value="188"/>
+      <details key="end" value="198"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateActionMethodLambdaExpOperand.1">
+      <details key="start" value="274"/>
+      <details key="end" value="438"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateActionMethodLambdaExpOperand.1/%">
+      <details key="start" value="375"/>
+      <details key="end" value="376"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateActionMethodLambdaExpOperand.1/%.1">
+      <details key="start" value="377"/>
+      <details key="end" value="392"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateActionMethodLambdaExpOperand.1/%.1/aParameter">
+      <details key="start" value="377"/>
+      <details key="end" value="387"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generateActionMethodLambdaExpOperand.1/%.2">
+      <details key="start" value="394"/>
+      <details key="end" value="406"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/generateActionMethodLambdaExpOperand.1/%.3">
+      <details key="start" value="407"/>
+      <details key="end" value="422"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/generateActionMethodLambdaExpOperand.1/%.3/aParameter">
+      <details key="start" value="407"/>
+      <details key="end" value="417"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/generateActionMethodLambdaExpOperand.1/%.4">
+      <details key="start" value="424"/>
+      <details key="end" value="426"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/generateActionMethodLambdaExpOperand.1/aParameter">
+      <details key="start" value="328"/>
+      <details key="end" value="350"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/generateActionMethodLambdaExpOperand.1/%.5">
+      <details key="start" value="355"/>
+      <details key="end" value="372"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/generateActionMethodLambdaExpOperand.1/%.5/aParameter">
+      <details key="start" value="355"/>
+      <details key="end" value="365"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

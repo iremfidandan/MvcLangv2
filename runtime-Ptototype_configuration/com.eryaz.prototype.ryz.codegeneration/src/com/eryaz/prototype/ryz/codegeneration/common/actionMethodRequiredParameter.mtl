@@ -1,0 +1,12 @@
+[comment encoding = UTF-8 /]
+[module actionMethodRequiredParameter('http://www.eryaz.com/prototype/ryz')]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::enumtypes::actionMethodParameterType /]
+
+[template public generateActionMethodRequiredParameter(aParameter : Parameter) ? ((aParameter.isNullable)._not()._and(aParameter.isList._not()))]
+[aParameter.type.generateActionMethodParameterType()/] [aParameter.name/]
+[/template]
+
+[template public generateActionMethodRequiredParameter(aParameter : Parameter) ? ((aParameter.isNullable)._not()._and(aParameter.isList))]
+List<[aParameter.type.generateActionMethodParameterType()/]> [aParameter.name/]
+[/template]

@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="mvcRelations" nsURI="com::eryaz::prototype::ryz::codegeneration::common::mvcRelations" startHeaderPosition="29" endHeaderPosition="261">
+    <input>
+      <takesTypesFrom href="http://www.eryaz.com/prototype/ryz#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Query" name="getMainComponentRelationsInProject" visibility="Public" type="/3/Set(MainComponentRelation)">
+      <parameter name="aProject">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:OperationCallExp" eType="/3/Set(MainComponentRelation)">
+        <source xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/3/Sequence(MainComponentRelation)">
+          <source xsi:type="ocl.ecore:OperationCallExp" eType="/3/OrderedSet(MvcPackage)" referredOperation="/1/oclstdlib_Collection(T)_Class/filter">
+            <source xsi:type="ocl.ecore:PropertyCallExp" eType="/3/OrderedSet(Package)">
+              <source xsi:type="ocl.ecore:VariableExp" name="aProject" referredVariable="/0/getMainComponentRelationsInProject/aProject">
+                <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//Project/packages"/>
+            </source>
+            <argument xsi:type="ocl.ecore:TypeExp" eType="/5/MvcPackage">
+              <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//MvcPackage"/>
+            </argument>
+          </source>
+          <body xsi:type="ocl.ecore:PropertyCallExp" eType="/3/OrderedSet(MainComponentRelation)">
+            <source xsi:type="ocl.ecore:VariableExp" name="temp1" referredVariable="/0/getMainComponentRelationsInProject/%/collect/temp1">
+              <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//MvcPackage"/>
+            </source>
+            <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//MvcPackage/maincomponentrelations"/>
+          </body>
+          <iterator xsi:type="ocl.ecore:Variable" name="temp1">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//MvcPackage"/>
+          </iterator>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/asSet"/>
+      </expression>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="getViewToControllerRelationsInProject" visibility="Public" type="/3/Set(ViewToControllerRelation)">
+      <parameter name="aProject">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:OperationCallExp" eType="/3/Set(ViewToControllerRelation)" referredOperation="/1/oclstdlib_Collection(T)_Class/filter">
+        <source xsi:type="mtl:QueryInvocation" eType="/3/Set(MainComponentRelation)" definition="/0/getMainComponentRelationsInProject">
+          <argument xsi:type="ocl.ecore:VariableExp" name="aProject" referredVariable="/0/getViewToControllerRelationsInProject/aProject">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+          </argument>
+        </source>
+        <argument xsi:type="ocl.ecore:TypeExp" eType="/5/ViewToControllerRelation">
+          <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ViewToControllerRelation"/>
+        </argument>
+      </expression>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="getControllerToModelRelationsInProject" visibility="Public" type="/3/Set(ControllerToModelRelation)">
+      <parameter name="aProject">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:OperationCallExp" eType="/3/Set(ControllerToModelRelation)" referredOperation="/1/oclstdlib_Collection(T)_Class/filter">
+        <source xsi:type="mtl:QueryInvocation" eType="/3/Set(MainComponentRelation)" definition="/0/getMainComponentRelationsInProject">
+          <argument xsi:type="ocl.ecore:VariableExp" name="aProject" referredVariable="/0/getControllerToModelRelationsInProject/aProject">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+          </argument>
+        </source>
+        <argument xsi:type="ocl.ecore:TypeExp" eType="/5/ControllerToModelRelation">
+          <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+        </argument>
+      </expression>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="getControllerToViewRelationsInProject" visibility="Public" type="/3/Set(ControllerToViewRelation)">
+      <parameter name="aProject">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:OperationCallExp" eType="/3/Set(ControllerToViewRelation)" referredOperation="/1/oclstdlib_Collection(T)_Class/filter">
+        <source xsi:type="mtl:QueryInvocation" eType="/3/Set(MainComponentRelation)" definition="/0/getMainComponentRelationsInProject">
+          <argument xsi:type="ocl.ecore:VariableExp" name="aProject" referredVariable="/0/getControllerToViewRelationsInProject/aProject">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+          </argument>
+        </source>
+        <argument xsi:type="ocl.ecore:TypeExp" eType="/5/ControllerToViewRelation">
+          <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToViewRelation"/>
+        </argument>
+      </expression>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="getViewToModelRelationsInProject" visibility="Public" type="/3/Set(ViewToModelRelation)">
+      <parameter name="aProject">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:OperationCallExp" eType="/3/Set(ViewToModelRelation)" referredOperation="/1/oclstdlib_Collection(T)_Class/filter">
+        <source xsi:type="mtl:QueryInvocation" eType="/3/Set(MainComponentRelation)" definition="/0/getMainComponentRelationsInProject">
+          <argument xsi:type="ocl.ecore:VariableExp" name="aProject" referredVariable="/0/getViewToModelRelationsInProject/aProject">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+          </argument>
+        </source>
+        <argument xsi:type="ocl.ecore:TypeExp" eType="/5/ViewToModelRelation">
+          <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ViewToModelRelation"/>
+        </argument>
+      </expression>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="getFormElementToPropertyKeyRelationsInProject" visibility="Public" type="/3/Set(FormElementToPropertyKeyRelation)">
+      <parameter name="aProject">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:OperationCallExp" eType="/3/Set(FormElementToPropertyKeyRelation)" referredOperation="/1/oclstdlib_Collection(T)_Class/filter">
+        <source xsi:type="mtl:QueryInvocation" eType="/3/Set(MainComponentRelation)" definition="/0/getMainComponentRelationsInProject">
+          <argument xsi:type="ocl.ecore:VariableExp" name="aProject" referredVariable="/0/getFormElementToPropertyKeyRelationsInProject/aProject">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+          </argument>
+        </source>
+        <argument xsi:type="ocl.ecore:TypeExp" eType="/5/FormElementToPropertyKeyRelation">
+          <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//FormElementToPropertyKeyRelation"/>
+        </argument>
+      </expression>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="getMainComponentRelationsInProject" eType="/3/Set(MainComponentRelation)">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/getMainComponentRelationsInProject"/>
+        <eParameters name="aProject">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="getViewToControllerRelationsInProject" eType="/3/Set(ViewToControllerRelation)">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/getViewToControllerRelationsInProject"/>
+        <eParameters name="aProject">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="getControllerToModelRelationsInProject" eType="/3/Set(ControllerToModelRelation)">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/getControllerToModelRelationsInProject"/>
+        <eParameters name="aProject">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="getControllerToViewRelationsInProject" eType="/3/Set(ControllerToViewRelation)">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/getControllerToViewRelationsInProject"/>
+        <eParameters name="aProject">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="getViewToModelRelationsInProject" eType="/3/Set(ViewToModelRelation)">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/getViewToModelRelationsInProject"/>
+        <eParameters name="aProject">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="getFormElementToPropertyKeyRelationsInProject" eType="/3/Set(FormElementToPropertyKeyRelation)">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/getFormElementToPropertyKeyRelationsInProject"/>
+        <eParameters name="aProject">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+      <eOperations name="filter">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:CollectionType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+        <eParameters name="filter">
+          <eType xsi:type="ocl.ecore:TypeType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclType"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ryz_Project_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eryaz.com/prototype/ryz#//Project"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(MainComponentRelation)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//MainComponentRelation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(ViewToControllerRelation)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ViewToControllerRelation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(ControllerToModelRelation)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(ControllerToViewRelation)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToViewRelation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(ViewToModelRelation)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ViewToModelRelation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(FormElementToPropertyKeyRelation)" instanceClassName="java.util.Set">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//FormElementToPropertyKeyRelation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Package)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Package"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(MvcPackage)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//MvcPackage"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(MainComponentRelation)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//MainComponentRelation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(MainComponentRelation)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//MainComponentRelation"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="types">
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="MvcPackage">
+      <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//MvcPackage"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="ViewToControllerRelation">
+      <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ViewToControllerRelation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="ControllerToModelRelation">
+      <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="ControllerToViewRelation">
+      <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToViewRelation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="ViewToModelRelation">
+      <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ViewToModelRelation"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="FormElementToPropertyKeyRelation">
+      <referredType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//FormElementToPropertyKeyRelation"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Project"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/getMainComponentRelationsInProject">
+      <details key="start" value="91"/>
+      <details key="end" value="263"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/getMainComponentRelationsInProject/aProject">
+      <details key="start" value="140"/>
+      <details key="end" value="157"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/getMainComponentRelationsInProject/%">
+      <details key="start" value="191"/>
+      <details key="end" value="260"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/getMainComponentRelationsInProject/%/collect">
+      <details key="start" value="191"/>
+      <details key="end" value="251"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/getMainComponentRelationsInProject/%/collect/%">
+      <details key="start" value="191"/>
+      <details key="end" value="228"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/getMainComponentRelationsInProject/%/collect/%/%">
+      <details key="start" value="191"/>
+      <details key="end" value="208"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/getMainComponentRelationsInProject/%/collect/%/%/aProject">
+      <details key="start" value="191"/>
+      <details key="end" value="199"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/getMainComponentRelationsInProject/%/collect/%/%.1">
+      <details key="start" value="217"/>
+      <details key="end" value="227"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/getMainComponentRelationsInProject/%/collect/%.1">
+      <details key="start" value="229"/>
+      <details key="end" value="251"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/getMainComponentRelationsInProject/%/collect/%.1/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/getMainComponentRelationsInProject/%/collect/temp1">
+      <details key="start" value="-1"/>
+      <details key="end" value="-1"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/getViewToControllerRelationsInProject">
+      <details key="start" value="265"/>
+      <details key="end" value="454"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/getViewToControllerRelationsInProject/aProject">
+      <details key="start" value="317"/>
+      <details key="end" value="334"/>
+      <details key="line" value="9"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/getViewToControllerRelationsInProject/%">
+      <details key="start" value="371"/>
+      <details key="end" value="450"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/getViewToControllerRelationsInProject/%/%">
+      <details key="start" value="371"/>
+      <details key="end" value="416"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/getViewToControllerRelationsInProject/%/%/aProject">
+      <details key="start" value="371"/>
+      <details key="end" value="379"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/getViewToControllerRelationsInProject/%/%.1">
+      <details key="start" value="425"/>
+      <details key="end" value="449"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/getControllerToModelRelationsInProject">
+      <details key="start" value="456"/>
+      <details key="end" value="648"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/getControllerToModelRelationsInProject/aProject">
+      <details key="start" value="509"/>
+      <details key="end" value="526"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/getControllerToModelRelationsInProject/%">
+      <details key="start" value="564"/>
+      <details key="end" value="644"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/getControllerToModelRelationsInProject/%/%">
+      <details key="start" value="564"/>
+      <details key="end" value="609"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/getControllerToModelRelationsInProject/%/%/aProject">
+      <details key="start" value="564"/>
+      <details key="end" value="572"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/getControllerToModelRelationsInProject/%/%.1">
+      <details key="start" value="618"/>
+      <details key="end" value="643"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/getControllerToViewRelationsInProject">
+      <details key="start" value="650"/>
+      <details key="end" value="839"/>
+      <details key="line" value="17"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/getControllerToViewRelationsInProject/aProject">
+      <details key="start" value="702"/>
+      <details key="end" value="719"/>
+      <details key="line" value="17"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/getControllerToViewRelationsInProject/%">
+      <details key="start" value="756"/>
+      <details key="end" value="835"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/getControllerToViewRelationsInProject/%/%">
+      <details key="start" value="756"/>
+      <details key="end" value="801"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/getControllerToViewRelationsInProject/%/%/aProject">
+      <details key="start" value="756"/>
+      <details key="end" value="764"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/getControllerToViewRelationsInProject/%/%.1">
+      <details key="start" value="810"/>
+      <details key="end" value="834"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/getViewToModelRelationsInProject">
+      <details key="start" value="841"/>
+      <details key="end" value="1015"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/getViewToModelRelationsInProject/aProject">
+      <details key="start" value="888"/>
+      <details key="end" value="905"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/getViewToModelRelationsInProject/%">
+      <details key="start" value="937"/>
+      <details key="end" value="1011"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/getViewToModelRelationsInProject/%/%">
+      <details key="start" value="937"/>
+      <details key="end" value="982"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/getViewToModelRelationsInProject/%/%/aProject">
+      <details key="start" value="937"/>
+      <details key="end" value="945"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/getViewToModelRelationsInProject/%/%.1">
+      <details key="start" value="991"/>
+      <details key="end" value="1010"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/getFormElementToPropertyKeyRelationsInProject">
+      <details key="start" value="1017"/>
+      <details key="end" value="1229"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/getFormElementToPropertyKeyRelationsInProject/aProject">
+      <details key="start" value="1077"/>
+      <details key="end" value="1094"/>
+      <details key="line" value="25"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/getFormElementToPropertyKeyRelationsInProject/%">
+      <details key="start" value="1139"/>
+      <details key="end" value="1226"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/getFormElementToPropertyKeyRelationsInProject/%/%">
+      <details key="start" value="1139"/>
+      <details key="end" value="1184"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/getFormElementToPropertyKeyRelationsInProject/%/%/aProject">
+      <details key="start" value="1139"/>
+      <details key="end" value="1147"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/getFormElementToPropertyKeyRelationsInProject/%/%.1">
+      <details key="start" value="1193"/>
+      <details key="end" value="1225"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

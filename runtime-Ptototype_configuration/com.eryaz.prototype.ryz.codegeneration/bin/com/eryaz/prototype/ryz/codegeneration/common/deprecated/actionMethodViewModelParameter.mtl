@@ -1,0 +1,7 @@
+[comment encoding = UTF-8 /]
+[module actionMethodViewModelParameter('http://www.eryaz.com/prototype/ryz')]
+
+[comment NavigationProperty'leri ile ilgili id'leri belirtmedik. Söz dizimindeki bir eksiklik./]
+[template public generateActionMethodViewModelParameter(aControllerToModelRelation : ControllerToModelRelation)]
+[ '[' /]Bind(Include = "[for (aProperty : Property | aControllerToModelRelation.modelproperties) separator (',')][aProperty.name/][/for]")[ ']' /][aControllerToModelRelation.model.name/]ViewModel [aControllerToModelRelation.model.name/]ViewModel
+[/template]

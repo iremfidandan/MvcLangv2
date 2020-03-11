@@ -1,0 +1,59 @@
+[comment encoding = UTF-8 /]
+[module actionMethodLambdaExpInference('http://www.eryaz.com/prototype/ryz')]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::actionMethodLambdaExpOperand /]
+
+
+[template public generateActionMethodLambdaExprInference(aControllerToModelRelation : ControllerToModelRelation) ? (aControllerToModelRelation.getOperands()->isEmpty())]
+[/template]
+
+[template public generateActionMethodLambdaExprInference(aControllerToModelRelation : ControllerToModelRelation) ? (aControllerToModelRelation.getOperands()->isEmpty()._not())]
+[for (aParameter : Parameter | aControllerToModelRelation.getOperands()) before ('m => ') separator (' && ')][generateActionMethodLambdaExpOperand(aParameter)/][/for]
+[/template]
+
+
+
+
+[query private getParameters(aControllerToModelRelation : ControllerToModelRelation) : OrderedSet(Parameter) = 
+aControllerToModelRelation.actionmethod.parameters
+/]
+
+
+
+
+[query private getAllProperties(aControllerToModelRelation : ControllerToModelRelation) : OrderedSet(Property) = 
+aControllerToModelRelation.model->closure(inherits)->including(aControllerToModelRelation.model).properties->asOrderedSet()
+/]
+
+[query private parameterPropertyEquality(aParameter : Parameter, aProperty : Property) : Boolean = 
+(aParameter.name = aProperty.name)._and(aParameter.type.toString() = aProperty.type.toString()) 
+/]
+
+[query private getRelatedProperties(aControllerToModelRelation : ControllerToModelRelation) : OrderedSet(Parameter) = 
+getParameters(aControllerToModelRelation)->product(getAllProperties(aControllerToModelRelation))->select(e | parameterPropertyEquality(e.first, e.second))->collect(e | e.first)->asOrderedSet()
+/]
+
+
+
+
+
+[query private getAllKeys(aControllerToModelRelation : ControllerToModelRelation) : Bag(TableKey) = 
+aControllerToModelRelation.model->closure(inherits)->including(aControllerToModelRelation.model).tablekeys
+/]
+
+[query private parameterKeyEquality(aParameter : Parameter, aTableKey : TableKey) : Boolean = 
+(aParameter.name = aTableKey.name)._and(aParameter.type.toString() = aTableKey.type.toString()) 
+/]
+
+[query private getRelatedKeys(aControllerToModelRelation : ControllerToModelRelation) : OrderedSet(Parameter) = 
+getParameters(aControllerToModelRelation)->product(getAllKeys(aControllerToModelRelation))->select(e | parameterKeyEquality(e.first, e.second))->collect(e | e.first)->asOrderedSet()
+/]
+
+
+
+
+
+
+[query private getOperands(aControllerToModelRelation : ControllerToModelRelation) : Set(Parameter) = 
+getRelatedKeys(aControllerToModelRelation)->union(getRelatedProperties(aControllerToModelRelation)) 
+/]

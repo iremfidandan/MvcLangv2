@@ -1,0 +1,31 @@
+[comment encoding = UTF-8 /]
+[module controllerClassFile('http://www.eryaz.com/prototype/ryz')]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::using /]
+[import com::eryaz::prototype::ryz::codegeneration::common::actionMethod /]
+
+[import com::eryaz::prototype::ryz::codegeneration::common::mvcRelations /]
+
+[template public generateControllerClassFile(aController : Controller)]
+
+[file (aController.eContainer(Project).name + '/Controllers/' + aController.name + '.cs', false, 'UTF-8')]
+[for (Sequence{aController.eContainer(Project).name + '.DAL', aController.eContainer(Project).name + '.Models', aController.eContainer(Project).name + '.ViewModels', 'System', 'System.Collections.Generic', 'System.Linq', 'System.Web', 'System.Web.Mvc'})]
+[self.generateUsing()/]
+[/for]
+
+namespace [aController.eContainer(Project).name/].Controllers{
+	public class [aController.name/] : Controller{
+		
+		private IUnitOfWork _uow;
+
+		public [aController.name/](IUnitOfWork uow){
+			_uow = uow;
+		}
+
+		[for (anActionMethod : ActionMethod | aController.actionmethods) separator ('\n')]
+		[anActionMethod.generateActionMethod()/]
+		[/for]
+	}
+}
+[/file]
+[/template]

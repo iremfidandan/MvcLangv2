@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="readModelOperation" nsURI="com::eryaz::prototype::ryz::codegeneration::common::deprecated::readModelOperation" startHeaderPosition="29" endHeaderPosition="313">
+    <input>
+      <takesTypesFrom href="http://www.eryaz.com/prototype/ryz#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateReadModelOperation" visibility="Public">
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="List&lt;"/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aControllerToModelRelation" referredVariable="/0/generateReadModelOperation/aControllerToModelRelation">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation/model"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="> "/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aControllerToModelRelation" referredVariable="/0/generateReadModelOperation/aControllerToModelRelation">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation/model"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" = _context."/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aControllerToModelRelation" referredVariable="/0/generateReadModelOperation/aControllerToModelRelation">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation/model"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".ToList();"/>
+      <parameter name="aControllerToModelRelation">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+      </parameter>
+      <guard xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//ModelCardinality"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aControllerToModelRelation" referredVariable="/0/generateReadModelOperation/aControllerToModelRelation">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation/modelCardinality"/>
+        </source>
+        <argument xsi:type="ocl.ecore:EnumLiteralExp">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//ModelCardinality"/>
+          <referredEnumLiteral xsi:type="ecore:EEnumLiteral" href="http://www.eryaz.com/prototype/ryz#//ModelCardinality/ALL"/>
+        </argument>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+      </guard>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Template" name="generateReadModelOperation" visibility="Public">
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aControllerToModelRelation" referredVariable="/0/generateReadModelOperation.1/aControllerToModelRelation">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation/model"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aControllerToModelRelation" referredVariable="/0/generateReadModelOperation.1/aControllerToModelRelation">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation/model"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" = _context."/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aControllerToModelRelation" referredVariable="/0/generateReadModelOperation.1/aControllerToModelRelation">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation/model"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".Where().FirstOrDefault&lt;"/>
+      <body xsi:type="ocl.ecore:PropertyCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Model"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aControllerToModelRelation" referredVariable="/0/generateReadModelOperation.1/aControllerToModelRelation">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+          </source>
+          <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation/model"/>
+        </source>
+        <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//NamedElement/name"/>
+      </body>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=">();"/>
+      <parameter name="aControllerToModelRelation">
+        <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+      </parameter>
+      <guard xsi:type="ocl.ecore:OperationCallExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+        <source xsi:type="ocl.ecore:PropertyCallExp">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//ModelCardinality"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="aControllerToModelRelation" referredVariable="/0/generateReadModelOperation.1/aControllerToModelRelation">
+            <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+          </source>
+          <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation/modelCardinality"/>
+        </source>
+        <argument xsi:type="ocl.ecore:EnumLiteralExp">
+          <eType xsi:type="ecore:EEnum" href="http://www.eryaz.com/prototype/ryz#//ModelCardinality"/>
+          <referredEnumLiteral xsi:type="ecore:EEnumLiteral" href="http://www.eryaz.com/prototype/ryz#//ModelCardinality/ONE"/>
+        </argument>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+      </guard>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="generateReadModelOperation">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/generateReadModelOperation"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aControllerToModelRelation">
+          <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ryz_ControllerToModelRelation_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//ControllerToModelRelation"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/generateReadModelOperation">
+      <details key="start" value="97"/>
+      <details key="end" value="431"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/generateReadModelOperation/%">
+      <details key="start" value="270"/>
+      <details key="end" value="275"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/generateReadModelOperation/%.1">
+      <details key="start" value="276"/>
+      <details key="end" value="313"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateReadModelOperation/%.1/%">
+      <details key="start" value="276"/>
+      <details key="end" value="308"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/generateReadModelOperation/%.1/%/aControllerToModelRelation">
+      <details key="start" value="276"/>
+      <details key="end" value="302"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/generateReadModelOperation/%.2">
+      <details key="start" value="315"/>
+      <details key="end" value="317"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/generateReadModelOperation/%.3">
+      <details key="start" value="318"/>
+      <details key="end" value="355"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/generateReadModelOperation/%.3/%">
+      <details key="start" value="318"/>
+      <details key="end" value="350"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/generateReadModelOperation/%.3/%/aControllerToModelRelation">
+      <details key="start" value="318"/>
+      <details key="end" value="344"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/generateReadModelOperation/%.4">
+      <details key="start" value="357"/>
+      <details key="end" value="369"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/generateReadModelOperation/%.5">
+      <details key="start" value="370"/>
+      <details key="end" value="407"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/generateReadModelOperation/%.5/%">
+      <details key="start" value="370"/>
+      <details key="end" value="402"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/generateReadModelOperation/%.5/%/aControllerToModelRelation">
+      <details key="start" value="370"/>
+      <details key="end" value="396"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/generateReadModelOperation/%.6">
+      <details key="start" value="409"/>
+      <details key="end" value="419"/>
+      <details key="line" value="6"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/generateReadModelOperation/aControllerToModelRelation">
+      <details key="start" value="141"/>
+      <details key="end" value="195"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/generateReadModelOperation/%.7">
+      <details key="start" value="200"/>
+      <details key="end" value="267"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/generateReadModelOperation/%.7/%">
+      <details key="start" value="200"/>
+      <details key="end" value="243"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/generateReadModelOperation/%.7/%/aControllerToModelRelation">
+      <details key="start" value="200"/>
+      <details key="end" value="226"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/generateReadModelOperation/%.7/%.1">
+      <details key="start" value="246"/>
+      <details key="end" value="267"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/generateReadModelOperation.1">
+      <details key="start" value="436"/>
+      <details key="end" value="822"/>
+      <details key="line" value="12"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/generateReadModelOperation.1/%">
+      <details key="start" value="610"/>
+      <details key="end" value="647"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/generateReadModelOperation.1/%/%">
+      <details key="start" value="610"/>
+      <details key="end" value="642"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/generateReadModelOperation.1/%/%/aControllerToModelRelation">
+      <details key="start" value="610"/>
+      <details key="end" value="636"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/generateReadModelOperation.1/%.1">
+      <details key="start" value="649"/>
+      <details key="end" value="650"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/generateReadModelOperation.1/%.2">
+      <details key="start" value="651"/>
+      <details key="end" value="688"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/generateReadModelOperation.1/%.2/%">
+      <details key="start" value="651"/>
+      <details key="end" value="683"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/generateReadModelOperation.1/%.2/%/aControllerToModelRelation">
+      <details key="start" value="651"/>
+      <details key="end" value="677"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/generateReadModelOperation.1/%.3">
+      <details key="start" value="690"/>
+      <details key="end" value="702"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/generateReadModelOperation.1/%.4">
+      <details key="start" value="703"/>
+      <details key="end" value="740"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/generateReadModelOperation.1/%.4/%">
+      <details key="start" value="703"/>
+      <details key="end" value="735"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/generateReadModelOperation.1/%.4/%/aControllerToModelRelation">
+      <details key="start" value="703"/>
+      <details key="end" value="729"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/generateReadModelOperation.1/%.5">
+      <details key="start" value="742"/>
+      <details key="end" value="766"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/generateReadModelOperation.1/%.6">
+      <details key="start" value="767"/>
+      <details key="end" value="804"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/generateReadModelOperation.1/%.6/%">
+      <details key="start" value="767"/>
+      <details key="end" value="799"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/generateReadModelOperation.1/%.6/%/aControllerToModelRelation">
+      <details key="start" value="767"/>
+      <details key="end" value="793"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/generateReadModelOperation.1/%.7">
+      <details key="start" value="806"/>
+      <details key="end" value="810"/>
+      <details key="line" value="13"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/generateReadModelOperation.1/aControllerToModelRelation">
+      <details key="start" value="480"/>
+      <details key="end" value="534"/>
+      <details key="line" value="12"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/generateReadModelOperation.1/%.8">
+      <details key="start" value="539"/>
+      <details key="end" value="606"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/generateReadModelOperation.1/%.8/%">
+      <details key="start" value="539"/>
+      <details key="end" value="582"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/generateReadModelOperation.1/%.8/%/aControllerToModelRelation">
+      <details key="start" value="539"/>
+      <details key="end" value="565"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/generateReadModelOperation.1/%.8/%.1">
+      <details key="start" value="585"/>
+      <details key="end" value="606"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>
