@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
-  <mtl:Module name="table" nsURI="com::eryaz::prototype::ryz::codegeneration::common::table" startHeaderPosition="29" endHeaderPosition="229">
+  <mtl:Module name="table" nsURI="com::eryaz::prototype::ryz::codegeneration::common::table" startHeaderPosition="29" endHeaderPosition="238">
     <input>
       <takesTypesFrom href="http://www.eryaz.com/prototype/ryz#/"/>
     </input>
     <ownedModuleElement xsi:type="mtl:Template" name="generateTable" visibility="Public">
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;table bordered=&quot;1&quot;>&#xA;&#x9;&lt;thead>&#xA;"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;table bordered=&quot;1&quot;>&#xA;&#x9;&lt;thead>&#xA;&#x9;&#x9;&lt;tr>&#xA;"/>
       <body xsi:type="mtl:ForBlock">
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&lt;tr>"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&#x9;&lt;th>"/>
         <body xsi:type="ocl.ecore:PropertyCallExp">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
           <source xsi:type="ocl.ecore:VariableExp" name="aHeader" referredVariable="/0/generateTable/%.1/aHeader">
@@ -15,7 +15,7 @@
           </source>
           <referredProperty xsi:type="ecore:EAttribute" href="http://www.eryaz.com/prototype/ryz#//Header/labelText"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/tr>&#xA;"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/th>&#xA;"/>
         <loopVariable name="aHeader">
           <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Header"/>
         </loopVariable>
@@ -26,7 +26,7 @@
           <referredProperty xsi:type="ecore:EReference" href="http://www.eryaz.com/prototype/ryz#//Table/header"/>
         </iterSet>
       </body>
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&lt;/thead>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/thead>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>"/>
       <parameter name="aTable">
         <eType xsi:type="ecore:EClass" href="http://www.eryaz.com/prototype/ryz#//Table"/>
       </parameter>
@@ -127,58 +127,58 @@
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/generateTable">
       <details key="start" value="84"/>
-      <details key="end" value="295"/>
+      <details key="end" value="313"/>
       <details key="line" value="5"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/generateTable/%">
       <details key="start" value="132"/>
-      <details key="end" value="162"/>
+      <details key="end" value="169"/>
       <details key="line" value="6"/>
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/generateTable/%.1">
-      <details key="start" value="164"/>
-      <details key="end" value="245"/>
-      <details key="line" value="8"/>
-    </eAnnotations>
-    <eAnnotations source="positions.3" references="/0/generateTable/%.1/%">
-      <details key="start" value="205"/>
-      <details key="end" value="211"/>
+      <details key="start" value="172"/>
+      <details key="end" value="255"/>
       <details key="line" value="9"/>
     </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/generateTable/%.1/%">
+      <details key="start" value="213"/>
+      <details key="end" value="220"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
     <eAnnotations source="positions.4" references="/0/generateTable/%.1/%.1">
-      <details key="start" value="212"/>
-      <details key="end" value="229"/>
+      <details key="start" value="221"/>
+      <details key="end" value="238"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.5" references="/0/generateTable/%.1/%.1/aHeader">
-      <details key="start" value="212"/>
-      <details key="end" value="219"/>
+      <details key="start" value="221"/>
+      <details key="end" value="228"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.6" references="/0/generateTable/%.1/%.2">
-      <details key="start" value="231"/>
-      <details key="end" value="237"/>
-      <details key="line" value="9"/>
+      <details key="start" value="240"/>
+      <details key="end" value="246"/>
+      <details key="line" value="10"/>
     </eAnnotations>
     <eAnnotations source="positions.7" references="/0/generateTable/%.1/aHeader">
-      <details key="start" value="170"/>
-      <details key="end" value="186"/>
-      <details key="line" value="8"/>
+      <details key="start" value="178"/>
+      <details key="end" value="194"/>
+      <details key="line" value="9"/>
     </eAnnotations>
     <eAnnotations source="positions.8" references="/0/generateTable/%.1/%.3">
-      <details key="start" value="189"/>
-      <details key="end" value="202"/>
+      <details key="start" value="197"/>
+      <details key="end" value="210"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.9" references="/0/generateTable/%.1/%.3/aTable">
-      <details key="start" value="189"/>
-      <details key="end" value="195"/>
+      <details key="start" value="197"/>
+      <details key="end" value="203"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.10" references="/0/generateTable/%.2">
-      <details key="start" value="246"/>
-      <details key="end" value="283"/>
-      <details key="line" value="11"/>
+      <details key="start" value="256"/>
+      <details key="end" value="301"/>
+      <details key="line" value="12"/>
     </eAnnotations>
     <eAnnotations source="positions.11" references="/0/generateTable/aTable">
       <details key="start" value="115"/>

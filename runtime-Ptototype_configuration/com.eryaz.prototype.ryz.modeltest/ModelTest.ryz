@@ -23,7 +23,7 @@
   </packages>
   <packages xsi:type="ryz:ControllerPackage" name="Controllers">
     <controllers name="CartController">
-      <actionmethods name="Click_AddToCart">
+      <actionmethods name="Click_AddToCart" usecase="//@packages.10/@usecasepackages.0/@usecases.1">
         <parameters name="ProductId"/>
         <parameters name="CartId"/>
       </actionmethods>
@@ -34,7 +34,10 @@
       <actionmethods name="Click_CheckOut">
         <parameters name="Cart_CartId"/>
       </actionmethods>
-      <actionmethods name="AddToCart" httpMethod="POST"/>
+      <actionmethods name="AddToCart" httpMethod="POST" usecase="//@packages.10/@usecasepackages.0/@usecases.1">
+        <parameters name="Product_ProductId"/>
+        <parameters name="Cart_CartId"/>
+      </actionmethods>
       <actionmethods name="RemoveFromCart" httpMethod="POST">
         <parameters name="CartLineId"/>
       </actionmethods>
@@ -52,11 +55,11 @@
       <actionmethods name="Click_CreateProduct"/>
       <actionmethods name="Click_EditProduct"/>
       <actionmethods name="Click_DeleteProduct"/>
-      <actionmethods name="CreateProduct" httpMethod="POST"/>
-      <actionmethods name="EditProduct" httpMethod="POST">
+      <actionmethods name="CreateProduct" httpMethod="POST" usecase="//@packages.9/@usecasepackages.0/@usecases.0"/>
+      <actionmethods name="EditProduct" httpMethod="POST" usecase="//@packages.9/@usecasepackages.0/@usecases.1">
         <parameters name="ProductId"/>
       </actionmethods>
-      <actionmethods name="DeleteProduct" httpMethod="POST">
+      <actionmethods name="DeleteProduct" httpMethod="POST" usecase="//@packages.9/@usecasepackages.0/@usecases.2">
         <parameters name="ProductId"/>
       </actionmethods>
       <actionmethods name="GetAdminHomePage"/>
@@ -142,7 +145,7 @@
   </packages>
   <packages xsi:type="ryz:ViewPackage" name="Admin">
     <views xsi:type="ryz:View" name="CreateProductPage">
-      <htmlelements xsi:type="ryz:Form" httpMethod="POST" text="Create a Product" presentationelement="//@packages.5/@views.0/@presentationelement.0"/>
+      <htmlelements xsi:type="ryz:Form" httpMethod="POST" text="Create a Product" usecase="//@packages.9/@usecasepackages.0/@usecases.0" presentationelement="//@packages.5/@views.0/@presentationelement.0"/>
       <presentationelement xsi:type="ryz:PresentationForm" name="Create Product" helperforsendingrequest="//@packages.5/@views.0/@htmlelements.0">
         <presentationformelement xsi:type="ryz:Input" labelText="Name"/>
         <presentationformelement xsi:type="ryz:Input" labelText="Category"/>
@@ -178,7 +181,7 @@
       <presentationelement xsi:type="ryz:Link" name="Delete Product" helperforsendingrequest="//@packages.5/@views.3/@htmlelements.2" text="Delete Product"/>
     </views>
     <views xsi:type="ryz:Partial" name="EditProductFormPage">
-      <htmlelements xsi:type="ryz:Form" httpMethod="POST" text="Edit Product" presentationelement="//@packages.5/@views.4/@presentationelement.0"/>
+      <htmlelements xsi:type="ryz:Form" httpMethod="POST" text="Edit Product" usecase="//@packages.9/@usecasepackages.0/@usecases.1" presentationelement="//@packages.5/@views.4/@presentationelement.0"/>
       <presentationelement xsi:type="ryz:PresentationForm" name="Edit Product" helperforsendingrequest="//@packages.5/@views.4/@htmlelements.0">
         <presentationformelement xsi:type="ryz:Input" labelText="Name"/>
         <presentationformelement xsi:type="ryz:Input" labelText="Category"/>
@@ -188,7 +191,7 @@
       </presentationelement>
     </views>
     <views xsi:type="ryz:Partial" name="DeleteProductFormPage">
-      <htmlelements xsi:type="ryz:Form" httpMethod="POST" text="Delete Product" presentationelement="//@packages.5/@views.5/@presentationelement.0"/>
+      <htmlelements xsi:type="ryz:Form" httpMethod="POST" text="Delete Product" usecase="//@packages.9/@usecasepackages.0/@usecases.2" presentationelement="//@packages.5/@views.5/@presentationelement.0"/>
       <presentationelement xsi:type="ryz:PresentationForm" name="Delete Product" helperforsendingrequest="//@packages.5/@views.5/@htmlelements.0">
         <presentationformelement xsi:type="ryz:Button" labelText="Delete Product"/>
       </presentationelement>
@@ -243,5 +246,22 @@
         <presentationformelement xsi:type="ryz:Button" labelText="Checkout"/>
       </presentationelement>
     </views>
+  </packages>
+  <packages xsi:type="ryz:UseCaseActorPackage" name="UseCaseDiagram1">
+    <actors name="Admin" usecase="//@packages.9/@usecasepackages.0/@usecases.0 //@packages.9/@usecasepackages.0/@usecases.1 //@packages.9/@usecasepackages.0/@usecases.2"/>
+    <usecasepackages name="UseCasePackage1">
+      <usecases name="Add New Product" actor="//@packages.9/@actors.0" helperforsendingrequest="//@packages.5/@views.0/@htmlelements.0" actionmethod="//@packages.1/@controllers.2/@actionmethods.3"/>
+      <usecases name="Select An Existing Product To Update" actor="//@packages.9/@actors.0" helperforsendingrequest="//@packages.5/@views.4/@htmlelements.0" actionmethod="//@packages.1/@controllers.2/@actionmethods.4"/>
+      <usecases name="Select An Existing Product To Delete" actor="//@packages.9/@actors.0" helperforsendingrequest="//@packages.5/@views.5/@htmlelements.0" actionmethod="//@packages.1/@controllers.2/@actionmethods.5"/>
+    </usecasepackages>
+  </packages>
+  <packages xsi:type="ryz:UseCaseActorPackage" name="UseCaseDiagram2">
+    <actors name="Customer" usecase="//@packages.10/@usecasepackages.0/@usecases.0 //@packages.10/@usecasepackages.0/@usecases.1 //@packages.10/@usecasepackages.0/@usecases.2 //@packages.10/@usecasepackages.0/@usecases.3"/>
+    <usecasepackages name="UseCasePackage2">
+      <usecases name="View Products By Category" actor="//@packages.10/@actors.0"/>
+      <usecases name="Add Product To Shopping Cart In Any Quantity" actor="//@packages.10/@actors.0" actionmethod="//@packages.1/@controllers.0/@actionmethods.3 //@packages.1/@controllers.0/@actionmethods.0"/>
+      <usecases name="Delete Product From Cart" actor="//@packages.10/@actors.0"/>
+      <usecases name="Checkout" actor="//@packages.10/@actors.0"/>
+    </usecasepackages>
   </packages>
 </ryz:Project>

@@ -31,11 +31,11 @@
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_426cIDt5Eeq9gKBswIsTmQ" name="MvcPackage Diagram" repPath="#_420VgDt5Eeq9gKBswIsTmQ">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='MvcPackage%20Diagram']"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_2gULoTuOEeq9HsGI5XLcpg" name="new Projects Diagram" repPath="#_2fRp0DuOEeq9HsGI5XLcpg" changeId="7a23c8e0-b558-46eb-a5d0-a03be79e4c2c">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_2gULoTuOEeq9HsGI5XLcpg" name="new Projects Diagram" repPath="#_2fRp0DuOEeq9HsGI5XLcpg" changeId="6a5f1fad-b37c-4115-842b-40f3455e20c3">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']"/>
         <target xmi:type="ryz:Project" href="ModelTest.ryz#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_rKOHADuXEeq7_cMfs5qenA" name="MvcPackage Diagram" repPath="#_rJegIDuXEeq7_cMfs5qenA" changeId="24996df4-5488-448d-898f-c01a3a78b049">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_rKOHADuXEeq7_cMfs5qenA" name="MvcPackage Diagram" repPath="#_rJegIDuXEeq7_cMfs5qenA" changeId="d291ffa9-69cf-4f6b-a05d-2c9f1e68086f">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='MvcPackage%20Diagram']"/>
         <target xmi:type="ryz:MvcPackage" href="ModelTest.ryz#//@packages.2"/>
       </ownedRepresentationDescriptors>
@@ -63,11 +63,11 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='ViewPresentation%20Diagram']"/>
         <target xmi:type="ryz:View" href="ModelTest.ryz#//@packages.8/@views.3"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_EdciRV7YEeqcDK1JaIuigg" name="ViewPresentation Diagram" repPath="#_EdciQF7YEeqcDK1JaIuigg" changeId="aba23889-f251-4460-9914-e112f5952a6f">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_EdciRV7YEeqcDK1JaIuigg" name="ViewPresentation Diagram" repPath="#_EdciQF7YEeqcDK1JaIuigg" changeId="a21524b7-d540-4f84-bbd0-6c3bcae98c73">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='ViewPresentation%20Diagram']"/>
         <target xmi:type="ryz:View" href="ModelTest.ryz#//@packages.8/@views.0"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_XEGUVV7YEeqcDK1JaIuigg" name="ViewPresentation Diagram" repPath="#_XEGUUF7YEeqcDK1JaIuigg" changeId="e5ce97b0-0cd5-4969-9f93-968896f672ce">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_XEGUVV7YEeqcDK1JaIuigg" name="ViewPresentation Diagram" repPath="#_XEGUUF7YEeqcDK1JaIuigg" changeId="90221e6c-a980-4803-a99c-dbf6cf275a19">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='ViewPresentation%20Diagram']"/>
         <target xmi:type="ryz:View" href="ModelTest.ryz#//@packages.7/@views.0"/>
       </ownedRepresentationDescriptors>
@@ -95,9 +95,21 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='ViewPresentation%20Diagram']"/>
         <target xmi:type="ryz:Partial" href="ModelTest.ryz#//@packages.5/@views.4"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_v8oCNV7aEeqcDK1JaIuigg" name="ViewPresentation Diagram" repPath="#_v8oCMF7aEeqcDK1JaIuigg" changeId="ba641a3f-f26d-48b0-bdd1-5e2ee849450d">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_v8oCNV7aEeqcDK1JaIuigg" name="ViewPresentation Diagram" repPath="#_v8oCMF7aEeqcDK1JaIuigg" changeId="3c575b24-f4b7-45ee-ae5d-a0097b89bd37">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='ViewPresentation%20Diagram']"/>
         <target xmi:type="ryz:Partial" href="ModelTest.ryz#//@packages.6/@views.0"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_qkWrw2UWEeqC3O2VcbR3nw" name="UseCase Diagram for Admin" repPath="#_qkM6wGUWEeqC3O2VcbR3nw" changeId="714fc1d0-c61c-4e9e-a8bf-c423dae89f7e">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']"/>
+        <target xmi:type="ryz:UseCaseActorPackage" href="ModelTest.ryz#//@packages.9"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_ApWIwGUeEeqjO5q80GSlTA" name="Admin Use Case Diagram" repPath="#_ApQCIGUeEeqjO5q80GSlTA" changeId="bb6dd211-3a61-4dca-978b-115fe2ccd097">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']"/>
+        <target xmi:type="ryz:UseCaseActorPackage" href="ModelTest.ryz#//@packages.9"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_iLbUIGUlEeqjO5q80GSlTA" name="Customers Use Case Diagram" repPath="#_iLZe8GUlEeqjO5q80GSlTA" changeId="84748559-6bf4-4f47-acce-af65f1c4e657">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']"/>
+        <target xmi:type="ryz:UseCaseActorPackage" href="ModelTest.ryz#//@packages.10"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
   </viewpoint:DAnalysis>
@@ -3818,7 +3830,7 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_gOlHnzuREeq7_cMfs5qenA"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_gOlHmjuREeq7_cMfs5qenA" fontName="Segoe UI" fontHeight="45" bold="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gOlHmzuREeq7_cMfs5qenA" x="1293" y="99"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gOlHmzuREeq7_cMfs5qenA" x="3205" y="174"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_zIQCMD6EEeq0lb3acgju2g" type="3009" element="_zHzWQD6EEeq0lb3acgju2g">
               <children xmi:type="notation:Node" xmi:id="_zIQCMz6EEeq0lb3acgju2g" type="5004"/>
@@ -3843,13 +3855,13 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_zIQCNj6EEeq0lb3acgju2g"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_zIQCMT6EEeq0lb3acgju2g" fontName="Segoe UI" fontHeight="45" bold="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zIQCMj6EEeq0lb3acgju2g" x="1018" y="741"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zIQCMj6EEeq0lb3acgju2g" x="1545" y="155"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_cDfnNzuREeq7_cMfs5qenA"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_cDfnODuREeq7_cMfs5qenA"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_cDfnMzuREeq7_cMfs5qenA" fontName="Segoe UI" fontHeight="45" bold="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cDfnNDuREeq7_cMfs5qenA" x="5060" y="2125" width="2245" height="1251"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cDfnNDuREeq7_cMfs5qenA" x="4990" y="2675" width="4061" height="675"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_0ZzDvTuREeq7_cMfs5qenA" type="2002" element="_0ZpSsDuREeq7_cMfs5qenA">
           <children xmi:type="notation:Node" xmi:id="_0ZzDwDuREeq7_cMfs5qenA" type="5006"/>
@@ -4055,7 +4067,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_0ZzDwzuREeq7_cMfs5qenA"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_0ZzDvjuREeq7_cMfs5qenA" fontName="Segoe UI" fontHeight="45" bold="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0ZzDvzuREeq7_cMfs5qenA" x="680" y="908" width="3941" height="2569"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0ZzDvzuREeq7_cMfs5qenA" x="860" y="910" width="3941" height="2659"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_1vedSDuREeq7_cMfs5qenA" type="2003" element="_1vedPTuREeq7_cMfs5qenA">
           <children xmi:type="notation:Node" xmi:id="_1vedSzuREeq7_cMfs5qenA" type="5007"/>
@@ -4104,7 +4116,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_1vedTjuREeq7_cMfs5qenA"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_1vedSTuREeq7_cMfs5qenA" fontName="Segoe UI" fontHeight="45" bold="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1vedSjuREeq7_cMfs5qenA" x="7410" y="2015" width="1165"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1vedSjuREeq7_cMfs5qenA" x="4910" y="945" width="1165"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_3UghZDuREeq7_cMfs5qenA" type="2003" element="_3UghWDuREeq7_cMfs5qenA">
           <children xmi:type="notation:Node" xmi:id="_3UghZzuREeq7_cMfs5qenA" type="5007"/>
@@ -4133,7 +4145,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_3UghajuREeq7_cMfs5qenA"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_3UghZTuREeq7_cMfs5qenA" fontName="Segoe UI" fontHeight="45" bold="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3UghZjuREeq7_cMfs5qenA" x="8625" y="1200" width="1190"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3UghZjuREeq7_cMfs5qenA" x="4925" y="1980" width="1190"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_-MwylzuREeq7_cMfs5qenA" type="2003" element="_-MnBrDuREeq7_cMfs5qenA">
           <children xmi:type="notation:Node" xmi:id="_-MwymjuREeq7_cMfs5qenA" type="5007"/>
@@ -4174,7 +4186,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_-MwynTuREeq7_cMfs5qenA"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_-MwymDuREeq7_cMfs5qenA" fontName="Segoe UI" fontHeight="45" bold="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-MwymTuREeq7_cMfs5qenA" x="7405" y="1200"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-MwymTuREeq7_cMfs5qenA" x="6365" y="910"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_6H719DuSEeq7_cMfs5qenA" type="2002" element="_6HyEwDuSEeq7_cMfs5qenA">
           <children xmi:type="notation:Node" xmi:id="_6H719zuSEeq7_cMfs5qenA" type="5006"/>
@@ -4196,7 +4208,7 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="__7SUdjuSEeq7_cMfs5qenA"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="__7SUcTuSEeq7_cMfs5qenA" fontName="Segoe UI" fontHeight="45" bold="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__7SUcjuSEeq7_cMfs5qenA" x="65" y="1744"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="__7SUcjuSEeq7_cMfs5qenA" x="3555" y="114"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_EvIeMDuTEeq7_cMfs5qenA" type="3008" element="_Eu-s8DuTEeq7_cMfs5qenA">
               <children xmi:type="notation:Node" xmi:id="_EvIeMzuTEeq7_cMfs5qenA" type="5005"/>
@@ -4234,7 +4246,7 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_H42oODuTEeq7_cMfs5qenA"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_H42oMzuTEeq7_cMfs5qenA" fontName="Segoe UI" fontHeight="45" bold="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H42oNDuTEeq7_cMfs5qenA" x="1190" y="1469"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H42oNDuTEeq7_cMfs5qenA" x="1140" y="849"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_L5hBRDuTEeq7_cMfs5qenA" type="3008" element="_L5XQADuTEeq7_cMfs5qenA">
               <children xmi:type="notation:Node" xmi:id="_L5hBRzuTEeq7_cMfs5qenA" type="5005"/>
@@ -4292,7 +4304,7 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_ANtsaF7QEeqcDK1JaIuigg"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_ANtsY17QEeqcDK1JaIuigg" fontName="Segoe UI" fontHeight="45" bold="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ANtsZF7QEeqcDK1JaIuigg" x="1120" y="774"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ANtsZF7QEeqcDK1JaIuigg" x="2300" y="114"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_CrEfUF7QEeqcDK1JaIuigg" type="3008" element="_CqeCYF7QEeqcDK1JaIuigg">
               <children xmi:type="notation:Node" xmi:id="_CrEfU17QEeqcDK1JaIuigg" type="5005"/>
@@ -4311,13 +4323,13 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_CrEfVl7QEeqcDK1JaIuigg"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_CrEfUV7QEeqcDK1JaIuigg" fontName="Segoe UI" fontHeight="45" bold="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CrEfUl7QEeqcDK1JaIuigg" x="1090" y="2219"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CrEfUl7QEeqcDK1JaIuigg" x="2290" y="859"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_6H71-TuSEeq7_cMfs5qenA"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_6H71-juSEeq7_cMfs5qenA"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_6H719TuSEeq7_cMfs5qenA" fontName="Segoe UI" fontHeight="45" bold="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6H719juSEeq7_cMfs5qenA" x="4935" y="-820" width="2390" height="2881"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6H719juSEeq7_cMfs5qenA" x="3745" y="-951" width="4660" height="1771"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_7N2VKDuSEeq7_cMfs5qenA" type="2002" element="_7Nsj8DuSEeq7_cMfs5qenA">
           <children xmi:type="notation:Node" xmi:id="_7N2VKzuSEeq7_cMfs5qenA" type="5006"/>
@@ -4329,7 +4341,7 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_qnvpODuTEeq7_cMfs5qenA"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_qnvpMzuTEeq7_cMfs5qenA" fontName="Segoe UI" fontHeight="45" bold="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qnvpNDuTEeq7_cMfs5qenA" x="81" y="179"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qnvpNDuTEeq7_cMfs5qenA" x="260" y="149"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_cA9o4DuXEeq7_cMfs5qenA" type="3008" element="_cAz34DuXEeq7_cMfs5qenA">
               <children xmi:type="notation:Node" xmi:id="_cA9o4zuXEeq7_cMfs5qenA" type="5005"/>
@@ -4358,13 +4370,13 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_cA9o5juXEeq7_cMfs5qenA"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_cA9o4TuXEeq7_cMfs5qenA" fontName="Segoe UI" fontHeight="45" bold="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cA9o4juXEeq7_cMfs5qenA" x="45" y="474"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cA9o4juXEeq7_cMfs5qenA" x="153" y="514"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_7N2VLTuSEeq7_cMfs5qenA"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_7N2VLjuSEeq7_cMfs5qenA"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_7N2VKTuSEeq7_cMfs5qenA" fontName="Segoe UI" fontHeight="45" bold="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7N2VKjuSEeq7_cMfs5qenA" x="2050" y="-840" width="1231" height="1630"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7N2VKjuSEeq7_cMfs5qenA" x="2120" y="-770" width="1351" height="1620"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_7zQISjuSEeq7_cMfs5qenA" type="2002" element="_7zGXEDuSEeq7_cMfs5qenA">
           <children xmi:type="notation:Node" xmi:id="_7zQITTuSEeq7_cMfs5qenA" type="5006"/>
@@ -4392,7 +4404,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_7zQIUDuSEeq7_cMfs5qenA"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_7zQISzuSEeq7_cMfs5qenA" fontName="Segoe UI" fontHeight="45" bold="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7zQITDuSEeq7_cMfs5qenA" x="3466" y="-380" width="1155" height="817"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7zQITDuSEeq7_cMfs5qenA" x="880" y="-235" width="1155" height="817"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_8hcDwDuSEeq7_cMfs5qenA" type="2002" element="_8hJI0DuSEeq7_cMfs5qenA">
           <children xmi:type="notation:Node" xmi:id="_8hcDwzuSEeq7_cMfs5qenA" type="5006"/>
@@ -4424,7 +4436,7 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_3FYOdzuTEeq7_cMfs5qenA"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_3FYOcjuTEeq7_cMfs5qenA" fontName="Segoe UI" fontHeight="45" bold="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3FYOczuTEeq7_cMfs5qenA" x="46" y="124"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3FYOczuTEeq7_cMfs5qenA" x="46" y="104"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_H-emAD6MEeq0lb3acgju2g" type="3008" element="_H9STMD6MEeq0lb3acgju2g">
               <children xmi:type="notation:Node" xmi:id="_H-emAz6MEeq0lb3acgju2g" type="5005"/>
@@ -4443,7 +4455,7 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_H-emBj6MEeq0lb3acgju2g"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_H-emAT6MEeq0lb3acgju2g" fontName="Segoe UI" fontHeight="45" bold="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H-emAj6MEeq0lb3acgju2g" x="1171" y="134"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H-emAj6MEeq0lb3acgju2g" x="30" y="1294"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_Ip9AzT67Eeq0lb3acgju2g" type="3008" element="_IowtwD67Eeq0lb3acgju2g">
               <children xmi:type="notation:Node" xmi:id="_Ip9A0D67Eeq0lb3acgju2g" type="5005"/>
@@ -4462,7 +4474,7 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_Ip9A0z67Eeq0lb3acgju2g"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_Ip9Azj67Eeq0lb3acgju2g" fontName="Segoe UI" fontHeight="45" bold="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ip9Azz67Eeq0lb3acgju2g" x="1171" y="794"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ip9Azz67Eeq0lb3acgju2g" x="30" y="1974"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_XNAdjD6_Eeq0lb3acgju2g" type="3008" element="_XM3TkD6_Eeq0lb3acgju2g">
               <children xmi:type="notation:Node" xmi:id="_XNAdjz6_Eeq0lb3acgju2g" type="5005"/>
@@ -4481,108 +4493,154 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_XNAdkj6_Eeq0lb3acgju2g"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_XNAdjT6_Eeq0lb3acgju2g" fontName="Segoe UI" fontHeight="45" bold="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XNAdjj6_Eeq0lb3acgju2g" x="46" y="1258"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XNAdjj6_Eeq0lb3acgju2g" x="35" y="2639"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_8hcDxTuSEeq7_cMfs5qenA"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_8hcDxjuSEeq7_cMfs5qenA"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_8hcDwTuSEeq7_cMfs5qenA" fontName="Segoe UI" fontHeight="45" bold="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8hcDwjuSEeq7_cMfs5qenA" x="7385" y="-820" width="2235" height="1907"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8hcDwjuSEeq7_cMfs5qenA" x="8605" y="-940" width="1145" height="3317"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_C5UcwGUdEeqM8fu1xFPOQg" type="2003" element="_C4y4UGUdEeqM8fu1xFPOQg">
+          <children xmi:type="notation:Node" xmi:id="_C5XgEGUdEeqM8fu1xFPOQg" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_C5YHIGUdEeqM8fu1xFPOQg" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_C5ajYGUdEeqM8fu1xFPOQg" type="3010" element="_C42isGUdEeqM8fu1xFPOQg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_C5ajYWUdEeqM8fu1xFPOQg" fontName="Segoe UI" fontHeight="45" bold="true"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_C5ajYmUdEeqM8fu1xFPOQg"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_C5bKcGUdEeqM8fu1xFPOQg" type="3010" element="_C43JwWUdEeqM8fu1xFPOQg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_C5bKcWUdEeqM8fu1xFPOQg" fontName="Segoe UI" fontHeight="45" bold="true"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_C5bKcmUdEeqM8fu1xFPOQg"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_C5bxgGUdEeqM8fu1xFPOQg" type="3010" element="_C43w0GUdEeqM8fu1xFPOQg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_C5bxgWUdEeqM8fu1xFPOQg" fontName="Segoe UI" fontHeight="45" bold="true"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_C5bxgmUdEeqM8fu1xFPOQg"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_C5YHIWUdEeqM8fu1xFPOQg"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_C5YHImUdEeqM8fu1xFPOQg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_C5UcwWUdEeqM8fu1xFPOQg" fontName="Segoe UI" fontHeight="45" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C5UcwmUdEeqM8fu1xFPOQg" x="960" y="-780"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_j8-xW2UlEeqjO5q80GSlTA" type="2003" element="_j8r2ZWUlEeqjO5q80GSlTA">
+          <children xmi:type="notation:Node" xmi:id="_j8-xXmUlEeqjO5q80GSlTA" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_j8-xX2UlEeqjO5q80GSlTA" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_nyHP0GUlEeqjO5q80GSlTA" type="3010" element="_nxyfsmUlEeqjO5q80GSlTA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_nyHP0WUlEeqjO5q80GSlTA" fontName="Segoe UI" fontHeight="45" bold="true"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_nyHP0mUlEeqjO5q80GSlTA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_v9zfEWUlEeqjO5q80GSlTA" type="3010" element="_v9pt6GUlEeqjO5q80GSlTA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_v9zfEmUlEeqjO5q80GSlTA" fontName="Segoe UI" fontHeight="45" bold="true"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_v9zfE2UlEeqjO5q80GSlTA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_1gg5gGUlEeqjO5q80GSlTA" type="3010" element="_1gN-mWUlEeqjO5q80GSlTA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_1gg5gWUlEeqjO5q80GSlTA" fontName="Segoe UI" fontHeight="45" bold="true"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_1gg5gmUlEeqjO5q80GSlTA"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_3Q214GUlEeqjO5q80GSlTA" type="3010" element="_3Qtr3WUlEeqjO5q80GSlTA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_3Q214WUlEeqjO5q80GSlTA" fontName="Segoe UI" fontHeight="45" bold="true"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_3Q214mUlEeqjO5q80GSlTA"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_j8-xYGUlEeqjO5q80GSlTA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_j8-xYWUlEeqjO5q80GSlTA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_j8-xXGUlEeqjO5q80GSlTA" fontName="Segoe UI" fontHeight="45" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_j8-xXWUlEeqjO5q80GSlTA" x="6330" y="1940"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_2gd8ojuOEeq9HsGI5XLcpg"/>
         <edges xmi:type="notation:Edge" xmi:id="_YTn9kDwdEeqEA9xSkd4ZaA" type="4001" element="_YTJccjwdEeqEA9xSkd4ZaA" source="_z1VZ6zuTEeq7_cMfs5qenA" target="_qnvpMjuTEeq7_cMfs5qenA">
           <children xmi:type="notation:Node" xmi:id="_YTn9lDwdEeqEA9xSkd4ZaA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YTn9lTwdEeqEA9xSkd4ZaA" x="-77" y="180"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Pel3AGUkEeqjO5q80GSlTA" x="-26" y="-109"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_YTn9ljwdEeqEA9xSkd4ZaA" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YTn9lzwdEeqEA9xSkd4ZaA" x="12" y="14"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Pel3AWUkEeqjO5q80GSlTA" y="8"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_YTn9mDwdEeqEA9xSkd4ZaA" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YTn9mTwdEeqEA9xSkd4ZaA" x="12" y="16"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Pel3AmUkEeqjO5q80GSlTA" x="-1" y="8"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_YTn9kTwdEeqEA9xSkd4ZaA"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_YTn9kjwdEeqEA9xSkd4ZaA" fontName="Segoe UI" fontHeight="45" bold="true"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_YTn9kzwdEeqEA9xSkd4ZaA" points="[-377, -292, 572, 444]$[-949, -736, 0, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_YTn9kzwdEeqEA9xSkd4ZaA" points="[496, -292, -801, 474]$[1278, -753, -19, 13]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YTn9mjwdEeqEA9xSkd4ZaA" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YTokoDwdEeqEA9xSkd4ZaA" id="(1.0,0.1541095890410959)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_YTokoDwdEeqEA9xSkd4ZaA" id="(0.38900414937759337,0.875)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_DFCPaz6FEeq0lb3acgju2g" type="4001" element="_DE5FED6FEeq0lb3acgju2g" source="_fV-rpjuREeq7_cMfs5qenA" target="_zIQCMD6EEeq0lb3acgju2g">
           <children xmi:type="notation:Node" xmi:id="_DFCPbz6FEeq0lb3acgju2g" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DFCPcD6FEeq0lb3acgju2g" x="-14" y="-15"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DFCPcD6FEeq0lb3acgju2g" x="-29" y="-14"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_DFCPcT6FEeq0lb3acgju2g" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DFCPcj6FEeq0lb3acgju2g" x="56" y="-143"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DFCPcj6FEeq0lb3acgju2g" x="60" y="-117"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_DFCPcz6FEeq0lb3acgju2g" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DFCPdD6FEeq0lb3acgju2g" x="178" y="-171"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DFCPdD6FEeq0lb3acgju2g" x="-45" y="-144"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_DFCPbD6FEeq0lb3acgju2g"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_DFCPbT6FEeq0lb3acgju2g" fontName="Segoe UI" fontHeight="45" bold="true"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DFCPbj6FEeq0lb3acgju2g" points="[443, 249, -599, -338]$[670, 378, -372, -209]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DFCPbj6FEeq0lb3acgju2g" points="[443, 0, -1126, -1]$[1005, 0, -564, -1]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DFCPdT6FEeq0lb3acgju2g" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DFCPdj6FEeq0lb3acgju2g" id="(0.5,0.5)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_Rhobwj6FEeq0lb3acgju2g" type="4001" element="_Rheqdj6FEeq0lb3acgju2g" source="_gOlHmTuREeq7_cMfs5qenA" target="_zIQCMD6EEeq0lb3acgju2g">
           <children xmi:type="notation:Node" xmi:id="_Rhobxj6FEeq0lb3acgju2g" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Rhobxz6FEeq0lb3acgju2g" x="2" y="-1"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Rhobxz6FEeq0lb3acgju2g" x="27" y="3"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_RhobyD6FEeq0lb3acgju2g" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RhobyT6FEeq0lb3acgju2g" x="18" y="-107"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RhobyT6FEeq0lb3acgju2g" x="6" y="102"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Rhobyj6FEeq0lb3acgju2g" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Rhobyz6FEeq0lb3acgju2g" x="-49" y="-155"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Rhobyz6FEeq0lb3acgju2g" x="-74" y="111"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_Rhobwz6FEeq0lb3acgju2g"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_RhobxD6FEeq0lb3acgju2g" fontName="Segoe UI" fontHeight="45" bold="true"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_RhobxT6FEeq0lb3acgju2g" points="[-18, 128, 83, -595]$[-72, 514, 29, -209]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_RhobxT6FEeq0lb3acgju2g" points="[-390, 16, 1096, -46]$[-922, 38, 564, -24]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_RhobzD6FEeq0lb3acgju2g" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_RhobzT6FEeq0lb3acgju2g" id="(0.5,0.5)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_I-7bgEGvEeqpD5onhggBDw" type="4001" element="_I-1U6UGvEeqpD5onhggBDw" source="_qnvpMjuTEeq7_cMfs5qenA" target="_cA9o4DuXEeq7_cMfs5qenA">
           <children xmi:type="notation:Node" xmi:id="_I-7bhEGvEeqpD5onhggBDw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I-7bhUGvEeqpD5onhggBDw" x="-20" y="-224"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SYHo4GUkEeqjO5q80GSlTA" x="1" y="-224"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_I-7bhkGvEeqpD5onhggBDw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I-7bh0GvEeqpD5onhggBDw" x="14" y="11"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SYHo4WUkEeqjO5q80GSlTA" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_I-7biEGvEeqpD5onhggBDw" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_I-7biUGvEeqpD5onhggBDw" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SYHo4mUkEeqjO5q80GSlTA" y="10"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_I-7bgUGvEeqpD5onhggBDw"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_I-7bgkGvEeqpD5onhggBDw" fontName="Segoe UI" fontHeight="45" bold="true"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_I-7bg0GvEeqpD5onhggBDw" points="[1, 52, -16, -729]$[5, 243, -12, -538]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_I-7bg0GvEeqpD5onhggBDw" points="[-4, 52, 50, -799]$[-20, 313, 34, -538]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_I-7bikGvEeqpD5onhggBDw" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_I-7bi0GvEeqpD5onhggBDw" id="(0.5,0.5)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_Z8YC_l7QEeqcDK1JaIuigg" type="4001" element="_Z7xluF7QEeqcDK1JaIuigg" source="_EvIeMDuTEeq7_cMfs5qenA" target="_ANtsYl7QEeqcDK1JaIuigg">
           <children xmi:type="notation:Node" xmi:id="_Z8YDAl7QEeqcDK1JaIuigg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Z8YDA17QEeqcDK1JaIuigg" x="82" y="-66"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Z8YDA17QEeqcDK1JaIuigg" x="-4" y="120"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Z8YDBF7QEeqcDK1JaIuigg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Z8YDBV7QEeqcDK1JaIuigg" x="-12" y="3"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Z8YDBV7QEeqcDK1JaIuigg" x="-65" y="1"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Z8hMkF7QEeqcDK1JaIuigg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Z8hMkV7QEeqcDK1JaIuigg" x="-6" y="7"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Z8hMkV7QEeqcDK1JaIuigg" x="-40" y="3"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_Z8YC_17QEeqcDK1JaIuigg"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_Z8YDAF7QEeqcDK1JaIuigg" fontName="Segoe UI" fontHeight="45" bold="true"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Z8YDAV7QEeqcDK1JaIuigg" points="[397, 244, -232, -144]$[629, 388, 0, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Z8YDAV7QEeqcDK1JaIuigg" points="[397, -60, -1412, 212]$[1809, -272, 0, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Z8hMkl7QEeqcDK1JaIuigg" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Z8hMk17QEeqcDK1JaIuigg" id="(0.9483526268922529,0.0)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_efJDVF7QEeqcDK1JaIuigg" type="4001" element="_eesXTF7QEeqcDK1JaIuigg" source="_H42oMjuTEeq7_cMfs5qenA" target="_CrEfUF7QEeqcDK1JaIuigg">
           <children xmi:type="notation:Node" xmi:id="_efJDWF7QEeqcDK1JaIuigg" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_efJDWV7QEeqcDK1JaIuigg" x="-90" y="196"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_efJDWV7QEeqcDK1JaIuigg" x="-2" y="124"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_efJDWl7QEeqcDK1JaIuigg" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_efJDW17QEeqcDK1JaIuigg" x="-7" y="13"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_efJDW17QEeqcDK1JaIuigg" x="-61"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_efJDXF7QEeqcDK1JaIuigg" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_efJDXV7QEeqcDK1JaIuigg" x="-6" y="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_efJDXV7QEeqcDK1JaIuigg" x="-55"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_efJDVV7QEeqcDK1JaIuigg"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_efJDVl7QEeqcDK1JaIuigg" fontName="Segoe UI" fontHeight="45" bold="true"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_efJDV17QEeqcDK1JaIuigg" points="[123, 292, -70, -166]$[193, 458, 0, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_efJDV17QEeqcDK1JaIuigg" points="[432, -85, -1011, 197]$[1443, -282, 0, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_efJDXl7QEeqcDK1JaIuigg" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_efJDX17QEeqcDK1JaIuigg" id="(0.6072026800670016,0.0)"/>
         </edges>
@@ -4784,7 +4842,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@defaultLayer/@containerMappings[name='ControllerPackageContainer']/@subContainerMappings[name='ControllerContainer']/@subContainerMappings[name='ActionMethodContainer']"/>
         </ownedDiagramElements>
-        <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_CnxAAD6MEeq0lb3acgju2g" name=" &lt;&lt;ActionMethod>>&#xA;[POST]&#xA;AddToCart(): View">
+        <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_CnxAAD6MEeq0lb3acgju2g" name="                                               &lt;&lt;ActionMethod>>&#xA;[POST]&#xA;AddToCart(INTEGER Product_ProductId, INTEGER Cart_CartId): View">
           <target xmi:type="ryz:ActionMethod" href="ModelTest.ryz#//@packages.1/@controllers.0/@actionmethods.3"/>
           <semanticElements xmi:type="ryz:ActionMethod" href="ModelTest.ryz#//@packages.1/@controllers.0/@actionmethods.3"/>
           <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_CnxAAT6MEeq0lb3acgju2g" labelSize="45" showIcon="false" borderSize="5" borderSizeComputationExpression="5" backgroundColor="238,201,142" foregroundColor="233,185,110">
@@ -5594,9 +5652,97 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@defaultLayer/@edgeMappings[name='RendersRelationBasedEdge']"/>
     </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_C4y4UGUdEeqM8fu1xFPOQg" name="UseCasePackage1">
+      <target xmi:type="ryz:UseCasePackage" href="ModelTest.ryz#//@packages.9/@usecasepackages.0"/>
+      <semanticElements xmi:type="ryz:UseCasePackage" href="ModelTest.ryz#//@packages.9/@usecasepackages.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_C40tgGUdEeqM8fu1xFPOQg" labelSize="45" showIcon="false" borderSize="1" borderSizeComputationExpression="1">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@additionalLayers[name='UseCaseLayer']/@containerMappings[name='UseCaseLayer_UseCasePackageContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@additionalLayers[name='UseCaseLayer']/@containerMappings[name='UseCaseLayer_UseCasePackageContainer']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_C42isGUdEeqM8fu1xFPOQg" name="Add New Product">
+        <target xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.9/@usecasepackages.0/@usecases.0"/>
+        <semanticElements xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.9/@usecasepackages.0/@usecases.0"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_C43JwGUdEeqM8fu1xFPOQg" labelSize="45" showIcon="false" labelPosition="node">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:SquareDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@additionalLayers[name='UseCaseLayer']/@containerMappings[name='UseCaseLayer_UseCasePackageContainer']/@subNodeMappings[name='UseCaseLayer_UseCaseNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@additionalLayers[name='UseCaseLayer']/@containerMappings[name='UseCaseLayer_UseCasePackageContainer']/@subNodeMappings[name='UseCaseLayer_UseCaseNode']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_C43JwWUdEeqM8fu1xFPOQg" name="Select An Existing Product To Update">
+        <target xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.9/@usecasepackages.0/@usecases.1"/>
+        <semanticElements xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.9/@usecasepackages.0/@usecases.1"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_C43JwmUdEeqM8fu1xFPOQg" labelSize="45" showIcon="false" labelPosition="node">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:SquareDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@additionalLayers[name='UseCaseLayer']/@containerMappings[name='UseCaseLayer_UseCasePackageContainer']/@subNodeMappings[name='UseCaseLayer_UseCaseNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@additionalLayers[name='UseCaseLayer']/@containerMappings[name='UseCaseLayer_UseCasePackageContainer']/@subNodeMappings[name='UseCaseLayer_UseCaseNode']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_C43w0GUdEeqM8fu1xFPOQg" name="Select An Existing Product To Delete">
+        <target xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.9/@usecasepackages.0/@usecases.2"/>
+        <semanticElements xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.9/@usecasepackages.0/@usecases.2"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_C43w0WUdEeqM8fu1xFPOQg" labelSize="45" showIcon="false" labelPosition="node">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:SquareDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@additionalLayers[name='UseCaseLayer']/@containerMappings[name='UseCaseLayer_UseCasePackageContainer']/@subNodeMappings[name='UseCaseLayer_UseCaseNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@additionalLayers[name='UseCaseLayer']/@containerMappings[name='UseCaseLayer_UseCasePackageContainer']/@subNodeMappings[name='UseCaseLayer_UseCaseNode']"/>
+      </ownedElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_j8r2ZWUlEeqjO5q80GSlTA" name="UseCasePackage2">
+      <target xmi:type="ryz:UseCasePackage" href="ModelTest.ryz#//@packages.10/@usecasepackages.0"/>
+      <semanticElements xmi:type="ryz:UseCasePackage" href="ModelTest.ryz#//@packages.10/@usecasepackages.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_j8r2ZmUlEeqjO5q80GSlTA" labelSize="45" showIcon="false" borderSize="1" borderSizeComputationExpression="1">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@additionalLayers[name='UseCaseLayer']/@containerMappings[name='UseCaseLayer_UseCasePackageContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@additionalLayers[name='UseCaseLayer']/@containerMappings[name='UseCaseLayer_UseCasePackageContainer']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_nxyfsmUlEeqjO5q80GSlTA" name="View Products By Category">
+        <target xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.10/@usecasepackages.0/@usecases.0"/>
+        <semanticElements xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.10/@usecasepackages.0/@usecases.0"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_nxyfs2UlEeqjO5q80GSlTA" labelSize="45" showIcon="false" labelPosition="node">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:SquareDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@additionalLayers[name='UseCaseLayer']/@containerMappings[name='UseCaseLayer_UseCasePackageContainer']/@subNodeMappings[name='UseCaseLayer_UseCaseNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@additionalLayers[name='UseCaseLayer']/@containerMappings[name='UseCaseLayer_UseCasePackageContainer']/@subNodeMappings[name='UseCaseLayer_UseCaseNode']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_v9pt6GUlEeqjO5q80GSlTA" name="Add Product To Shopping Cart In Any Quantity">
+        <target xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.10/@usecasepackages.0/@usecases.1"/>
+        <semanticElements xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.10/@usecasepackages.0/@usecases.1"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_v9pt6WUlEeqjO5q80GSlTA" labelSize="45" showIcon="false" labelPosition="node">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:SquareDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@additionalLayers[name='UseCaseLayer']/@containerMappings[name='UseCaseLayer_UseCasePackageContainer']/@subNodeMappings[name='UseCaseLayer_UseCaseNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@additionalLayers[name='UseCaseLayer']/@containerMappings[name='UseCaseLayer_UseCasePackageContainer']/@subNodeMappings[name='UseCaseLayer_UseCaseNode']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_1gN-mWUlEeqjO5q80GSlTA" name="Delete Product From Cart">
+        <target xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.10/@usecasepackages.0/@usecases.2"/>
+        <semanticElements xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.10/@usecasepackages.0/@usecases.2"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_1gN-mmUlEeqjO5q80GSlTA" labelSize="45" showIcon="false" labelPosition="node">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:SquareDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@additionalLayers[name='UseCaseLayer']/@containerMappings[name='UseCaseLayer_UseCasePackageContainer']/@subNodeMappings[name='UseCaseLayer_UseCaseNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@additionalLayers[name='UseCaseLayer']/@containerMappings[name='UseCaseLayer_UseCasePackageContainer']/@subNodeMappings[name='UseCaseLayer_UseCaseNode']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_3Qtr3WUlEeqjO5q80GSlTA" name="Checkout">
+        <target xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.10/@usecasepackages.0/@usecases.3"/>
+        <semanticElements xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.10/@usecasepackages.0/@usecases.3"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_3Qtr3mUlEeqjO5q80GSlTA" labelSize="45" showIcon="false" labelPosition="node">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:SquareDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@additionalLayers[name='UseCaseLayer']/@containerMappings[name='UseCaseLayer_UseCasePackageContainer']/@subNodeMappings[name='UseCaseLayer_UseCaseNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@additionalLayers[name='UseCaseLayer']/@containerMappings[name='UseCaseLayer_UseCasePackageContainer']/@subNodeMappings[name='UseCaseLayer_UseCaseNode']"/>
+      </ownedElements>
+    </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_2fazwDuOEeq9HsGI5XLcpg"/>
     <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@defaultLayer"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='Projects%20Diagram']/@additionalLayers[name='UseCaseLayer']"/>
     <target xmi:type="ryz:Project" href="ModelTest.ryz#/"/>
   </diagram:DSemanticDiagram>
   <diagram:DSemanticDiagram uid="_rJegIDuXEeq7_cMfs5qenA">
@@ -6405,7 +6551,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='MvcPackage%20Diagram']/@defaultLayer/@containerMappings[name='Mvc_ControllerContainer']/@subContainerMappings[name='Mvc_ActionMethodContainer']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_nvm1fj6MEeq0lb3acgju2g" name=" &lt;&lt;ActionMethod>>&#xA;[POST]&#xA;AddToCart(): View" outgoingEdges="_J6HmtEHWEeqpD5onhggBDw _eXfp3EHWEeqpD5onhggBDw" incomingEdges="_HZTPxEHWEeqpD5onhggBDw">
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_nvm1fj6MEeq0lb3acgju2g" name="                                               &lt;&lt;ActionMethod>>&#xA;[POST]&#xA;AddToCart(INTEGER Product_ProductId, INTEGER Cart_CartId): View" outgoingEdges="_J6HmtEHWEeqpD5onhggBDw _eXfp3EHWEeqpD5onhggBDw" incomingEdges="_HZTPxEHWEeqpD5onhggBDw">
         <target xmi:type="ryz:ActionMethod" href="ModelTest.ryz#//@packages.1/@controllers.0/@actionmethods.3"/>
         <semanticElements xmi:type="ryz:ActionMethod" href="ModelTest.ryz#//@packages.1/@controllers.0/@actionmethods.3"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -9043,7 +9189,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_GPl1i17YEeqcDK1JaIuigg"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_GPl1hl7YEeqcDK1JaIuigg" fontName="Segoe UI" fontHeight="25" bold="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GPl1h17YEeqcDK1JaIuigg" x="195" y="55"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GPl1h17YEeqcDK1JaIuigg" x="250" y="250" width="428"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_Hk-UZV7YEeqcDK1JaIuigg" type="2002" element="_Hk0i4F7YEeqcDK1JaIuigg">
           <children xmi:type="notation:Node" xmi:id="_Hk-UaF7YEeqcDK1JaIuigg" type="5006"/>
@@ -9052,7 +9198,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_Hk-Ua17YEeqcDK1JaIuigg"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_Hk-UZl7YEeqcDK1JaIuigg" fontName="Segoe UI" fontHeight="25" bold="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Hk-UZ17YEeqcDK1JaIuigg" x="190" y="210"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Hk-UZ17YEeqcDK1JaIuigg" x="250" y="114"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_EdciSF7YEeqcDK1JaIuigg"/>
       </data>
@@ -9099,7 +9245,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_aJ_HPF7YEeqcDK1JaIuigg"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_aJ_HN17YEeqcDK1JaIuigg" fontName="Segoe UI" fontHeight="25" bold="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aJ_HOF7YEeqcDK1JaIuigg" x="270" y="125"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aJ_HOF7YEeqcDK1JaIuigg" x="385" y="160"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_XEGUWF7YEeqcDK1JaIuigg"/>
       </data>
@@ -9107,6 +9253,9 @@
     <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_aJrlMF7YEeqcDK1JaIuigg" name="&lt;&lt;Link>>&#xA;{text = Choose Product Category}">
       <target xmi:type="ryz:Link" href="ModelTest.ryz#//@packages.7/@views.0/@presentationelement.0"/>
       <semanticElements xmi:type="ryz:Link" href="ModelTest.ryz#//@packages.7/@views.0/@presentationelement.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_aJrlMV7YEeqcDK1JaIuigg" labelSize="25" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="114,73,110">
         <labelFormat>bold</labelFormat>
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='ViewPresentation%20Diagram']/@defaultLayer/@containerMappings[name='LinkPresentationContainer']/@style"/>
@@ -9733,7 +9882,7 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_5dy2fV7aEeqcDK1JaIuigg"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_5dy2eF7aEeqcDK1JaIuigg" fontName="Segoe UI" fontHeight="25" bold="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5dy2eV7aEeqcDK1JaIuigg" x="28" y="45"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5dy2eV7aEeqcDK1JaIuigg" x="26" y="45"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_5dy2fl7aEeqcDK1JaIuigg" type="3008" element="_5dNAkl7aEeqcDK1JaIuigg">
               <children xmi:type="notation:Node" xmi:id="_5dy2gV7aEeqcDK1JaIuigg" type="5005"/>
@@ -9742,7 +9891,7 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_5dy2hF7aEeqcDK1JaIuigg"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_5dy2f17aEeqcDK1JaIuigg" fontName="Segoe UI" fontHeight="25" bold="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5dy2gF7aEeqcDK1JaIuigg" x="363" y="40"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5dy2gF7aEeqcDK1JaIuigg" x="361" y="40"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_5dy2hV7aEeqcDK1JaIuigg" type="3008" element="_5dNAlV7aEeqcDK1JaIuigg">
               <children xmi:type="notation:Node" xmi:id="_5dy2iF7aEeqcDK1JaIuigg" type="5005"/>
@@ -9751,7 +9900,7 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_5dy2i17aEeqcDK1JaIuigg"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_5dy2hl7aEeqcDK1JaIuigg" fontName="Segoe UI" fontHeight="25" bold="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5dy2h17aEeqcDK1JaIuigg" x="760" y="40"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5dy2h17aEeqcDK1JaIuigg" x="758" y="40"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_9KP6EF7aEeqcDK1JaIuigg" type="3008" element="_9JqEOF7aEeqcDK1JaIuigg">
               <children xmi:type="notation:Node" xmi:id="_9KP6E17aEeqcDK1JaIuigg" type="5005"/>
@@ -9760,7 +9909,7 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_9KP6Fl7aEeqcDK1JaIuigg"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_9KP6EV7aEeqcDK1JaIuigg" fontName="Segoe UI" fontHeight="25" bold="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9KP6El7aEeqcDK1JaIuigg" x="1188" y="25"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9KP6El7aEeqcDK1JaIuigg" x="1168" y="45"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_Nuw1QF7bEeqcDK1JaIuigg" type="3008" element="_NunrWl7bEeqcDK1JaIuigg">
               <children xmi:type="notation:Node" xmi:id="_Nuw1Q17bEeqcDK1JaIuigg" type="5005"/>
@@ -9769,13 +9918,13 @@
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_Nuw1Rl7bEeqcDK1JaIuigg"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_Nuw1QV7bEeqcDK1JaIuigg" fontName="Segoe UI" fontHeight="25" bold="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Nuw1Ql7bEeqcDK1JaIuigg"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Nuw1Ql7bEeqcDK1JaIuigg" x="1473" y="35"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_5dy2dV7aEeqcDK1JaIuigg"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_5dy2dl7aEeqcDK1JaIuigg"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_5dy2cV7aEeqcDK1JaIuigg" fontName="Segoe UI" fontHeight="25" bold="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5dy2cl7aEeqcDK1JaIuigg" x="150" y="80" width="1572" height="278"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5dy2cl7aEeqcDK1JaIuigg" x="300" y="120" width="1932" height="218"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_v8xMIl7aEeqcDK1JaIuigg"/>
       </data>
@@ -9842,6 +9991,9 @@
       <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_NunrWl7bEeqcDK1JaIuigg" name="&lt;&lt;Header>>CartOperations">
         <target xmi:type="ryz:Header" href="ModelTest.ryz#//@packages.6/@views.0/@presentationelement.0/@header.4"/>
         <semanticElements xmi:type="ryz:Header" href="ModelTest.ryz#//@packages.6/@views.0/@presentationelement.0/@header.4"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
         <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_NunrW17bEeqcDK1JaIuigg" labelSize="25" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="194,239,255">
           <labelFormat>bold</labelFormat>
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='ViewPresentation%20Diagram']/@defaultLayer/@containerMappings[name='TablePresentationContainer']/@subContainerMappings[name='HeaderPresentation']/@style"/>
@@ -9853,5 +10005,617 @@
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_v8oCMV7aEeqcDK1JaIuigg"/>
     <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='ViewPresentation%20Diagram']/@defaultLayer"/>
     <target xmi:type="ryz:Partial" href="ModelTest.ryz#//@packages.6/@views.0"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_qkM6wGUWEeqC3O2VcbR3nw">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_qkWrwGUWEeqC3O2VcbR3nw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_qkWrwWUWEeqC3O2VcbR3nw"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_qlf7QGUWEeqC3O2VcbR3nw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_qlf7QWUWEeqC3O2VcbR3nw" type="Sirius" element="_qkM6wGUWEeqC3O2VcbR3nw" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_sP0vEmUWEeqC3O2VcbR3nw" type="2001" element="_sPFIMGUWEeqC3O2VcbR3nw">
+          <children xmi:type="notation:Node" xmi:id="_sP-gEGUWEeqC3O2VcbR3nw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_sP-gEWUWEeqC3O2VcbR3nw" y="-22"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_sQRbAGUWEeqC3O2VcbR3nw" type="3005" element="_sPFIMWUWEeqC3O2VcbR3nw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_sQRbAWUWEeqC3O2VcbR3nw" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sQRbAmUWEeqC3O2VcbR3nw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_sP0vE2UWEeqC3O2VcbR3nw" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sP0vFGUWEeqC3O2VcbR3nw" x="120" y="85" width="100" height="137"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_s7VxQGUWEeqC3O2VcbR3nw" type="2002" element="_s6sRAGUWEeqC3O2VcbR3nw">
+          <children xmi:type="notation:Node" xmi:id="_s7W_YGUWEeqC3O2VcbR3nw" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_s7XmcGUWEeqC3O2VcbR3nw" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_w3JfhmUWEeqC3O2VcbR3nw" type="3007" element="_w2jCkGUWEeqC3O2VcbR3nw">
+              <children xmi:type="notation:Node" xmi:id="_w3JfiWUWEeqC3O2VcbR3nw" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_w3JfimUWEeqC3O2VcbR3nw" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_w3Jfi2UWEeqC3O2VcbR3nw" type="3016" element="_w2jCkWUWEeqC3O2VcbR3nw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_w3JfjGUWEeqC3O2VcbR3nw" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_w3JfjWUWEeqC3O2VcbR3nw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_w3Jfh2UWEeqC3O2VcbR3nw" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_w3JfiGUWEeqC3O2VcbR3nw" x="45" y="49" width="150" height="50"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_4PowAGUWEeqC3O2VcbR3nw" type="3007" element="_4O_PwGUWEeqC3O2VcbR3nw">
+              <children xmi:type="notation:Node" xmi:id="_4PpXEGUWEeqC3O2VcbR3nw" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_4PpXEWUWEeqC3O2VcbR3nw" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_4Pp-IGUWEeqC3O2VcbR3nw" type="3016" element="_4O_20GUWEeqC3O2VcbR3nw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_4Pp-IWUWEeqC3O2VcbR3nw" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4Pp-ImUWEeqC3O2VcbR3nw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_4PowAWUWEeqC3O2VcbR3nw" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4PowAmUWEeqC3O2VcbR3nw" x="45" y="124" width="186" height="61"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_7LtfkGUWEeqC3O2VcbR3nw" type="3007" element="_7LMiMGUWEeqC3O2VcbR3nw">
+              <children xmi:type="notation:Node" xmi:id="_7LuGoGUWEeqC3O2VcbR3nw" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_7LuGoWUWEeqC3O2VcbR3nw" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_7LuGomUWEeqC3O2VcbR3nw" type="3016" element="_7LMiMWUWEeqC3O2VcbR3nw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_7LuGo2UWEeqC3O2VcbR3nw" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7LuGpGUWEeqC3O2VcbR3nw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_7LtfkWUWEeqC3O2VcbR3nw" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7LtfkmUWEeqC3O2VcbR3nw" x="50" y="219" width="206" height="61"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_s7XmcWUWEeqC3O2VcbR3nw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_s7XmcmUWEeqC3O2VcbR3nw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_s7VxQWUWEeqC3O2VcbR3nw" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_s7VxQmUWEeqC3O2VcbR3nw" x="390" y="25" width="333" height="313"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_qlf7QmUWEeqC3O2VcbR3nw"/>
+        <edges xmi:type="notation:Edge" xmi:id="_9XMfsGUWEeqC3O2VcbR3nw" type="4001" element="_9Wy3EGUWEeqC3O2VcbR3nw" source="_sP0vEmUWEeqC3O2VcbR3nw" target="_w3JfhmUWEeqC3O2VcbR3nw">
+          <children xmi:type="notation:Node" xmi:id="_9XMftGUWEeqC3O2VcbR3nw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9XMftWUWEeqC3O2VcbR3nw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9XMftmUWEeqC3O2VcbR3nw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9XMft2UWEeqC3O2VcbR3nw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9XMfuGUWEeqC3O2VcbR3nw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9XMfuWUWEeqC3O2VcbR3nw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_9XMfsWUWEeqC3O2VcbR3nw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_9XMfsmUWEeqC3O2VcbR3nw" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9XMfs2UWEeqC3O2VcbR3nw" points="[0, 0, -220, 35]$[220, -35, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9XMfumUWEeqC3O2VcbR3nw" id="(1.0,0.40145985401459855)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9XMfu2UWEeqC3O2VcbR3nw" id="(0.0,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_-LVSYGUWEeqC3O2VcbR3nw" type="4001" element="_-KoHxGUWEeqC3O2VcbR3nw" source="_sP0vEmUWEeqC3O2VcbR3nw" target="_4PowAGUWEeqC3O2VcbR3nw">
+          <children xmi:type="notation:Node" xmi:id="_-LVSZGUWEeqC3O2VcbR3nw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-LVSZWUWEeqC3O2VcbR3nw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-LV5cGUWEeqC3O2VcbR3nw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-LV5cWUWEeqC3O2VcbR3nw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_-LV5cmUWEeqC3O2VcbR3nw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-LV5c2UWEeqC3O2VcbR3nw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_-LVSYWUWEeqC3O2VcbR3nw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_-LVSYmUWEeqC3O2VcbR3nw" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-LVSY2UWEeqC3O2VcbR3nw" points="[0, 0, -220, -85]$[220, 85, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-LV5dGUWEeqC3O2VcbR3nw" id="(1.0,0.18248175182481752)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-LV5dWUWEeqC3O2VcbR3nw" id="(0.0,0.6557377049180327)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="__HL2wmUWEeqC3O2VcbR3nw" type="4001" element="__G47uGUWEeqC3O2VcbR3nw" source="_sP0vEmUWEeqC3O2VcbR3nw" target="_7LtfkGUWEeqC3O2VcbR3nw">
+          <children xmi:type="notation:Node" xmi:id="__HL2xmUWEeqC3O2VcbR3nw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__HL2x2UWEeqC3O2VcbR3nw" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="__HL2yGUWEeqC3O2VcbR3nw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__HL2yWUWEeqC3O2VcbR3nw" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="__HL2ymUWEeqC3O2VcbR3nw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__HL2y2UWEeqC3O2VcbR3nw" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="__HL2w2UWEeqC3O2VcbR3nw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="__HL2xGUWEeqC3O2VcbR3nw" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__HL2xWUWEeqC3O2VcbR3nw" points="[0, 0, -225, -70]$[225, 70, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__HL2zGUWEeqC3O2VcbR3nw" id="(1.0,0.9124087591240876)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__HL2zWUWEeqC3O2VcbR3nw" id="(0.0,0.4918032786885246)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_sPFIMGUWEeqC3O2VcbR3nw" name="Admin" outgoingEdges="_9Wy3EGUWEeqC3O2VcbR3nw _-KoHxGUWEeqC3O2VcbR3nw __G47uGUWEeqC3O2VcbR3nw" width="10" height="10" resizeKind="NSEW">
+      <target xmi:type="ryz:Actor" href="ModelTest.ryz#//@packages.9/@actors.0"/>
+      <semanticElements xmi:type="ryz:Actor" href="ModelTest.ryz#//@packages.9/@actors.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_sPFIMWUWEeqC3O2VcbR3nw" labelSize="12" showIcon="false" workspacePath="/com.eryaz.prototype.ryz.design/kisspng-use-case-diagram-symbol-computer-icons-actor-actor-5ac18860865fc3.1153830815226328005504.png">
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@nodeMappings[name='ActorNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@nodeMappings[name='ActorNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_s6sRAGUWEeqC3O2VcbR3nw" name="UseCasePackage1">
+      <target xmi:type="ryz:UseCasePackage" href="ModelTest.ryz#//@packages.9/@usecasepackages.0"/>
+      <semanticElements xmi:type="ryz:UseCasePackage" href="ModelTest.ryz#//@packages.9/@usecasepackages.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_s6sRAWUWEeqC3O2VcbR3nw" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_w2jCkGUWEeqC3O2VcbR3nw" name="Add New Product" incomingEdges="_9Wy3EGUWEeqC3O2VcbR3nw" width="15" height="5" resizeKind="NSEW">
+        <target xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.9/@usecasepackages.0/@usecases.0"/>
+        <semanticElements xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.9/@usecasepackages.0/@usecases.0"/>
+        <ownedStyle xmi:type="diagram:Ellipse" uid="_w2jCkWUWEeqC3O2VcbR3nw" labelSize="12" borderSize="2" borderSizeComputationExpression="2" labelPosition="node" horizontalDiameter="15" verticalDiameter="5" color="255,255,255">
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']/@subNodeMappings[name='UseCaseNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']/@subNodeMappings[name='UseCaseNode']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_4O_PwGUWEeqC3O2VcbR3nw" name="Select Existing Product To Update" incomingEdges="_-KoHxGUWEeqC3O2VcbR3nw" width="15" height="5" resizeKind="NSEW">
+        <target xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.9/@usecasepackages.0/@usecases.1"/>
+        <semanticElements xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.9/@usecasepackages.0/@usecases.1"/>
+        <ownedStyle xmi:type="diagram:Ellipse" uid="_4O_20GUWEeqC3O2VcbR3nw" labelSize="12" borderSize="2" borderSizeComputationExpression="2" labelPosition="node" horizontalDiameter="15" verticalDiameter="5" color="255,255,255">
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']/@subNodeMappings[name='UseCaseNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']/@subNodeMappings[name='UseCaseNode']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_7LMiMGUWEeqC3O2VcbR3nw" name="Select Existing Product  To Delete" incomingEdges="__G47uGUWEeqC3O2VcbR3nw" width="15" height="5" resizeKind="NSEW">
+        <target xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.9/@usecasepackages.0/@usecases.2"/>
+        <semanticElements xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.9/@usecasepackages.0/@usecases.2"/>
+        <ownedStyle xmi:type="diagram:Ellipse" uid="_7LMiMWUWEeqC3O2VcbR3nw" labelSize="12" borderSize="2" borderSizeComputationExpression="2" labelPosition="node" horizontalDiameter="15" verticalDiameter="5" color="255,255,255">
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']/@subNodeMappings[name='UseCaseNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']/@subNodeMappings[name='UseCaseNode']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_9Wy3EGUWEeqC3O2VcbR3nw" sourceNode="_sPFIMGUWEeqC3O2VcbR3nw" targetNode="_w2jCkGUWEeqC3O2VcbR3nw">
+      <target xmi:type="ryz:Actor" href="ModelTest.ryz#//@packages.9/@actors.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_9Wy3EWUWEeqC3O2VcbR3nw" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@edgeMappings[name='ActorToUseCaseRelationBasedEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_9Wy3EmUWEeqC3O2VcbR3nw" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@edgeMappings[name='ActorToUseCaseRelationBasedEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_-KoHxGUWEeqC3O2VcbR3nw" sourceNode="_sPFIMGUWEeqC3O2VcbR3nw" targetNode="_4O_PwGUWEeqC3O2VcbR3nw">
+      <target xmi:type="ryz:Actor" href="ModelTest.ryz#//@packages.9/@actors.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_-Kou0GUWEeqC3O2VcbR3nw" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@edgeMappings[name='ActorToUseCaseRelationBasedEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_-Kou0WUWEeqC3O2VcbR3nw" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@edgeMappings[name='ActorToUseCaseRelationBasedEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="__G47uGUWEeqC3O2VcbR3nw" sourceNode="_sPFIMGUWEeqC3O2VcbR3nw" targetNode="_7LMiMGUWEeqC3O2VcbR3nw">
+      <target xmi:type="ryz:Actor" href="ModelTest.ryz#//@packages.9/@actors.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="__G47uWUWEeqC3O2VcbR3nw" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@edgeMappings[name='ActorToUseCaseRelationBasedEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="__G47umUWEeqC3O2VcbR3nw" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@edgeMappings[name='ActorToUseCaseRelationBasedEdge']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_qkM6wWUWEeqC3O2VcbR3nw"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer"/>
+    <target xmi:type="ryz:UseCaseActorPackage" href="ModelTest.ryz#//@packages.9"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_ApQCIGUeEeqjO5q80GSlTA">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_ApSeYGUeEeqjO5q80GSlTA" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_ApSeYWUeEeqjO5q80GSlTA"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_ApjkIGUeEeqjO5q80GSlTA" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_ApjkIWUeEeqjO5q80GSlTA" type="Sirius" element="_ApQCIGUeEeqjO5q80GSlTA" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_B77K8mUeEeqjO5q80GSlTA" type="2001" element="_B7BzEGUeEeqjO5q80GSlTA">
+          <children xmi:type="notation:Node" xmi:id="_B77K9WUeEeqjO5q80GSlTA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_B77K9mUeEeqjO5q80GSlTA" y="-22"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_B8OF4GUeEeqjO5q80GSlTA" type="3005" element="_B7BzEWUeEeqjO5q80GSlTA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_B8OF4WUeEeqjO5q80GSlTA" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B8OF4mUeEeqjO5q80GSlTA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_B77K82UeEeqjO5q80GSlTA" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B77K9GUeEeqjO5q80GSlTA" x="270" y="85" width="100" height="137"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_DbC0UGUeEeqjO5q80GSlTA" type="2002" element="_DaTNcGUeEeqjO5q80GSlTA">
+          <children xmi:type="notation:Node" xmi:id="_DbDbYGUeEeqjO5q80GSlTA" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_DbECcGUeEeqjO5q80GSlTA" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_FJMYNmUeEeqjO5q80GSlTA" type="3007" element="_FImiUGUeEeqjO5q80GSlTA">
+              <children xmi:type="notation:Node" xmi:id="_FJMYOWUeEeqjO5q80GSlTA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_FJMYOmUeEeqjO5q80GSlTA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_FJMYO2UeEeqjO5q80GSlTA" type="3016" element="_FImiUWUeEeqjO5q80GSlTA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_FJMYPGUeEeqjO5q80GSlTA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FJMYPWUeEeqjO5q80GSlTA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_FJMYN2UeEeqjO5q80GSlTA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FJMYOGUeEeqjO5q80GSlTA" x="45" y="34" width="150" height="50"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_KVZXWGUeEeqjO5q80GSlTA" type="3007" element="_KUy6YGUeEeqjO5q80GSlTA">
+              <children xmi:type="notation:Node" xmi:id="_KVZXW2UeEeqjO5q80GSlTA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_KVZXXGUeEeqjO5q80GSlTA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_KVZXXWUeEeqjO5q80GSlTA" type="3016" element="_KUy6YWUeEeqjO5q80GSlTA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_KVZXXmUeEeqjO5q80GSlTA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KVZXX2UeEeqjO5q80GSlTA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_KVZXWWUeEeqjO5q80GSlTA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KVZXWmUeEeqjO5q80GSlTA" x="50" y="103" width="231" height="66"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_NTjKgGUeEeqjO5q80GSlTA" type="3007" element="_NTEpYGUeEeqjO5q80GSlTA">
+              <children xmi:type="notation:Node" xmi:id="_NTjxkGUeEeqjO5q80GSlTA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_NTjxkWUeEeqjO5q80GSlTA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_NTjxkmUeEeqjO5q80GSlTA" type="3016" element="_NTEpYWUeEeqjO5q80GSlTA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_NTjxk2UeEeqjO5q80GSlTA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NTjxlGUeEeqjO5q80GSlTA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_NTjKgWUeEeqjO5q80GSlTA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NTjKgmUeEeqjO5q80GSlTA" x="55" y="203" width="236" height="56"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_DbECcWUeEeqjO5q80GSlTA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_DbECcmUeEeqjO5q80GSlTA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_DbC0UWUeEeqjO5q80GSlTA" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DbC0UmUeEeqjO5q80GSlTA" x="430" y="46" width="358" height="287"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_ApjkImUeEeqjO5q80GSlTA"/>
+        <edges xmi:type="notation:Edge" xmi:id="_Q5bFAGUeEeqjO5q80GSlTA" type="4001" element="_Q4780GUeEeqjO5q80GSlTA" source="_B77K8mUeEeqjO5q80GSlTA" target="_FJMYNmUeEeqjO5q80GSlTA">
+          <children xmi:type="notation:Node" xmi:id="_Q5cTIGUeEeqjO5q80GSlTA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Q5cTIWUeEeqjO5q80GSlTA" x="4" y="-11"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Q5c6MGUeEeqjO5q80GSlTA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Q5c6MWUeEeqjO5q80GSlTA" x="-3" y="8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Q5dhQGUeEeqjO5q80GSlTA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Q5dhQWUeEeqjO5q80GSlTA" x="-3" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_Q5bFAWUeEeqjO5q80GSlTA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_Q5bFAmUeEeqjO5q80GSlTA" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Q5bFA2UeEeqjO5q80GSlTA" points="[0, 0, -110, 60]$[110, -60, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Q5f9gGUeEeqjO5q80GSlTA" id="(1.0,0.5474452554744526)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Q5f9gWUeEeqjO5q80GSlTA" id="(0.0,0.28)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_RcjAMGUeEeqjO5q80GSlTA" type="4001" element="_RcD4BGUeEeqjO5q80GSlTA" source="_B77K8mUeEeqjO5q80GSlTA" target="_KVZXWGUeEeqjO5q80GSlTA">
+          <children xmi:type="notation:Node" xmi:id="_RcjANGUeEeqjO5q80GSlTA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RcjANWUeEeqjO5q80GSlTA" x="-3" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_RcjANmUeEeqjO5q80GSlTA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RcjAN2UeEeqjO5q80GSlTA" x="3" y="9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_RcjnQGUeEeqjO5q80GSlTA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RcjnQWUeEeqjO5q80GSlTA" x="2" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_RcjAMWUeEeqjO5q80GSlTA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_RcjAMmUeEeqjO5q80GSlTA" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_RcjAM2UeEeqjO5q80GSlTA" points="[0, 0, -115, -65]$[115, 65, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_RcjnQmUeEeqjO5q80GSlTA" id="(1.0,0.21897810218978103)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_RcjnQ2UeEeqjO5q80GSlTA" id="(0.0,0.3787878787878788)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_R_BbIGUeEeqjO5q80GSlTA" type="4001" element="_R-rc5GUeEeqjO5q80GSlTA" source="_B77K8mUeEeqjO5q80GSlTA" target="_NTjKgGUeEeqjO5q80GSlTA">
+          <children xmi:type="notation:Node" xmi:id="_R_CCMGUeEeqjO5q80GSlTA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R_CCMWUeEeqjO5q80GSlTA" x="-4" y="-8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_R_CCMmUeEeqjO5q80GSlTA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R_CCM2UeEeqjO5q80GSlTA" x="4" y="8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_R_CCNGUeEeqjO5q80GSlTA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R_CCNWUeEeqjO5q80GSlTA" x="3" y="8"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_R_BbIWUeEeqjO5q80GSlTA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_R_BbImUeEeqjO5q80GSlTA" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_R_BbI2UeEeqjO5q80GSlTA" points="[0, 0, -120, -120]$[120, 120, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_R_CpQGUeEeqjO5q80GSlTA" id="(1.0,0.6204379562043796)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_R_CpQWUeEeqjO5q80GSlTA" id="(0.0,0.625)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_B7BzEGUeEeqjO5q80GSlTA" name="Admin" outgoingEdges="_Q4780GUeEeqjO5q80GSlTA _RcD4BGUeEeqjO5q80GSlTA _R-rc5GUeEeqjO5q80GSlTA" width="10" height="10" resizeKind="NSEW">
+      <target xmi:type="ryz:Actor" href="ModelTest.ryz#//@packages.9/@actors.0"/>
+      <semanticElements xmi:type="ryz:Actor" href="ModelTest.ryz#//@packages.9/@actors.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_B7BzEWUeEeqjO5q80GSlTA" labelSize="12" showIcon="false" workspacePath="/com.eryaz.prototype.ryz.design/kisspng-use-case-diagram-symbol-computer-icons-actor-actor-5ac18860865fc3.1153830815226328005504.png">
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@nodeMappings[name='ActorNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@nodeMappings[name='ActorNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_DaTNcGUeEeqjO5q80GSlTA" name="UseCasePackage1">
+      <target xmi:type="ryz:UseCasePackage" href="ModelTest.ryz#//@packages.9/@usecasepackages.0"/>
+      <semanticElements xmi:type="ryz:UseCasePackage" href="ModelTest.ryz#//@packages.9/@usecasepackages.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_DaT0gGUeEeqjO5q80GSlTA" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_FImiUGUeEeqjO5q80GSlTA" name="Add New Product" incomingEdges="_Q4780GUeEeqjO5q80GSlTA" width="15" height="5" resizeKind="NSEW">
+        <target xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.9/@usecasepackages.0/@usecases.0"/>
+        <semanticElements xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.9/@usecasepackages.0/@usecases.0"/>
+        <ownedStyle xmi:type="diagram:Ellipse" uid="_FImiUWUeEeqjO5q80GSlTA" labelSize="12" borderSize="2" borderSizeComputationExpression="2" labelPosition="node" horizontalDiameter="15" verticalDiameter="5" color="255,255,255">
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']/@subNodeMappings[name='UseCaseNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']/@subNodeMappings[name='UseCaseNode']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_KUy6YGUeEeqjO5q80GSlTA" name="Select An Existing Product To Update" incomingEdges="_RcD4BGUeEeqjO5q80GSlTA" width="15" height="5" resizeKind="NSEW">
+        <target xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.9/@usecasepackages.0/@usecases.1"/>
+        <semanticElements xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.9/@usecasepackages.0/@usecases.1"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" uid="_KUy6YWUeEeqjO5q80GSlTA" labelSize="12" borderSize="2" borderSizeComputationExpression="2" labelPosition="node" horizontalDiameter="15" verticalDiameter="5" color="255,255,255">
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']/@subNodeMappings[name='UseCaseNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']/@subNodeMappings[name='UseCaseNode']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_NTEpYGUeEeqjO5q80GSlTA" name="Select An Existing Product To Delete" incomingEdges="_R-rc5GUeEeqjO5q80GSlTA" width="15" height="5" resizeKind="NSEW">
+        <target xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.9/@usecasepackages.0/@usecases.2"/>
+        <semanticElements xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.9/@usecasepackages.0/@usecases.2"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" uid="_NTEpYWUeEeqjO5q80GSlTA" labelSize="12" borderSize="2" borderSizeComputationExpression="2" labelPosition="node" horizontalDiameter="15" verticalDiameter="5" color="255,255,255">
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']/@subNodeMappings[name='UseCaseNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']/@subNodeMappings[name='UseCaseNode']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Q4780GUeEeqjO5q80GSlTA" sourceNode="_B7BzEGUeEeqjO5q80GSlTA" targetNode="_FImiUGUeEeqjO5q80GSlTA">
+      <target xmi:type="ryz:Actor" href="ModelTest.ryz#//@packages.9/@actors.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Q48j4GUeEeqjO5q80GSlTA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@edgeMappings[name='ActorToUseCaseRelationBasedEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_Q48j4WUeEeqjO5q80GSlTA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@edgeMappings[name='ActorToUseCaseRelationBasedEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_RcD4BGUeEeqjO5q80GSlTA" sourceNode="_B7BzEGUeEeqjO5q80GSlTA" targetNode="_KUy6YGUeEeqjO5q80GSlTA">
+      <target xmi:type="ryz:Actor" href="ModelTest.ryz#//@packages.9/@actors.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_RcD4BWUeEeqjO5q80GSlTA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@edgeMappings[name='ActorToUseCaseRelationBasedEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_RcD4BmUeEeqjO5q80GSlTA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@edgeMappings[name='ActorToUseCaseRelationBasedEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_R-rc5GUeEeqjO5q80GSlTA" sourceNode="_B7BzEGUeEeqjO5q80GSlTA" targetNode="_NTEpYGUeEeqjO5q80GSlTA">
+      <target xmi:type="ryz:Actor" href="ModelTest.ryz#//@packages.9/@actors.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_R-rc5WUeEeqjO5q80GSlTA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@edgeMappings[name='ActorToUseCaseRelationBasedEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_R-rc5mUeEeqjO5q80GSlTA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@edgeMappings[name='ActorToUseCaseRelationBasedEdge']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_ApQpMGUeEeqjO5q80GSlTA"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer"/>
+    <target xmi:type="ryz:UseCaseActorPackage" href="ModelTest.ryz#//@packages.9"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_iLZe8GUlEeqjO5q80GSlTA">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_iLatEGUlEeqjO5q80GSlTA" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_iLatEWUlEeqjO5q80GSlTA"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_iLgzsGUlEeqjO5q80GSlTA" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_iLgzsWUlEeqjO5q80GSlTA" type="Sirius" element="_iLZe8GUlEeqjO5q80GSlTA" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_jXT4cGUlEeqjO5q80GSlTA" type="2001" element="_jW5owGUlEeqjO5q80GSlTA">
+          <children xmi:type="notation:Node" xmi:id="_jXT4c2UlEeqjO5q80GSlTA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_jXT4dGUlEeqjO5q80GSlTA" y="-22"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_jXUfgGUlEeqjO5q80GSlTA" type="3005" element="_jW5owWUlEeqjO5q80GSlTA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_jXUfgWUlEeqjO5q80GSlTA" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jXUfgmUlEeqjO5q80GSlTA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_jXT4cWUlEeqjO5q80GSlTA" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jXT4cmUlEeqjO5q80GSlTA" x="95" y="70" width="100" height="137"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_j8-xVGUlEeqjO5q80GSlTA" type="2002" element="_j8r2YGUlEeqjO5q80GSlTA">
+          <children xmi:type="notation:Node" xmi:id="_j8-xV2UlEeqjO5q80GSlTA" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_j8-xWGUlEeqjO5q80GSlTA" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_nyEzkGUlEeqjO5q80GSlTA" type="3007" element="_nxtnMGUlEeqjO5q80GSlTA">
+              <children xmi:type="notation:Node" xmi:id="_nyEzk2UlEeqjO5q80GSlTA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_nyEzlGUlEeqjO5q80GSlTA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_nyEzlWUlEeqjO5q80GSlTA" type="3016" element="_nxtnMWUlEeqjO5q80GSlTA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_nyEzlmUlEeqjO5q80GSlTA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nyEzl2UlEeqjO5q80GSlTA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_nyEzkWUlEeqjO5q80GSlTA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nyEzkmUlEeqjO5q80GSlTA" x="25" y="24" width="211" height="50"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_v9zfCWUlEeqjO5q80GSlTA" type="3007" element="_v9gj8GUlEeqjO5q80GSlTA">
+              <children xmi:type="notation:Node" xmi:id="_v9zfDGUlEeqjO5q80GSlTA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_v9zfDWUlEeqjO5q80GSlTA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_v9zfDmUlEeqjO5q80GSlTA" type="3016" element="_v9gj8WUlEeqjO5q80GSlTA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_v9zfD2UlEeqjO5q80GSlTA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_v9zfEGUlEeqjO5q80GSlTA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_v9zfCmUlEeqjO5q80GSlTA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_v9zfC2UlEeqjO5q80GSlTA" x="10" y="89" width="226" height="50"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_1gXInmUlEeqjO5q80GSlTA" type="3007" element="_1gENkGUlEeqjO5q80GSlTA">
+              <children xmi:type="notation:Node" xmi:id="_1gXIoWUlEeqjO5q80GSlTA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_1gXIomUlEeqjO5q80GSlTA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_1gXIo2UlEeqjO5q80GSlTA" type="3016" element="_1gENkWUlEeqjO5q80GSlTA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_1gXIpGUlEeqjO5q80GSlTA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1gXIpWUlEeqjO5q80GSlTA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_1gXIn2UlEeqjO5q80GSlTA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1gXIoGUlEeqjO5q80GSlTA" x="10" y="154" width="150" height="50"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_3Q212GUlEeqjO5q80GSlTA" type="3007" element="_3Qtr0GUlEeqjO5q80GSlTA">
+              <children xmi:type="notation:Node" xmi:id="_3Q2122UlEeqjO5q80GSlTA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_3Q213GUlEeqjO5q80GSlTA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_3Q213WUlEeqjO5q80GSlTA" type="3016" element="_3Qtr0WUlEeqjO5q80GSlTA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_3Q213mUlEeqjO5q80GSlTA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3Q2132UlEeqjO5q80GSlTA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_3Q212WUlEeqjO5q80GSlTA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3Q212mUlEeqjO5q80GSlTA" x="10" y="224" width="150" height="50"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_j8-xWWUlEeqjO5q80GSlTA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_j8-xWmUlEeqjO5q80GSlTA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_j8-xVWUlEeqjO5q80GSlTA" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_j8-xVmUlEeqjO5q80GSlTA" x="290" y="25" width="258" height="308"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_iLgzsmUlEeqjO5q80GSlTA"/>
+        <edges xmi:type="notation:Edge" xmi:id="_6P3k72UlEeqjO5q80GSlTA" type="4001" element="_6PkpoGUlEeqjO5q80GSlTA" source="_jXT4cGUlEeqjO5q80GSlTA" target="_nyEzkGUlEeqjO5q80GSlTA">
+          <children xmi:type="notation:Node" xmi:id="_6P3k82UlEeqjO5q80GSlTA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6P3k9GUlEeqjO5q80GSlTA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_6P3k9WUlEeqjO5q80GSlTA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6P3k9mUlEeqjO5q80GSlTA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_6P3k92UlEeqjO5q80GSlTA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6P3k-GUlEeqjO5q80GSlTA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_6P3k8GUlEeqjO5q80GSlTA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_6P3k8WUlEeqjO5q80GSlTA" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_6P3k8mUlEeqjO5q80GSlTA" points="[0, 0, -125, 40]$[125, -40, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_6P3k-WUlEeqjO5q80GSlTA" id="(1.0,0.291970802919708)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_6P3k-mUlEeqjO5q80GSlTA" id="(0.0,0.3)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_69anEGUlEeqjO5q80GSlTA" type="4001" element="_69CzpGUlEeqjO5q80GSlTA" source="_jXT4cGUlEeqjO5q80GSlTA" target="_v9zfCWUlEeqjO5q80GSlTA">
+          <children xmi:type="notation:Node" xmi:id="_69bOIGUlEeqjO5q80GSlTA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_69bOIWUlEeqjO5q80GSlTA" x="6" y="-9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_69bOImUlEeqjO5q80GSlTA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_69bOI2UlEeqjO5q80GSlTA" x="-6" y="9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_69bOJGUlEeqjO5q80GSlTA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_69bOJWUlEeqjO5q80GSlTA" x="-5" y="9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_69anEWUlEeqjO5q80GSlTA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_69anEmUlEeqjO5q80GSlTA" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_69anE2UlEeqjO5q80GSlTA" points="[49, 4, -111, -8]$[160, 4, 0, -8]"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_69bOJ2UlEeqjO5q80GSlTA" id="(0.0,0.6)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_9CfdSGUlEeqjO5q80GSlTA" type="4001" element="_9CCxSGUlEeqjO5q80GSlTA" source="_jXT4cGUlEeqjO5q80GSlTA" target="_1gXInmUlEeqjO5q80GSlTA">
+          <children xmi:type="notation:Node" xmi:id="_9CfdTGUlEeqjO5q80GSlTA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9CfdTWUlEeqjO5q80GSlTA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9CfdTmUlEeqjO5q80GSlTA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9CfdT2UlEeqjO5q80GSlTA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_9CfdUGUlEeqjO5q80GSlTA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9CfdUWUlEeqjO5q80GSlTA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_9CfdSWUlEeqjO5q80GSlTA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_9CfdSmUlEeqjO5q80GSlTA" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_9CfdS2UlEeqjO5q80GSlTA" points="[0, 0, -110, -70]$[110, 70, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9CfdUmUlEeqjO5q80GSlTA" id="(1.0,0.5109489051094891)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_9CfdU2UlEeqjO5q80GSlTA" id="(0.0,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="__A_xQGUlEeqjO5q80GSlTA" type="4001" element="__AroPGUlEeqjO5q80GSlTA" source="_jXT4cGUlEeqjO5q80GSlTA" target="_3Q212GUlEeqjO5q80GSlTA">
+          <children xmi:type="notation:Node" xmi:id="__BAYUGUlEeqjO5q80GSlTA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__BAYUWUlEeqjO5q80GSlTA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="__BAYUmUlEeqjO5q80GSlTA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__BAYU2UlEeqjO5q80GSlTA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="__BAYVGUlEeqjO5q80GSlTA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__BAYVWUlEeqjO5q80GSlTA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="__A_xQWUlEeqjO5q80GSlTA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="__A_xQmUlEeqjO5q80GSlTA" fontName="Segoe UI" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__A_xQ2UlEeqjO5q80GSlTA" points="[0, 0, -110, -135]$[110, 135, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__BAYVmUlEeqjO5q80GSlTA" id="(1.0,0.5109489051094891)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__BAYV2UlEeqjO5q80GSlTA" id="(0.0,0.4)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_jW5owGUlEeqjO5q80GSlTA" name="Customer" outgoingEdges="_6PkpoGUlEeqjO5q80GSlTA _69CzpGUlEeqjO5q80GSlTA _9CCxSGUlEeqjO5q80GSlTA __AroPGUlEeqjO5q80GSlTA" width="10" height="10" resizeKind="NSEW">
+      <target xmi:type="ryz:Actor" href="ModelTest.ryz#//@packages.10/@actors.0"/>
+      <semanticElements xmi:type="ryz:Actor" href="ModelTest.ryz#//@packages.10/@actors.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_jW5owWUlEeqjO5q80GSlTA" labelSize="12" showIcon="false" workspacePath="/com.eryaz.prototype.ryz.design/kisspng-use-case-diagram-symbol-computer-icons-actor-actor-5ac18860865fc3.1153830815226328005504.png">
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@nodeMappings[name='ActorNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@nodeMappings[name='ActorNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_j8r2YGUlEeqjO5q80GSlTA" name="UseCasePackage2">
+      <target xmi:type="ryz:UseCasePackage" href="ModelTest.ryz#//@packages.10/@usecasepackages.0"/>
+      <semanticElements xmi:type="ryz:UseCasePackage" href="ModelTest.ryz#//@packages.10/@usecasepackages.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_j8r2YWUlEeqjO5q80GSlTA" labelSize="12" borderSize="1" borderSizeComputationExpression="1">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_nxtnMGUlEeqjO5q80GSlTA" name="View Products By Category" incomingEdges="_6PkpoGUlEeqjO5q80GSlTA" width="15" height="5" resizeKind="NSEW">
+        <target xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.10/@usecasepackages.0/@usecases.0"/>
+        <semanticElements xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.10/@usecasepackages.0/@usecases.0"/>
+        <ownedStyle xmi:type="diagram:Ellipse" uid="_nxtnMWUlEeqjO5q80GSlTA" labelSize="12" borderSize="2" borderSizeComputationExpression="2" labelPosition="node" horizontalDiameter="15" verticalDiameter="5" color="255,255,255">
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']/@subNodeMappings[name='UseCaseNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']/@subNodeMappings[name='UseCaseNode']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_v9gj8GUlEeqjO5q80GSlTA" name="Add Product To Shopping Cart In Any Quantity" incomingEdges="_69CzpGUlEeqjO5q80GSlTA" width="15" height="5" resizeKind="NSEW">
+        <target xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.10/@usecasepackages.0/@usecases.1"/>
+        <semanticElements xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.10/@usecasepackages.0/@usecases.1"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" uid="_v9gj8WUlEeqjO5q80GSlTA" labelSize="12" borderSize="2" borderSizeComputationExpression="2" labelPosition="node" horizontalDiameter="15" verticalDiameter="5" color="255,255,255">
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']/@subNodeMappings[name='UseCaseNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']/@subNodeMappings[name='UseCaseNode']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_1gENkGUlEeqjO5q80GSlTA" name="Delete Product From Cart" incomingEdges="_9CCxSGUlEeqjO5q80GSlTA" width="15" height="5" resizeKind="NSEW">
+        <target xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.10/@usecasepackages.0/@usecases.2"/>
+        <semanticElements xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.10/@usecasepackages.0/@usecases.2"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" uid="_1gENkWUlEeqjO5q80GSlTA" labelSize="12" borderSize="2" borderSizeComputationExpression="2" labelPosition="node" horizontalDiameter="15" verticalDiameter="5" color="255,255,255">
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']/@subNodeMappings[name='UseCaseNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']/@subNodeMappings[name='UseCaseNode']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_3Qtr0GUlEeqjO5q80GSlTA" name="Checkout" incomingEdges="__AroPGUlEeqjO5q80GSlTA" width="15" height="5" resizeKind="NSEW">
+        <target xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.10/@usecasepackages.0/@usecases.3"/>
+        <semanticElements xmi:type="ryz:UseCase" href="ModelTest.ryz#//@packages.10/@usecasepackages.0/@usecases.3"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Ellipse" uid="_3Qtr0WUlEeqjO5q80GSlTA" labelSize="12" borderSize="2" borderSizeComputationExpression="2" labelPosition="node" horizontalDiameter="15" verticalDiameter="5" color="255,255,255">
+          <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']/@subNodeMappings[name='UseCaseNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@containerMappings[name='UseCasePackageContainer']/@subNodeMappings[name='UseCaseNode']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_6PkpoGUlEeqjO5q80GSlTA" sourceNode="_jW5owGUlEeqjO5q80GSlTA" targetNode="_nxtnMGUlEeqjO5q80GSlTA">
+      <target xmi:type="ryz:Actor" href="ModelTest.ryz#//@packages.10/@actors.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_6PkpoWUlEeqjO5q80GSlTA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@edgeMappings[name='ActorToUseCaseRelationBasedEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_6PkpomUlEeqjO5q80GSlTA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@edgeMappings[name='ActorToUseCaseRelationBasedEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_69CzpGUlEeqjO5q80GSlTA" sourceNode="_jW5owGUlEeqjO5q80GSlTA" targetNode="_v9gj8GUlEeqjO5q80GSlTA">
+      <target xmi:type="ryz:Actor" href="ModelTest.ryz#//@packages.10/@actors.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_69DasGUlEeqjO5q80GSlTA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@edgeMappings[name='ActorToUseCaseRelationBasedEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_69DasWUlEeqjO5q80GSlTA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@edgeMappings[name='ActorToUseCaseRelationBasedEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_9CCxSGUlEeqjO5q80GSlTA" sourceNode="_jW5owGUlEeqjO5q80GSlTA" targetNode="_1gENkGUlEeqjO5q80GSlTA">
+      <target xmi:type="ryz:Actor" href="ModelTest.ryz#//@packages.10/@actors.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_9CCxSWUlEeqjO5q80GSlTA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@edgeMappings[name='ActorToUseCaseRelationBasedEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_9CCxSmUlEeqjO5q80GSlTA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@edgeMappings[name='ActorToUseCaseRelationBasedEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="__AroPGUlEeqjO5q80GSlTA" sourceNode="_jW5owGUlEeqjO5q80GSlTA" targetNode="_3Qtr0GUlEeqjO5q80GSlTA">
+      <target xmi:type="ryz:Actor" href="ModelTest.ryz#//@packages.10/@actors.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="__AroPWUlEeqjO5q80GSlTA" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@edgeMappings[name='ActorToUseCaseRelationBasedEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="__AroPmUlEeqjO5q80GSlTA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer/@edgeMappings[name='ActorToUseCaseRelationBasedEdge']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_iLZe8WUlEeqjO5q80GSlTA"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/com.eryaz.prototype.ryz.design/description/ryz.odesign#//@ownedViewpoints[name='projects']/@ownedRepresentations[name='UseCase%20Diagram']/@defaultLayer"/>
+    <target xmi:type="ryz:UseCaseActorPackage" href="ModelTest.ryz#//@packages.10"/>
   </diagram:DSemanticDiagram>
 </xmi:XMI>

@@ -5,9 +5,11 @@
 [template public generateTable(aTable : Table)]
 <table bordered="1">
 	<thead>
-		[for (aHeader : Header | aTable.header)]
-		<tr>[aHeader.labelText/]</tr>
-		[/for]
+		<tr>
+			[for (aHeader : Header | aTable.header)]
+			<th>[aHeader.labelText/]</th>
+			[/for]
+		</tr>
 	</thead>
 	<tbody>
 	</tbody>
